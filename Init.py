@@ -3,6 +3,7 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 
+#UI Loading
 form_class = uic.loadUiType("Init.ui")[0]
 
 #메인윈도우 설정
