@@ -12,24 +12,33 @@ class MainWindow(QMainWindow, form_class):
         super().__init__()
         self.setupUi(self)
 
-        self.mainPage.setCurrentIndex(0)
+        self.set_MainPage_Index(0)
+
+#def
+    def set_MainPage_Index(self, index) :
+        self.mainPage.setCurrentIndex(index)
 
 #Buttons
     #(시작화면)으로 이동
     def btn_ToInitPage(self) :
-        self.mainPage.setCurrentIndex(0)
+        self.set_MainPage_Index(0)
+
     #(일반주문, 음성주문 선택화면)으로 이동
     def btn_ToSelectPage(self) :
-        self.mainPage.setCurrentIndex(1)
+        self.set_MainPage_Index(1)
+
     #(일반주문화면)으로 이동
     def btn_ToDefaultMenuPage(self) :
-        self.mainPage.setCurrentIndex(2)
+        self.set_MainPage_Index(2)
+
     #(음성주문화면)으로 이동
     def btn_ToVoiceOrderPage(self) :
-        self.mainPage.setCurrentIndex(3)
+        self.set_MainPage_Index(3)
+
     #(결제창)으로 이동
     def btn_ToOrderPage(self) :
         pass
+        #Open New Window
 
 #프로그램 시작
 if __name__ == "__main__":
@@ -37,5 +46,3 @@ if __name__ == "__main__":
     myWindow = MainWindow()
     myWindow.show()
     app.exec_()
-
-##Commit Test 
