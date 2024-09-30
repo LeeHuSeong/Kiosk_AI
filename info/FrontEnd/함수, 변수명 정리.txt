@@ -1,0 +1,33 @@
+qt designer(UI)			-> Code
+	=> Action
+
+#QStackedWidget
+mainPage
+	=> 메인 프레임
+subPage
+	=> 메뉴 목록 프레임
+
+#Buttons
+btn_toSelectPage 		-> mainPage_toSelect()
+	=> 메뉴선택화면으로 이동
+btn_toDefaultMenuPage 	-> mainPage_toDefault()
+	=> 일반주문화면으로 이동
+btn_toVoiceOrderPage 		-> mainPage_toVoice()
+	=> 음성주문화면으로 이동
+btn_toInitPage 			-> mainPage_toInit()
+	=> 시작화면으로 이동
+
+btn_catalog_(1 ~ 7)		-> 예정
+	=> 메뉴목록 전환(전체, 커피, 음료 등)
+
+#Lcd
+lcd_Timer
+	=> 타이머 표시
+lcd_Price
+	=> 총 가격 표시
+
+#Text
+cartArea
+	=> 장바구니 내역
+
+
