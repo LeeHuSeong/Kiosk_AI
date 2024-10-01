@@ -3,11 +3,13 @@ import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
 
+import Purchase
+
 #UI Loading
-form_class = uic.loadUiType("Init.ui")[0]
+Init_Class= uic.loadUiType("Init.ui")[0]
 
 #메인윈도우 설정
-class MainWindow(QMainWindow, form_class):
+class MainWindow(QMainWindow, Init_Class) :
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -37,8 +39,9 @@ class MainWindow(QMainWindow, form_class):
 
     #(결제창)으로 이동
     def popup_purchaseWindow(self) :
-        pass
         #Open New Window/modal
+        self.purchase_Window = Purchase.PurchaseWindow()
+        self.purchase_Window.show()
 
 #프로그램 시작
 if __name__ == "__main__":
