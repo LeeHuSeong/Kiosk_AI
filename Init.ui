@@ -44,7 +44,7 @@
       <item row="0" column="0">
        <widget class="QStackedWidget" name="mainPage">
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="initPage">
          <layout class="QGridLayout" name="gridLayout_5">
@@ -467,8 +467,8 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toDefault()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>383</x>
-     <y>182</y>
+     <x>99</x>
+     <y>12</y>
     </hint>
     <hint type="destinationlabel">
      <x>736</x>
@@ -483,8 +483,8 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toVoice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>368</x>
-     <y>513</y>
+     <x>99</x>
+     <y>29</y>
     </hint>
     <hint type="destinationlabel">
      <x>701</x>
@@ -515,8 +515,8 @@ p, li { white-space: pre-wrap; }
    <slot>popup_purchaseWindow()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>559</x>
-     <y>773</y>
+     <x>173</x>
+     <y>80</y>
     </hint>
     <hint type="destinationlabel">
      <x>690</x>
