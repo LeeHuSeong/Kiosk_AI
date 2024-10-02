@@ -1,6 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
 from PyQt5 import uic
 
 Purchase_Class= uic.loadUiType("Purchase.ui")[0]
@@ -9,7 +10,7 @@ class PurchaseWindow(QMainWindow, Purchase_Class) :
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.center()
+        self.setWindowFlag(Qt.FramelessWindowHint)
         self.show()
     
     def center(self):
@@ -27,5 +28,6 @@ class PurchaseWindow(QMainWindow, Purchase_Class) :
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     myWindow = PurchaseWindow()
+    myWindow.center()
     myWindow.show()
     app.exec_()

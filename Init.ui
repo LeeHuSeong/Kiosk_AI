@@ -41,10 +41,10 @@
     </property>
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
-      <item row="0" column="0">
+      <item row="1" column="0">
        <widget class="QStackedWidget" name="mainPage">
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="initPage">
          <layout class="QGridLayout" name="gridLayout_5">
@@ -135,210 +135,133 @@
           <property name="bottomMargin">
            <number>0</number>
           </property>
-          <item row="1" column="3">
-           <layout class="QVBoxLayout" name="catalog_Layout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="1" column="3" colspan="3">
+           <layout class="QHBoxLayout" name="middle_Layout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <item>
-             <widget class="QPushButton" name="btn_catalog_1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+             <layout class="QVBoxLayout" name="catalog_List">
+              <property name="spacing">
+               <number>0</number>
               </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>101</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
+              <item>
+               <widget class="QPushButton" name="btn_catalog_1">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>101</width>
+                  <height>101</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>전체메뉴</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_catalog_2">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>101</width>
+                  <height>101</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>커피</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_catalog_3">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>101</width>
+                  <height>101</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>에이드</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_catalog_4">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>101</width>
+                  <height>101</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>디저트</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_catalog_5">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>101</width>
+                  <height>101</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>기타</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_catalog_2">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>101</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_catalog_3">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>101</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_catalog_4">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>101</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_catalog_5">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>101</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_catalog_6">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>101</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_catalog_7">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>101</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>PushButton</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="1" column="4">
-           <layout class="QHBoxLayout" name="menu_Layout">
-            <item>
-             <widget class="QStackedWidget" name="menuPage">
-              <widget class="QWidget" name="page_3"/>
-              <widget class="QWidget" name="page_4"/>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="1" column="5">
-           <layout class="QVBoxLayout" name="bill_Layout">
-            <item>
-             <widget class="QTextBrowser" name="cartArea">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>0</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="lcd_Price">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>50</height>
-               </size>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="btn_toOrderPage">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>101</width>
-                <height>50</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>결제하기</string>
-              </property>
-             </widget>
+             <layout class="QVBoxLayout" name="menu_List">
+              <item>
+               <widget class="QStackedWidget" name="menuPage">
+                <widget class="QWidget" name="page_3"/>
+                <widget class="QWidget" name="page_4"/>
+               </widget>
+              </item>
+             </layout>
             </item>
            </layout>
           </item>
           <item row="0" column="3" colspan="3">
            <layout class="QHBoxLayout" name="top_Layout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QPushButton" name="btn_toInitPage">
               <property name="sizePolicy">
@@ -400,6 +323,58 @@ p, li { white-space: pre-wrap; }
             </item>
            </layout>
           </item>
+          <item row="2" column="3" colspan="3">
+           <layout class="QHBoxLayout" name="bottom_Layout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QTableWidget" name="table_shoppingCart"/>
+            </item>
+            <item>
+             <layout class="QVBoxLayout" name="PricePurchase_Layout">
+              <property name="spacing">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QLCDNumber" name="lcd_Price">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>101</width>
+                  <height>50</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_toPurchasePage">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>101</width>
+                  <height>101</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>결제하기</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
+          </item>
          </layout>
         </widget>
         <widget class="QWidget" name="voiceOrderPage">
@@ -445,46 +420,14 @@ p, li { white-space: pre-wrap; }
  <resources/>
  <connections>
   <connection>
-   <sender>btn_toSelectPage</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>mainPage_toSelect()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>399</x>
-     <y>187</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>759</x>
-     <y>200</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_toDefaultMenuPage</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>mainPage_toDefault()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>99</x>
-     <y>12</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>736</x>
-     <y>194</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>btn_toVoiceOrderPage</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>mainPage_toVoice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>99</x>
-     <y>29</y>
+     <x>101</x>
+     <y>432</y>
     </hint>
     <hint type="destinationlabel">
      <x>701</x>
@@ -493,30 +436,14 @@ p, li { white-space: pre-wrap; }
    </hints>
   </connection>
   <connection>
-   <sender>btn_toInitPage</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>mainPage_toInit()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>41</x>
-     <y>41</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-93</x>
-     <y>41</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_toOrderPage</sender>
+   <sender>btn_toPurchasePage</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>popup_purchaseWindow()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>173</x>
-     <y>80</y>
+     <x>597</x>
+     <y>797</y>
     </hint>
     <hint type="destinationlabel">
      <x>690</x>
@@ -537,6 +464,54 @@ p, li { white-space: pre-wrap; }
     <hint type="destinationlabel">
      <x>748</x>
      <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_toDefaultMenuPage</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>mainPage_toDefault()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>99</x>
+     <y>12</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>736</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_toInitPage</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>mainPage_toInit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>41</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-93</x>
+     <y>41</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_toSelectPage</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>mainPage_toSelect()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>399</x>
+     <y>187</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>759</x>
+     <y>200</y>
     </hint>
    </hints>
   </connection>

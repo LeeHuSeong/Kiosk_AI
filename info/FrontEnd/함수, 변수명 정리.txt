@@ -4,7 +4,7 @@ qt designer(UI)			-> Code
 #QStackedWidget
 mainPage
 	=> 메인 프레임
-subPage
+menuPage
 	=> 메뉴 목록 프레임
 
 #Buttons
@@ -16,18 +16,20 @@ btn_toVoiceOrderPage 		-> mainPage_toVoice()
 	=> 음성주문화면으로 이동
 btn_toInitPage 			-> mainPage_toInit()
 	=> 시작화면으로 이동
+btn_toPurchasePage		-> popup_purchaseWindow()
+	=> 결제창 호출(ApplicationModal)
 
-btn_catalog_(1 ~ 7)		-> 예정
+btn_catalog_(1 ~ 5)		-> 예정
 	=> 메뉴목록 전환(전체, 커피, 음료 등)
 
-#Lcd
+#Lcd(예정)
 lcd_Timer
 	=> 타이머 표시
 lcd_Price
 	=> 총 가격 표시
 
-#Text
-cartArea
+#Table(예정)
+table_shoppingCart
 	=> 장바구니 내역
 
 
