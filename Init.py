@@ -39,7 +39,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
     #(결제창)으로 이동
     def popup_purchaseWindow(self) :
-        #Open New Window/modal
+        #Open New Window/ApplicationModal
         self.purchase_Window = Purchase.PurchaseWindow()
         self.purchase_Window.show()
 
