@@ -1,6 +1,7 @@
 import sys
 
 from PyQt5.QtWidgets import *
+from PyQt5.QtCore import *
 from PyQt5 import uic
 
 import Purchase
@@ -20,6 +21,25 @@ class MainWindow(QMainWindow, Init_Class) :
     def set_MainPage_Index(self, index) :
         self.mainPage.setCurrentIndex(index)
 
+#180초 타이머 설정
+    def timeout_Start(self) :
+        self.timer = QTimer(self)
+        self.timer.timeout.connect(self.update_timer)
+        self.timer.start(1000)
+        self.remaining_time = 5
+
+    def timeout_Return(self) :
+        QMessageBox.about(self, 'test2', 'test2')
+        self.set_MainPage_Index(0)
+
+    def update_timer(self) :
+        if self.remaining_time > 0 :
+            self.remaining_time -= 1
+            self.lcd_Timer.display(self.remaining_time)
+        else :
+            self.timer.stop()
+            self.timeout_Return()
+        
 #Buttons
     #(시작화면)으로 이동
     def mainPage_toInit(self) :
@@ -31,6 +51,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
     #(일반주문화면)으로 이동
     def mainPage_toDefault(self) :
+        self.timeout_Start()
         self.set_MainPage_Index(2)
 
     #(음성주문화면)으로 이동
