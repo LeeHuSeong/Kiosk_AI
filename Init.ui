@@ -44,7 +44,7 @@
       <item row="1" column="0">
        <widget class="QStackedWidget" name="mainPage">
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="initPage">
          <layout class="QGridLayout" name="gridLayout_5">
@@ -318,6 +318,18 @@ p, li { white-space: pre-wrap; }
                 <width>101</width>
                 <height>101</height>
                </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::Panel</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="midLineWidth">
+               <number>0</number>
+              </property>
+              <property name="intValue" stdset="0">
+               <number>180</number>
               </property>
              </widget>
             </item>
