@@ -17,7 +17,7 @@ totalPrice = 123456 #TEST
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
 #variables
-    timeoutTime = 3 #* 60
+    timeoutTime = 3 * 60
 
     def __init__(self):
         super().__init__()
