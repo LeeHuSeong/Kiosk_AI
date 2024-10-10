@@ -365,7 +365,7 @@ p, li { white-space: pre-wrap; }
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="btn_toPurchasePage">
+               <widget class="QPushButton" name="btn_toCheckOrderPage">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                   <horstretch>0</horstretch>
@@ -438,28 +438,12 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toVoice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>101</x>
-     <y>432</y>
+     <x>100</x>
+     <y>30</y>
     </hint>
     <hint type="destinationlabel">
      <x>701</x>
      <y>509</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_toPurchasePage</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>popup_purchaseWindow()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>597</x>
-     <y>797</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>690</x>
-     <y>779</y>
     </hint>
    </hints>
   </connection>
@@ -518,12 +502,28 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toSelect()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>399</x>
-     <y>187</y>
+     <x>100</x>
+     <y>30</y>
     </hint>
     <hint type="destinationlabel">
      <x>759</x>
      <y>200</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_toCheckOrderPage</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>popup_checkOrder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>565</x>
+     <y>755</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>717</x>
+     <y>743</y>
     </hint>
    </hints>
   </connection>
@@ -533,6 +533,6 @@ p, li { white-space: pre-wrap; }
   <slot>mainPage_toSelect()</slot>
   <slot>mainPage_toDefault()</slot>
   <slot>mainPage_toVoice()</slot>
-  <slot>popup_purchaseWindow()</slot>
+  <slot>popup_checkOrder()</slot>
  </slots>
 </ui>

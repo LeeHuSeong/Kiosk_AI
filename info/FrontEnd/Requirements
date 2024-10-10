@@ -1,2 +1,4 @@
+python 3.9.13
+
 pip install pyqt5designer
-pip install pyqt
+pip install pyqt5

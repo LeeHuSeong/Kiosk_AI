@@ -4,10 +4,13 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-import Purchase
+import check_Order as cO
 
 #UI Loading
 Init_Class = uic.loadUiType("Init.ui")[0]
+
+totalPrice = 0
+#totalPrice = 123456 #TEST
 
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
@@ -46,6 +49,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
     def stop_timer(self) :
         self.timer.stop()
+
         
 #Buttons
     #(시작화면)으로 이동
@@ -71,10 +75,17 @@ class MainWindow(QMainWindow, Init_Class) :
         self.set_MainPage_Index(3)
 
     #(결제창)으로 이동
-    def popup_purchaseWindow(self) :
-        #Open New Window/ApplicationModal
-        self.purchase_Window = Purchase.PurchaseWindow()
-        self.purchase_Window.show()
+    def popup_checkOrder(self) :
+        if totalPrice > 0 :
+            #Open New Window/ApplicationModal
+            checkOrder_Window = cO.OrderWindow()
+            checkOrder_Window.order_Price.display(totalPrice)
+
+            checkOrder_Window.showModal()
+
+        else :
+            #아무것도 주문하지 않았을 시 알림창
+            pass
 
 #프로그램 시작
 if __name__ == "__main__":
