@@ -4,14 +4,16 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-Order_Class = uic.loadUiType("UI/check_Order.ui")[0]
+timeoutMsg = uic.loadUiType("UI/timeoutMsgbox.ui")[0]
 
-class OrderWindow(QDialog, Order_Class) :
+class timeoutMsgBox(QDialog, timeoutMsg) :
     def __init__(self) :
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
         self.center()
+
+        self.timeoutFlag = True
 
     #창 종료까지 대기
     def showModal(self) :
@@ -25,3 +27,7 @@ class OrderWindow(QDialog, Order_Class) :
         self.move(qr.topLeft())
 
     #Buttons
+
+    def timeout_Addtime(self) :
+        self.timeoutFlag = False
+        self.close()

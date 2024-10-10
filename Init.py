@@ -5,15 +5,20 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 
 import check_Order as cO
+import timeoutMsgbox as tM
 
 #UI Loading
-Init_Class = uic.loadUiType("Init.ui")[0]
+Init_Class = uic.loadUiType("UI/Init.ui")[0]
 
 totalPrice = 0
-#totalPrice = 123456 #TEST
+totalPrice = 123456 #TEST
+
 
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
+#variables
+    timeoutTime = 3 #* 60
+
     def __init__(self):
         super().__init__()
         self.setupUi(self)
@@ -30,11 +35,12 @@ class MainWindow(QMainWindow, Init_Class) :
         self.set_MainPage_Index(0)
 
     #180초 타이머 설정
-    def timeout_Start(self) :
+    def timeout_Start(self, timeoutTime) :
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_timer)
         self.timer.start(1000)
-        self.remaining_time = 3 * 60
+        self.remaining_time = timeoutTime
+        self.lcd_Timer.display(self.remaining_time)
 
     def timeout_Return(self) :
         self.set_MainPage_Index(0)
@@ -45,11 +51,27 @@ class MainWindow(QMainWindow, Init_Class) :
             self.lcd_Timer.display(self.remaining_time)
         else :
             self.stop_timer()
-            self.timeout_Return()
+            timeoutMsgbox = tM.timeoutMsgBox()
+            timeoutMsgbox.showModal()
+
+            timeoutFlag = timeoutMsgbox.timeoutFlag
+            if(timeoutFlag == True) :
+                timeoutMsgbox.close()
+                self.timeout_Return()
+            
+            else :
+                timeoutMsgbox.close()
+                self.timeout_Start(self.timeoutTime)
+
+    def add_timer(self) :
+        self.remaining_time += self.timeoutTime
+        self.lcd_Timer.display(self.remaining_time)
+
+    def pause_timer(self) :
+        pass
 
     def stop_timer(self) :
         self.timer.stop()
-
         
 #Buttons
     #(시작화면)으로 이동
@@ -67,7 +89,7 @@ class MainWindow(QMainWindow, Init_Class) :
     #(일반주문화면)으로 이동
     def mainPage_toDefault(self) :
         self.lcd_Timer.display(180)
-        self.timeout_Start()
+        self.timeout_Start(self.timeoutTime)
         self.set_MainPage_Index(2)
 
     #(음성주문화면)으로 이동
@@ -80,7 +102,6 @@ class MainWindow(QMainWindow, Init_Class) :
             #Open New Window/ApplicationModal
             checkOrder_Window = cO.OrderWindow()
             checkOrder_Window.order_Price.display(totalPrice)
-
             checkOrder_Window.showModal()
 
         else :
@@ -91,5 +112,5 @@ class MainWindow(QMainWindow, Init_Class) :
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     myWindow = MainWindow()
-    myWindow.show()
+    myWindow.showFullScreen()
     app.exec_()
