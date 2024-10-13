@@ -10,20 +10,6 @@ import mysql.connector
 # 예시 메뉴 리스트
 menu_list = ["아메리카노", "라떼", "카푸치노", "커피", "카페라떼", "바닐라라떼", "연유라떼", "카라멜마끼아또", "카페모카", "시나몬", "캐모마일", "얼그레이", "복숭아아이스티"]
 
-# 유사어 사전
-synonyms = {
-    "커피": "아메리카노",
-    "라떼": "카페라떼",
-    "바닐라": "바닐라라떼",
-    "연유": "연유라떼",
-    "카라멜": "카라멜마끼아또",
-    "모카": "카페모카",
-    "시나몬": "카푸치노",
-    "허브차": "캐모마일",
-    "홍차": "얼그레이",
-    "아이스티": "복숭아아이스티"
-}
-
 # MySQL 데이터베이스 연결
 def connect_to_db():
     connection = mysql.connector.connect(
@@ -79,25 +65,11 @@ def update_order_count(menu):
     conn.close()
     return order_count_today
 
-# 음성 인식 후 텍스트에서 메뉴를 추출하는 함수
-def extract_menu(text, menu_list, synonyms):
-    # 먼저 유사어를 실제 메뉴로 변환
-    for synonym, actual_menu in synonyms.items():
-        if synonym in text:
-            text = text.replace(synonym, actual_menu)
-    
-    # 메뉴 리스트에서 매칭되는 메뉴 찾기
-    for menu in menu_list:
-        if re.search(menu, text):
-            return menu
-    return None
-
 # 음성 인식 후 메뉴를 추출
 recognized_text = recognize_speech()
 
 if recognized_text:
-    selected_menu = extract_menu(recognized_text, menu_list, synonyms)
-
+    selected_menu = extract_menu(recognized_text, menu_list)
     
     if selected_menu:
         print(f"선택된 메뉴: {selected_menu}")
