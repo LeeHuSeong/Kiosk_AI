@@ -6,6 +6,7 @@ from PyQt5 import uic
 
 import check_Order as cO
 import timeoutMsgbox as tM
+import testWidget as tW
 
 #UI Loading
 Init_Class = uic.loadUiType("UI/Init.ui")[0]
@@ -24,6 +25,8 @@ class MainWindow(QMainWindow, Init_Class) :
         self.setupUi(self)
 
         self.init_setting()
+
+        #self.menuWidget:tW.testWidget
 
 #def
     def set_MainPage_Index(self, index) :
@@ -91,6 +94,8 @@ class MainWindow(QMainWindow, Init_Class) :
         self.lcd_Timer.display(180)
         self.timeout_Start(self.timeoutTime)
         self.set_MainPage_Index(2)
+
+        self.menuWidget.setMenuItem("drink/ICE_아메리카노")
 
     #(음성주문화면)으로 이동
     def mainPage_toVoice(self) :
