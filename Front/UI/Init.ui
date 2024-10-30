@@ -450,7 +450,7 @@
                   </property>
                   <layout class="QHBoxLayout" name="horizontalLayout_2">
                    <item>
-                    <widget class="testWidget" name="menuWidget" native="true">
+                    <widget class="menuItem" name="menuWidget" native="true">
                      <property name="minimumSize">
                       <size>
                        <width>150</width>
@@ -466,7 +466,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="testWidget" name="widget" native="true">
+                    <widget class="menuItem" name="widget" native="true">
                      <property name="minimumSize">
                       <size>
                        <width>150</width>
@@ -485,7 +485,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="testWidget" name="widget_2" native="true">
+                    <widget class="menuItem" name="widget_2" native="true">
                      <property name="minimumSize">
                       <size>
                        <width>150</width>
@@ -504,7 +504,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="testWidget" name="widget_3" native="true">
+                    <widget class="menuItem" name="widget_3" native="true">
                      <property name="minimumSize">
                       <size>
                        <width>150</width>
@@ -523,7 +523,7 @@
                     </widget>
                    </item>
                    <item>
-                    <widget class="testWidget" name="widget_4" native="true">
+                    <widget class="menuItem" name="widget_4" native="true">
                      <property name="minimumSize">
                       <size>
                        <width>150</width>
@@ -779,9 +779,9 @@ p, li { white-space: pre-wrap; }
  </widget>
  <customwidgets>
   <customwidget>
-   <class>testWidget</class>
+   <class>menuItem</class>
    <extends>QWidget</extends>
-   <header>Front/testWidget.h</header>
+   <header>Front/menuItem.h</header>
    <container>1</container>
    <slots>
     <signal>clicked()</signal>
