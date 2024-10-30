@@ -293,7 +293,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="verticalSpacer_4">
+               <spacer name="verticalSpacer">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -325,7 +325,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="verticalSpacer_3">
+               <spacer name="verticalSpacer_2">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -357,7 +357,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="verticalSpacer_2">
+               <spacer name="verticalSpacer_3">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
@@ -389,7 +389,7 @@
                </widget>
               </item>
               <item>
-               <spacer name="verticalSpacer">
+               <spacer name="verticalSpacer_4">
                 <property name="orientation">
                  <enum>Qt::Vertical</enum>
                 </property>
