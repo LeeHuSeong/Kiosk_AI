@@ -4,12 +4,10 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-import check_Order as cO
-import timeoutMsgbox as tM
-import testWidget as tW
+import Front
 
 #UI Loading
-Init_Class = uic.loadUiType("UI/Init.ui")[0]
+Init_Class = uic.loadUiType("Front/UI/Init.ui")[0]
 
 totalPrice = 0
 totalPrice = 123456 #TEST
@@ -54,7 +52,7 @@ class MainWindow(QMainWindow, Init_Class) :
             self.lcd_Timer.display(self.remaining_time)
         else :
             self.stop_timer()
-            timeoutMsgbox = tM.timeoutMsgBox()
+            timeoutMsgbox = Front.timeoutMsgBox()
             timeoutMsgbox.showModal()
 
             timeoutFlag = timeoutMsgbox.timeoutFlag
@@ -105,7 +103,7 @@ class MainWindow(QMainWindow, Init_Class) :
     def popup_checkOrder(self) :
         if totalPrice > 0 :
             #Open New Window/ApplicationModal
-            checkOrder_Window = cO.OrderWindow()
+            checkOrder_Window = Front.OrderWindow()
             checkOrder_Window.order_Price.display(totalPrice)
             checkOrder_Window.showModal()
 

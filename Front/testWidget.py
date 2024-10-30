@@ -7,7 +7,7 @@ from PyQt5 import uic
 ##test
 from PyQt5.QtGui import QPixmap
 
-form_class = uic.loadUiType("UI/testWidget.ui")[0]
+form_class = uic.loadUiType("Front/UI/testWidget.ui")[0]
 
 class testWidget(QWidget, form_class) :
     def __init__(self, parent = None) :
