@@ -12,17 +12,21 @@ Init_Class = uic.loadUiType("Front/UI/Init.ui")[0]
 totalPrice = 0
 totalPrice = 123456 #TEST
 
+menuItemNums = 8
+
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
 #variables
     timeoutTime = 3 * 60
+    menuIndex = 0
+
+    
 
     def __init__(self):
         super().__init__()
         self.setupUi(self)
 
         self.init_setting()
-        #self.menuWidget:tW.testWidget
 
 #def
     def set_MainPage_Index(self, index) :
@@ -30,6 +34,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
     #기초 세팅값 설정
     def init_setting(self) :
+        self.setup_MenuList()
         self.lcd_Timer.display(180)
         self.set_MainPage_Index(0)
 
@@ -91,8 +96,6 @@ class MainWindow(QMainWindow, Init_Class) :
         self.timeout_Start(self.timeoutTime)
         self.set_MainPage_Index(2)
 
-        self.menuWidget.setMenuItem("drink/ICE_아메리카노")
-
     #(음성주문화면)으로 이동
     def mainPage_toVoice(self) :
         self.set_MainPage_Index(3)
@@ -108,6 +111,52 @@ class MainWindow(QMainWindow, Init_Class) :
         else :
             #아무것도 주문하지 않았을 시 알림창
             pass
+
+    #test
+    def setup_MenuList(self) :
+        self.load_MenuList()
+    
+    def load_MenuList(self) :
+        i = 0
+        db = Front.db
+        menuListLenth = len(db)
+
+        for item in db[self.menuIndex:self.menuIndex + 8] :
+            imgPath = item[1]
+            menuPrice = item[2]
+
+            #print(imgPath)
+            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem("'+imgPath+'", menuPrice)'
+            eval(menuStr)
+
+            print(self.menuIndex, self.menuIndex + 8, len(db))
+            i += 1
+    
+    def reset_MenuList(self) :
+        for i in range(1, 8) :
+            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItemDefault()'
+            eval(menuStr)
+
+    def btn_MenuPrev(self) :
+        self.menuIndex -= 8
+        self.reset_MenuList()
+        self.load_MenuList()
+
+        if self.menuIndex == 0 :
+            self.btn_menuPrev.setDisabled(True)
+        if self.menuIndex + 8 < len(Front.db) :
+            self.btn_menuNext.setEnabled(True)
+    
+    def btn_MenuNext(self) :
+        self.menuIndex += 8
+        self.reset_MenuList()
+        self.load_MenuList()
+
+        if self.menuIndex != 0 :
+            self.btn_menuPrev.setEnabled(True)
+        if self.menuIndex + 8 > len(Front.db) :
+            self.btn_menuNext.setDisabled(True)
+
 
 #프로그램 시작
 if __name__ == "__main__":
