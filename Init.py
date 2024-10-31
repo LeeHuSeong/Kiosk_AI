@@ -12,7 +12,6 @@ Init_Class = uic.loadUiType("Front/UI/Init.ui")[0]
 totalPrice = 0
 totalPrice = 123456 #TEST
 
-
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
 #variables
@@ -23,7 +22,6 @@ class MainWindow(QMainWindow, Init_Class) :
         self.setupUi(self)
 
         self.init_setting()
-
         #self.menuWidget:tW.testWidget
 
 #def
