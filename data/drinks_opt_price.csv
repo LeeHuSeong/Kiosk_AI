@@ -1,25 +1,25 @@
-choose_id,eng_name,kor_name,noraml_drink,mega_drink
-1,no_choice,ì„ íƒx,0,0
-2,coffee_weak,ì—°í•˜ê²Œ,0,0
-3,coffee_add_one,ìƒ· ì¶”ê°€,500,700
-4,coffee_add_two,2ìƒ· ì¶”ê°€,1000,1200
-5,decaffein_shot,ë””ì¹´í˜ì¸ ìƒ· ì¶”ê°€,1000,1200
-6,vanilia_syrup_add,ë°”ë‹ë¼ì‹œëŸ½ì¶”ê°€,500,700
-7,light_vanilia_changed,ë¼ì´íŠ¸ë°”ë‹ë¼ì‹œëŸ½ë³€ê²½,300,500
-8,light_vanilia_add,ë¼ì´íŠ¸ë°”ë‹ë¼ì‹œëŸ½ì¶”ê°€,800,1000
-9,syrup_add_c,ì¹´ë¼ë©œì‹œëŸ½ì¶”ê°€,500,700
-10,stevia_changed,ìŠ¤íƒœë¹„ì•„ë³€ê²½,300,500
-11,stevia_add,ìŠ¤íƒœë¹„ì•„ ì¶”ê°€ ,600,800
-12,choose_milk_a,ì•„ëª¬ë“œë°€í¬ë³€ê²½,500,700
-13,choose_milk_o,ì˜¤íŠ¸ë°€í¬ë³€ê²½,700,700
-14,honey_add,ê¿€ ì¶”ê°€,700,900
-15,whip_n,íœ˜í•‘(O),0,0
-16,whip_y,íœ˜í•‘(X),0,0
-17,cinnamon_y,ì‹œë‚˜ëª¬(O),0,0
-18,cinnamon_n,ì‹œë‚˜ëª¬(X),0,0
-19,coffee_weak_2,ë””ì¹´í˜ì¸ì—°í•˜ê²Œ,0,0
-20,no_choice_light_vanlia_add,ë°”ë‹ë¼ì‹œëŸ½ì¶”ê°€ì•ˆí•¨,0,0
-21,no_choice_light_vanlia_changed,ë¼ì´íŠ¸ë°”ë‹ë¼ì‹œëŸ½ë³€ê²½ì•ˆí•¨,0,0
-22,no_choice_stevia_add,ìŠ¤íƒœë¹„ì•„ì¶”ê°€ì„ íƒì•ˆí•¨,0,0
-23,no_choice_milk,ìš°ìœ ì„ íƒì•ˆí•¨,0,0
-24,no_choice_decaffein,ë””ì¹´í˜ì¸ì„ íƒì•ˆí•¨,0,0
+choose_id,eng_name,kor_name,add_price
+1,no_choice,¼±ÅÃx,0
+2,coffee_weak,¿¬ÇÏ°Ô,0
+3,coffee_add_one,¼¦ Ãß°¡,500
+4,coffee_add_two,2¼¦ Ãß°¡,1000
+5,decaffein_shot,µğÄ«ÆäÀÎ ¼¦ Ãß°¡,1000
+6,vanilia_syrup_add,¹Ù´Ò¶ó½Ã·´Ãß°¡,500
+7,light_vanilia_changed,¶óÀÌÆ®¹Ù´Ò¶ó½Ã·´º¯°æ,300
+8,light_vanilia_add,¶óÀÌÆ®¹Ù´Ò¶ó½Ã·´Ãß°¡,800
+9,syrup_add_c,Ä«¶ó¸á½Ã·´Ãß°¡,500
+10,stevia_changed,½ºÅÂºñ¾Æº¯°æ,300
+11,stevia_add,½ºÅÂºñ¾Æ Ãß°¡ ,600
+12,choose_milk_a,¾Æ¸óµå¹ĞÅ©º¯°æ,500
+13,choose_milk_o,¿ÀÆ®¹ĞÅ©º¯°æ,700
+14,honey_add,²Ü Ãß°¡,700
+15,whip_n,ÈÖÇÎ(O),0
+16,whip_y,ÈÖÇÎ(X),0
+17,cinnamon_y,½Ã³ª¸ó(O),0
+18,cinnamon_n,½Ã³ª¸ó(X),0
+19,coffee_weak_2,µğÄ«ÆäÀÎ¿¬ÇÏ°Ô,0
+20,no_choice_light_vanlia_add,¹Ù´Ò¶ó½Ã·´Ãß°¡¾ÈÇÔ,0
+21,no_choice_light_vanlia_changed,¶óÀÌÆ®¹Ù´Ò¶ó½Ã·´º¯°æ¾ÈÇÔ,0
+22,no_choice_stevia_add,½ºÅÂºñ¾ÆÃß°¡¼±ÅÃ¾ÈÇÔ,0
+23,no_choice_milk,¿ìÀ¯¼±ÅÃ¾ÈÇÔ,0
+24,no_choice_decaffein,µğÄ«ÆäÀÎ¼±ÅÃ¾ÈÇÔ,0
