@@ -2,7 +2,6 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-##test
 from PyQt5.QtGui import QPixmap
 
 form_class = uic.loadUiType("Front/UI/menuItem.ui")[0]
@@ -18,11 +17,11 @@ class menuItem(QWidget, form_class) :
 
     def setMenuItem(self, imgPath, menuPrice) :
         imgPath = imgPath
-        print(imgPath)
+        #print(imgPath)
         src = QPixmap(imgPath).scaled(150, 150)
         self.menuImg.setPixmap(src)
 
-        menu = imgPath.split('/')[3]
+        menu = imgPath.split('\\')[2]
         self.menuName.setText(menu)
         self.menuPrice.setText("\\" + str(menuPrice))
     
@@ -32,6 +31,7 @@ class menuItem(QWidget, form_class) :
         self.menuImg.setPixmap(src)
         menu = imgPath.split('/')[2]
         self.menuName.setText(menu)
+        self.menuPrice.setText("\\0")
 
     def addShoppingCart(self) :
         print("test message")

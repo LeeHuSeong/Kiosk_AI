@@ -5,14 +5,17 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 
 import Front
+import data_query
 
 #UI Loading
 Init_Class = uic.loadUiType("Front/UI/Init.ui")[0]
 
+#init_setting
 totalPrice = 0
 totalPrice = 123456 #TEST
 
 menuItemNums = 8
+db = data_query.menu_price_path()
 
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
@@ -117,17 +120,14 @@ class MainWindow(QMainWindow, Init_Class) :
     def load_MenuList(self) :
         i = 0
         db = Front.db
-        menuListLenth = len(db)
 
         for item in db[self.menuIndex:self.menuIndex + 8] :
-            imgPath = item[1]
-            menuPrice = item[2]
+            imgPath = item[2]
+            menuPrice = item[1] #Do not Delete
 
-            #print(imgPath)
             menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem("'+imgPath+'", menuPrice)'
             eval(menuStr)
 
-            print(self.menuIndex, self.menuIndex + 8, len(db))
             i += 1
     
     def reset_MenuList(self) :
