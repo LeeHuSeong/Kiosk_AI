@@ -25,5 +25,3 @@ def close_connection(conn):
         print("MySQL 데이터베이스와의 연결이 종료됨.")
 
 
-conn.commit()
-conn.close()
