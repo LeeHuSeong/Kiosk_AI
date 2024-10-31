@@ -20,15 +20,12 @@ class MainWindow(QMainWindow, Init_Class) :
     timeoutTime = 3 * 60
     menuIndex = 0
 
-    
-
     def __init__(self):
         super().__init__()
         self.setupUi(self)
 
         self.init_setting()
 
-#def
     def set_MainPage_Index(self, index) :
         self.mainPage.setCurrentIndex(index)
 
@@ -38,7 +35,7 @@ class MainWindow(QMainWindow, Init_Class) :
         self.lcd_Timer.display(180)
         self.set_MainPage_Index(0)
 
-    #180초 타이머 설정
+    #timeOut
     def timeout_Start(self, timeoutTime) :
         self.timer = QTimer(self)
         self.timer.timeout.connect(self.update_timer)
@@ -76,7 +73,8 @@ class MainWindow(QMainWindow, Init_Class) :
 
     def stop_timer(self) :
         self.timer.stop()
-        
+    #timeOut END
+
 #Buttons
     #(시작화면)으로 이동
     def mainPage_toInit(self) :
@@ -112,7 +110,7 @@ class MainWindow(QMainWindow, Init_Class) :
             #아무것도 주문하지 않았을 시 알림창
             pass
 
-    #test
+    #menuList
     def setup_MenuList(self) :
         self.load_MenuList()
     
@@ -156,7 +154,7 @@ class MainWindow(QMainWindow, Init_Class) :
             self.btn_menuPrev.setEnabled(True)
         if self.menuIndex + 8 > len(Front.db) :
             self.btn_menuNext.setDisabled(True)
-
+    #menuList END
 
 #프로그램 시작
 if __name__ == "__main__":
