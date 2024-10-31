@@ -4,15 +4,13 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-import check_Order as cO
-import timeoutMsgbox as tM
+import Front
 
 #UI Loading
-Init_Class = uic.loadUiType("UI/Init.ui")[0]
+Init_Class = uic.loadUiType("Front/UI/Init.ui")[0]
 
 totalPrice = 0
 totalPrice = 123456 #TEST
-
 
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
@@ -24,6 +22,7 @@ class MainWindow(QMainWindow, Init_Class) :
         self.setupUi(self)
 
         self.init_setting()
+        #self.menuWidget:tW.testWidget
 
 #def
     def set_MainPage_Index(self, index) :
@@ -51,7 +50,7 @@ class MainWindow(QMainWindow, Init_Class) :
             self.lcd_Timer.display(self.remaining_time)
         else :
             self.stop_timer()
-            timeoutMsgbox = tM.timeoutMsgBox()
+            timeoutMsgbox = Front.timeoutMsgBox()
             timeoutMsgbox.showModal()
 
             timeoutFlag = timeoutMsgbox.timeoutFlag
@@ -92,6 +91,8 @@ class MainWindow(QMainWindow, Init_Class) :
         self.timeout_Start(self.timeoutTime)
         self.set_MainPage_Index(2)
 
+        self.menuWidget.setMenuItem("drink/ICE_아메리카노")
+
     #(음성주문화면)으로 이동
     def mainPage_toVoice(self) :
         self.set_MainPage_Index(3)
@@ -100,7 +101,7 @@ class MainWindow(QMainWindow, Init_Class) :
     def popup_checkOrder(self) :
         if totalPrice > 0 :
             #Open New Window/ApplicationModal
-            checkOrder_Window = cO.OrderWindow()
+            checkOrder_Window = Front.OrderWindow()
             checkOrder_Window.order_Price.display(totalPrice)
             checkOrder_Window.showModal()
 
