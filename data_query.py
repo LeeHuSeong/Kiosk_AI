@@ -6,7 +6,7 @@ conn=create_connection()
 #리스트 /table (data join img_path) / [[메뉴이름, 가격,이미지경로,카테고리] ]
 def get_menu_price_path_category():
     #conn에 대한 cursor를 만드는 함수
-    cur= cursor(conn)
+    cur = cursor(conn)
     #Query
     query="""
             select path.menu_name,data.가격,path.img_path,data.분류
@@ -26,7 +26,7 @@ def get_menu_price_path_category():
 #딕셔너리 /table (drinks_menu & drinks_opt_price) / {'메뉴':[옵션eng,옵션kor,가격] }
 def get_menu_option():
     #conn에 대한 cursor를 만드는 함수
-    cur= cursor(conn)
+    cur = cursor(conn)
 
     #Query: 메뉴이름, 가격, 옵션들
     query_menu="""

@@ -4,7 +4,7 @@ from PyQt5 import uic
 
 from PyQt5.QtGui import QPixmap
 
-form_class = uic.loadUiType("Front/UI/menuItem.ui")[0]
+form_class = uic.loadUiType("Front/menu/menuItem.ui")[0]
 
 class menuItem(QWidget, form_class) :
     def __init__(self, parent = None) :
