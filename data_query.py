@@ -12,6 +12,7 @@ def get_menu_price_path_category():
             select path.menu_name,data.가격,path.img_path,data.분류
             from drinks_img_path path join data data on path.id=data.no
           """
+            #형식: 메뉴이름, 가격, 이미지경로, 분류
     ##Query / 튜플로 데이터 가져옴 / 튜플 -> 리스트 변환
     cur.execute(query)
     result_tuple = cur.fetchall()

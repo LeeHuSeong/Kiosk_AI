@@ -15,13 +15,14 @@ totalPrice = 0
 totalPrice = 123456 #TEST
 
 menuItemNums = 8
-db = data_query.menu_price_path()
 
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
 #variables
     timeoutTime = 3 * 60
     menuIndex = 0
+    menuType = 'ALL'
+    db = Front.get_db(menuType)
 
     def __init__(self):
         super().__init__()
@@ -34,9 +35,9 @@ class MainWindow(QMainWindow, Init_Class) :
 
     #기초 세팅값 설정
     def init_setting(self) :
-        self.setup_MenuList()
         self.lcd_Timer.display(180)
         self.set_MainPage_Index(0)
+        self.setup_MenuList()
 
     #timeOut
     def timeout_Start(self, timeoutTime) :
@@ -84,8 +85,10 @@ class MainWindow(QMainWindow, Init_Class) :
         try :
             self.stop_timer()
             self.set_MainPage_Index(0)
+            self.setup_MenuList()
         except : 
             self.set_MainPage_Index(0)
+            self.setup_MenuList()
 
     #(일반주문, 음성주문 선택화면)으로 이동
     def mainPage_toSelect(self) :
@@ -115,16 +118,30 @@ class MainWindow(QMainWindow, Init_Class) :
 
     #menuList
     def setup_MenuList(self) :
-        self.load_MenuList()
+        self.menuIndex = 0
+        self.menuType = 'ALL'
+        self.load_MenuList(self.menuType)
     
-    def load_MenuList(self) :
+    def load_MenuList(self, menuType) :
+        self.reset_MenuList()
         i = 0
+
         db = Front.get_db(menuType)
+
+        if self.menuIndex == 0 :
+            self.btn_menuPrev.setDisabled(True)
+        else :
+            self.btn_menuPrev.setEnabled(True)
+
+        if self.menuIndex + 8 < len(db) :
+            self.btn_menuNext.setEnabled(True)
+        else :
+            self.btn_menuNext.setDisabled(True)
 
         for item in db[self.menuIndex:self.menuIndex + 8] :
             imgPath = item[2]
-            menuPrice = item[1] #Do not Delete
 
+            menuPrice = item[1] #Do not Delete
             menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem("'+imgPath+'", menuPrice)'
             eval(menuStr)
 
@@ -137,24 +154,41 @@ class MainWindow(QMainWindow, Init_Class) :
 
     def btn_MenuPrev(self) :
         self.menuIndex -= 8
-        self.reset_MenuList()
-        self.load_MenuList()
-
-        if self.menuIndex == 0 :
-            self.btn_menuPrev.setDisabled(True)
-        if self.menuIndex + 8 < len(Front.db) :
-            self.btn_menuNext.setEnabled(True)
+        self.load_MenuList(self.menuType)
     
     def btn_MenuNext(self) :
         self.menuIndex += 8
-        self.reset_MenuList()
-        self.load_MenuList()
+        self.load_MenuList(self.menuType)
 
-        if self.menuIndex != 0 :
-            self.btn_menuPrev.setEnabled(True)
-        if self.menuIndex + 8 > len(Front.db) :
-            self.btn_menuNext.setDisabled(True)
     #menuList END
+
+    #btnMenu
+
+    def btn_MenuALL(self) :
+        self.menuIndex = 0
+        self.menuType = 'ALL'
+        self.load_MenuList(self.menuType)
+    
+    def btn_MenuCoffee(self) :
+        self.menuIndex = 0
+        self.menuType = 'Coffee'
+        self.load_MenuList(self.menuType)
+
+    def btn_MenuDeCaffeine(self) :
+        self.menuIndex = 0
+        self.menuType = 'DeCaffeine'
+        self.load_MenuList(self.menuType)
+
+    def btn_MenuDrinks(self) :
+        self.menuIndex = 0
+        self.menuType = 'Drinks'
+        self.load_MenuList(self.menuType)
+
+    def btn_MenuDessert(self) :
+        self.menuIndex = 0
+        self.menuType = 'Dessert'
+        self.load_MenuList(self.menuType)
+
 
 #프로그램 시작
 if __name__ == "__main__":
