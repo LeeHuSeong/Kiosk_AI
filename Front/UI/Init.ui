@@ -274,6 +274,19 @@
                <number>0</number>
               </property>
               <item>
+               <spacer name="verticalSpacer_9">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
                <widget class="QPushButton" name="btn_catalog_1">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -438,7 +451,7 @@
                </spacer>
               </item>
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_2">
+               <layout class="QHBoxLayout" name="menuListLayout0">
                 <property name="spacing">
                  <number>6</number>
                 </property>
@@ -605,7 +618,7 @@
                </spacer>
               </item>
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_3">
+               <layout class="QHBoxLayout" name="menuListLayout1">
                 <item>
                  <spacer name="horizontalSpacer_9">
                   <property name="orientation">
@@ -766,7 +779,7 @@
                </spacer>
               </item>
               <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <layout class="QHBoxLayout" name="menuBtnLayout0">
                 <item>
                  <widget class="QPushButton" name="btn_menuPrev">
                   <property name="enabled">
@@ -833,13 +846,49 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QTableWidget" name="table_shoppingCart">
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>200</height>
-               </size>
+             <widget class="QScrollArea" name="scrollArea">
+              <property name="widgetResizable">
+               <bool>true</bool>
               </property>
+              <widget class="QWidget" name="scrollAreaWidgetContents">
+               <property name="geometry">
+                <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>949</width>
+                 <height>200</height>
+                </rect>
+               </property>
+               <widget class="cartWidget" name="cartWidget_0" native="true">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>931</width>
+                  <height>202</height>
+                 </rect>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+               </widget>
+               <widget class="QScrollBar" name="verticalScrollBar">
+                <property name="geometry">
+                 <rect>
+                  <x>930</x>
+                  <y>0</y>
+                  <width>16</width>
+                  <height>201</height>
+                 </rect>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+               </widget>
+              </widget>
              </widget>
             </item>
             <item>
@@ -1063,6 +1112,12 @@ p, li { white-space: pre-wrap; }
     <signal>clicked()</signal>
    </slots>
   </customwidget>
+  <customwidget>
+   <class>cartWidget</class>
+   <extends>QWidget</extends>
+   <header>Front/cartWidget.h</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
  <resources/>
  <connections>
@@ -1153,8 +1208,8 @@ p, li { white-space: pre-wrap; }
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>111</x>
-     <y>31</y>
+     <x>40</x>
+     <y>32</y>
     </hint>
     <hint type="destinationlabel">
      <x>1351</x>

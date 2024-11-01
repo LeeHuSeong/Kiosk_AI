@@ -119,7 +119,7 @@ class MainWindow(QMainWindow, Init_Class) :
     
     def load_MenuList(self) :
         i = 0
-        db = Front.db
+        db = Front.get_db(menuType)
 
         for item in db[self.menuIndex:self.menuIndex + 8] :
             imgPath = item[2]
