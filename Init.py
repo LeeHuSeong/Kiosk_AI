@@ -5,22 +5,19 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 
 import Front
-#import data_query
 
 #UI Loading
 Init_Class = uic.loadUiType("Front/UI/Init.ui")[0]
-
-#init_setting
-totalPrice = 0
-totalPrice = 123456 #TEST
-
-menuItemNums = 8
 
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
 #variables
     menuIndex = 0
     menuType = 'ALL'
+    totalPrice = 0
+
+    totalPrice = 123456 #will remove
+
     db = Front.get_db(menuType)
 
     def __init__(self):
@@ -29,24 +26,23 @@ class MainWindow(QMainWindow, Init_Class) :
 
         self.init_setting()
 
-    #기초 세팅값 설정
+    #Initial_settings (execute once)
     def init_setting(self) :
         self.timer = Front.timeoutClass(self)
         self.lcd_Timer.display(180)
         self.set_MainPage_Index(0)
         self.setup_MenuList()
-
-    #testAREA
+        
+    #need to change def name
     def add_timer(self) :
         self.timer.remain_Time += self.timer.timeout_Time
         self.lcd_Timer.display(self.timer.remain_Time)
-    #testAREA_END
 
     def set_MainPage_Index(self, index) :
         self.mainPage.setCurrentIndex(index)
 
 #Buttons
-    #(시작화면)으로 이동
+    #move to initPage
     def mainPage_toInit(self) :
         try :
             self.timer.timeout_Stop()
@@ -56,36 +52,34 @@ class MainWindow(QMainWindow, Init_Class) :
             self.set_MainPage_Index(0)
             self.setup_MenuList()
 
-    #(일반주문, 음성주문 선택화면)으로 이동
+    #move to selectPage
     def mainPage_toSelect(self) :
         self.set_MainPage_Index(1)
 
-    #(일반주문화면)으로 이동
+    #move to defaultMenuPage
     def mainPage_toDefault(self) :
         self.lcd_Timer.display(180)
         self.timer.timeout_Start(self.timer.timeout_Time)
         self.set_MainPage_Index(2)
 
-    #(음성주문화면)으로 이동
+    #move to voiceOrderPage
     def mainPage_toVoice(self) :
         self.set_MainPage_Index(3)
 
-    #(결제창)으로 이동
+    #open checkOrderDialog(결제최종확인)
     def popup_checkOrder(self) :
-        if totalPrice > 0 :
-            #timer pause/resume
+        if self.totalPrice > 0 :
             self.timer.timeout_Pause()
 
-            #Open New Window/ApplicationModal
             checkOrder_Window = Front.OrderWindow(self)
-            checkOrder_Window.order_Price.display(totalPrice)
+            checkOrder_Window.order_Price.display(self.totalPrice)
             checkOrder_Window.showModal()
 
         else :
             #아무것도 주문하지 않았을 시 알림창
             pass
 
-    #menuList
+    #menuList//NEED TO REFACTOR
     def setup_MenuList(self) :
         self.menuIndex = 0
         self.menuType = 'ALL'
@@ -131,7 +125,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
     #menuList END
 
-    #btnMenu
+    #btnMenu//NEED TO REFACTOR
 
     def btn_MenuALL(self) :
         self.menuIndex = 0
@@ -158,8 +152,9 @@ class MainWindow(QMainWindow, Init_Class) :
         self.menuType = 'Dessert'
         self.load_MenuList(self.menuType)
 
+###########################
+###########################
 
-#프로그램 시작
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     myWindow = MainWindow()
