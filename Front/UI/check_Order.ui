@@ -147,17 +147,20 @@
    <sender>order_Cancel</sender>
    <signal>clicked()</signal>
    <receiver>Dialog</receiver>
-   <slot>close()</slot>
+   <slot>check_Order_Close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>355</x>
-     <y>719</y>
+     <x>339</x>
+     <y>741</y>
     </hint>
     <hint type="destinationlabel">
-     <x>387</x>
-     <y>829</y>
+     <x>391</x>
+     <y>805</y>
     </hint>
    </hints>
   </connection>
  </connections>
+ <slots>
+  <slot>check_Order_Close()</slot>
+ </slots>
 </ui>

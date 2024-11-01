@@ -5,7 +5,7 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 
 import Front
-import data_query
+#import data_query
 
 #UI Loading
 Init_Class = uic.loadUiType("Front/UI/Init.ui")[0]
@@ -19,7 +19,6 @@ menuItemNums = 8
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
 #variables
-    timeoutTime = 3 * 60
     menuIndex = 0
     menuType = 'ALL'
     db = Front.get_db(menuType)
@@ -30,60 +29,27 @@ class MainWindow(QMainWindow, Init_Class) :
 
         self.init_setting()
 
-    def set_MainPage_Index(self, index) :
-        self.mainPage.setCurrentIndex(index)
-
     #기초 세팅값 설정
     def init_setting(self) :
+        self.timer = Front.timeoutClass(self)
         self.lcd_Timer.display(180)
         self.set_MainPage_Index(0)
         self.setup_MenuList()
 
-    #timeOut
-    def timeout_Start(self, timeoutTime) :
-        self.timer = QTimer(self)
-        self.timer.timeout.connect(self.update_timer)
-        self.timer.start(1000)
-        self.remaining_time = timeoutTime
-        self.lcd_Timer.display(self.remaining_time)
-
-    def timeout_Return(self) :
-        self.set_MainPage_Index(0)
-
-    def update_timer(self) :
-        if self.remaining_time > 0 :
-            self.remaining_time -= 1
-            self.lcd_Timer.display(self.remaining_time)
-        else :
-            self.stop_timer()
-            timeoutMsgbox = Front.timeoutMsgBox()
-            timeoutMsgbox.showModal()
-
-            timeoutFlag = timeoutMsgbox.timeoutFlag
-            if(timeoutFlag == True) :
-                timeoutMsgbox.close()
-                self.timeout_Return()
-            
-            else :
-                timeoutMsgbox.close()
-                self.timeout_Start(self.timeoutTime)
-
+    #testAREA
     def add_timer(self) :
-        self.remaining_time += self.timeoutTime
-        self.lcd_Timer.display(self.remaining_time)
+        self.timer.remain_Time += self.timer.timeout_Time
+        self.lcd_Timer.display(self.timer.remain_Time)
+    #testAREA_END
 
-    def pause_timer(self) :
-        pass
-
-    def stop_timer(self) :
-        self.timer.stop()
-    #timeOut END
+    def set_MainPage_Index(self, index) :
+        self.mainPage.setCurrentIndex(index)
 
 #Buttons
     #(시작화면)으로 이동
     def mainPage_toInit(self) :
         try :
-            self.stop_timer()
+            self.timer.timeout_Stop()
             self.set_MainPage_Index(0)
             self.setup_MenuList()
         except : 
@@ -97,7 +63,7 @@ class MainWindow(QMainWindow, Init_Class) :
     #(일반주문화면)으로 이동
     def mainPage_toDefault(self) :
         self.lcd_Timer.display(180)
-        self.timeout_Start(self.timeoutTime)
+        self.timer.timeout_Start(self.timer.timeout_Time)
         self.set_MainPage_Index(2)
 
     #(음성주문화면)으로 이동
@@ -107,8 +73,11 @@ class MainWindow(QMainWindow, Init_Class) :
     #(결제창)으로 이동
     def popup_checkOrder(self) :
         if totalPrice > 0 :
+            #timer pause/resume
+            self.timer.timeout_Pause()
+
             #Open New Window/ApplicationModal
-            checkOrder_Window = Front.OrderWindow()
+            checkOrder_Window = Front.OrderWindow(self)
             checkOrder_Window.order_Price.display(totalPrice)
             checkOrder_Window.showModal()
 
