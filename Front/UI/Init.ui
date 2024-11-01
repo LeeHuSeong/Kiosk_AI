@@ -1281,6 +1281,86 @@ p, li { white-space: pre-wrap; }
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_catalog_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuALL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>224</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-177</x>
+     <y>220</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_catalog_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuCoffee()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>386</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-162</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_catalog_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuDrinks()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>68</x>
+     <y>645</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-197</x>
+     <y>631</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_catalog_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuDessert()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>92</x>
+     <y>803</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-212</x>
+     <y>771</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_catalog_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuDeCaffeine()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>51</x>
+     <y>501</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-69</x>
+     <y>512</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>mainPage_toInit()</slot>
@@ -1292,5 +1372,11 @@ p, li { white-space: pre-wrap; }
   <slot>menu1_Clicked()</slot>
   <slot>btn_MenuPrev()</slot>
   <slot>btn_MenuNext()</slot>
+  <slot>btn_Menu(ALL)</slot>
+  <slot>btn_MenuALL()</slot>
+  <slot>btn_MenuCoffee()</slot>
+  <slot>btn_MenuDeCaffeine()</slot>
+  <slot>btn_MenuDrinks()</slot>
+  <slot>btn_MenuDessert()</slot>
  </slots>
 </ui>
