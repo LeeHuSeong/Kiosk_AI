@@ -7,7 +7,7 @@ import data_query
 def get_db(menuType) :
     db = data_query.get_menu_price_path_category()
     newdb = []
-    print(menuType)
+    #print(menuType)
 
     if menuType == 'ALL' :
         newdb = db
