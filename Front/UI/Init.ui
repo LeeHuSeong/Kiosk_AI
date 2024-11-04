@@ -1106,7 +1106,7 @@ p, li { white-space: pre-wrap; }
   <customwidget>
    <class>menuItem</class>
    <extends>QWidget</extends>
-   <header>Front/menu/menu_Item.h</header>
+   <header>front/menu/menu_Item.h</header>
    <container>1</container>
    <slots>
     <signal>clicked()</signal>
@@ -1115,7 +1115,7 @@ p, li { white-space: pre-wrap; }
   <customwidget>
    <class>cartWidget</class>
    <extends>QWidget</extends>
-   <header>Front/cartWidget.h</header>
+   <header>front/cartWidget.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

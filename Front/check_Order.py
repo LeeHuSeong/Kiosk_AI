@@ -4,7 +4,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-Order_Class = uic.loadUiType("Front/UI/check_Order.ui")[0]
+Order_Class = uic.loadUiType("front/UI/check_Order.ui")[0]
 
 class OrderWindow(QDialog, Order_Class) :
     def __init__(self, parent) :

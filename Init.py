@@ -4,10 +4,10 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-import Front
+import front
 
 #UI Loading
-Init_Class = uic.loadUiType("Front/UI/Init.ui")[0]
+Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
 
 #메인윈도우 설정
 class MainWindow(QMainWindow, Init_Class) :
@@ -18,7 +18,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
     totalPrice = 123456 #will remove
 
-    db = Front.get_db(menuType)
+    db = front.get_db(menuType)
 
     def __init__(self):
         super().__init__()
@@ -28,7 +28,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
     #Initial_settings (execute once)
     def init_setting(self) :
-        self.timer = Front.timeoutClass(self)
+        self.timer = front.timeoutClass(self)
         self.lcd_Timer.display(180)
         self.set_MainPage_Index(0)
         self.setup_MenuList()
@@ -71,7 +71,7 @@ class MainWindow(QMainWindow, Init_Class) :
         if self.totalPrice > 0 :
             self.timer.timeout_Pause()
 
-            checkOrder_Window = Front.OrderWindow(self)
+            checkOrder_Window = front.OrderWindow(self)
             checkOrder_Window.order_Price.display(self.totalPrice)
             checkOrder_Window.showModal()
 
@@ -89,7 +89,7 @@ class MainWindow(QMainWindow, Init_Class) :
         self.reset_MenuList()
         i = 0
 
-        db = Front.get_db(menuType)
+        db = front.get_db(menuType)
 
         if self.menuIndex == 0 :
             self.btn_menuPrev.setDisabled(True)
@@ -152,8 +152,7 @@ class MainWindow(QMainWindow, Init_Class) :
         self.menuType = 'Dessert'
         self.load_MenuList(self.menuType)
 
-###########################
-###########################
+######################################################
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
