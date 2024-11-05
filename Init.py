@@ -6,6 +6,9 @@ from PyQt5 import uic
 
 import front
 
+##TEST
+data = ['테스트 메뉴', '옵션 없음', 1, 2000]
+
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
 
@@ -28,11 +31,20 @@ class MainWindow(QMainWindow, Init_Class) :
 
     #Initial_settings (execute once)
     def init_setting(self) :
+        #Timer_Init
         self.timer = front.timeoutClass(self)
         self.lcd_Timer.display(180)
+        #CartList_Init
+        self.cartList = front.cartItem(self.cart_List, data)
+
         self.set_MainPage_Index(0)
         self.setup_MenuList()
         
+    ####################
+    def btnTEST(self) :
+        self.cartList.cartItem_Add(data)
+    ####################
+
     #need to change def name
     def add_timer(self) :
         self.timer.remain_Time += self.timer.timeout_Time

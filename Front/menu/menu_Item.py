@@ -13,13 +13,13 @@ class menuItem(QWidget, form_class) :
 
         item = "defaultImage"
         src = QPixmap("./img/"+ item +".jpg").scaled(150, 150)
-        self.menuImg.setPixmap(src)
+        self.menuImg.setIcon(src)
 
     def setMenuItem(self, imgPath, menuPrice) :
         imgPath = imgPath
         #print(imgPath)
         src = QPixmap(imgPath).scaled(150, 150)
-        self.menuImg.setPixmap(src)
+        self.menuImg.setIcon(src)
 
         menu = imgPath.split('\\')[2]
         self.menuName.setText(menu)
@@ -28,7 +28,7 @@ class menuItem(QWidget, form_class) :
     def setMenuItemDefault(self) :
         imgPath = "./img/defaultImage.jpg"
         src = QPixmap(imgPath).scaled(150, 150)
-        self.menuImg.setPixmap(src)
+        self.menuImg.setIcon(src)
         menu = imgPath.split('/')[2]
         self.menuName.setText(menu)
         self.menuPrice.setText("\\0")

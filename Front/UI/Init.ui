@@ -846,49 +846,25 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QScrollArea" name="scrollArea">
-              <property name="widgetResizable">
-               <bool>true</bool>
+             <widget class="QListWidget" name="cart_List">
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
               </property>
-              <widget class="QWidget" name="scrollAreaWidgetContents">
-               <property name="geometry">
-                <rect>
-                 <x>0</x>
-                 <y>0</y>
-                 <width>949</width>
-                 <height>200</height>
-                </rect>
-               </property>
-               <widget class="cartWidget" name="cartWidget_0" native="true">
-                <property name="geometry">
-                 <rect>
-                  <x>0</x>
-                  <y>0</y>
-                  <width>931</width>
-                  <height>202</height>
-                 </rect>
-                </property>
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-               </widget>
-               <widget class="QScrollBar" name="verticalScrollBar">
-                <property name="geometry">
-                 <rect>
-                  <x>930</x>
-                  <y>0</y>
-                  <width>16</width>
-                  <height>201</height>
-                 </rect>
-                </property>
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-               </widget>
-              </widget>
+              <property name="isWrapping" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="resizeMode">
+               <enum>QListView::Fixed</enum>
+              </property>
+              <property name="layoutMode">
+               <enum>QListView::SinglePass</enum>
+              </property>
+              <property name="gridSize">
+               <size>
+                <width>0</width>
+                <height>50</height>
+               </size>
+              </property>
              </widget>
             </item>
             <item>
@@ -977,6 +953,13 @@
                 </property>
                 <property name="text">
                  <string>홈으로</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="text">
+                 <string>PushButton</string>
                 </property>
                </widget>
               </item>
@@ -1112,12 +1095,6 @@ p, li { white-space: pre-wrap; }
     <signal>clicked()</signal>
    </slots>
   </customwidget>
-  <customwidget>
-   <class>cartWidget</class>
-   <extends>QWidget</extends>
-   <header>front/cartWidget.h</header>
-   <container>1</container>
-  </customwidget>
  </customwidgets>
  <resources/>
  <connections>
@@ -1144,8 +1121,8 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toSelect()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>65</x>
-     <y>18</y>
+     <x>113</x>
+     <y>66</y>
     </hint>
     <hint type="destinationlabel">
      <x>759</x>
@@ -1208,8 +1185,8 @@ p, li { white-space: pre-wrap; }
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>40</x>
-     <y>32</y>
+     <x>1079</x>
+     <y>34</y>
     </hint>
     <hint type="destinationlabel">
      <x>1351</x>
@@ -1224,8 +1201,8 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toVoice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>99</x>
-     <y>29</y>
+     <x>101</x>
+     <y>573</y>
     </hint>
     <hint type="destinationlabel">
      <x>701</x>
@@ -1361,6 +1338,22 @@ p, li { white-space: pre-wrap; }
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnTEST()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>161</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>-45</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>mainPage_toInit()</slot>
@@ -1378,5 +1371,6 @@ p, li { white-space: pre-wrap; }
   <slot>btn_MenuDeCaffeine()</slot>
   <slot>btn_MenuDrinks()</slot>
   <slot>btn_MenuDessert()</slot>
+  <slot>btnTEST()</slot>
  </slots>
 </ui>

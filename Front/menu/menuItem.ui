@@ -69,7 +69,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="menuImg">
+        <widget class="QPushButton" name="menuImg">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
@@ -77,10 +77,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>DefaultImage</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <string>defaultImage</string>
          </property>
         </widget>
        </item>
