@@ -5,6 +5,7 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 
 import front
+import data_query#TEST
 
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
@@ -131,10 +132,11 @@ class MainWindow(QMainWindow, Init_Class) :
             self.btn_menuNext.setDisabled(True)
 
         for item in db[self.menuIndex:self.menuIndex + 8] :
-            imgPath = item[2]
 
-            menuPrice = item[1] #Do not Delete
-            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem("'+imgPath+'", menuPrice, self)'
+            #imgPath = item[2]
+            #menuPrice = item[1] #Do not Delete
+
+            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem(item, self)'
             eval(menuStr)
 
             i += 1
@@ -180,6 +182,17 @@ class MainWindow(QMainWindow, Init_Class) :
         self.menuIndex = 0
         self.menuType = 'Dessert'
         self.load_MenuList(self.menuType)
+
+######################################################
+
+    def btnTEST(self) :
+        testData = data_query.get_menu_option()
+
+        for key, data in testData.items() :
+            testOptionList = data
+            testOptionData = [key, data]
+            print(testOptionData)
+
 
 ######################################################
 

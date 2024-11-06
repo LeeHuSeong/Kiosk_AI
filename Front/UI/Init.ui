@@ -975,6 +975,13 @@
                </widget>
               </item>
               <item>
+               <widget class="QPushButton" name="pushButton">
+                <property name="text">
+                 <string>PushButton</string>
+                </property>
+               </widget>
+              </item>
+              <item>
                <widget class="QLabel" name="label">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -1362,6 +1369,22 @@ p, li { white-space: pre-wrap; }
     <hint type="destinationlabel">
      <x>1221</x>
      <y>960</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnTEST()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>165</x>
+     <y>60</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-53</x>
+     <y>84</y>
     </hint>
    </hints>
   </connection>
