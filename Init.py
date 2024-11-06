@@ -18,7 +18,8 @@ class MainWindow(QMainWindow, Init_Class) :
     totalPrice = 0
     #totalPrice = 123456 #will remove
 
-    db = front.get_db(menuType)
+    menuData = front.get_db(menuType)
+    optionData = data_query.get_menu_option()
 
     #cartList
     def Reset_lcd_Price(self) :
@@ -119,23 +120,19 @@ class MainWindow(QMainWindow, Init_Class) :
         self.reset_MenuList()
         i = 0
 
-        db = front.get_db(menuType)
+        menuData = front.get_db(menuType)
 
         if self.menuIndex == 0 :
             self.btn_menuPrev.setDisabled(True)
         else :
             self.btn_menuPrev.setEnabled(True)
 
-        if self.menuIndex + 8 < len(db) :
+        if self.menuIndex + 8 < len(menuData) :
             self.btn_menuNext.setEnabled(True)
         else :
             self.btn_menuNext.setDisabled(True)
 
-        for item in db[self.menuIndex:self.menuIndex + 8] :
-
-            #imgPath = item[2]
-            #menuPrice = item[1] #Do not Delete
-
+        for item in menuData[self.menuIndex:self.menuIndex + 8] :
             menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem(item, self)'
             eval(menuStr)
 
@@ -192,7 +189,7 @@ class MainWindow(QMainWindow, Init_Class) :
             #testOptionList = data
             testOptionData.append([key, data])
         
-        print(testOptionData[15])
+        print(testData['디카페인 아메리카노'])
 
 
 ######################################################

@@ -152,20 +152,21 @@
    <sender>menuImg</sender>
    <signal>clicked()</signal>
    <receiver>Form</receiver>
-   <slot>addShoppingCart()</slot>
+   <slot>select_MenuOption()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>43</x>
-     <y>111</y>
+     <x>127</x>
+     <y>104</y>
     </hint>
     <hint type="destinationlabel">
-     <x>402</x>
-     <y>120</y>
+     <x>444</x>
+     <y>128</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
   <slot>addShoppingCart()</slot>
+  <slot>select_MenuOption()</slot>
  </slots>
 </ui>

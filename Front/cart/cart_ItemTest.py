@@ -8,7 +8,7 @@ form_class = uic.loadUiType("front/cart/cartItem.ui")[0]
 
 class cartItem(QWidget, form_class) :
     listWidget = None
-    def __init__(self, listWidget, menuData, parent) :
+    def __init__(self, listWidget, menuData, optionData, parent) :
         super(cartItem, self).__init__(parent)
         self.setupUi(self)
         self.parent = parent
