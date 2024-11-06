@@ -187,11 +187,12 @@ class MainWindow(QMainWindow, Init_Class) :
 
     def btnTEST(self) :
         testData = data_query.get_menu_option()
-
+        testOptionData = []
         for key, data in testData.items() :
-            testOptionList = data
-            testOptionData = [key, data]
-            print(testOptionData)
+            #testOptionList = data
+            testOptionData.append([key, data])
+        
+        print(testOptionData[15])
 
 
 ######################################################
