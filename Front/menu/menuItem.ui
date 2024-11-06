@@ -35,7 +35,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color: white; border: 0px</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="leftMargin">
@@ -76,8 +76,17 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
+         </property>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
          <property name="text">
-          <string>defaultImage</string>
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -138,7 +147,24 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>menuImg</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>addShoppingCart()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>43</x>
+     <y>111</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>402</x>
+     <y>120</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
   <slot>addShoppingCart()</slot>
  </slots>

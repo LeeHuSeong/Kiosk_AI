@@ -6,9 +6,6 @@ from PyQt5 import uic
 
 import front
 
-##TEST
-data = ['테스트 메뉴', '옵션 없음', 1, 2000]
-
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
 
@@ -18,10 +15,30 @@ class MainWindow(QMainWindow, Init_Class) :
     menuIndex = 0
     menuType = 'ALL'
     totalPrice = 0
-
-    totalPrice = 123456 #will remove
+    #totalPrice = 123456 #will remove
 
     db = front.get_db(menuType)
+
+    #cartList
+    def Reset_lcd_Price(self) :
+        self.lcd_Price.display(self.totalPrice)
+
+    def cartWidget_Add(self, menuData) :
+        optionList = []
+        #data = ['테스트 메뉴', optionList, 1, 2000]
+        item_Widget = front.cartItem(self.cartList, menuData, self)
+        item = QListWidgetItem()
+        item.setSizeHint(item_Widget.sizeHint())
+
+        self.cartList.addItem(item)
+        self.cartList.setItemWidget(item, item_Widget)
+    
+    def btn_listWidgetClear(self) :
+        self.cartList.clear()
+        self.totalPrice = 0
+        self.lcd_Price.display(self.totalPrice)
+    
+    #cartListEnd
 
     def __init__(self):
         super().__init__()
@@ -34,16 +51,15 @@ class MainWindow(QMainWindow, Init_Class) :
         #Timer_Init
         self.timer = front.timeoutClass(self)
         self.lcd_Timer.display(180)
+
         #CartList_Init
-        self.cartList = front.cartItem(self.cart_List, data)
+        self.cartList = self.cart_List
+
+        #test = front.cartItem(self.cartList, self.data, self)
+        #test.cartItem_Add(self.data)
 
         self.set_MainPage_Index(0)
         self.setup_MenuList()
-        
-    ####################
-    def btnTEST(self) :
-        self.cartList.cartItem_Add(data)
-    ####################
 
     #need to change def name
     def add_timer(self) :
@@ -67,6 +83,7 @@ class MainWindow(QMainWindow, Init_Class) :
     #move to selectPage
     def mainPage_toSelect(self) :
         self.set_MainPage_Index(1)
+        self.btn_listWidgetClear()
 
     #move to defaultMenuPage
     def mainPage_toDefault(self) :
@@ -117,7 +134,7 @@ class MainWindow(QMainWindow, Init_Class) :
             imgPath = item[2]
 
             menuPrice = item[1] #Do not Delete
-            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem("'+imgPath+'", menuPrice)'
+            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem("'+imgPath+'", menuPrice, self)'
             eval(menuStr)
 
             i += 1

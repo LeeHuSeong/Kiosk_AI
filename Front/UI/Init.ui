@@ -485,11 +485,11 @@
                     <height>300</height>
                    </size>
                   </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
                   <property name="autoFillBackground">
                    <bool>true</bool>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true"/>
                   </property>
                  </widget>
                 </item>
@@ -519,6 +519,9 @@
                     <width>200</width>
                     <height>300</height>
                    </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
                   </property>
                   <property name="autoFillBackground">
                    <bool>true</bool>
@@ -552,6 +555,9 @@
                     <height>300</height>
                    </size>
                   </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
                   <property name="autoFillBackground">
                    <bool>true</bool>
                   </property>
@@ -583,6 +589,9 @@
                     <width>200</width>
                     <height>300</height>
                    </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
                   </property>
                   <property name="autoFillBackground">
                    <bool>true</bool>
@@ -646,11 +655,11 @@
                     <height>300</height>
                    </size>
                   </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
                   <property name="autoFillBackground">
                    <bool>true</bool>
-                  </property>
-                  <property name="styleSheet">
-                   <string notr="true"/>
                   </property>
                  </widget>
                 </item>
@@ -680,6 +689,9 @@
                     <width>200</width>
                     <height>300</height>
                    </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
                   </property>
                   <property name="autoFillBackground">
                    <bool>true</bool>
@@ -713,6 +725,9 @@
                     <height>300</height>
                    </size>
                   </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
+                  </property>
                   <property name="autoFillBackground">
                    <bool>true</bool>
                   </property>
@@ -744,6 +759,9 @@
                     <width>200</width>
                     <height>300</height>
                    </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::NoContextMenu</enum>
                   </property>
                   <property name="autoFillBackground">
                    <bool>true</bool>
@@ -957,13 +975,6 @@
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton">
-                <property name="text">
-                 <string>PushButton</string>
-                </property>
-               </widget>
-              </item>
-              <item>
                <widget class="QLabel" name="label">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -1121,8 +1132,8 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toSelect()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>113</x>
-     <y>66</y>
+     <x>100</x>
+     <y>30</y>
     </hint>
     <hint type="destinationlabel">
      <x>759</x>
@@ -1185,8 +1196,8 @@ p, li { white-space: pre-wrap; }
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1079</x>
-     <y>34</y>
+     <x>40</x>
+     <y>35</y>
     </hint>
     <hint type="destinationlabel">
      <x>1351</x>
@@ -1201,8 +1212,8 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toVoice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>101</x>
-     <y>573</y>
+     <x>100</x>
+     <y>30</y>
     </hint>
     <hint type="destinationlabel">
      <x>701</x>
@@ -1339,18 +1350,18 @@ p, li { white-space: pre-wrap; }
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
+   <sender>btn_resetShoppingCart</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>btnTEST()</slot>
+   <slot>btn_listWidgetClear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>161</x>
-     <y>60</y>
+     <x>1001</x>
+     <y>974</y>
     </hint>
     <hint type="destinationlabel">
-     <x>179</x>
-     <y>-45</y>
+     <x>1221</x>
+     <y>960</y>
     </hint>
    </hints>
   </connection>
@@ -1372,5 +1383,7 @@ p, li { white-space: pre-wrap; }
   <slot>btn_MenuDrinks()</slot>
   <slot>btn_MenuDessert()</slot>
   <slot>btnTEST()</slot>
+  <slot>btnTEST2()</slot>
+  <slot>btn_listWidgetClear()</slot>
  </slots>
 </ui>

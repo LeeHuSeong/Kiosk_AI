@@ -1,8 +1,6 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
-from PyQt5 import uic
-
-from PyQt5.QtGui import QPixmap
+from PyQt5 import uic, QtGui
 
 form_class = uic.loadUiType("front/menu/menuItem.ui")[0]
 
@@ -11,28 +9,32 @@ class menuItem(QWidget, form_class) :
         super(menuItem, self).__init__(parent)
         self.setupUi(self)
 
-        item = "defaultImage"
-        src = QPixmap("./img/"+ item +".jpg").scaled(150, 150)
-        self.menuImg.setIcon(src)
+        self.menuImg.setIcon(QtGui.QIcon("./img/defaultImage.jpg"))
+        self.menuImg.setIconSize(QSize(200, 200))
 
-    def setMenuItem(self, imgPath, menuPrice) :
-        imgPath = imgPath
-        #print(imgPath)
-        src = QPixmap(imgPath).scaled(150, 150)
-        self.menuImg.setIcon(src)
-
+    def setMenuItem(self, imgPath, menuPrice, parent) :
+        self.parent = parent
+        self.menuImg.setIcon(QtGui.QIcon(imgPath))
+        self.menuImg.setIconSize(QSize(200, 200))
         menu = imgPath.split('\\')[2]
         self.menuName.setText(menu)
         self.menuPrice.setText("\\" + str(menuPrice))
     
     def setMenuItemDefault(self) :
         imgPath = "./img/defaultImage.jpg"
-        src = QPixmap(imgPath).scaled(150, 150)
-        self.menuImg.setIcon(src)
+
+        self.menuImg.setIcon(QtGui.QIcon(imgPath))
+        self.menuImg.setIconSize(QSize(200, 200))
         menu = imgPath.split('/')[2]
         self.menuName.setText(menu)
         self.menuPrice.setText("\\0")
 
     def addShoppingCart(self) :
-        print("test message")
+        optionList = []
+        menuPrice = int(self.menuPrice.text().split('\\')[1])
+        menuData = [self.menuName.text(), optionList, 1, menuPrice]
+        
+        self.parent.cartWidget_Add(menuData)
+        self.parent.Reset_lcd_Price()
+    
 
