@@ -22,8 +22,8 @@ def total_price(table):
         total+=table[i][1] * table[i][2]
     return total
 
-# 메뉴 id , 옵션 id 수량을 주면 리스트 만들어서 반환
-def cart(menu_id,opt_id,ea):
+# 메뉴 id 수량, 옵션 id을 주면 리스트 만들어서 반환 옵션 id의 디폴트 값은 1 (선택없음)
+def cart(menu_id,ea,opt_id=[1]):
     table=[] #이름 수량 가격
     table.insert(1,ea)
     cur = db.cursor(conn)
@@ -46,7 +46,8 @@ def a(table): #추후 구현
 #임시 장바구니로 테스트
 #add_cart(test_table)
 #print("결제 금액: ",total_price(test_table))
-order_table.append(cart(1,[4,13],2)) # 메뉴 id : 1 , 옵션 id : 4,13 , 수량 : 2
-order_table.append(cart(3,[1],4)) # 메뉴 id : 1 , 옵션 id : 1 , 수량 : 2
+order_table.append(cart(1,2,[4,13])) # 메뉴 id : 1 , 옵션 id : 4,13 , 수량 : 2
+order_table.append(cart(3,4,[1,11])) # 메뉴 id 3, 수량 4 , 옵션 id 1,11
+order_table.append(cart(3,4)) #옵션 선택이 없는 경우
 print(order_table) # 만든 장바구니 출력
 print(total_price(order_table)) #총 결제 금액 출력
