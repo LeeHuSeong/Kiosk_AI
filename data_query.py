@@ -78,6 +78,7 @@ def get_menu_option():
     
     #커서 종료
     cur.close()
+    print(res_dict.keys())
     return res_dict
 
 
@@ -98,8 +99,9 @@ def get_data():
     cur.close()
     return result_list
 
-    
 
+    
+a = get_menu_option()
 '''
 #menu_price_path_category 테스트
 a= get_menu_price_path_category()
