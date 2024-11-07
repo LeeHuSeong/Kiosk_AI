@@ -13,7 +13,7 @@ def add_cart(table):
         data=(table[i][0],table[i][1],table[i][2],table[i][3],table[i][4],table[i][5])
         cur.execute(sql,data)
         conn.commit()
-        cur.close()
+    cur.close()
 
 #장바구니를 전달 받으면 총 결제 금액을 반환해주는 함수
 def total_price(table):
@@ -42,7 +42,14 @@ def cart(menu_id,ea,opt_id=[1]):
     cur.close()
     return table
 def a(table): #추후 구현
-    test=table # 리스트 복제
+    cur = db.cursor(conn)
+    sql = "insert into order_table (customer_id,order_drink_name, order_drink,price) values (%s,%s, %s,%s)"
+    for i in range(len(table)):
+        data = (100,table[i][0], table[i][1], table[i][2])
+        cur.execute(sql, data)
+        conn.commit()
+    cur.close()
+
 #임시 장바구니로 테스트
 #add_cart(test_table)
 #print("결제 금액: ",total_price(test_table))
@@ -50,4 +57,5 @@ order_table.append(cart(1,2,[4,13])) # 메뉴 id : 1 , 옵션 id : 4,13 , 수량
 order_table.append(cart(3,4,[1,11])) # 메뉴 id 3, 수량 4 , 옵션 id 1,11
 order_table.append(cart(3,4)) #옵션 선택이 없는 경우
 print(order_table) # 만든 장바구니 출력
-print(total_price(order_table)) #총 결제 금액 출력
+print(total_price(order_table))#총 결제 금액 출력
+a(order_table)
