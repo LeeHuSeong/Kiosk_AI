@@ -189,7 +189,7 @@ class MainWindow(QMainWindow, Init_Class) :
             #testOptionList = data
             testOptionData.append([key, data])
         
-        print(testData['디카페인 아메리카노'])
+        print(testData['디카페인 바닐라라떼'])
 
 
 ######################################################

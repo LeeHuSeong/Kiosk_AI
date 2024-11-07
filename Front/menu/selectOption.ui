@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>750</width>
-    <height>766</height>
+    <height>800</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,13 +22,13 @@
   <property name="minimumSize">
    <size>
     <width>750</width>
-    <height>766</height>
+    <height>800</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
     <width>750</width>
-    <height>766</height>
+    <height>800</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -128,9 +128,9 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-1650</y>
+        <y>-225</y>
         <width>713</width>
-        <height>2278</height>
+        <height>2484</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -175,7 +175,7 @@
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QWidget" name="">
+         <widget class="QWidget" name="layoutWidget">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -478,7 +478,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_3">
            <item>
-            <widget class="QPushButton" name="btn_ChangeStav_0">
+            <widget class="QPushButton" name="btn_ChangeStev_0">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -503,7 +503,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_ChangeStav_1">
+            <widget class="QPushButton" name="btn_ChangeStev_1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -523,7 +523,7 @@
               </size>
              </property>
              <property name="text">
-              <string>스태비아 변경</string>
+              <string>스테비아 변경</string>
              </property>
             </widget>
            </item>
@@ -598,13 +598,13 @@
            </font>
           </property>
           <property name="text">
-           <string>라이트 바닐라시럽 변경</string>
+           <string>스태비아 추가</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
           </property>
          </widget>
-         <widget class="QWidget" name="layoutWidget_3">
+         <widget class="QWidget" name="layoutWidget_12">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -613,9 +613,9 @@
             <height>152</height>
            </rect>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <layout class="QHBoxLayout" name="horizontalLayout_14">
            <item>
-            <widget class="QPushButton" name="btn_ChangeLightV_0">
+            <widget class="QPushButton" name="btn_AddStev_0">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -640,7 +640,144 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_ChangeLightV_1">
+            <widget class="QPushButton" name="btn_AddStev_1">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>스테비아 추가</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_20" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>150</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="widget_21" native="true">
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>150</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_Option_4">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <widget class="QLabel" name="optionName_4">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>10</y>
+            <width>711</width>
+            <height>31</height>
+           </rect>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>라이트 바닐라시럽 변경</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+         <widget class="QWidget" name="layoutWidget_3">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>40</y>
+            <width>711</width>
+            <height>152</height>
+           </rect>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <item>
+            <widget class="QPushButton" name="btn_ChangeLightVan_0">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>150</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>150</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>선택 안함</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="btn_ChangeLightVan_1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -701,7 +838,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_Option_4">
+        <widget class="QFrame" name="frame_Option_5">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -720,7 +857,7 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_4">
+         <widget class="QLabel" name="optionName_5">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -752,7 +889,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_5">
            <item>
-            <widget class="QPushButton" name="btn_AddLightV_0">
+            <widget class="QPushButton" name="btn_AddLightVan_0">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -777,7 +914,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_AddLightV_1">
+            <widget class="QPushButton" name="btn_AddLightVan_1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -838,7 +975,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_Option_5">
+        <widget class="QFrame" name="frame_Option_6">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -857,7 +994,7 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_5">
+         <widget class="QLabel" name="optionName_6">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -889,7 +1026,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_6">
            <item>
-            <widget class="QPushButton" name="btn_AddV_0">
+            <widget class="QPushButton" name="btn_AddVan_0">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -914,7 +1051,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_AddV_1">
+            <widget class="QPushButton" name="btn_AddVan_1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -975,7 +1112,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_Option_6">
+        <widget class="QFrame" name="frame_Option_7">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -994,7 +1131,7 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_6">
+         <widget class="QLabel" name="optionName_7">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -1026,7 +1163,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_8">
            <item>
-            <widget class="QPushButton" name="btn_AddC_0">
+            <widget class="QPushButton" name="btn_AddCaramel_0">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1051,7 +1188,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_AddC_1">
+            <widget class="QPushButton" name="btn_AddCaramel_1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1112,7 +1249,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_Option_7">
+        <widget class="QFrame" name="frame_Option_8">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1131,7 +1268,7 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_7">
+         <widget class="QLabel" name="optionName_8">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -1258,7 +1395,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_Option_8">
+        <widget class="QFrame" name="frame_Option_9">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1277,7 +1414,7 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_8">
+         <widget class="QLabel" name="optionName_9">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -1309,7 +1446,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_10">
            <item>
-            <widget class="QPushButton" name="btn_AddH_0">
+            <widget class="QPushButton" name="btn_AddHoney_0">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1334,7 +1471,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_AddH_1">
+            <widget class="QPushButton" name="btn_AddHoney_1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1395,7 +1532,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_Option_9">
+        <widget class="QFrame" name="frame_Option_10">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1414,7 +1551,7 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_9">
+         <widget class="QLabel" name="optionName_10">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -1446,7 +1583,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_11">
            <item>
-            <widget class="QPushButton" name="btn_AddH_2">
+            <widget class="QPushButton" name="btn_AddWhip_1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1471,7 +1608,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_AddH_3">
+            <widget class="QPushButton" name="btn_AddWhip_0">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1532,7 +1669,7 @@
         </widget>
        </item>
        <item>
-        <widget class="QFrame" name="frame_Option_10">
+        <widget class="QFrame" name="frame_Option_11">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -1551,7 +1688,7 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_10">
+         <widget class="QLabel" name="optionName_11">
           <property name="geometry">
            <rect>
             <x>0</x>
@@ -1583,7 +1720,7 @@
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_12">
            <item>
-            <widget class="QPushButton" name="btn_AddH_4">
+            <widget class="QPushButton" name="btn_AddCinn_0">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>
@@ -1608,7 +1745,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QPushButton" name="btn_AddH_5">
+            <widget class="QPushButton" name="btn_AddCinn_1">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                <horstretch>0</horstretch>

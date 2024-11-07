@@ -78,7 +78,7 @@ def get_menu_option():
     
     #커서 종료
     cur.close()
-    print(res_dict.keys())
+    #print(res_dict.keys())
     return res_dict
 
 
