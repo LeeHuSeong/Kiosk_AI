@@ -39,6 +39,7 @@ def cart(menu_id,opt_id,ea):
         cur.execute(sql,data)
         row = cur.fetchone()
         table[2]=table[2]+row[0]
+    cur.close()
     return table
 def a(table): #추후 구현
     test=table # 리스트 복제
