@@ -33,8 +33,8 @@ class OrderWindow(QDialog, Order_Class) :
             'AddCaramel'        : ['btn_AddCaramel_0', 'btn_AddCaramel_1'] ,             #7 카라멜시럽 추가
             'SelectMilk'        : ['btn_SelectM_0', 'btn_SelectM_1', 'btn_SelectM_2'] ,  #8 우유 선택
             'AddHoney'          : ['btn_AddHoney_0', 'btn_AddHoney_1'] ,                 #9 꿀 추가
-            'AddWhipping'       : ['btn_AddWhip_0', 'btn_AddWhip_1'] ,                   #10 휘핑OX
-            'AddCinnamon'       : ['btn_AddCinn_0', 'btn_AddCinn_1']                     #11 시나몬 OX
+            'AddWhipping'       : ['btn_Whipping_0', 'btn_Whipping_1'] ,                 #10 휘핑OX
+            'AddCinnamon'       : ['btn_Cinnamon_0', 'btn_Cinnamon_1']                   #11 시나몬 OX
                      }
 
     def selectOption_InitSetting(self, optionData) :
