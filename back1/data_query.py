@@ -3,15 +3,19 @@ from link import * #MySQL과 연결하는 함수 가져오기
 #MySQL과 연결, 커서 가져옴
 conn=create_connection()
 
-#리스트 /table (data join img_path) / [[메뉴이름, 가격,이미지경로,카테고리] ]
+#리스트 /table (data join img_path) / [[메뉴이름, 가격,이미지경로,카테고리,품절여부(0/1)] ]
 def get_menu_price_path_category():
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
     #Query
     query="""
-            select path.menu_name,data.가격,path.img_path,data.분류
-            from drinks_img_path path join data data on path.id=data.no
+            select path.menu_name,data.가격,path.img_path,data.분류,soldout.sold_out
+            from drinks_img_path path 
+                join data data  on path.id=data.no
+                join drinks_sold_out soldout on path.id=soldout.id;
+        
           """
+            #형식: 메뉴이름, 가격, 이미지경로, 분류
     ##Query / 튜플로 데이터 가져옴 / 튜플 -> 리스트 변환
     cur.execute(query)
     result_tuple = cur.fetchall()
@@ -97,7 +101,7 @@ def get_data():
     cur.close()
     return result_list
 
-    
+
 
 '''
 #menu_price_path_category 테스트
