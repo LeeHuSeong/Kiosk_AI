@@ -123,14 +123,7 @@ def get_data():
     cur.close()
     return result_list
 
-<<<<<<< HEAD:back1/data_query.py
 
-
-=======
->>>>>>> front/feature/shoppingCart:data_query.py
-
-    
-a = get_menu_option()
 '''
 #menu_price_path_category 테스트
 a= get_menu_price_path_category()
