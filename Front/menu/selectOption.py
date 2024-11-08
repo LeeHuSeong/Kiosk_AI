@@ -13,7 +13,7 @@ class OrderWindow(QDialog, Order_Class) :
 
         self.parent = parent
         print(optionData[1])
-        testOptionData = [0, 1, 6, 4, 5, 9, 8]
+        #testOptionData = [0, 1, 6, 4, 5, 9, 8]
 
         self.selectedOptionDict = {}
         self.optionDict = {
