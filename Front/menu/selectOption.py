@@ -12,8 +12,9 @@ class OrderWindow(QDialog, Order_Class) :
         self.center()
 
         self.parent = parent
-
+        print(optionData[1])
         testOptionData = [0, 1, 6, 4, 5, 9, 8]
+
         self.selectedOptionDict = {}
         self.optionDict = {
             'AddShot'           : [self.btn_Shot_0, self.btn_Shot_1, self.btn_Shot_2] ,             #0 샷 추가
@@ -34,20 +35,20 @@ class OrderWindow(QDialog, Order_Class) :
             for value in self.optionDict[key] :
                 value.clicked.connect(self.optionSelect)
 
-        self.selectOption_InitSetting(testOptionData)
+        self.selectOption_InitSetting(optionData)
 
         self.selectOption_MenuName.setText(menuData[0])
         self.selectOption_Price.setText(str(menuData[1]) + '원')
 
     def selectOption_InitSetting(self, optionData) :
-         #옵션별 버튼 변수 딕셔너리
-
-        for item in range(0, 12) :
-            if item in optionData :
-                initStr = 'self.frame_Option_'+str(item)+'.setVisible(True)'
+        i = 0
+        for key in self.optionDict :
+            if key in optionData[1] :
+                initStr = 'self.frame_Option_'+str(i)+'.setVisible(True)'
             else :
-                initStr = 'self.frame_Option_'+str(item)+'.setVisible(False)'
+                initStr = 'self.frame_Option_'+str(i)+'.setVisible(False)'
             eval(initStr)
+            i += 1
 
     #창 종료까지 대기
     def showModal(self) :

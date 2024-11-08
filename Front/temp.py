@@ -64,3 +64,10 @@ def addShoppingCart(self) :
             'AddWhipping'       : [self.btn_Whipping_0, self.btn_Whipping_1] ,                      #10 휘핑OX
             'AddCinnamon'       : [self.btn_Cinnamon_0, self.btn_Cinnamon_1]                        #11 시나몬 OX
         }
+    
+    for item in  range(0, 12) :
+            if item in optionData :
+                initStr = 'self.frame_Option_'+str(item)+'.setVisible(True)'
+            else :
+                initStr = 'self.frame_Option_'+str(item)+'.setVisible(False)'
+            eval(initStr)
