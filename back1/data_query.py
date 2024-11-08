@@ -6,7 +6,7 @@ conn=create_connection()
 #리스트 /table (data join img_path) / [[메뉴이름, 가격,이미지경로,카테고리,품절여부(0/1)] ]
 def get_menu_price_path_category():
     #conn에 대한 cursor를 만드는 함수
-    cur= cursor(conn)
+    cur = cursor(conn)
     #Query
     query="""
             select path.menu_name,data.가격,path.img_path,data.분류,soldout.sold_out
@@ -29,8 +29,13 @@ def get_menu_price_path_category():
 #딕셔너리 {'메뉴':[  menu_price, [   옵션category, [옵션eng,옵션kor,opt_price]],  [옵션category2,[]]     ]    ], '메뉴2' }
 def get_menu_option():
     #conn에 대한 cursor를 만드는 함수
+<<<<<<< HEAD:back1/data_query.py
     cur= cursor(conn)
     menu = [item[0] for item in get_menu_price_path_category()]
+=======
+    cur = cursor(conn)
+
+>>>>>>> front/feature/shoppingCart:data_query.py
     #Query: 메뉴이름, 가격, 옵션들
     query_menu="""
                 select menu_name,price,
@@ -101,6 +106,7 @@ def get_menu_option():
 
     #커서 종료
     cur.close()
+    #print(res_dict.keys())
     return res_dict
 
 
@@ -121,9 +127,14 @@ def get_data():
     cur.close()
     return result_list
 
+<<<<<<< HEAD:back1/data_query.py
 
 
+=======
+>>>>>>> front/feature/shoppingCart:data_query.py
 
+    
+a = get_menu_option()
 '''
 #menu_price_path_category 테스트
 a= get_menu_price_path_category()

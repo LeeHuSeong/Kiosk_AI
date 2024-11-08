@@ -1,10 +1,8 @@
-import sys
-
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-timeoutMsg = uic.loadUiType("Front/UI/timeoutMsgbox.ui")[0]
+timeoutMsg = uic.loadUiType("front/timeout/timeoutMsgbox.ui")[0]
 
 class timeoutMsgBox(QDialog, timeoutMsg) :
     def __init__(self) :
