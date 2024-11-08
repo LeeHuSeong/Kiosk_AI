@@ -29,13 +29,9 @@ def get_menu_price_path_category():
 #딕셔너리 {'메뉴':[  menu_price, [   옵션category, [옵션eng,옵션kor,opt_price]],  [옵션category2,[]]     ]    ], '메뉴2' }
 def get_menu_option():
     #conn에 대한 cursor를 만드는 함수
-<<<<<<< HEAD:back1/data_query.py
     cur= cursor(conn)
     menu = [item[0] for item in get_menu_price_path_category()]
-=======
-    cur = cursor(conn)
 
->>>>>>> front/feature/shoppingCart:data_query.py
     #Query: 메뉴이름, 가격, 옵션들
     query_menu="""
                 select menu_name,price,
