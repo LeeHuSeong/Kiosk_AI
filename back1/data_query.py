@@ -106,7 +106,6 @@ def get_data():
     cur.close()
     return result_list
     
-a = get_menu_option()
 '''
 #menu_price_path_category 테스트
 a= get_menu_price_path_category()
@@ -122,5 +121,5 @@ print(b['아메리카노'])
 c= get_data()
 print(c)
 '''
-b= get_menu_option()
-print(b)
+#b= get_menu_option()
+#print(b)

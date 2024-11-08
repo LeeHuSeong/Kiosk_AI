@@ -35,13 +35,14 @@ class menuItem(QWidget, form_class) :
 
     def select_MenuOption(self) :
         #optionList = selectOption.OrderWindow()
+        self.parent.timer.timeout_Pause()
         self.optionData = []
         try :
             self.optionData = self.parent.optionData[self.menuData[0]]
         except :
             pass
 
-        test = selectOption.OrderWindow(self.menuData, self.optionData)
+        test = selectOption.OrderWindow(self.menuData, self.optionData, self.parent)
         test.showModal()
     
     def addShoppingCart(self) :
@@ -51,3 +52,4 @@ class menuItem(QWidget, form_class) :
         
         self.parent.cartWidget_Add(menuData)
         self.parent.Reset_lcd_Price()
+
