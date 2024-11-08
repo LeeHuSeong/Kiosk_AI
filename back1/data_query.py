@@ -1,4 +1,4 @@
-from link import * #MySQL과 연결하는 함수 가져오기
+from back1.link import * #MySQL과 연결하는 함수 가져오기
 
 #MySQL과 연결, 커서 가져옴
 conn=create_connection()
@@ -29,13 +29,8 @@ def get_menu_price_path_category():
 #딕셔너리 {'메뉴':[  menu_price, [   옵션category, [옵션eng,옵션kor,opt_price]],  [옵션category2,[]]     ]    ], '메뉴2' }
 def get_menu_option():
     #conn에 대한 cursor를 만드는 함수
-<<<<<<< HEAD:back1/data_query.py
     cur= cursor(conn)
     menu = [item[0] for item in get_menu_price_path_category()]
-=======
-    cur = cursor(conn)
-
->>>>>>> front/feature/shoppingCart:data_query.py
     #Query: 메뉴이름, 가격, 옵션들
     query_menu="""
                 select menu_name,price,
@@ -110,13 +105,6 @@ def get_data():
     #커서 종료
     cur.close()
     return result_list
-
-<<<<<<< HEAD:back1/data_query.py
-
-
-=======
->>>>>>> front/feature/shoppingCart:data_query.py
-
     
 a = get_menu_option()
 '''

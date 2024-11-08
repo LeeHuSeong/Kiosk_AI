@@ -5,7 +5,7 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 
 import front
-import data_query#TEST
+import back1#TEST
 
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
@@ -19,7 +19,7 @@ class MainWindow(QMainWindow, Init_Class) :
     #totalPrice = 123456 #will remove
 
     menuData = front.get_db(menuType)
-    optionData = data_query.get_menu_option()
+    optionData = back1.data_query.get_menu_option()
 
     #cartList
     def Reset_lcd_Price(self) :
@@ -183,7 +183,7 @@ class MainWindow(QMainWindow, Init_Class) :
 ######################################################
 
     def btnTEST(self) :
-        testData = data_query.get_menu_option()
+        testData = back1.data_query.get_menu_option()
         testOptionData = []
         for key, data in testData.items() :
             #testOptionList = data
