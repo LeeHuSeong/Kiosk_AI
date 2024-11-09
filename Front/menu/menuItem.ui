@@ -35,7 +35,7 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">background-color: white; border: 0px</string>
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <property name="leftMargin">
@@ -69,18 +69,24 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QLabel" name="menuImg">
+        <widget class="QPushButton" name="menuImg">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
-         <property name="text">
-          <string>DefaultImage</string>
+         <property name="focusPolicy">
+          <enum>Qt::NoFocus</enum>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="flat">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -141,8 +147,26 @@
   </layout>
  </widget>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>menuImg</sender>
+   <signal>clicked()</signal>
+   <receiver>Form</receiver>
+   <slot>select_MenuOption()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>127</x>
+     <y>104</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>444</x>
+     <y>128</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
  <slots>
   <slot>addShoppingCart()</slot>
+  <slot>select_MenuOption()</slot>
  </slots>
 </ui>
