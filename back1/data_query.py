@@ -119,6 +119,20 @@ def get_opt_price():
     opt= [[item[0],item[1],item[3]] for item in opt_list]
     return opt
 
+
+def get_menu_info(menu):
+    #conn에 대한 cursor를 만드는 함수
+    cur= cursor(conn)
+
+    #Query
+    query = "select menu_name, info from drinks_menu"
+
+    cur.execute(query)
+    menu_info_tuple = cur.fetchall()
+    opt_dict= {item[0]:[item[1]] for item in menu_info_tuple}
+    return opt_dict[menu]
+
+
 '''
 #menu_price_path_category 테스트
 a= get_menu_price_path_category()
@@ -137,5 +151,5 @@ print(c)
 b= get_menu_option()
 print(b)
 '''
-d=get_opt_price()
+d=get_menu_info('디카페인 아메리카노')
 print(d)
