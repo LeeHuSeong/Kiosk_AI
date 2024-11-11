@@ -120,6 +120,23 @@ def get_opt_price():
     return opt
 
 
+# def(옵션이름,번호(opt_one)) => 값 반환
+def get_opt_price(name,num):
+    #conn에 대한 cursor를 만드는 함수
+    cur= cursor(conn)
+
+    #Query
+    query = "select opt_Name,opt_One,opt_Two,opt_Three from new_opt_data"
+
+    cur.execute(query)
+    opt_tuple = cur.fetchall()
+    opt_list = [list(row) for row in opt_tuple]
+    opt_dict = {item[0]:[item[1],item[2],item[3]] for item in opt_list}
+    price = opt_dict[name][num]
+    return price
+
+
+#메뉴 설명 가져오기
 def get_menu_info(menu):
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
@@ -151,5 +168,5 @@ print(c)
 b= get_menu_option()
 print(b)
 '''
-d=get_menu_info('디카페인 아메리카노')
+d=get_opt_price('AddShot',2)
 print(d)
