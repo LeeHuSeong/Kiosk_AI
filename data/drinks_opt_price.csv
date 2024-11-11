@@ -1,4 +1,4 @@
-choose_id,eng_name,kor_name,noraml_drink
+choose_id,eng_name,kor_name,normal_drink
 1,no_choice,????x,0
 2,coffee_weak,?????,0
 3,coffee_add_one,?? ???,500

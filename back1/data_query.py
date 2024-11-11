@@ -66,25 +66,7 @@ def get_menu_option():
         key=item[0] #key는 앞의 메뉴명
         price = item[1]
         options_with_column_names = []
-        
-        '''카테고리별로 리스트 만들고, 해당되는 옵션있으면,이름 나옴 (단, 없어도 카테고리 이름 나옴)
-        for opt_name, opt_str in zip(column_names[:],item[2:]):
-            opt = []
-            if isinstance(opt_str,str): #str타입인지
-                #opt_nums는 리스트
-                opt_nums=opt_str.split(',')
-            else: 
-                opt_nums=[opt_str]
-            
-            for num in opt_nums:
-                #isdigit() = 숫자 판별 T/F
-                if str(num).isdigit() and int(num) in opt_dict: 
-                    opt.append(opt_dict[int(num)])
-            options_with_column_names.append([opt_name,opt])
-        
-        #키(메뉴이름)에 맞는 밸류(옵션) 추가
-        res_dict[key]=[price,options_with_column_names]
-        '''
+
         for opt_name, opt_str in zip(column_names,item[2:]):
             opt = []
             if isinstance(opt_str, str):
@@ -123,6 +105,20 @@ def get_data():
     return result_list
 
 
+#리스트/옵션 가격/ []
+def get_opt_price():
+    #conn에 대한 cursor를 만드는 함수
+    cur= cursor(conn)
+
+    #Query: choose_id, eng_name, kor_name, add_price
+    query_opt="select * from drinks_opt_price"
+
+    cur.execute(query_opt) 
+    opt_tuple = cur.fetchall()
+    opt_list=[list(row) for row in opt_tuple]
+    opt= [[item[0],item[1],item[3]] for item in opt_list]
+    return opt
+
 '''
 #menu_price_path_category 테스트
 a= get_menu_price_path_category()
@@ -137,6 +133,9 @@ print(b['아메리카노'])
 #get_data 테스트
 c= get_data()
 print(c)
-'''
+
 b= get_menu_option()
 print(b)
+'''
+d=get_opt_price()
+print(d)
