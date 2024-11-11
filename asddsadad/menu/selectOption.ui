@@ -34,10 +34,25 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <property name="styleSheet">
    <string notr="true"/>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item>
     <widget class="QLabel" name="selectOption_Title">
      <property name="minimumSize">
@@ -128,8 +143,8 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-536</y>
-        <width>713</width>
+        <y>-1858</y>
+        <width>731</width>
         <height>2484</height>
        </rect>
       </property>
@@ -154,130 +169,177 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_0">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>샷 추가</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout">
-           <item>
-            <widget class="QPushButton" name="btn_Shot_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_Shot_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>1샷 추가</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_Shot_2">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>2샷 추가</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="Null" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout">
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_3" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_Shot_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_Shot_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>1샷 추가</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QPushButton" name="btn_Shot_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="autoFillBackground">
+                <bool>false</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string>2샷 추가</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_0">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>샷 추가</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -300,130 +362,156 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_1">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>디카페인 샷 추가</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_6">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_7">
-           <item>
-            <widget class="QPushButton" name="btn_DeShot_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_DeShot_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>디카페인 1샷 추가</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_DeShot_2">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>디카페인 2샷 추가</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="Null_2" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_2">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_4">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_DeShot_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_DeShot_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>1샷 추가</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QWidget" name="Null_4" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_5" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_1">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>디카페인 샷 추가</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -446,121 +534,156 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_2">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_5">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>스태비아 변경</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_2">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_3">
-           <item>
-            <widget class="QPushButton" name="btn_ChangeStev_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_ChangeStev_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>스테비아 변경</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_4" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_3" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_6">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_ChangeStev_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QWidget" name="Null_6" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_ChangeStev_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>변경하기</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_7" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_2">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>스테비아 변경</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -583,258 +706,156 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_3">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>스태비아 추가</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_12">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_14">
-           <item>
-            <widget class="QPushButton" name="btn_AddStev_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_AddStev_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>스테비아 추가</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_20" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_21" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
-        </widget>
-       </item>
-       <item>
-        <widget class="QFrame" name="frame_Option_6">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>200</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>200</height>
-          </size>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::Box</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Raised</enum>
-         </property>
-         <widget class="QLabel" name="optionName_6">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
-          </property>
-          <property name="text">
-           <string>바닐라시럽 추가</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_5">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_6">
-           <item>
-            <widget class="QPushButton" name="btn_AddVan_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_AddVan_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>바닐라시럽 추가</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_9" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_10" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_8">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_AddStev_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QWidget" name="Null_8" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_AddStev_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>추가하기</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_9" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_3">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>스테비아 추가</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -857,121 +878,156 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_4">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_13">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>라이트 바닐라시럽 변경</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_3">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_4">
-           <item>
-            <widget class="QPushButton" name="btn_ChangeLightVan_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_ChangeLightVan_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>라이트바닐라 변경</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_5" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_6" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_7">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_14">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_AddVan_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_AddVan_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>추가하기</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QWidget" name="Null_14" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_15" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_4">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>바닐라시럽 추가</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -994,121 +1050,328 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_5">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_9">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>라이트 바닐라시럽 추가</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_4">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
+          <item row="1" column="0">
+           <widget class="QLabel" name="optionName_5">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>라이트 바닐라시럽 변경</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QGroupBox" name="groupBox_5">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_10">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_ChangeLightVan_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QWidget" name="Null_10" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_ChangeLightVan_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>변경하기</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_11" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_Option_6">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>200</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_11">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_5">
-           <item>
-            <widget class="QPushButton" name="btn_AddLightVan_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_AddLightVan_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>라이트 바닐라시럽 추가</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_7" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_8" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_6">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_12">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_AddLightVan_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QWidget" name="Null_12" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_AddLightVan_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>추가하기</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_13" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_6">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>라이트 바닐라시럽 추가</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -1131,121 +1394,156 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_7">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_15">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>카라멜시럽 추가</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_7">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_8">
-           <item>
-            <widget class="QPushButton" name="btn_AddCaramel_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_AddCaramel_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>카라멜시럽 추가</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_11" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_12" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_8">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_16">
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_AddCaramel_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QWidget" name="Null_16" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_AddCaramel_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>추가하기</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_17" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_7">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>카라멜시럽 추가</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -1268,130 +1566,177 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_8">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_17">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>우유 선택</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_8">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_9">
-           <item>
-            <widget class="QPushButton" name="btn_SelectM_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_SelectM_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>아몬드밀크 변경</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_SelectM_2">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>오트밀크 변경</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_14" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_9">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_18">
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_SelectM_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>아몬드밀크</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_19" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="2">
+              <widget class="QPushButton" name="btn_SelectM_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>오트밀크</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_SelectM_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_8">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>우유 선택</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -1414,121 +1759,156 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_9">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_19">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>꿀 추가</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_9">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_10">
-           <item>
-            <widget class="QPushButton" name="btn_AddHoney_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_AddHoney_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>꿀 추가</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_13" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_15" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_10">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_20">
+             <item row="1" column="2">
+              <widget class="QWidget" name="Null_20" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_AddHoney_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">선택 안함</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_AddHoney_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>추가하기</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_21" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_9">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>꿀 추가</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -1551,121 +1931,156 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_10">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_21">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>휘핑 OX</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_10">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_11">
-           <item>
-            <widget class="QPushButton" name="btn_Whipping_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_Whipping_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>휘핑 O</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_16" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_17" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_11">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_22">
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_22" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="4">
+              <widget class="QWidget" name="Null_23" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_Whipping_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">기본</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_Whipping_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>빼기</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_10">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>휘핑크림</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
        <item>
@@ -1688,121 +2103,156 @@
          <property name="frameShadow">
           <enum>QFrame::Raised</enum>
          </property>
-         <widget class="QLabel" name="optionName_11">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>10</y>
-            <width>711</width>
-            <height>31</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_23">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>12</pointsize>
-           </font>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string>시나몬 OX</string>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QWidget" name="layoutWidget_11">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>40</y>
-            <width>711</width>
-            <height>152</height>
-           </rect>
-          </property>
-          <layout class="QHBoxLayout" name="horizontalLayout_12">
-           <item>
-            <widget class="QPushButton" name="btn_Cinnamon_0">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>선택 안함</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QPushButton" name="btn_Cinnamon_1">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="text">
-              <string>시나몬 O</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_18" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QWidget" name="widget_19" native="true">
-             <property name="minimumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>150</width>
-               <height>150</height>
-              </size>
-             </property>
-            </widget>
-           </item>
-          </layout>
-         </widget>
+          <item row="1" column="0">
+           <widget class="QGroupBox" name="groupBox_12">
+            <property name="title">
+             <string/>
+            </property>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+            <layout class="QGridLayout" name="gridLayout_24">
+             <item row="1" column="4">
+              <widget class="QWidget" name="Null_25" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QPushButton" name="btn_Cinnamon_1">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true"/>
+               </property>
+               <property name="text">
+                <string extracomment="123">기본</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QWidget" name="Null_24" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QPushButton" name="btn_Cinnamon_0">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>빼기</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QLabel" name="optionName_11">
+            <property name="font">
+             <font>
+              <pointsize>12</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>시나몬</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
@@ -1859,17 +2309,20 @@
    <sender>btn_Close</sender>
    <signal>clicked()</signal>
    <receiver>selectOption</receiver>
-   <slot>close()</slot>
+   <slot>selectOption_Cancel()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>43</x>
-     <y>59</y>
+     <x>251</x>
+     <y>754</y>
     </hint>
     <hint type="destinationlabel">
-     <x>-104</x>
-     <y>58</y>
+     <x>245</x>
+     <y>874</y>
     </hint>
    </hints>
   </connection>
  </connections>
+ <slots>
+  <slot>selectOption_Cancel()</slot>
+ </slots>
 </ui>

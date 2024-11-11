@@ -6,7 +6,7 @@ conn=create_connection()
 #리스트 /table (data join img_path) / [[메뉴이름, 가격,이미지경로,카테고리,품절여부(0/1)] ]
 def get_menu_price_path_category():
     #conn에 대한 cursor를 만드는 함수
-    cur = cursor(conn)
+    cur= cursor(conn)
     #Query
     query="""
             select path.menu_name,data.가격,path.img_path,data.분류,soldout.sold_out
@@ -31,11 +31,12 @@ def get_menu_option():
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
     menu = [item[0] for item in get_menu_price_path_category()]
+
     #Query: 메뉴이름, 가격, 옵션들
     query_menu="""
                 select menu_name,price,
                         Addshot ,AddDeShot, ChangeStevia, AddStevia, ChangeLightVanila,
-                        AddLightVanila, AddVanila, AddCaramel, SelectMilk ,AddHoney
+                        AddLightVanila, AddVanila, AddCaramel, SelectMilk ,AddHoney,
                         AddWhipping, AddCinnamon
                 from drinks_menu
                 """
@@ -55,17 +56,18 @@ def get_menu_option():
 
     # 불러온 옵션 넘버가 integer와 str으로 섞여있어서 검색이 어려움 ( 0,'1,2,3',0 이런식)
     #옵션리스트 -> 옵션 딕션너리로 변경
+
     opt_dict= {item[0]:[item[1],item[2],item[3]] for item in opt_list}
     
     #결과 딕셔너리
     res_dict={}
-    count=0
     #결과 딕셔너리 채우기
     for item in menu_list:
         key=item[0] #key는 앞의 메뉴명
         price = item[1]
         options_with_column_names = []
         
+        '''카테고리별로 리스트 만들고, 해당되는 옵션있으면,이름 나옴 (단, 없어도 카테고리 이름 나옴)
         for opt_name, opt_str in zip(column_names[:],item[2:]):
             opt = []
             if isinstance(opt_str,str): #str타입인지
@@ -82,10 +84,25 @@ def get_menu_option():
         
         #키(메뉴이름)에 맞는 밸류(옵션) 추가
         res_dict[key]=[price,options_with_column_names]
+        '''
+        for opt_name, opt_str in zip(column_names,item[2:]):
+            opt = []
+            if isinstance(opt_str, str):
+                opt_nums = opt_str.split(',')
+            else:
+                opt_nums = [opt_str]
+            
+            for num in opt_nums:
+                if str(num).isdigit() and int(num) in opt_dict:
+                    options_with_column_names.append(opt_name)
+                    break
+        res_dict[key] = [price, options_with_column_names]
+
+
 
     #커서 종료
     cur.close()
-    #print(res_dict.keys())
+    #print(res_dict)
     return res_dict
 
 
@@ -105,8 +122,8 @@ def get_data():
     #커서 종료
     cur.close()
     return result_list
-    
-a = get_menu_option()
+
+
 '''
 #menu_price_path_category 테스트
 a= get_menu_price_path_category()
@@ -122,5 +139,3 @@ print(b['아메리카노'])
 c= get_data()
 print(c)
 '''
-b= get_menu_option()
-print(b)
