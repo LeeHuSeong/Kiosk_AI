@@ -105,7 +105,7 @@ def get_data():
     return result_list
 
 
-#리스트/옵션 가격/ []
+#리스트/옵션 가격/ [[choose_id, eng_name,price],[] ]
 def get_opt_price():
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
