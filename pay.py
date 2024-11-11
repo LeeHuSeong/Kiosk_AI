@@ -1,6 +1,7 @@
-import link as db
+from back1 import link as db
+
 conn = db.create_connection()
-cur=db.cursor(conn)
+cur = db.cursor(conn)
 #임시 장바구니 구조 [id, 고객번호, 상품 이름, 상품 수량, 상품 가격, 카드 번호]
 #임시 장바구니
 test_table=[[1,100,"아메리카노",1,2500,1234],[2,100,"카푸치노",2,3000,1234]]
@@ -21,5 +22,6 @@ def total_price(table):
     return total
 
 #임시 장바구니로 테스트
+
 add_cart(test_table)
 print("결제 금액: ",total_price(test_table))
