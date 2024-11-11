@@ -19,7 +19,7 @@ class MainWindow(QMainWindow, Init_Class) :
     #totalPrice = 123456 #will remove
 
     menuData = front.get_db(menuType)
-    #optionData = back1.data_query.get_menu_option()
+    optionData = back1.data_query.get_menu_option()
 
     #cartList
     def Reset_lcd_Price(self) :

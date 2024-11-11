@@ -71,3 +71,11 @@ def addShoppingCart(self) :
             else :
                 initStr = 'self.frame_Option_'+str(item)+'.setVisible(False)'
             eval(initStr)
+
+
+
+
+
+
+
+#data = [메뉴이름, 수량, ['디카페인 샷추가', '아몬드밀크 변경'], 총 금액]

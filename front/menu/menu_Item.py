@@ -3,7 +3,6 @@ from PyQt5.QtCore import *
 from PyQt5 import uic, QtGui
 
 from front.menu import selectOption
-from back1 import *
 
 form_class = uic.loadUiType("front/menu/menuItem.ui")[0]
 
@@ -21,7 +20,8 @@ class menuItem(QWidget, form_class) :
         self.menuData = menuData
         self.menuImg.setIcon(QtGui.QIcon(menuData[2]))
         self.menuImg.setIconSize(QSize(200, 200))
-        menu = menuData[2].split('\\')[2]
+        menu1 = menuData[2].split('\\')[2]
+        menu = menu1.split('.')[0]
         self.menuName.setText(menu)
         self.menuPrice.setText("\\" + str(menuData[1]))
     
@@ -37,9 +37,13 @@ class menuItem(QWidget, form_class) :
     def select_MenuOption(self) :
         #optionList = selectOption.OrderWindow()
         self.parent.timer.timeout_Pause()
-        optionData = data_query.get_menu_option()
+        self.optionData = []
+        try :
+            self.optionData = self.parent.optionData[self.menuData[0]]
+        except :
+            pass
 
-        test = selectOption.OrderWindow(self.menuData, optionData[self.menuData[0]], self.parent)
+        test = selectOption.OrderWindow(self.menuData, self.optionData, self.parent)
         test.showModal()
     
     def addShoppingCart(self) :
@@ -49,4 +53,3 @@ class menuItem(QWidget, form_class) :
         
         self.parent.cartWidget_Add(menuData)
         self.parent.Reset_lcd_Price()
-
