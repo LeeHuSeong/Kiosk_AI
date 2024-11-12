@@ -25,6 +25,21 @@ def get_menu_price_path_category():
     cur.close()
     return result_list
 
+#리스트/ [[menu_name1],[menu_name2], ...]
+def get_menu_name():
+    #conn에 대한 cursor를 만드는 함수
+    cur= cursor(conn)
+    #Query
+    query="select 이름 from data"
+
+    ##Query / 튜플로 데이터 가져옴 / 튜플 -> 리스트 변환
+    cur.execute(query)
+    result_tuple = cur.fetchall()
+    result_list=[list(row) for row in result_tuple]
+
+    #커서 종료
+    cur.close()
+    return result_list
 
 #딕셔너리 {'메뉴':[  menu_price, [   옵션category, [옵션eng,옵션kor,opt_price]],  [옵션category2,[]]     ]    ], '메뉴2' }
 def get_menu_option():
@@ -167,6 +182,9 @@ print(c)
 
 b= get_menu_option()
 print(b)
-'''
+
 d=get_opt_price('AddShot',2)
 print(d)
+'''
+a = get_menu_name()
+print(a)
