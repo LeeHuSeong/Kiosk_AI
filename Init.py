@@ -197,7 +197,8 @@ class MainWindow(QMainWindow, Init_Class) :
 ######################################################
 
     def btnTEST(self) :
-        pass
+        test = front.aiWindow(self)
+        test.show()
 
 
 ######################################################
