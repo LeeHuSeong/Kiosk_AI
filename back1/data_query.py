@@ -168,3 +168,5 @@ print(c)
 b= get_menu_option()
 print(b)
 '''
+d=get_opt_price('AddShot',2)
+print(d)

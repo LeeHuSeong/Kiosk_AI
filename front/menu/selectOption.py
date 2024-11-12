@@ -196,7 +196,8 @@ class OrderWindow(QDialog, Order_Class) :
 
         if data != {} :
             for key, value in data :
-                optPrice += back1.get_opt_price(key, value)
+                optPrice += int(back1.get_opt_price(key, value))
+                #print(type(back1.get_opt_price(key, value)))
 
         return optPrice
 
