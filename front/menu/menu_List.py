@@ -1,11 +1,11 @@
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
-import data_query
+import back1
 #형식: 메뉴이름, 가격, 이미지경로, 분류
 
 def get_db(menuType) :
-    db = data_query.get_menu_price_path_category()
+    db = back1.data_query.get_menu_price_path_category()
     newdb = []
     #print(menuType)
 
