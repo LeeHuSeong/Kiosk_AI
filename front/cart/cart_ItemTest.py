@@ -28,7 +28,7 @@ class cartItem(QWidget, form_class) :
         self.menuName = menuData[0]
         
 
-        print(menuData[1])
+        #print(menuData[1])
         #self.selectedOptionList = '\n'.join(menuData[1])
         optionList = []
         for value in menuData[1].values() :

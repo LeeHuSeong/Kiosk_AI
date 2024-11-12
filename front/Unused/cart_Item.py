@@ -26,7 +26,7 @@ class cartItem(QWidget, form_class) :
         self.amount.setText('1')
         self.itemPrice.setText(str(data[2]))
         self.allPrice += data[2]
-        print("data[2]1 : " + str(data[2]))
+        #print("data[2]1 : " + str(data[2]))
 
     def cartItemAmount_Increase(self) :
 

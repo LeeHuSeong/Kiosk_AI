@@ -27,7 +27,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
         #menuData = [메뉴이름, 옵션딕셔너리, 1, 메뉴 총가격]
     def cartWidget_Add(self, menuData) :
-        print(menuData[1])
+        #print(menuData[1])
         item_Widget = front.cartItem(self.cartList, menuData, self)
         item = QListWidgetItem()
         item.setSizeHint(item_Widget.sizeHint())
@@ -115,7 +115,7 @@ class MainWindow(QMainWindow, Init_Class) :
                 else :
                     break
  
-            print(totalOrderData)
+            #print(totalOrderData)
             checkOrder_Window = front.OrderWindow(totalOrderData, self)
             checkOrder_Window.order_Price.display(self.totalPrice)
             checkOrder_Window.showModal()

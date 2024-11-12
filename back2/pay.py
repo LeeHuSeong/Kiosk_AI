@@ -1,4 +1,4 @@
-import link as db
+import back1 as db
 import random
 conn = db.create_connection()
 #임시 장바구니 구조 [id, 고객번호, 상품 이름, 상품 수량, 상품 가격, 카드 번호]
