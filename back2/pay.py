@@ -5,6 +5,7 @@ conn = link.create_connection()
 test_table=[[1,100,"아메리카노",1,2500,1234],[2,100,"카푸치노",2,3000,1234]]
 #order_table=[] #cart메서드  테스트용 리스트
 
+
 #장바구니를 전달받아 데이터베이스 order_table에 저장하는 메서드 장바구니 구조가 나중에 결정되면 거기에 맞춰서 변경
 def add_cart(table):
     cur = link.cursor(conn)
@@ -51,6 +52,21 @@ def a(table): #추후 구현
         cur.execute(sql, data)
         conn.commit()
     cur.close()
+
+def b(table):
+    cur = link.cursor(conn)
+    sql = "insert into order_table2 (customer_id,order_drink_name, opt_name, order_drink,price) values (%s,%s,%s, %s,%s)"
+    for i in range(len(table)):
+        data = (count,table[i][0],table[i][1],table[i][2],table[i][3])
+        cur.execute(sql, data)
+        conn.commit()
+    cur.close()
+
+
+
+#장바구니 구조 [메뉴 이름, 수량, [옵션 이름] ]
+def request(cart):
+
 
 #임시 장바구니로 테스트
 #add_cart(test_table)
