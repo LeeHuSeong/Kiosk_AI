@@ -50,11 +50,11 @@ def addShoppingCart(self) :
             'AddCinnamon'       : ['btn_Cinnamon_0', 'btn_Cinnamon_1']                   #11 시나몬 OX
                      }
     
-    optionDict = {
+    self.optionDict = {
             'AddShot'           : [self.btn_Shot_0, self.btn_Shot_1, self.btn_Shot_2] ,             #0 샷 추가
-            'AddDeShot'         : [self.btn_DeShot_0, self.btn_DeShot_1, self.btn_DeShot_2] ,       #1 디카페인 샷 추가
-            'ChangeStevia'      : [self.btn_ChangeStev_0, self.btn_ChangeStev_0] ,                  #2 스태비아 변경
-            'AddStevia'         : [self.btn_AddStev_0, self.btn_AddStev_0] ,                        #3 스태비아 추가
+            'AddDeShot'         : [self.btn_DeShot_0, self.btn_DeShot_1] ,                          #1 디카페인 샷 추가
+            'ChangeStevia'      : [self.btn_ChangeStev_0, self.btn_ChangeStev_1] ,                  #2 스태비아 변경
+            'AddStevia'         : [self.btn_AddStev_0, self.btn_AddStev_1] ,                        #3 스태비아 추가
             'AddVanila'         : [self.btn_AddVan_0, self.btn_AddVan_1] ,                          #4 바닐라시럽 추가
             'ChangeLightVanila' : [self.btn_ChangeLightVan_0, self.btn_ChangeLightVan_1] ,          #5 라이트 바닐라시럽 변경
             'AddLightVanila'    : [self.btn_AddLightVan_0, self.btn_AddLightVan_1] ,                #6 라이트 바닐라시럽 추가
@@ -65,12 +65,14 @@ def addShoppingCart(self) :
             'AddCinnamon'       : [self.btn_Cinnamon_0, self.btn_Cinnamon_1]                        #11 시나몬 OX
         }
     
+    '''
     for item in  range(0, 12) :
             if item in optionData :
                 initStr = 'self.frame_Option_'+str(item)+'.setVisible(True)'
             else :
                 initStr = 'self.frame_Option_'+str(item)+'.setVisible(False)'
             eval(initStr)
+    '''
 
 
 
@@ -79,3 +81,107 @@ def addShoppingCart(self) :
 
 
 #data = [메뉴이름, 수량, ['디카페인 샷추가', '아몬드밀크 변경'], 총 금액]
+
+
+'''
+if key == 'AddShot' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '1샷 추가'
+            elif int(value) == 2 :
+                self.selectedOptionDict[key] = '2샷 추가'
+
+        elif key == 'AddDeShot' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '디카페인 1샷 추가'
+
+        elif key == 'ChangeStevia' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '스테비아 변경'
+        
+        elif key == 'AddStevia' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '스테비아 추가'
+        
+        elif key == 'AddVanila' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '바닐라시럽 추가'
+        
+        elif key == 'ChangeLightVanila' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '라이트 바닐라시럽 변경'
+        
+        elif key == 'AddLightVanila' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '라이트 바닐라시럽 추가'
+        
+        elif key == 'AddCaramel' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '카라멜시럽 추가'
+        
+        elif key == 'SelectMilk' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '우유 변경(아몬드)'
+            elif int(value) == 2 :
+                self.selectedOptionDict[key] = '우유 변경(오트)'
+        
+        elif key == 'AddHoney' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '꿀 추가'
+        
+        elif key == 'AddWhipping' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '휘핑 빼기'
+        
+        elif key == 'AddCinnamon' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionDict[key] = '시나몬 빼기'
+        
+        print(self.selectedOptionDict.items())
+        '''
+
+
+'''
+
+결제창 전달 데이터(리스트)
+
+[
+    ['메뉴이름1', [옵션리스트1, 옵션리스트2, ...], 수량, 단일메뉴 총 가격], 
+    ['메뉴이름2', [옵션리스트1, 옵션리스트2, ...], 수량, 단일메뉴 총 가격], 
+    .
+    .
+    .
+]
+
+예시
+[
+    ['디카페인 아메리카노', [], 2, 5000], 
+    ['디카페인 카페라떼', ['디카페인 1샷 추가', '스테비아 추가'], 2, 11000]
+]
+
+
+
+'''

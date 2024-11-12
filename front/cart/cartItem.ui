@@ -73,7 +73,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="menuName">
+    <widget class="QLabel" name="menuName_">
      <property name="sizePolicy">
       <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
        <horstretch>0</horstretch>
@@ -93,7 +93,7 @@
       </size>
      </property>
      <property name="text">
-      <string>menuName</string>
+      <string>menuName_</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -101,7 +101,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="optionList">
+    <widget class="QLabel" name="optionList_">
      <property name="minimumSize">
       <size>
        <width>250</width>
@@ -115,7 +115,7 @@
       </size>
      </property>
      <property name="text">
-      <string>optionList</string>
+      <string>optionList_</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -148,7 +148,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QLabel" name="amount">
+    <widget class="QLabel" name="quantity">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
        <horstretch>0</horstretch>
@@ -168,7 +168,7 @@
       </size>
      </property>
      <property name="text">
-      <string>amount</string>
+      <string>quantity</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>

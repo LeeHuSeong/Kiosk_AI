@@ -25,15 +25,16 @@ class MainWindow(QMainWindow, Init_Class) :
     def Reset_lcd_Price(self) :
         self.lcd_Price.display(self.totalPrice)
 
+        #menuData = [메뉴이름, 옵션딕셔너리, 1, 메뉴 총가격]
     def cartWidget_Add(self, menuData) :
-        optionList = []
-        #data = ['테스트 메뉴', optionList, 1, 2000]
+        print(menuData[1])
         item_Widget = front.cartItem(self.cartList, menuData, self)
         item = QListWidgetItem()
         item.setSizeHint(item_Widget.sizeHint())
 
         self.cartList.addItem(item)
         self.cartList.setItemWidget(item, item_Widget)
+        self.Reset_lcd_Price()
     
     def btn_listWidgetClear(self) :
         self.cartList.clear()
@@ -102,7 +103,20 @@ class MainWindow(QMainWindow, Init_Class) :
         if self.totalPrice > 0 :
             self.timer.timeout_Pause()
 
-            checkOrder_Window = front.OrderWindow(self)
+            totalOrderData = []
+
+            row = 0
+            while True :
+                data = self.cartList.item(row) 
+                if data != None :
+                    orderData = self.cartList.itemWidget(data).get_CartData()
+                    totalOrderData.append(orderData)
+                    row += 1
+                else :
+                    break
+ 
+            print(totalOrderData)
+            checkOrder_Window = front.OrderWindow(totalOrderData, self)
             checkOrder_Window.order_Price.display(self.totalPrice)
             checkOrder_Window.showModal()
 
@@ -183,13 +197,7 @@ class MainWindow(QMainWindow, Init_Class) :
 ######################################################
 
     def btnTEST(self) :
-        testData = back1.data_query.get_menu_option()
-        testOptionData = []
-        for key, data in testData.items() :
-            #testOptionList = data
-            testOptionData.append([key, data])
-        
-        print(testData['디카페인 바닐라라떼'])
+        pass
 
 
 ######################################################

@@ -54,7 +54,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="QLabel" name="selectOption_Title">
+    <widget class="QLabel" name="label_5">
      <property name="minimumSize">
       <size>
        <width>0</width>
@@ -68,7 +68,7 @@
       </size>
      </property>
      <property name="text">
-      <string>추가 옵션을 선택해주세요</string>
+      <string>옵션을 선택하세요</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -77,54 +77,200 @@
    </item>
    <item>
     <layout class="QHBoxLayout" name="info">
+     <property name="spacing">
+      <number>0</number>
+     </property>
      <item>
-      <widget class="QLabel" name="label_4">
-       <property name="maximumSize">
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
         <size>
-         <width>45</width>
-         <height>16777215</height>
+         <width>10</width>
+         <height>10</height>
         </size>
        </property>
-       <property name="text">
-        <string>메뉴: </string>
-       </property>
-      </widget>
+      </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="selectOption_MenuName">
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>가격: </string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="selectOption_Price">
+      <widget class="QLabel" name="menuPic">
        <property name="minimumSize">
         <size>
-         <width>0</width>
-         <height>25</height>
+         <width>150</width>
+         <height>150</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>100</width>
-         <height>25</height>
+         <width>150</width>
+         <height>150</height>
         </size>
        </property>
        <property name="text">
-        <string/>
+        <string>DefaultImage</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
       </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>10</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_6">
+       <item>
+        <widget class="QLabel" name="menuName">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>DefaultMenuName</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="menuDescription">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>120</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>120</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>DefaultDescription</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+         <property name="textInteractionFlags">
+          <set>Qt::NoTextInteraction</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_3">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>10</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>100</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="priceLabel">
+         <property name="minimumSize">
+          <size>
+           <width>150</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_2">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeType">
+        <enum>QSizePolicy::Fixed</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>10</width>
+         <height>10</height>
+        </size>
+       </property>
+      </spacer>
      </item>
     </layout>
    </item>
@@ -143,7 +289,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-1858</y>
+        <y>0</y>
         <width>731</width>
         <height>2484</height>
        </rect>
@@ -2321,8 +2467,25 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_addCart</sender>
+   <signal>clicked()</signal>
+   <receiver>selectOption</receiver>
+   <slot>selectOption_Add()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>603</x>
+     <y>757</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>852</x>
+     <y>747</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>selectOption_Cancel()</slot>
+  <slot>selectOption_Add()</slot>
  </slots>
 </ui>
