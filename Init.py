@@ -5,7 +5,8 @@ from PyQt5.QtCore import *
 from PyQt5 import uic
 
 import front
-import back1#TEST
+import back1
+#import back2
 
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]

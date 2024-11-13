@@ -169,6 +169,11 @@ QLabel {
            <height>100</height>
           </size>
          </property>
+         <property name="font">
+          <font>
+           <pointsize>19</pointsize>
+          </font>
+         </property>
          <property name="text">
           <string>버튼을 눌러 음성으로 주문하세요</string>
          </property>
@@ -212,6 +217,11 @@ QLabel {
              <height>200</height>
             </size>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>19</pointsize>
+            </font>
+           </property>
            <property name="styleSheet">
             <string notr="true"/>
            </property>
@@ -254,6 +264,11 @@ QLabel {
            <width>16777215</width>
            <height>100</height>
           </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>19</pointsize>
+          </font>
          </property>
          <property name="text">
           <string>label_RecordResult</string>

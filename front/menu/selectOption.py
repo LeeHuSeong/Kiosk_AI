@@ -7,9 +7,9 @@ import back1
 
 from PyQt5.QtGui import QPixmap
 
-Order_Class = uic.loadUiType("front/menu/selectOption.ui")[0]
+Option_Class = uic.loadUiType("front/menu/selectOption.ui")[0]
 
-class OrderWindow(QDialog, Order_Class) :
+class OptionWindow(QDialog, Option_Class) :
     def __init__(self, menuData, optionData, parent) :
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
@@ -18,9 +18,6 @@ class OrderWindow(QDialog, Order_Class) :
 
         self.parent = parent
 
-        #testOptionData = [0, 1, 6, 4, 5, 9, 8]
-        #self.optPrice = back1.get_opt_price()
-        #print(self.optPrice)
         self.selectedOptionDict = {}
         self.selectedOptionDict2 = {}
         self.optionDict = {
@@ -66,21 +63,12 @@ class OrderWindow(QDialog, Order_Class) :
             eval(initStr)
             i += 1
 
-    #창 종료까지 대기
-    def showModal(self) :
-        return super().exec_()
-    
-    #창 위치 조정
-    def center(self):
-        qr = self.frameGeometry()
-        cp = QDesktopWidget().availableGeometry().center()
-        qr.moveCenter(cp)
-        self.move(qr.topLeft())
-
+    #옵션선택 취소
     def selectOption_Cancel(self) :
         self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
         self.close()
 
+    #옵션선택 완료
     def selectOption_Add(self) :
         result = [self.menuName.text(), self.selectedOptionDict, 1, self.priceLabel.text()]
         #print(result)
@@ -89,6 +77,7 @@ class OrderWindow(QDialog, Order_Class) :
         self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
         self.close()
 
+    #옵션 선택 시 수행
     def optionSelect(self) :
         sender = self.sender()
         getKey = sender
@@ -101,6 +90,28 @@ class OrderWindow(QDialog, Order_Class) :
         self.totalPrice = self.refresh_Price() + self.originPrice
         self.priceLabel.setText(str(self.totalPrice) + '원')
 
+        self.add_Dict(key, value)
+
+    def get_key(self, val) :
+        for key in self.optionDict : 
+            for value in self.optionDict[key] :
+                if val == value :
+                    return key
+                
+    def get_value(self, objectName) :
+        return objectName[-1]
+
+    #가격 새로고침
+    def refresh_Price(self) :
+        data = self.selectedOptionDict2.items()
+        optPrice = 0
+
+        if data != {} :
+            for key, value in data :
+                optPrice += int(back1.get_opt_price(key, value))
+        return optPrice
+    
+    def add_Dict(self, key, value) :
         if key == 'AddShot' :
             if int(value) == 0 :
                 pass
@@ -176,31 +187,14 @@ class OrderWindow(QDialog, Order_Class) :
                 self.selectedOptionDict[key] = '시나몬 빼기'
             elif int(value) == 1 :
                 pass
-
-        #print(self.selectedOptionDict.items())
-        
-
-
-    def get_key(self, val) :
-        for key in self.optionDict : 
-            for value in self.optionDict[key] :
-                if val == value :
-                    return key
-                
-    def get_value(self, objectName) :
-        return objectName[-1]
-
-    def refresh_Price(self) :
-        data = self.selectedOptionDict2.items()
-        optPrice = 0
-
-        if data != {} :
-            for key, value in data :
-                optPrice += int(back1.get_opt_price(key, value))
-                #print(type(back1.get_opt_price(key, value)))
-
-        return optPrice
-
-
-
-
+   
+    #창 종료까지 대기
+    def showModal(self) :
+        return super().exec_()
+    
+    #창 위치 조정
+    def center(self):
+        qr = self.frameGeometry()
+        cp = QDesktopWidget().availableGeometry().center()
+        qr.moveCenter(cp)
+        self.move(qr.topLeft())

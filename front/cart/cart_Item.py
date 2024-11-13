@@ -4,9 +4,9 @@ from PyQt5 import uic
 
 #['테스트 메뉴', '옵션 없음', 1, 2000]
 #[self.menuName.text(), self.selectedOptionList, 1, self.priceLcd.text()]
-form_class = uic.loadUiType("front/cart/cartItem.ui")[0]
+cartItem_Class = uic.loadUiType("front/cart/cartItem.ui")[0]
 
-class cartItem(QWidget, form_class) :
+class cartItem(QWidget, cartItem_Class) :
     listWidget = None
     menuData = []
     optionList = []
@@ -48,7 +48,8 @@ class cartItem(QWidget, form_class) :
 
         #print(self.parent.totalPrice)
         self.parent.totalPrice += self.singleMenuPrice
-
+    
+    #메뉴 수량 증/감
     def cartItemAmount_Increase(self) :
         self.amount += 1
         self.quantity.setText(str(self.amount))
@@ -69,14 +70,11 @@ class cartItem(QWidget, form_class) :
         else :
             self.parent.totalPrice -= self.singleMenuPrice
 
-        #self.quantity.setText(str(amount))
         self.totalMenuPrice = self.singleMenuPrice * self.amount
         self.itemPrice.setText(str(self.totalMenuPrice) + '원')
         self.parent.Reset_lcd_Price()
 
-    #def cartItem_Add(self, menuData) :
-        #self.parent.testMethod(menuData)
-    
+    #장바구니 메뉴 객체 삭제
     def cartItem_Remove(self) :
         if self.amount == 1 :
             self.parent.totalPrice -= self.singleMenuPrice
@@ -91,9 +89,7 @@ class cartItem(QWidget, form_class) :
         row = self.listWidget.row(item)
         self.listWidget.takeItem(row)
 
-    #def cartItem_Reset(self) :
-        #self.listWidget.clear()
-
+    #주문내역 반환
     def get_CartData(self) :
         data = [self.menuName, self.optionList, self.amount, self.totalMenuPrice]
         return data

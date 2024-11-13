@@ -2,23 +2,15 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-Order_Class = uic.loadUiType("front/UI/ai_Order_Page.ui")[0]
+AiPage_Class = uic.loadUiType("front/UI/ai_Order_Page.ui")[0]
 
-class aiWindow(QDialog, Order_Class) :
+class aiWindow(QDialog, AiPage_Class) :
     def __init__(self, parent) :
         super(aiWindow, self).__init__(parent)
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
 
         self.setGeometry(420, 125, 1080, 755)  # x, y, w, h
-
-
-        #self.center()
-
-    #창 종료까지 대기
-    def showModal(self) :
-        return super().exec_()
-    
 
     def record_Start(self) :
         #녹음시작
@@ -34,7 +26,3 @@ class aiWindow(QDialog, Order_Class) :
         #ex) [ '디카페인 아메리카노', '메뉴가격', '이미지경로', '옵션정보' ]
         #           옵션정보: [샷추가 ]
         pass
-
-
-
-    #Buttons

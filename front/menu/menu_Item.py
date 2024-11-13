@@ -4,9 +4,9 @@ from PyQt5 import uic, QtGui
 
 from front.menu import selectOption
 
-form_class = uic.loadUiType("front/menu/menuItem.ui")[0]
+menuItem_Class = uic.loadUiType("front/menu/menuItem.ui")[0]
 
-class menuItem(QWidget, form_class) :
+class menuItem(QWidget, menuItem_Class) :
     def __init__(self, parent = None) :
         #parent, menuData, optionData
         super(menuItem, self).__init__(parent)
@@ -43,7 +43,7 @@ class menuItem(QWidget, form_class) :
         except :
             pass
 
-        test = selectOption.OrderWindow(self.menuData, self.optionData, self.parent)
+        test = selectOption.OptionWindow(self.menuData, self.optionData, self.parent)
         test.showModal()
     
     def addShoppingCart(self) :

@@ -2,9 +2,9 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-timeoutMsg = uic.loadUiType("front/timeout/timeoutMsgbox.ui")[0]
+timeOut_Class = uic.loadUiType("front/timeout/timeoutMsgbox.ui")[0]
 
-class timeoutMsgBox(QDialog, timeoutMsg) :
+class timeoutMsgBox(QDialog, timeOut_Class) :
     def __init__(self) :
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
