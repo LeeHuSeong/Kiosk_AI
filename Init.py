@@ -6,7 +6,7 @@ from PyQt5 import uic
 
 import front
 import back1
-#import back2
+import back2
 
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
