@@ -56,13 +56,29 @@ class MainWindow(QMainWindow, Init_Class) :
         self.lcd_Timer.display(180)
 
         #CartList_Init
-        self.cartList = self.cart_List
+        self.cartList = self.cartListWidget
 
-        #test = front.cartItem(self.cartList, self.data, self)
-        #test.cartItem_Add(self.data)
+        #MenuList_Init
+        self.menuList = self.menuListWidget
+        self.menuWidget_Load()
 
         self.set_MainPage_Index(0)
-        self.setup_MenuList()
+
+    def menuWidget_Load(self) :
+        #[메뉴이름, 가격,이미지경로,카테고리,품절여부(0/1)]
+        menuDB = back1.get_menu_price_path_category()
+        menuData = []
+
+        for i in range(0, len(menuDB), 4) :
+            menuData.append(menuDB[i:i + 4])
+
+        for itemSet in menuData :
+            item_Widget = front.menu_ItemSet(self.menuList, itemSet, self)
+            item = QListWidgetItem()
+            item.setSizeHint(item_Widget.sizeHint())
+
+            self.menuList.addItem(item)
+            self.menuList.setItemWidget(item, item_Widget)
 
     #need to change def name
     def add_timer(self) :
@@ -72,16 +88,14 @@ class MainWindow(QMainWindow, Init_Class) :
     def set_MainPage_Index(self, index) :
         self.mainPage.setCurrentIndex(index)
 
-#Buttons
+#Move_Page
     #move to initPage
     def mainPage_toInit(self) :
         try :
             self.timer.timeout_Stop()
             self.set_MainPage_Index(0)
-            self.setup_MenuList()
         except : 
             self.set_MainPage_Index(0)
-            self.setup_MenuList()
 
     #move to selectPage
     def mainPage_toSelect(self) :
@@ -97,102 +111,6 @@ class MainWindow(QMainWindow, Init_Class) :
     #move to voiceOrderPage
     def mainPage_toVoice(self) :
         self.set_MainPage_Index(3)
-
-    #open checkOrderDialog(결제최종확인)
-    def popup_checkOrder(self) :
-        if self.totalPrice > 0 :
-            self.timer.timeout_Pause()
-
-            totalOrderData = []
-
-            row = 0
-            while True :
-                data = self.cartList.item(row) 
-                if data != None :
-                    orderData = self.cartList.itemWidget(data).get_CartData()
-                    totalOrderData.append(orderData)
-                    row += 1
-                else :
-                    break
- 
-            #print(totalOrderData)
-            checkOrder_Window = front.OrderWindow(totalOrderData, self)
-            checkOrder_Window.order_Price.display(self.totalPrice)
-            checkOrder_Window.showModal()
-
-        else :
-            #아무것도 주문하지 않았을 시 알림창
-            pass
-
-    #menuList//NEED TO REFACTOR
-    def setup_MenuList(self) :
-        self.menuIndex = 0
-        self.menuType = 'ALL'
-        self.load_MenuList(self.menuType)
-    
-    def load_MenuList(self, menuType) :
-        self.reset_MenuList()
-        i = 0
-
-        menuData = front.get_db(menuType)
-
-        if self.menuIndex == 0 :
-            self.btn_menuPrev.setDisabled(True)
-        else :
-            self.btn_menuPrev.setEnabled(True)
-
-        if self.menuIndex + 8 < len(menuData) :
-            self.btn_menuNext.setEnabled(True)
-        else :
-            self.btn_menuNext.setDisabled(True)
-
-        for item in menuData[self.menuIndex:self.menuIndex + 8] :
-            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem(item, self)'
-            eval(menuStr)
-
-            i += 1
-    
-    def reset_MenuList(self) :
-        for i in range(1, 8) :
-            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItemDefault()'
-            eval(menuStr)
-
-    def btn_MenuPrev(self) :
-        self.menuIndex -= 8
-        self.load_MenuList(self.menuType)
-    
-    def btn_MenuNext(self) :
-        self.menuIndex += 8
-        self.load_MenuList(self.menuType)
-
-    #menuList END
-
-    #btnMenu//NEED TO REFACTOR
-
-    def btn_MenuALL(self) :
-        self.menuIndex = 0
-        self.menuType = 'ALL'
-        self.load_MenuList(self.menuType)
-    
-    def btn_MenuCoffee(self) :
-        self.menuIndex = 0
-        self.menuType = 'Coffee'
-        self.load_MenuList(self.menuType)
-
-    def btn_MenuDeCaffeine(self) :
-        self.menuIndex = 0
-        self.menuType = 'DeCaffeine'
-        self.load_MenuList(self.menuType)
-
-    def btn_MenuDrinks(self) :
-        self.menuIndex = 0
-        self.menuType = 'Drinks'
-        self.load_MenuList(self.menuType)
-
-    def btn_MenuDessert(self) :
-        self.menuIndex = 0
-        self.menuType = 'Dessert'
-        self.load_MenuList(self.menuType)
 
 ######################################################
 

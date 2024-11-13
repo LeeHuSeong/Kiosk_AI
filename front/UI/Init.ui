@@ -436,425 +436,29 @@
              </layout>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="menu_List">
-              <item>
-               <spacer name="verticalSpacer_8">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="menuListLayout0">
-                <property name="spacing">
-                 <number>6</number>
-                </property>
-                <property name="sizeConstraint">
-                 <enum>QLayout::SetDefaultConstraint</enum>
-                </property>
-                <item>
-                 <spacer name="horizontalSpacer_7">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="menuItem" name="menuWidget_0" native="true">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::NoContextMenu</enum>
-                  </property>
-                  <property name="autoFillBackground">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="menuItem" name="menuWidget_1" native="true">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::NoContextMenu</enum>
-                  </property>
-                  <property name="autoFillBackground">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_2">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="menuItem" name="menuWidget_2" native="true">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::NoContextMenu</enum>
-                  </property>
-                  <property name="autoFillBackground">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_3">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="menuItem" name="menuWidget_3" native="true">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::NoContextMenu</enum>
-                  </property>
-                  <property name="autoFillBackground">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_8">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_6">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="menuListLayout1">
-                <item>
-                 <spacer name="horizontalSpacer_9">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="menuItem" name="menuWidget_4" native="true">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::NoContextMenu</enum>
-                  </property>
-                  <property name="autoFillBackground">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_4">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="menuItem" name="menuWidget_5" native="true">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::NoContextMenu</enum>
-                  </property>
-                  <property name="autoFillBackground">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_5">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="menuItem" name="menuWidget_6" native="true">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::NoContextMenu</enum>
-                  </property>
-                  <property name="autoFillBackground">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_6">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="menuItem" name="menuWidget_7" native="true">
-                  <property name="minimumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>200</width>
-                    <height>300</height>
-                   </size>
-                  </property>
-                  <property name="contextMenuPolicy">
-                   <enum>Qt::NoContextMenu</enum>
-                  </property>
-                  <property name="autoFillBackground">
-                   <bool>true</bool>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="horizontalSpacer_10">
-                  <property name="orientation">
-                   <enum>Qt::Horizontal</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>40</width>
-                    <height>20</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_5">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <layout class="QHBoxLayout" name="menuBtnLayout0">
-                <item>
-                 <widget class="QPushButton" name="btn_menuPrev">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>50</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>50</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>Prev</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QPushButton" name="btn_menuNext">
-                  <property name="minimumSize">
-                   <size>
-                    <width>50</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>50</width>
-                    <height>50</height>
-                   </size>
-                  </property>
-                  <property name="text">
-                   <string>Next</string>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <spacer name="verticalSpacer_7">
-                <property name="orientation">
-                 <enum>Qt::Vertical</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>20</width>
-                  <height>40</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-             </layout>
+             <widget class="QListWidget" name="menuListWidget">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::NoContextMenu</enum>
+              </property>
+              <property name="autoScroll">
+               <bool>false</bool>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="showDropIndicator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::NoSelection</enum>
+              </property>
+              <property name="verticalScrollMode">
+               <enum>QAbstractItemView::ScrollPerPixel</enum>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -864,7 +468,7 @@
              <number>0</number>
             </property>
             <item>
-             <widget class="QListWidget" name="cart_List">
+             <widget class="QListWidget" name="cartListWidget">
               <property name="editTriggers">
                <set>QAbstractItemView::NoEditTriggers</set>
               </property>
@@ -1103,17 +707,6 @@ p, li { white-space: pre-wrap; }
    </layout>
   </widget>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>menuItem</class>
-   <extends>QWidget</extends>
-   <header>front/menu/menu_Item.h</header>
-   <container>1</container>
-   <slots>
-    <signal>clicked()</signal>
-   </slots>
-  </customwidget>
- </customwidgets>
  <resources/>
  <connections>
   <connection>
@@ -1139,28 +732,12 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toSelect()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>100</x>
-     <y>30</y>
+     <x>65</x>
+     <y>18</y>
     </hint>
     <hint type="destinationlabel">
      <x>759</x>
      <y>200</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_toCheckOrderPage</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>popup_checkOrder()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>1078</x>
-     <y>1078</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>717</x>
-     <y>743</y>
     </hint>
    </hints>
   </connection>
@@ -1203,8 +780,8 @@ p, li { white-space: pre-wrap; }
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>40</x>
-     <y>35</y>
+     <x>111</x>
+     <y>37</y>
     </hint>
     <hint type="destinationlabel">
      <x>1351</x>
@@ -1219,8 +796,8 @@ p, li { white-space: pre-wrap; }
    <slot>mainPage_toVoice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>100</x>
-     <y>30</y>
+     <x>99</x>
+     <y>29</y>
     </hint>
     <hint type="destinationlabel">
      <x>701</x>
@@ -1241,134 +818,6 @@ p, li { white-space: pre-wrap; }
     <hint type="destinationlabel">
      <x>736</x>
      <y>194</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_menuPrev</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_MenuPrev()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>447</x>
-     <y>825</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1100</x>
-     <y>822</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_menuNext</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_MenuNext()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>767</x>
-     <y>840</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1115</x>
-     <y>852</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_catalog_1</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_MenuALL()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>76</x>
-     <y>224</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-177</x>
-     <y>220</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_catalog_2</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_MenuCoffee()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>98</x>
-     <y>386</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-162</x>
-     <y>359</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_catalog_4</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_MenuDrinks()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>68</x>
-     <y>645</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-197</x>
-     <y>631</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_catalog_5</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_MenuDessert()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>92</x>
-     <y>803</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-212</x>
-     <y>771</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_catalog_3</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_MenuDeCaffeine()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>51</x>
-     <y>501</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-69</x>
-     <y>512</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_resetShoppingCart</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btn_listWidgetClear()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>1001</x>
-     <y>974</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1221</x>
-     <y>960</y>
     </hint>
    </hints>
   </connection>

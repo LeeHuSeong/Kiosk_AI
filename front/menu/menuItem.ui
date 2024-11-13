@@ -69,6 +69,19 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
+        <widget class="QLabel" name="menuData">
+         <property name="maximumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>TextLabel</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <widget class="QPushButton" name="menuImg">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Minimum" vsizetype="MinimumExpanding">
@@ -152,15 +165,15 @@
    <sender>menuImg</sender>
    <signal>clicked()</signal>
    <receiver>Form</receiver>
-   <slot>select_MenuOption()</slot>
+   <slot>open_selectOptionPage()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>127</x>
-     <y>104</y>
+     <x>78</x>
+     <y>198</y>
     </hint>
     <hint type="destinationlabel">
-     <x>444</x>
-     <y>128</y>
+     <x>-287</x>
+     <y>353</y>
     </hint>
    </hints>
   </connection>
@@ -168,5 +181,6 @@
  <slots>
   <slot>addShoppingCart()</slot>
   <slot>select_MenuOption()</slot>
+  <slot>open_selectOptionPage()</slot>
  </slots>
 </ui>

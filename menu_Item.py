@@ -2,28 +2,19 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-#['테스트 메뉴', '옵션 없음', 1, 2000]
-#[self.menuName.text(), self.selectedOptionList, 1, self.priceLcd.text()]
-form_class = uic.loadUiType("front/cart/cartItem.ui")[0]
+form_class = uic.loadUiType("front/cart/menuList_Item.ui")[0]
 
-class cartItem(QWidget, form_class) :
+class menuItem(QWidget, form_class) :
     listWidget = None
     menuData = []
-    optionList = []
-
-    menuName = ''
-    selectedOptionList = ''
-    amount = 0
-    singleMenuPrice = 0
-    totalMenuPrice = 0
 
     def __init__(self, listWidget, menuData, parent) :
-        super(cartItem, self).__init__(parent)
+        super(menuItem, self).__init__(parent)
         self.setupUi(self)
-        self.parent = parent
 
-        self.menuData = menuData
         self.listWidget = listWidget
+        self.menuData = menuData
+        self.parent = parent
         
         self.menuName = menuData[0]
         
