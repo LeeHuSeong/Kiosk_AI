@@ -948,13 +948,29 @@ p, li { white-space: pre-wrap; }
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_toCheckOrderPage</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>popup_Receipt()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1031</x>
+     <y>1052</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1121</x>
+     <y>1045</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>mainPage_toInit()</slot>
   <slot>mainPage_toSelect()</slot>
   <slot>mainPage_toDefault()</slot>
   <slot>mainPage_toVoice()</slot>
-  <slot>popup_checkOrder()</slot>
+  <slot>popup_Receipt()</slot>
   <slot>add_timer()</slot>
   <slot>menu1_Clicked()</slot>
   <slot>btn_MenuALL()</slot>

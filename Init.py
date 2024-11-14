@@ -95,6 +95,28 @@ class MainWindow(QMainWindow, Init_Class) :
     def btn_CartListClear(self) :
         front.btn_CartListClear(self)
 
+    def popup_Receipt(self) :
+        if self.totalPrice > 0 :
+            self.timer.timeout_Pause()
+
+            totalOrderData = []
+
+            row = 0
+            while True :
+                data = self.cartList.item(row) 
+                if data != None :
+                    orderData = self.cartList.itemWidget(data).get_CartData()
+                    totalOrderData.append(orderData)
+                    row += 1
+                else :
+                    break
+ 
+            #print(totalOrderData)
+            purchaseWindow = front.purchaseWindow(totalOrderData, self)
+            purchaseWindow.order_Price.display(self.totalPrice)
+            purchaseWindow.showModal()
+
+
 #btn_ETC
 
 ######################################################

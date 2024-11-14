@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-form_class = uic.loadUiType("front/UI/menuList_Item.ui")[0]
+form_class = uic.loadUiType("front/menu/menu_ItemSet.ui")[0]
 
 class menu_ItemSet(QWidget, form_class) :
     listWidget = None

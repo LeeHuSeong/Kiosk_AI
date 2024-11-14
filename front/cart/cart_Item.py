@@ -4,7 +4,7 @@ from PyQt5 import uic
 
 #['테스트 메뉴', '옵션 없음', 1, 2000]
 #[self.menuName.text(), self.selectedOptionList, 1, self.priceLcd.text()]
-form_class = uic.loadUiType("front/cart/cartItem.ui")[0]
+form_class = uic.loadUiType("front/cart/cart_Item.ui")[0]
 
 class cartItem(QWidget, form_class) :
     listWidget = None
