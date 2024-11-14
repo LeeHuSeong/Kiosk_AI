@@ -33,7 +33,7 @@
     <number>0</number>
    </property>
    <item>
-    <widget class="menuItem" name="widget_1" native="true">
+    <widget class="menu_Item" name="widget_1" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -61,7 +61,7 @@
     </widget>
    </item>
    <item>
-    <widget class="menuItem" name="widget_2" native="true">
+    <widget class="menu_Item" name="widget_2" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -83,7 +83,7 @@
     </widget>
    </item>
    <item>
-    <widget class="menuItem" name="widget_3" native="true">
+    <widget class="menu_Item" name="widget_3" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -105,7 +105,7 @@
     </widget>
    </item>
    <item>
-    <widget class="menuItem" name="widget_4" native="true">
+    <widget class="menu_Item" name="widget_4" native="true">
      <property name="sizePolicy">
       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
        <horstretch>0</horstretch>
@@ -130,7 +130,7 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>menuItem</class>
+   <class>menu_Item</class>
    <extends>QWidget</extends>
    <header>front/menu/menu_Item.h</header>
    <container>1</container>

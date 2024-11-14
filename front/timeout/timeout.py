@@ -5,6 +5,7 @@ class timeoutClass :
 
     #Class_Variables
     timeout_Time = 3 * 60
+    add_Time = 60
     remain_Time = timeout_Time
 
     def __init__(self, parent) :

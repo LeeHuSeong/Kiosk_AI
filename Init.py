@@ -10,38 +10,13 @@ import back1#TEST
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
 
-#메인윈도우 설정
+#메인윈도우 설정    
 class MainWindow(QMainWindow, Init_Class) :
 #variables
-    menuIndex = 0
-    menuType = 'ALL'
     totalPrice = 0
-    #totalPrice = 123456 #will remove
-
-    menuData = front.get_db(menuType)
-    optionData = back1.data_query.get_menu_option()
-
-    #cartList
+    
     def Reset_lcd_Price(self) :
         self.lcd_Price.display(self.totalPrice)
-
-        #menuData = [메뉴이름, 옵션딕셔너리, 1, 메뉴 총가격]
-    def cartWidget_Add(self, menuData) :
-        #print(menuData[1])
-        item_Widget = front.cartItem(self.cartList, menuData, self)
-        item = QListWidgetItem()
-        item.setSizeHint(item_Widget.sizeHint())
-
-        self.cartList.addItem(item)
-        self.cartList.setItemWidget(item, item_Widget)
-        self.Reset_lcd_Price()
-    
-    def btn_listWidgetClear(self) :
-        self.cartList.clear()
-        self.totalPrice = 0
-        self.lcd_Price.display(self.totalPrice)
-    
-    #cartListEnd
 
     def __init__(self):
         super().__init__()
@@ -60,35 +35,20 @@ class MainWindow(QMainWindow, Init_Class) :
 
         #MenuList_Init
         self.menuList = self.menuListWidget
-        self.menuWidget_Load()
+        #print("log_1" + str(self))
+        front.menuWidget_Load(self, 'ALL')
 
         self.set_MainPage_Index(0)
 
-    def menuWidget_Load(self) :
-        #[메뉴이름, 가격,이미지경로,카테고리,품절여부(0/1)]
-        menuDB = back1.get_menu_price_path_category()
-        menuData = []
-
-        for i in range(0, len(menuDB), 4) :
-            menuData.append(menuDB[i:i + 4])
-
-        for itemSet in menuData :
-            item_Widget = front.menu_ItemSet(self.menuList, itemSet, self)
-            item = QListWidgetItem()
-            item.setSizeHint(item_Widget.sizeHint())
-
-            self.menuList.addItem(item)
-            self.menuList.setItemWidget(item, item_Widget)
-
     #need to change def name
     def add_timer(self) :
-        self.timer.remain_Time += self.timer.timeout_Time
+        self.timer.remain_Time += self.timer.add_Time
         self.lcd_Timer.display(self.timer.remain_Time)
 
     def set_MainPage_Index(self, index) :
         self.mainPage.setCurrentIndex(index)
 
-#Move_Page
+#Move_Page/화면 전환(stackedWidget 관련)
     #move to initPage
     def mainPage_toInit(self) :
         try :
@@ -100,7 +60,7 @@ class MainWindow(QMainWindow, Init_Class) :
     #move to selectPage
     def mainPage_toSelect(self) :
         self.set_MainPage_Index(1)
-        self.btn_listWidgetClear()
+        front.btn_CartListClear(self)
 
     #move to defaultMenuPage
     def mainPage_toDefault(self) :
@@ -111,12 +71,36 @@ class MainWindow(QMainWindow, Init_Class) :
     #move to voiceOrderPage
     def mainPage_toVoice(self) :
         self.set_MainPage_Index(3)
+#Move_Page
+
+#btn_MenuType/메뉴종류 설정('ALL', '디카페인', '커피', '티(음료)', '디저트')
+    def btn_MenuALL(self) :
+        front.menuWidget_Load(self, 'ALL')
+        
+    def btn_MenuCoffee(self) :
+        front.menuWidget_Load(self, '커피')
+        
+    def btn_MenuDeCaffeine(self) :
+        front.menuWidget_Load(self, '디카페인')
+        
+    def btn_MenuDrinks(self) :
+        front.menuWidget_Load(self, '티')
+        
+    def btn_MenuDessert(self) :
+        front.menuWidget_Load(self, '디저트')
+        
+#btn_MenuType
+
+#btn_ETC/기타 버튼
+    def btn_CartListClear(self) :
+        front.btn_CartListClear(self)
+
+#btn_ETC
 
 ######################################################
 
     def btnTEST(self) :
         pass
-
 
 ######################################################
 

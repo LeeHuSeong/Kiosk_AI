@@ -469,8 +469,23 @@
             </property>
             <item>
              <widget class="QListWidget" name="cartListWidget">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="contextMenuPolicy">
+               <enum>Qt::NoContextMenu</enum>
+              </property>
+              <property name="autoScroll">
+               <bool>false</bool>
+              </property>
               <property name="editTriggers">
                <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="showDropIndicator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::NoSelection</enum>
               </property>
               <property name="isWrapping" stdset="0">
                <bool>false</bool>
@@ -780,8 +795,8 @@ p, li { white-space: pre-wrap; }
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>111</x>
-     <y>37</y>
+     <x>40</x>
+     <y>38</y>
     </hint>
     <hint type="destinationlabel">
      <x>1351</x>
@@ -837,6 +852,102 @@ p, li { white-space: pre-wrap; }
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_catalog_1</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuALL()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>252</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-71</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_catalog_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuCoffee()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>41</x>
+     <y>381</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-110</x>
+     <y>381</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_catalog_3</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuDeCaffeine()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>59</x>
+     <y>539</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-125</x>
+     <y>539</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_catalog_4</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuDrinks()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>69</x>
+     <y>690</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-72</x>
+     <y>685</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_catalog_5</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_MenuDessert()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>33</x>
+     <y>828</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-80</x>
+     <y>823</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_resetShoppingCart</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_CartListClear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1033</x>
+     <y>972</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1151</x>
+     <y>943</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>mainPage_toInit()</slot>
@@ -846,9 +957,6 @@ p, li { white-space: pre-wrap; }
   <slot>popup_checkOrder()</slot>
   <slot>add_timer()</slot>
   <slot>menu1_Clicked()</slot>
-  <slot>btn_MenuPrev()</slot>
-  <slot>btn_MenuNext()</slot>
-  <slot>btn_Menu(ALL)</slot>
   <slot>btn_MenuALL()</slot>
   <slot>btn_MenuCoffee()</slot>
   <slot>btn_MenuDeCaffeine()</slot>
@@ -856,6 +964,6 @@ p, li { white-space: pre-wrap; }
   <slot>btn_MenuDessert()</slot>
   <slot>btnTEST()</slot>
   <slot>btnTEST2()</slot>
-  <slot>btn_listWidgetClear()</slot>
+  <slot>btn_CartListClear()</slot>
  </slots>
 </ui>
