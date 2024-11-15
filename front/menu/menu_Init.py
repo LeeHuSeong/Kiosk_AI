@@ -10,7 +10,7 @@ import time #for Test
 ##menudata[3]
 
 def menuWidget_Load(self, type) :
-        start = time.time()#
+        #start = time.time()#
 
         self.menuList.clear()
         menuDB = []
@@ -34,11 +34,11 @@ def menuWidget_Load(self, type) :
                     pass
 
         ## menuDB = [menuType: menuList[]]
-        start2 = time.time()
+        #start2 = time.time()
         for list in menuDB :
             list.append(optionDB[list[0]][1])
-        end2 = time.time()
-        print(f'실행 시간: {end2 - start2}')#
+        #end2 = time.time()
+        #print(f'실행 시간: {end2 - start2}')#
 
     
         menuData = []
@@ -54,5 +54,5 @@ def menuWidget_Load(self, type) :
             self.menuList.addItem(item)
             self.menuList.setItemWidget(item, item_Widget)
 
-        end = time.time()#
-        print(f'메뉴 로딩 시간: {end - start}')#
+        #end = time.time()#
+        #print(f'메뉴 로딩 시간: {end - start}')#

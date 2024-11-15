@@ -87,11 +87,6 @@
        <property name="wordWrap">
         <bool>false</bool>
        </property>
-       <item>
-        <property name="text">
-         <string>1112321313213</string>
-        </property>
-       </item>
       </widget>
      </item>
      <item>
