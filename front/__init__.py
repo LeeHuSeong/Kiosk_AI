@@ -14,3 +14,6 @@ from .purchase.purchase_Receipt import *
 #Package_timeout
 from .timeout.timeoutMsgbox import *
 from .timeout.timeout import *
+
+#Package_AiPage
+from .aipage.ai_Order_Page import *
