@@ -7,9 +7,12 @@ import back1
 
 from PyQt5.QtGui import QPixmap
 
-Option_Class = uic.loadUiType("front/menu/selectOption.ui")[0]
+Order_Class = uic.loadUiType("front/menu/menu_SelectOption.ui")[0]
 
-class OptionWindow(QDialog, Option_Class) :
+class optionWindow(QDialog, Order_Class) :
+    originPrice = 0
+    totalPrice = 0
+
     def __init__(self, menuData, optionData, parent) :
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
@@ -18,8 +21,8 @@ class OptionWindow(QDialog, Option_Class) :
 
         self.parent = parent
 
-        self.selectedOptionDict = {}
-        self.selectedOptionDict2 = {}
+        self.selectedOptionNameDict = {}
+        self.selectedOptionIDDict = {}
         self.optionDict = {
             'AddShot'           : [self.btn_Shot_0, self.btn_Shot_1, self.btn_Shot_2] ,             #0 샷 추가
             'AddDeShot'         : [self.btn_DeShot_0, self.btn_DeShot_1] ,                          #1 디카페인 샷 추가
@@ -56,138 +59,13 @@ class OptionWindow(QDialog, Option_Class) :
     def selectOption_InitSetting(self, optionData) :
         i = 0
         for key in self.optionDict :
-            if key in optionData[1] :
+            if key in optionData :
                 initStr = 'self.frame_Option_'+str(i)+'.setVisible(True)'
             else :
                 initStr = 'self.frame_Option_'+str(i)+'.setVisible(False)'
             eval(initStr)
             i += 1
 
-    #옵션선택 취소
-    def selectOption_Cancel(self) :
-        self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
-        self.close()
-
-    #옵션선택 완료
-    def selectOption_Add(self) :
-        result = [self.menuName.text(), self.selectedOptionDict, 1, self.priceLabel.text()]
-        #print(result)
-        self.parent.cartWidget_Add(result)
-
-        self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
-        self.close()
-
-    #옵션 선택 시 수행
-    def optionSelect(self) :
-        sender = self.sender()
-        getKey = sender
-        getValue = sender.objectName()
-
-        key = self.get_key(getKey)
-        value = self.get_value(getValue)
-
-        self.selectedOptionDict2[key] = int(value)
-        self.totalPrice = self.refresh_Price() + self.originPrice
-        self.priceLabel.setText(str(self.totalPrice) + '원')
-
-        self.add_Dict(key, value)
-
-    def get_key(self, val) :
-        for key in self.optionDict : 
-            for value in self.optionDict[key] :
-                if val == value :
-                    return key
-                
-    def get_value(self, objectName) :
-        return objectName[-1]
-
-    #가격 새로고침
-    def refresh_Price(self) :
-        data = self.selectedOptionDict2.items()
-        optPrice = 0
-
-        if data != {} :
-            for key, value in data :
-                optPrice += int(back1.get_opt_price(key, value))
-        return optPrice
-    
-    def add_Dict(self, key, value) :
-        if key == 'AddShot' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '1샷 추가'
-            elif int(value) == 2 :
-                self.selectedOptionDict[key] = '2샷 추가'
-
-        elif key == 'AddDeShot' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '디카페인 1샷 추가'
-
-        elif key == 'ChangeStevia' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '스테비아 변경'
-        
-        elif key == 'AddStevia' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '스테비아 추가'
-        
-        elif key == 'AddVanila' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '바닐라시럽 추가'
-        
-        elif key == 'ChangeLightVanila' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '라이트 바닐라시럽 변경'
-        
-        elif key == 'AddLightVanila' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '라이트 바닐라시럽 추가'
-        
-        elif key == 'AddCaramel' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '카라멜시럽 추가'
-        
-        elif key == 'SelectMilk' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '우유 변경(아몬드)'
-            elif int(value) == 2 :
-                self.selectedOptionDict[key] = '우유 변경(오트)'
-        
-        elif key == 'AddHoney' :
-            if int(value) == 0 :
-                pass
-            elif int(value) == 1 :
-                self.selectedOptionDict[key] = '꿀 추가'
-        
-        elif key == 'AddWhipping' :
-            if int(value) == 0 :
-                self.selectedOptionDict[key] = '휘핑 빼기'
-            elif int(value) == 1 :
-                pass
-        
-        elif key == 'AddCinnamon' :
-            if int(value) == 0 :
-                self.selectedOptionDict[key] = '시나몬 빼기'
-            elif int(value) == 1 :
-                pass
-   
     #창 종료까지 대기
     def showModal(self) :
         return super().exec_()
@@ -198,3 +76,129 @@ class OptionWindow(QDialog, Option_Class) :
         cp = QDesktopWidget().availableGeometry().center()
         qr.moveCenter(cp)
         self.move(qr.topLeft())
+
+    def refresh_Price(self) :
+        data = self.selectedOptionIDDict.items()
+        optPrice = 0
+
+        if data != {} :
+            for key, value in data :
+                optPrice += int(back1.get_opt_price(key, value))
+
+        return optPrice
+
+    def selectOption_Cancel(self) :
+        self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
+        self.close()
+
+    def selectOption_Add(self) :
+        result = [self.menuName.text(), self.selectedOptionNameDict, 1, self.priceLabel.text()]
+        #print(result)
+        #self.parent.cartWidget_Add(result)
+        front.cartWidget_Add(self.parent, result)
+
+        self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
+        self.close()
+
+    def optionSelect(self) :
+        sender = self.sender()
+        getKey = sender
+        getValue = sender.objectName()
+
+        key = self.get_key(getKey)
+        value = self.get_value(getValue)
+
+        self.selectedOptionIDDict[key] = int(value)
+        self.totalPrice = self.refresh_Price() + self.originPrice
+        self.priceLabel.setText(str(self.totalPrice) + '원')
+
+        if key == 'AddShot' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '1샷 추가'
+            elif int(value) == 2 :
+                self.selectedOptionNameDict[key] = '2샷 추가'
+
+        elif key == 'AddDeShot' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '디카페인 1샷 추가'
+
+        elif key == 'ChangeStevia' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '스테비아 변경'
+        
+        elif key == 'AddStevia' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '스테비아 추가'
+        
+        elif key == 'AddVanila' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '바닐라시럽 추가'
+        
+        elif key == 'ChangeLightVanila' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '라이트 바닐라시럽 변경'
+        
+        elif key == 'AddLightVanila' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '라이트 바닐라시럽 추가'
+        
+        elif key == 'AddCaramel' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '카라멜시럽 추가'
+        
+        elif key == 'SelectMilk' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '우유 변경(아몬드)'
+            elif int(value) == 2 :
+                self.selectedOptionNameDict[key] = '우유 변경(오트)'
+        
+        elif key == 'AddHoney' :
+            if int(value) == 0 :
+                pass
+            elif int(value) == 1 :
+                self.selectedOptionNameDict[key] = '꿀 추가'
+        
+        elif key == 'AddWhipping' :
+            if int(value) == 0 :
+                self.selectedOptionNameDict[key] = '휘핑 빼기'
+            elif int(value) == 1 :
+                pass
+        
+        elif key == 'AddCinnamon' :
+            if int(value) == 0 :
+                self.selectedOptionNameDict[key] = '시나몬 빼기'
+            elif int(value) == 1 :
+                pass
+        
+
+    def get_key(self, val) :
+        for key in self.optionDict : 
+            for value in self.optionDict[key] :
+                if val == value :
+                    return key
+                
+    def get_value(self, objectName) :
+        return objectName[-1]
+
+
+
+
+

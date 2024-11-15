@@ -2,54 +2,37 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic, QtGui
 
-from front.menu import selectOption
+import ast
+from front.menu import menu_SelectOption
 
-menuItem_Class = uic.loadUiType("front/menu/menuItem.ui")[0]
+form_class = uic.loadUiType("front/menu/menu_Item.ui")[0]
 
-class menuItem(QWidget, menuItem_Class) :
+class menu_Item(QWidget, form_class) :
+    menuData = []
+    optionData = []
+
     def __init__(self, parent = None) :
-        #parent, menuData, optionData
-        super(menuItem, self).__init__(parent)
+        super(menu_Item, self).__init__(parent)
         self.setupUi(self)
 
-        self.menuImg.setIcon(QtGui.QIcon("./img/defaultImage.jpg"))
+    def menuItem_Init(self) :
+        menuDataText = self.menuData.text()
+        self.menuData = ast.literal_eval(menuDataText)
+        self.optionData = self.menuData[5]
+
+        #self.menuName.setText(self.menuData[0])
+        self.menuName.setText(self.menuData[2].split('\\')[2].replace('.jpg', ''))
+                              
+        self.menuPrice.setText(str(self.menuData[1]) + '원')
+
+        self.menuImg.setIcon(QtGui.QIcon(self.menuData[2]))
         self.menuImg.setIconSize(QSize(200, 200))
 
-    def setMenuItem(self, menuData, parent) :
+    def set_Parent(self, parent) :
         self.parent = parent
-        self.menuData = menuData
-        self.menuImg.setIcon(QtGui.QIcon(menuData[2]))
-        self.menuImg.setIconSize(QSize(200, 200))
-        menu1 = menuData[2].split('\\')[2]
-        menu = menu1.split('.')[0]
-        self.menuName.setText(menu)
-        self.menuPrice.setText("\\" + str(menuData[1]))
-    
-    def setMenuItemDefault(self) :
-        imgPath = "./img/defaultImage.jpg"
 
-        self.menuImg.setIcon(QtGui.QIcon(imgPath))
-        self.menuImg.setIconSize(QSize(200, 200))
-        menu = imgPath.split('/')[2]
-        self.menuName.setText(menu)
-        self.menuPrice.setText("\\0")
-
-    def select_MenuOption(self) :
-        #optionList = selectOption.OrderWindow()
+    def open_selectOptionPage(self) :
         self.parent.timer.timeout_Pause()
-        self.optionData = []
-        try :
-            self.optionData = self.parent.optionData[self.menuData[0]]
-        except :
-            pass
 
-        test = selectOption.OptionWindow(self.menuData, self.optionData, self.parent)
-        test.showModal()
-    
-    def addShoppingCart(self) :
-        optionList = []
-        menuPrice = int(self.menuPrice.text().split('\\')[1])
-        menuData = [self.menuName.text(), optionList, 1, menuPrice]
-        
-        self.parent.cartWidget_Add(menuData)
-        self.parent.Reset_lcd_Price()
+        selectOptionPage = menu_SelectOption.optionWindow(self.menuData, self.optionData, self.parent)
+        selectOptionPage.showModal()
