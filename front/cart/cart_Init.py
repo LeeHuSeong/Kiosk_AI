@@ -4,7 +4,6 @@ from PyQt5.QtCore import *
 import front
 
 def cartWidget_Add(self, menuData) :
-    #print(menuData[1])
     item_Widget = front.cartItem(self.cartList, menuData, self)
     item = QListWidgetItem()
     item.setSizeHint(item_Widget.sizeHint())

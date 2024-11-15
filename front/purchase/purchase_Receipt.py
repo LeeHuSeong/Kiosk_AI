@@ -2,9 +2,9 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-Order_Class = uic.loadUiType("front/purchase/purchase_Receipt.ui")[0]
+form_class = uic.loadUiType("front/purchase/purchase_Receipt.ui")[0]
 
-class purchaseWindow(QDialog, Order_Class) :
+class purchaseWindow(QDialog, form_class) :
     def __init__(self, orderList, parent) :
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)

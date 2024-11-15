@@ -7,9 +7,9 @@ import back1
 
 from PyQt5.QtGui import QPixmap
 
-Order_Class = uic.loadUiType("front/menu/menu_SelectOption.ui")[0]
+form_class = uic.loadUiType("front/menu/menu_SelectOption.ui")[0]
 
-class optionWindow(QDialog, Order_Class) :
+class optionWindow(QDialog, form_class) :
     originPrice = 0
     totalPrice = 0
 
@@ -93,8 +93,6 @@ class optionWindow(QDialog, Order_Class) :
 
     def selectOption_Add(self) :
         result = [self.menuName.text(), self.selectedOptionNameDict, 1, self.priceLabel.text()]
-        #print(result)
-        #self.parent.cartWidget_Add(result)
         front.cartWidget_Add(self.parent, result)
 
         self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
@@ -186,8 +184,7 @@ class optionWindow(QDialog, Order_Class) :
             if int(value) == 0 :
                 self.selectedOptionNameDict[key] = '시나몬 빼기'
             elif int(value) == 1 :
-                pass
-        
+                pass       
 
     def get_key(self, val) :
         for key in self.optionDict : 
@@ -197,8 +194,3 @@ class optionWindow(QDialog, Order_Class) :
                 
     def get_value(self, objectName) :
         return objectName[-1]
-
-
-
-
-

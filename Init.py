@@ -36,7 +36,6 @@ class MainWindow(QMainWindow, Init_Class) :
 
         #MenuList_Init
         self.menuList = self.menuListWidget
-        #print("log_1" + str(self))
         front.menuWidget_Load(self, 'ALL')
 
         self.set_MainPage_Index(0)
@@ -88,8 +87,7 @@ class MainWindow(QMainWindow, Init_Class) :
         front.menuWidget_Load(self, '티')
         
     def btn_MenuDessert(self) :
-        front.menuWidget_Load(self, '디저트')
-        
+        front.menuWidget_Load(self, '디저트')    
 #btn_MenuType
 
 #btn_ETC/기타 버튼
@@ -116,7 +114,6 @@ class MainWindow(QMainWindow, Init_Class) :
             purchaseWindow = front.purchaseWindow(totalOrderData, self)
             purchaseWindow.order_Price.display(self.totalPrice)
             purchaseWindow.showModal()
-
 
 #btn_ETC
 
