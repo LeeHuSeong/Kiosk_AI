@@ -10,38 +10,13 @@ import back1#TEST
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
 
-#메인윈도우 설정
+#메인윈도우 설정    
 class MainWindow(QMainWindow, Init_Class) :
 #variables
-    menuIndex = 0
-    menuType = 'ALL'
     totalPrice = 0
-    #totalPrice = 123456 #will remove
-
-    menuData = front.get_db(menuType)
-    optionData = back1.data_query.get_menu_option()
-
-    #cartList
+    
     def Reset_lcd_Price(self) :
         self.lcd_Price.display(self.totalPrice)
-
-        #menuData = [메뉴이름, 옵션딕셔너리, 1, 메뉴 총가격]
-    def cartWidget_Add(self, menuData) :
-        #print(menuData[1])
-        item_Widget = front.cartItem(self.cartList, menuData, self)
-        item = QListWidgetItem()
-        item.setSizeHint(item_Widget.sizeHint())
-
-        self.cartList.addItem(item)
-        self.cartList.setItemWidget(item, item_Widget)
-        self.Reset_lcd_Price()
-    
-    def btn_listWidgetClear(self) :
-        self.cartList.clear()
-        self.totalPrice = 0
-        self.lcd_Price.display(self.totalPrice)
-    
-    #cartListEnd
 
     def __init__(self):
         super().__init__()
@@ -56,37 +31,36 @@ class MainWindow(QMainWindow, Init_Class) :
         self.lcd_Timer.display(180)
 
         #CartList_Init
-        self.cartList = self.cart_List
+        self.cartList = self.cartListWidget
 
-        #test = front.cartItem(self.cartList, self.data, self)
-        #test.cartItem_Add(self.data)
+        #MenuList_Init
+        self.menuList = self.menuListWidget
+        #print("log_1" + str(self))
+        front.menuWidget_Load(self, 'ALL')
 
         self.set_MainPage_Index(0)
-        self.setup_MenuList()
 
     #need to change def name
     def add_timer(self) :
-        self.timer.remain_Time += self.timer.timeout_Time
+        self.timer.remain_Time += self.timer.add_Time
         self.lcd_Timer.display(self.timer.remain_Time)
 
     def set_MainPage_Index(self, index) :
         self.mainPage.setCurrentIndex(index)
 
-#Buttons
+#Move_Page/화면 전환(stackedWidget 관련)
     #move to initPage
     def mainPage_toInit(self) :
         try :
             self.timer.timeout_Stop()
             self.set_MainPage_Index(0)
-            self.setup_MenuList()
         except : 
             self.set_MainPage_Index(0)
-            self.setup_MenuList()
 
     #move to selectPage
     def mainPage_toSelect(self) :
         self.set_MainPage_Index(1)
-        self.btn_listWidgetClear()
+        front.btn_CartListClear(self)
 
     #move to defaultMenuPage
     def mainPage_toDefault(self) :
@@ -97,9 +71,31 @@ class MainWindow(QMainWindow, Init_Class) :
     #move to voiceOrderPage
     def mainPage_toVoice(self) :
         self.set_MainPage_Index(3)
+#Move_Page
 
-    #open checkOrderDialog(결제최종확인)
-    def popup_checkOrder(self) :
+#btn_MenuType/메뉴종류 설정('ALL', '디카페인', '커피', '티(음료)', '디저트')
+    def btn_MenuALL(self) :
+        front.menuWidget_Load(self, 'ALL')
+        
+    def btn_MenuCoffee(self) :
+        front.menuWidget_Load(self, '커피')
+        
+    def btn_MenuDeCaffeine(self) :
+        front.menuWidget_Load(self, '디카페인')
+        
+    def btn_MenuDrinks(self) :
+        front.menuWidget_Load(self, '티')
+        
+    def btn_MenuDessert(self) :
+        front.menuWidget_Load(self, '디저트')
+        
+#btn_MenuType
+
+#btn_ETC/기타 버튼
+    def btn_CartListClear(self) :
+        front.btn_CartListClear(self)
+
+    def popup_Receipt(self) :
         if self.totalPrice > 0 :
             self.timer.timeout_Pause()
 
@@ -116,89 +112,17 @@ class MainWindow(QMainWindow, Init_Class) :
                     break
  
             #print(totalOrderData)
-            checkOrder_Window = front.OrderWindow(totalOrderData, self)
-            checkOrder_Window.order_Price.display(self.totalPrice)
-            checkOrder_Window.showModal()
+            purchaseWindow = front.purchaseWindow(totalOrderData, self)
+            purchaseWindow.order_Price.display(self.totalPrice)
+            purchaseWindow.showModal()
 
-        else :
-            #아무것도 주문하지 않았을 시 알림창
-            pass
 
-    #menuList//NEED TO REFACTOR
-    def setup_MenuList(self) :
-        self.menuIndex = 0
-        self.menuType = 'ALL'
-        self.load_MenuList(self.menuType)
-    
-    def load_MenuList(self, menuType) :
-        self.reset_MenuList()
-        i = 0
-
-        menuData = front.get_db(menuType)
-
-        if self.menuIndex == 0 :
-            self.btn_menuPrev.setDisabled(True)
-        else :
-            self.btn_menuPrev.setEnabled(True)
-
-        if self.menuIndex + 8 < len(menuData) :
-            self.btn_menuNext.setEnabled(True)
-        else :
-            self.btn_menuNext.setDisabled(True)
-
-        for item in menuData[self.menuIndex:self.menuIndex + 8] :
-            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItem(item, self)'
-            eval(menuStr)
-
-            i += 1
-    
-    def reset_MenuList(self) :
-        for i in range(1, 8) :
-            menuStr = 'self.menuWidget_'+str(i)+'.setMenuItemDefault()'
-            eval(menuStr)
-
-    def btn_MenuPrev(self) :
-        self.menuIndex -= 8
-        self.load_MenuList(self.menuType)
-    
-    def btn_MenuNext(self) :
-        self.menuIndex += 8
-        self.load_MenuList(self.menuType)
-
-    #menuList END
-
-    #btnMenu//NEED TO REFACTOR
-
-    def btn_MenuALL(self) :
-        self.menuIndex = 0
-        self.menuType = 'ALL'
-        self.load_MenuList(self.menuType)
-    
-    def btn_MenuCoffee(self) :
-        self.menuIndex = 0
-        self.menuType = 'Coffee'
-        self.load_MenuList(self.menuType)
-
-    def btn_MenuDeCaffeine(self) :
-        self.menuIndex = 0
-        self.menuType = 'DeCaffeine'
-        self.load_MenuList(self.menuType)
-
-    def btn_MenuDrinks(self) :
-        self.menuIndex = 0
-        self.menuType = 'Drinks'
-        self.load_MenuList(self.menuType)
-
-    def btn_MenuDessert(self) :
-        self.menuIndex = 0
-        self.menuType = 'Dessert'
-        self.load_MenuList(self.menuType)
+#btn_ETC
 
 ######################################################
 
     def btnTEST(self) :
         pass
-
 
 ######################################################
 
