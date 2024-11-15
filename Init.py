@@ -110,7 +110,7 @@ class MainWindow(QMainWindow, Init_Class) :
                 else :
                     break
  
-            #print(totalOrderData)
+            print(totalOrderData)
             purchaseWindow = front.purchaseWindow(totalOrderData, self)
             purchaseWindow.order_Price.display(self.totalPrice)
             purchaseWindow.showModal()
