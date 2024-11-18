@@ -1,4 +1,4 @@
-from .link import * #MySQL과 연결하는 함수 가져오기
+from link import * #MySQL과 연결하는 함수 가져오기
 
 #MySQL과 연결, 커서 가져옴
 conn=create_connection()
@@ -25,6 +25,21 @@ def get_menu_price_path_category():
     cur.close()
     return result_list
 
+#리스트/ [[menu_name1],[menu_name2], ...]
+def get_menu_name():
+    #conn에 대한 cursor를 만드는 함수
+    cur= cursor(conn)
+    #Query
+    query="select 이름 from data"
+
+    ##Query / 튜플로 데이터 가져옴 / 튜플 -> 리스트 변환
+    cur.execute(query)
+    result_tuple = cur.fetchall()
+    result_list=[list(row) for row in result_tuple]
+
+    #커서 종료
+    cur.close()
+    return result_list
 
 #딕셔너리 {'메뉴':[  menu_price, [   옵션category, [옵션eng,옵션kor,opt_price]],  [옵션category2,[]]     ]    ], '메뉴2' }
 def get_menu_option():
@@ -148,7 +163,6 @@ def get_menu_info(menu):
     menu_info_tuple = cur.fetchall()
     opt_dict= {item[0]:[item[1]] for item in menu_info_tuple}
     return opt_dict[menu]
-
 
 '''
 #menu_price_path_category 테스트
