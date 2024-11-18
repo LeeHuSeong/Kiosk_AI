@@ -22,4 +22,4 @@ def add_receipt(order_id,table):
         conn.commit()
     cur.close()
 
-add_receipt(101,table123)
+#add_receipt(101,table123) 테스트
