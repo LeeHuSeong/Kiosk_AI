@@ -4,7 +4,7 @@ from PyQt5 import uic
 
 #['테스트 메뉴', '옵션 없음', 1, 2000]
 #[self.menuName.text(), self.selectedOptionList, 1, self.priceLcd.text()]
-form_class = uic.loadUiType("front/cart/cartItem.ui")[0]
+form_class = uic.loadUiType("front/cart/cart_Item.ui")[0]
 
 class cartItem(QWidget, form_class) :
     listWidget = None
@@ -27,9 +27,6 @@ class cartItem(QWidget, form_class) :
         
         self.menuName = menuData[0]
         
-
-        #print(menuData[1])
-        #self.selectedOptionList = '\n'.join(menuData[1])
         optionList = []
         for value in menuData[1].values() :
             optionList.append(value)
@@ -46,7 +43,6 @@ class cartItem(QWidget, form_class) :
         self.quantity.setText(str(menuData[2]))
         self.itemPrice.setText(str(self.singleMenuPrice) + '원')
 
-        #print(self.parent.totalPrice)
         self.parent.totalPrice += self.singleMenuPrice
 
     def cartItemAmount_Increase(self) :
@@ -54,7 +50,6 @@ class cartItem(QWidget, form_class) :
         self.quantity.setText(str(self.amount))
         self.parent.totalPrice += self.singleMenuPrice
 
-        #self.amount.setText(str(amount))
         self.totalMenuPrice = self.singleMenuPrice * self.amount
         self.itemPrice.setText(str(self.totalMenuPrice) + '원')
         self.parent.Reset_lcd_Price()
@@ -69,13 +64,9 @@ class cartItem(QWidget, form_class) :
         else :
             self.parent.totalPrice -= self.singleMenuPrice
 
-        #self.quantity.setText(str(amount))
         self.totalMenuPrice = self.singleMenuPrice * self.amount
         self.itemPrice.setText(str(self.totalMenuPrice) + '원')
         self.parent.Reset_lcd_Price()
-
-    #def cartItem_Add(self, menuData) :
-        #self.parent.testMethod(menuData)
     
     def cartItem_Remove(self) :
         if self.amount == 1 :
@@ -90,9 +81,6 @@ class cartItem(QWidget, form_class) :
         item = self.listWidget.itemAt(self.pos())
         row = self.listWidget.row(item)
         self.listWidget.takeItem(row)
-
-    #def cartItem_Reset(self) :
-        #self.listWidget.clear()
 
     def get_CartData(self) :
         data = [self.menuName, self.optionList, self.amount, self.totalMenuPrice]
