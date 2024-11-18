@@ -33,4 +33,7 @@ class purchaseWindow(QDialog, form_class) :
         #print(self.parent_mainWindow)
         self.parent_mainWindow.timer.timeout_Resume(self.parent_mainWindow.timer.remain_Time)
         self.close()
+
+    def purchaseWindow_OK(self) :
+        pass
     #Buttons
