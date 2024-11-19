@@ -53,7 +53,7 @@
    <item row="0" column="0">
     <widget class="QStackedWidget" name="stackedWidget">
      <property name="currentIndex">
-      <number>2</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="page">
       <layout class="QGridLayout" name="gridLayout_2">
@@ -89,7 +89,7 @@
           </size>
          </property>
          <property name="text">
-          <string>InputStr</string>
+          <string>입력 결과: </string>
          </property>
         </widget>
        </item>
@@ -126,6 +126,9 @@
          </item>
          <item>
           <widget class="QPushButton" name="pushButton_5">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>200</width>
@@ -363,6 +366,22 @@
     <hint type="destinationlabel">
      <x>55</x>
      <y>643</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_ReStart</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>btn_Back()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>565</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-53</x>
+     <y>565</y>
     </hint>
    </hints>
   </connection>

@@ -7,12 +7,14 @@ import time
 
 import front
 import back1
+import AI.AI_main
 
 form_class = uic.loadUiType("front/aipage/ai_Dialog.ui")[0]
 
 class aiDialog(QDialog, form_class) :
     resultFlag = 0
     optionResult = []
+    result = []
     testList = []
     parent = None
     def __init__(self, parent) :
@@ -23,6 +25,7 @@ class aiDialog(QDialog, form_class) :
 
         self.parent = parent
         self.aiOptionList = self.aiOptionListWidget
+        self.aiInExactList = self.ai_InExactListWidget
         self.stackedWidget.setCurrentIndex(0)
 
     def showModal(self) :
@@ -36,25 +39,27 @@ class aiDialog(QDialog, form_class) :
 
     def btn_Start(self) :
         self.btn_start.setText("입력중..")
+        self.result = []             #결과
+        self.resultFlag = 1     #결과 종류(0: 정확한 결과, 1: 부정확한 결과(리스트), -1: 입력 오류)
 
         #음성입력 시작
-        #self.testSleep()
+
+            #여기에 작성 및 result 변수/ resultFlag 변수에 결과 할당
+
         #음성입력 완료 및 결과반환
 
-        #self.btn_start.setText("입력 시작")
-
         self.btn_start.setText("입력 시작")
-        result = []         #결과
-        resultFlag = 0      #결과 종류(0: 정확한 결과, 1: 부정확한 결과(리스트), -1: 입력 오류)
 
         #TEST
         #####
 
         #결과가 정확하다면
-        if resultFlag == 0 :
+        if self.resultFlag == 0 :
+            #result = ['메뉴명', 수량]
+            self.result = ['디카페인 아메리카노', 1]
             #menuData = [메뉴이름, 메뉴설명, 메뉴이미지 경로, 옵션리스트, 가격] DB연동
             #menuData = def(result[0])
-            menuData = ['디카페인 아메리카노', 'TEST DESCRIPTION', 'img\\drink1\\HOT_디카페인 아메리카노.jpg', ['AddDeShot', 'AddStevia'], 2500]
+            menuData = ['디카페인 아메리카노', 'TEST DESCRIPTION', 'img\\drink1\\HOT_디카페인 아메리카노.jpg', ['AddDeShot'], 2500]
 
             self.stackedWidget.setCurrentIndex(2)
 
@@ -63,23 +68,52 @@ class aiDialog(QDialog, form_class) :
 
             pixmap = QPixmap(menuData[2]).scaled(300, 300)  #메뉴이미지
             self.menuImg.setPixmap(pixmap)
+            self.lcdNumber.display(menuData[4])
 
-            self.menuData = [menuData[0], menuData[1], menuData[2], menuData[4]]
+            self.menuData = [menuData[0], menuData[1], menuData[2], menuData[4], self.result[1]]
             self.optionData = menuData[3]
 
         #결과가 부정확하다면
-        elif resultFlag == 1:
+        elif self.resultFlag == 1:
+            inputStr = '힘들다'
+            self.InputStr_2.setText('입력 결과: ' + inputStr)
+            #result = [['메뉴명1', '메뉴명2', ...], 수량]
+            self.result = [['디카페인 아메리카노', '아메리카노', '디카페인 카페라떼'], 7]
+
+            #menuData = [
+                #['메뉴명1', '메뉴설명', '이미지경로', '옵션목록[]', '가격'], 
+                #...
+            #]
+            menuData = [
+                ['디카페인 아메리카노', 'TEST DESCRIPTION디카페인아메리카노', 'img\\drink1\\HOT_디카페인 아메리카노.jpg', ['AddDeShot'], 2500], 
+                ['아메리카노', 'TEST DESCRIPTION아메리카노', 'img\\drink1\\HOT_아메리카노.jpg', ['AddShot'], 2000],
+                ['디카페인 카페라떼', 'TEST DESCRIPTION디카페인카페라떼', 'img\\drink1\\HOT_디카페인 카페라떼.jpg', ['AddDeShot', 'AddLightVanila', 'SelectMilk'], 3900]
+            ]
+
             self.stackedWidget.setCurrentIndex(1)
+            #메뉴리스트 ListWidget item으로 반환
+            for data in menuData :
+                data.append(self.result[1])
+                self.addInExactList(data)            
 
         #오류
         else :
             pass
     
     def btn_Back(self) :
-        if self.resultFlag == 0 :
+        #print(self.resultFlag)
+        #print(self.stackedWidget.currentIndex())
+        if self.stackedWidget.currentIndex() == 1 :
             self.stackedWidget.setCurrentIndex(0)
+            self.aiInExactList.clear()
+            self.aiOptionList.clear()
         else :
-            self.stackedWidget.setCurrentIndex(1)
+            if self.resultFlag == 0 :
+                self.stackedWidget.setCurrentIndex(0)
+                self.aiOptionList.clear()
+            else :
+                self.stackedWidget.setCurrentIndex(1)
+                self.aiOptionList.clear()
 
     def btn_SelectOption(self) :
         self.aiOptionList.clear()
@@ -89,29 +123,38 @@ class aiDialog(QDialog, form_class) :
         popup_selectOption = front.aiOptionWindow(self.menuData, self.optionData, self)
         popup_selectOption.showModal()
 
-        #print(self.menuData)
-        #print(self.optionResult)
         self.testList = []
-        for key, value in self.optionResult[0].items() :
-            self.testList.append(value)
+        try :
+            for key, value in self.optionResult[0].items() :
+                self.testList.append(value)
+        except :
+            pass
 
-        #print(self.testList)
         for data in self.testList :
             self.aiOptionList.addItem(data)
 
-        self.lcdNumber.display(self.optionResult[2])
+        try :
+            self.lcdNumber.display(self.optionResult[2])
+        except :
+            self.lcdNumber.display(self.menuData[3])
 
     def btn_addCart(self) :
-        print(self.menuData)
-        print(self.optionResult)
         try :
-            data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], 1, self.testList]
+            data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], 1, self.testList, self.result[1]]
         except :
-            data = [self.menuData[0], self.menuData[3], self.menuData[2], 1, self.testList]
+            data = [self.menuData[0], self.menuData[3], self.menuData[2], 1, self.testList, self.result[1]]
         #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg']
         #
         self.parent.addAiCart(data)
         self.close()
+
+    def addInExactList(self, menuData) :
+        item_Widget = front.inExactItem(self.aiInExactList, menuData, self)
+        item = QListWidgetItem()
+        item.setSizeHint(item_Widget.sizeHint())
+
+        self.aiInExactList.addItem(item)
+        self.aiInExactList.setItemWidget(item, item_Widget)
     
     def testSleep(self):
         time.sleep(5)

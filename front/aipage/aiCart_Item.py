@@ -29,14 +29,15 @@ class aiCartItem(QWidget, form_class) :
         #self.amount = 1
         self.singleMenuPrice = menuData[1]
         self.totalMenuPrice = menuData[1]
-        self.parent.totalPrice += self.singleMenuPrice
+        self.amount = menuData[5]
+        self.parent.totalPrice += self.singleMenuPrice * self.amount
 
         pixmap = QPixmap(menuData[2]).scaled(150, 150)
         self.menuPic_.setPixmap(pixmap)
 
         self.menuName_.setText(self.menuName)
         self.quantity_.setText(str(self.amount))
-        self.itemPrice_.setText(str(self.totalMenuPrice) + '원')
+        self.itemPrice_.setText(str(self.totalMenuPrice * self.amount) + '원')
 
         self.selectedOptionList = '\n'.join(self.optionList)
         self.optionList_.setText(self.selectedOptionList)

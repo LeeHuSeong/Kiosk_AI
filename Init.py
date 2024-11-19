@@ -67,6 +67,7 @@ class MainWindow(QMainWindow, Init_Class) :
     def mainPage_toSelect(self) :
         self.set_MainPage_Index(1)
         front.btn_CartListClear(self)
+        self.aiCartList.clear()
 
     #move to defaultMenuPage
     def mainPage_toDefault(self) :
@@ -141,7 +142,6 @@ class MainWindow(QMainWindow, Init_Class) :
         testDialog.showModal()
     
     def addAiCart(self, data) :
-
         front.aiCartWidget_Add(self, data)
 
 ######################################################

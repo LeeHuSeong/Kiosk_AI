@@ -20,4 +20,5 @@ from .aipage.aiCart_Init import *
 from .aipage.aiCart_Item import *
 from .aipage.ai_Dialog import *
 from .aipage.ai_selectOption import *
+from .aipage.select_Item import *
 
