@@ -24,12 +24,12 @@ class inExactItem(QWidget, form_class) :
     def btn_select(self) : 
         self.parent.stackedWidget.setCurrentIndex(2)
 
-        self.parent.menuStr.setText(self.menuData[0])   #메뉴이름
-        self.parent.menuDesc.setText(self.menuData[1])  #메뉴설명
+        self.parent.menuName_.setText(self.menuData[0])   #메뉴이름
+        self.parent.menuDesc_.setText(self.menuData[1])  #메뉴설명
 
         pixmap = QPixmap(self.menuData[2]).scaled(300, 300)  #메뉴이미지
-        self.parent.menuImg.setPixmap(pixmap)
-        self.parent.lcdNumber.display(self.menuData[4])
+        self.parent.menuImg_.setPixmap(pixmap)
+        self.parent.itemPrice_.display(self.menuData[4])
 
-        self.parent.menuData = [self.menuData[0], self.menuData[1], self.menuData[2], self.menuData[4]]
-        self.parent.optionData = self.menuData[3]
+        #self.menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
+        self.parent.menuData = [self.menuData[0], self.menuData[4], self.menuData[2], 1, self.menuData[3], self.menuData[1]]

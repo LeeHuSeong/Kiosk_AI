@@ -27,35 +27,36 @@ class aiOptionWindow(QDialog, form_class) :
     selectedOptionNameDict = {}
     selectedOptionIDDict = {}
 
-    def __init__(self, menuData, optionResult, parent) :
+    def __init__(self, menuData, parent) :
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
         self.center()
 
-        self.set_InitData(menuData, optionResult, parent)
+        self.set_InitData(menuData, parent)
         self.set_InitLabelData()
 
     # Initial_Setting
-    def set_InitData(self, menuData, optionResult, parent) :  #초기 Class 변수 값 설정
+    def set_InitData(self, menuData, parent) :  #초기 Class 변수 값 설정
         self.parent = parent
-        self.menuData = menuData
-        self.selectedOptionNameDict = optionResult[0]
-        self.selectedOptionIDDict = optionResult[1]
+
+        #버튼변수 할당
+        for key in self.optionDict : 
+            for value in self.optionDict[key] :
+                value.clicked.connect(self.optionSelect)
 
         self.menuName = menuData[2].split('\\')[2].replace('.jpg', '')
         self.menuDesc = menuData[5]
 
         self.menuDefaultPrice = menuData[1]
-        if optionResult[2] == 0 :
-            self.totalPrice = menuData[1]
-        else :
-            self.totalPrice = optionResult[2]
+        self.totalPrice = menuData[1]
 
         self.menuImgSrc = menuData[2]
         self.menuAmount = menuData[3]
 
         self.optionData = menuData[4]
+        self.set_InitSetting(self.optionData)
+
         self.optionDict = {
             'AddShot'           : [self.btn_Shot_0, self.btn_Shot_1, self.btn_Shot_2] ,             #0 샷 추가
             'AddDeShot'         : [self.btn_DeShot_0, self.btn_DeShot_1] ,                          #1 디카페인 샷 추가
@@ -70,18 +71,7 @@ class aiOptionWindow(QDialog, form_class) :
             'AddWhipping'       : [self.btn_Whipping_0, self.btn_Whipping_1] ,                      #10 휘핑OX
             'AddCinnamon'       : [self.btn_Cinnamon_0, self.btn_Cinnamon_1]                        #11 시나몬 OX
         }
-
-        #버튼변수 할당
-        for key in self.optionDict : 
-            i = 0
-            for value in self.optionDict[key] :
-                value.clicked.connect(self.optionSelect)
-                if key in optionResult[1] and i == optionResult[1][key] :
-                    value.setChecked(True)
-                i += 1
-
-        self.set_InitSetting(self.optionData)
-
+    
     def set_InitLabelData(self) :       #초기 Label 값 설정
         self.menuName_.setText(self.menuName)
         self.menuDesc_.setText(self.menuDesc)
@@ -112,22 +102,6 @@ class aiOptionWindow(QDialog, form_class) :
         qr.moveCenter(cp)
         self.move(qr.topLeft())
 
-    def selectOption_Cancel(self) :
-        result = [{}, {}, self.menuDefaultPrice]
-        
-        self.parent.set_optionResult(result)
-        self.close()
-
-    def selectOption_Add(self) :
-        print(self.selectedOptionNameDict)
-        result = [self.selectedOptionNameDict, self.selectedOptionIDDict, int(self.itemPrice_.text().split('원')[0])]
-        self.parent.set_optionResult(result)
-
-        self.selectedOptionNameDict = dict()
-        self.selectedOptionIDDict = dict()
-
-        self.close()
-
     def refresh_Price(self) :
         data = self.selectedOptionIDDict.items()
         optPrice = 0
@@ -138,6 +112,16 @@ class aiOptionWindow(QDialog, form_class) :
 
         return optPrice
 
+    def selectOption_Cancel(self) :
+        #self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
+        self.close()
+
+    def selectOption_Add(self) :
+        result = [self.selectedOptionNameDict, 1, self.priceLabel.text().split('원')[0]]
+
+        self.parent.optionResult = result
+        self.close()
+
     def optionSelect(self) :
         sender = self.sender()
         getKey = sender
@@ -147,12 +131,12 @@ class aiOptionWindow(QDialog, form_class) :
         value = self.get_value(getValue)
 
         self.selectedOptionIDDict[key] = int(value)
-        self.totalPrice = self.refresh_Price() + self.menuDefaultPrice
-        self.itemPrice_.setText(str(self.totalPrice) + '원')
+        self.totalPrice = self.refresh_Price() + self.originPrice
+        self.priceLabel.setText(str(self.totalPrice) + '원')
 
         if key == 'AddShot' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '1샷 추가'
             elif int(value) == 2 :
@@ -160,49 +144,49 @@ class aiOptionWindow(QDialog, form_class) :
 
         elif key == 'AddDeShot' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '디카페인 1샷 추가'
 
         elif key == 'ChangeStevia' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '스테비아 변경'
         
         elif key == 'AddStevia' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '스테비아 추가'
         
         elif key == 'AddVanila' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '바닐라시럽 추가'
         
         elif key == 'ChangeLightVanila' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '라이트 바닐라시럽 변경'
         
         elif key == 'AddLightVanila' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '라이트 바닐라시럽 추가'
         
         elif key == 'AddCaramel' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '카라멜시럽 추가'
         
         elif key == 'SelectMilk' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '우유 변경(아몬드)'
             elif int(value) == 2 :
@@ -210,7 +194,7 @@ class aiOptionWindow(QDialog, form_class) :
         
         elif key == 'AddHoney' :
             if int(value) == 0 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '꿀 추가'
         
@@ -218,13 +202,13 @@ class aiOptionWindow(QDialog, form_class) :
             if int(value) == 0 :
                 self.selectedOptionNameDict[key] = '휘핑 빼기'
             elif int(value) == 1 :
-                self.selectedOptionNameDict.pop(key, None)
+                pass
         
         elif key == 'AddCinnamon' :
             if int(value) == 0 :
                 self.selectedOptionNameDict[key] = '시나몬 빼기'
             elif int(value) == 1 :
-                self.selectedOptionNameDict.pop(key, None)    
+                pass       
 
     def get_key(self, val) :
         for key in self.optionDict : 

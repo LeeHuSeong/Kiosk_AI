@@ -97,7 +97,7 @@
       </spacer>
      </item>
      <item>
-      <widget class="QLabel" name="menuPic">
+      <widget class="QLabel" name="menuImg_">
        <property name="minimumSize">
         <size>
          <width>150</width>
@@ -111,7 +111,7 @@
         </size>
        </property>
        <property name="text">
-        <string>DefaultImage</string>
+        <string>menuImg_</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -137,7 +137,7 @@
      <item>
       <layout class="QVBoxLayout" name="verticalLayout_6">
        <item>
-        <widget class="QLabel" name="menuName">
+        <widget class="QLabel" name="menuName_">
          <property name="minimumSize">
           <size>
            <width>0</width>
@@ -151,12 +151,12 @@
           </size>
          </property>
          <property name="text">
-          <string>DefaultMenuName</string>
+          <string>menuName_</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLabel" name="menuDescription">
+        <widget class="QLabel" name="menuDesc_">
          <property name="sizePolicy">
           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
            <horstretch>0</horstretch>
@@ -176,7 +176,7 @@
           </size>
          </property>
          <property name="text">
-          <string>DefaultDescription</string>
+          <string>menuDesc_</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -226,7 +226,7 @@
         </spacer>
        </item>
        <item>
-        <widget class="QLabel" name="priceLabel">
+        <widget class="QLabel" name="itemPrice_">
          <property name="minimumSize">
           <size>
            <width>150</width>
@@ -289,7 +289,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>-1542</y>
         <width>731</width>
         <height>2484</height>
        </rect>
@@ -1737,6 +1737,22 @@
              <bool>false</bool>
             </property>
             <layout class="QGridLayout" name="gridLayout_18">
+             <item row="1" column="4">
+              <widget class="QWidget" name="Null_19" native="true">
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+              </widget>
+             </item>
              <item row="1" column="1">
               <widget class="QPushButton" name="btn_SelectM_1">
                <property name="sizePolicy">
@@ -1765,59 +1781,6 @@
                </property>
                <property name="text">
                 <string>아몬드밀크</string>
-               </property>
-               <property name="checkable">
-                <bool>true</bool>
-               </property>
-               <property name="autoExclusive">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="3">
-              <widget class="QWidget" name="Null_19" native="true">
-               <property name="minimumSize">
-                <size>
-                 <width>150</width>
-                 <height>150</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>150</width>
-                 <height>150</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="2">
-              <widget class="QPushButton" name="btn_SelectM_2">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>150</width>
-                 <height>150</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>150</width>
-                 <height>150</height>
-                </size>
-               </property>
-               <property name="contextMenuPolicy">
-                <enum>Qt::PreventContextMenu</enum>
-               </property>
-               <property name="layoutDirection">
-                <enum>Qt::LeftToRight</enum>
-               </property>
-               <property name="text">
-                <string>오트밀크</string>
                </property>
                <property name="checkable">
                 <bool>true</bool>
@@ -1857,6 +1820,43 @@
                 <bool>true</bool>
                </property>
                <property name="checked">
+                <bool>true</bool>
+               </property>
+               <property name="autoExclusive">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="3">
+              <widget class="QPushButton" name="btn_SelectM_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>150</width>
+                 <height>150</height>
+                </size>
+               </property>
+               <property name="contextMenuPolicy">
+                <enum>Qt::PreventContextMenu</enum>
+               </property>
+               <property name="layoutDirection">
+                <enum>Qt::LeftToRight</enum>
+               </property>
+               <property name="text">
+                <string>오트밀크</string>
+               </property>
+               <property name="checkable">
                 <bool>true</bool>
                </property>
                <property name="autoExclusive">
