@@ -1,10 +1,12 @@
-from link import * #MySQL과 연결하는 함수 가져오기
+from .link import * #MySQL과 연결하는 함수 가져오기
 
+'''
 #MySQL과 연결, 커서 가져옴
 conn=create_connection()
+'''
 
 #리스트 /table (data join img_path) / [[메뉴이름, 가격,이미지경로,카테고리,품절여부(0/1)] ]
-def get_menu_price_path_category():
+def get_menu_price_path_category(conn):
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
     #Query
@@ -26,7 +28,7 @@ def get_menu_price_path_category():
     return result_list
 
 #리스트/ [[menu_name1],[menu_name2], ...]
-def get_menu_name():
+def get_menu_name(conn):
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
     #Query
@@ -34,15 +36,14 @@ def get_menu_name():
 
     ##Query / 튜플로 데이터 가져옴 / 튜플 -> 리스트 변환
     cur.execute(query)
-    result_tuple = cur.fetchall()
-    result_list=[list(row) for row in result_tuple]
+    result_list=[row[0] for row in cur.fetchall()]
 
     #커서 종료
     cur.close()
     return result_list
 
 #딕셔너리 {'메뉴':[  menu_price, [   옵션category, [옵션eng,옵션kor,opt_price]],  [옵션category2,[]]     ]    ], '메뉴2' }
-def get_menu_option():
+def get_menu_option(conn):
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
     menu = [item[0] for item in get_menu_price_path_category()]
@@ -103,7 +104,7 @@ def get_menu_option():
 
 
 #리스트 /table data / [[no, 분류, 카테고리 번호, HOT/ICE, 이름, 가격, 설명] ]
-def get_data():
+def get_data(conn):
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
     #Query
@@ -121,7 +122,7 @@ def get_data():
 
 
 #리스트/옵션 가격/ [[choose_id, eng_name,price],[] ]
-def get_opt_price():
+def get_opt_price(conn):
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
 
@@ -136,7 +137,7 @@ def get_opt_price():
 
 
 # def(옵션이름,번호(opt_one)) => 값 반환
-def get_opt_price(name,num):
+def get_opt_price(conn,name,num):
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
 
@@ -152,7 +153,7 @@ def get_opt_price(name,num):
 
 
 #메뉴 설명 가져오기
-def get_menu_info(menu):
+def get_menu_info(conn,menu):
     #conn에 대한 cursor를 만드는 함수
     cur= cursor(conn)
 
@@ -181,6 +182,7 @@ print(c)
 
 b= get_menu_option()
 print(b)
+
+b= get_opt_price('AddShot',2)
+print(d)
 '''
-#d=get_opt_price('AddShot',2)
-#print(d)
