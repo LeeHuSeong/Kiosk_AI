@@ -78,7 +78,7 @@ class MainWindow(QMainWindow, Init_Class) :
     def mainPage_toVoice(self) :
         self.set_MainPage_Index(3)
 
-        testDialog = front.aiDialog()
+        testDialog = front.aiDialog(self)
         testDialog.showModal()
 #Move_Page
 
@@ -135,6 +135,14 @@ class MainWindow(QMainWindow, Init_Class) :
 
     def btnTEST2(self) :
         pass
+
+    def btn_newAiOrder(self) :
+        testDialog = front.aiDialog(self)
+        testDialog.showModal()
+    
+    def addAiCart(self, data) :
+
+        front.aiCartWidget_Add(self, data)
 
 ######################################################
 

@@ -788,7 +788,20 @@
           <item row="1" column="0">
            <layout class="QHBoxLayout" name="horizontalLayout_4">
             <item>
-             <widget class="QListWidget" name="aiCartListWidget"/>
+             <widget class="QListWidget" name="aiCartListWidget">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="showDropIndicator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::NoSelection</enum>
+              </property>
+             </widget>
             </item>
            </layout>
           </item>
@@ -922,8 +935,8 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>111</x>
-     <y>41</y>
+     <x>40</x>
+     <y>40</y>
     </hint>
     <hint type="destinationlabel">
      <x>1351</x>
@@ -1111,15 +1124,15 @@
    <sender>btn_addMenu</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
-   <slot>btnTEST2()</slot>
+   <slot>btn_newAiOrder()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>87</x>
-     <y>1051</y>
+     <x>44</x>
+     <y>1050</y>
     </hint>
     <hint type="destinationlabel">
-     <x>-27</x>
-     <y>939</y>
+     <x>-44</x>
+     <y>1050</y>
     </hint>
    </hints>
   </connection>
@@ -1140,5 +1153,6 @@
   <slot>btnTEST()</slot>
   <slot>btnTEST2()</slot>
   <slot>btn_CartListClear()</slot>
+  <slot>btn_newAiOrder()</slot>
  </slots>
 </ui>

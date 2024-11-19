@@ -13,12 +13,15 @@ form_class = uic.loadUiType("front/aipage/ai_Dialog.ui")[0]
 class aiDialog(QDialog, form_class) :
     resultFlag = 0
     optionResult = []
-    def __init__(self) :
+    testList = []
+    parent = None
+    def __init__(self, parent) :
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
         self.center()
 
+        self.parent = parent
         self.aiOptionList = self.aiOptionListWidget
         self.stackedWidget.setCurrentIndex(0)
 
@@ -66,7 +69,7 @@ class aiDialog(QDialog, form_class) :
 
         #결과가 부정확하다면
         elif resultFlag == 1:
-            pass
+            self.stackedWidget.setCurrentIndex(1)
 
         #오류
         else :
@@ -86,20 +89,29 @@ class aiDialog(QDialog, form_class) :
         popup_selectOption = front.aiOptionWindow(self.menuData, self.optionData, self)
         popup_selectOption.showModal()
 
-        print(self.menuData)
-        print(self.optionResult)
-        testList = []
+        #print(self.menuData)
+        #print(self.optionResult)
+        self.testList = []
         for key, value in self.optionResult[0].items() :
-            testList.append(value)
+            self.testList.append(value)
 
-        print(testList)
-        for data in testList :
+        #print(self.testList)
+        for data in self.testList :
             self.aiOptionList.addItem(data)
 
         self.lcdNumber.display(self.optionResult[2])
 
     def btn_addCart(self) :
-        pass
+        print(self.menuData)
+        print(self.optionResult)
+        try :
+            data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], 1, self.testList]
+        except :
+            data = [self.menuData[0], self.menuData[3], self.menuData[2], 1, self.testList]
+        #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg']
+        #
+        self.parent.addAiCart(data)
+        self.close()
     
     def testSleep(self):
         time.sleep(5)

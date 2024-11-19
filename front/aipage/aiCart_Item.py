@@ -2,6 +2,8 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
+from PyQt5.QtGui import QPixmap
+
 form_class = uic.loadUiType("front/aipage/test_item.ui")[0]
 
 class aiCartItem(QWidget, form_class) :
@@ -20,6 +22,7 @@ class aiCartItem(QWidget, form_class) :
         self.setupUi(self)
         self.parent = parent
         self.listWidget = listWidget
+        self.optionList = menuData[4]
         
         #self.menuName = menuData[0]
         self.menuName = menuData[2].split('\\')[2].replace('.jpg', '')
@@ -28,9 +31,15 @@ class aiCartItem(QWidget, form_class) :
         self.totalMenuPrice = menuData[1]
         self.parent.totalPrice += self.singleMenuPrice
 
+        pixmap = QPixmap(menuData[2]).scaled(150, 150)
+        self.menuPic_.setPixmap(pixmap)
+
         self.menuName_.setText(self.menuName)
         self.quantity_.setText(str(self.amount))
         self.itemPrice_.setText(str(self.totalMenuPrice) + '원')
+
+        self.selectedOptionList = '\n'.join(self.optionList)
+        self.optionList_.setText(self.selectedOptionList)
 
         self.parent.Reset_lcd_Price()
 
@@ -66,6 +75,7 @@ class aiCartItem(QWidget, form_class) :
             self.parent.totalPrice -= self.singleMenuPrice * self.amount
             self.amount = 0
 
+        self.parent.Reset_lcd_Price()
         item = self.listWidget.itemAt(self.pos())
         row = self.listWidget.row(item)
         self.listWidget.takeItem(row)
