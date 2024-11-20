@@ -289,7 +289,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-1542</y>
+        <y>0</y>
         <width>731</width>
         <height>2484</height>
        </rect>
@@ -2471,21 +2471,21 @@
    <sender>btn_addCart</sender>
    <signal>clicked()</signal>
    <receiver>selectOption</receiver>
-   <slot>selectOption_Add()</slot>
+   <slot>selectOption_OK()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>603</x>
-     <y>757</y>
+     <x>545</x>
+     <y>738</y>
     </hint>
     <hint type="destinationlabel">
-     <x>852</x>
-     <y>747</y>
+     <x>624</x>
+     <y>862</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
   <slot>selectOption_Cancel()</slot>
-  <slot>selectOption_Add()</slot>
+  <slot>selectOption_OK()</slot>
  </slots>
 </ui>

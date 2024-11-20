@@ -10,6 +10,10 @@ class inExactItem(QWidget, form_class) :
     listWidget = None
     menuData = []
 
+    menuName = ''           # (STR) 메뉴 이름
+    menuDefaultPrice = 0    # (INT) 메뉴 기본가격 
+
+    #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
     def __init__(self, listWidget, menuData, parent) :
         super(inExactItem, self).__init__(parent)
         self.setupUi(self)
@@ -18,18 +22,12 @@ class inExactItem(QWidget, form_class) :
         self.listWidget = listWidget
         self.menuData = menuData
 
-        self.menuName_.setText(menuData[0])
-        self.itemPrice_.setText(str(menuData[4]) + '원')
+        self.menuName = menuData[2].split('\\')[2].replace('.jpg', '')
+        self.menuDefaultPrice = menuData[1]
+
+        self.menuName_.setText(self.menuName)
+        self.itemPrice_.setText(str(self.menuDefaultPrice) + '원')
 
     def btn_select(self) : 
-        self.parent.stackedWidget.setCurrentIndex(2)
-
-        self.parent.menuName_.setText(self.menuData[0])   #메뉴이름
-        self.parent.menuDesc_.setText(self.menuData[1])  #메뉴설명
-
-        pixmap = QPixmap(self.menuData[2]).scaled(300, 300)  #메뉴이미지
-        self.parent.menuImg_.setPixmap(pixmap)
-        self.parent.itemPrice_.display(self.menuData[4])
-
-        #self.menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
-        self.parent.menuData = [self.menuData[0], self.menuData[4], self.menuData[2], 1, self.menuData[3], self.menuData[1]]
+         self.parent.stackedWidget.setCurrentIndex(2)
+         self.parent.set_aiOrderData(self.menuData)
