@@ -161,15 +161,29 @@ def AI_recognition(conn):
         intent = OrderIntent(conn, recognized_text, synonyms_data)
         intent.extract_menu(conn)
 
+        
+
+        if not intent.menu:
+            print("사용 가능한 메뉴와 매칭되지 않았습니다.")
+            return [[None],0,0] #메뉴가 없을 때
+
+        #결과 갯수 파악
+        result_Flag = 0
+        if len(intent.menu) == 0:
+            result_Flag=0
+        elif len(intent.menu) > 0:
+            result_Flag=1
+        elif len(intent.menu) < 0:
+            result_Flag=-1
+
         # 결과 출력
         if intent.menu:
-            final_result = [[intent.menu], [intent.quantity]]
+            final_result = [[intent.menu], intent.quantity,result_Flag]
             return final_result
         else:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
     else:
         print("음성 인식에 실패했습니다.")
-
 
 
 ''' test시 사용
