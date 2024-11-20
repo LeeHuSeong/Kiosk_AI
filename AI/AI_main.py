@@ -8,10 +8,9 @@ import json
 
 # 주문 의도를 처리하는 클래스
 class OrderIntent:
-    def __init__(self, text, synonyms_data, quantity_model):
+    def __init__(self, text, synonyms_data):
         self.text = text
         self.synonyms_data = synonyms_data
-        self.quantity_model = quantity_model  # 학습된 모델
         self.matched_synonym, self.menu = self.extract_menu()
         self.quantity = self.extract_quantity()
         self.is_order = self.detect_order_words()
@@ -39,35 +38,42 @@ class OrderIntent:
         return None, None
 
     def extract_quantity(self):
-        # 학습된 모델로 수량 예측
-        if self.quantity_model:
-            model, vectorizer = self.quantity_model
-            try:
-                transformed_text = vectorizer.transform([self.text])  # 입력 텍스트 변환
-                predicted_quantity = model.predict(transformed_text)[0]  # 예측된 수량
-                print(f"AI 모델 예측 결과: {predicted_quantity}")
-                return predicted_quantity if predicted_quantity > 0 else 1  # 유효성 검사
-            except Exception as e:
-                print(f"AI 모델 예측 중 오류 발생: {e}")
+        # 한글 숫자 매핑
+        korean_numbers = {
+            '한': 1, '두': 2, '세': 3, '네': 4,
+            '다섯': 5, '여섯': 6, '일곱': 7, '여덟': 8,
+            '아홉': 9, '열': 10, '스물': 20, '서른': 30,
+            '마흔': 40, '쉰': 50, '예순': 60, '일흔': 70,
+            '여든': 80, '아흔': 90
+        }
 
-        # AI 모델 결과가 없을 경우 기본값
-        print("AI 모델 예측 실패, 기본값 1로 설정합니다.")
-        return 1
+        def parse_korean_number(korean_str):
+            total = 0
+            temp = 0
+            for char in korean_str:
+                if char in korean_numbers:
+                    temp += korean_numbers[char]
+                elif char == '십':
+                    temp = max(1, temp) * 10
+            total += temp
+            return total
+
+        # 정규식 패턴 (수량과 "잔" 같은 단위를 인식)
+        pattern = r'(\d+)|([한두세네다섯여섯일곱여덟아홉열스물서른마흔쉰예순일흔여든아흔십]+)\s*잔'
+        matches = re.findall(pattern, self.text)
+
+        total_quantity = 0
+        for match in matches:
+            if match[0].isdigit():
+                total_quantity += int(match[0])
+            elif match[1]:
+                total_quantity += parse_korean_number(match[1])
+
+        return total_quantity if total_quantity > 0 else 1
 
     def detect_order_words(self):
         order_keywords = ["주세요", "줘", "주문할게요", "주문"]
         return any(word in self.text for word in order_keywords)
-
-
-# 학습된 모델 로드
-def load_quantity_model(model_path="model/menu_classifier.pkl"):
-    if os.path.exists(model_path):
-        with open(model_path, "rb") as model_file:
-            return pickle.load(model_file)
-    else:
-        print("학습된 모델 파일을 찾을 수 없습니다.")
-        return None
-
 
 
 # JSON 데이터 로드
@@ -143,14 +149,11 @@ if __name__ == "__main__":
     # 유사어 데이터 로드
     synonyms_data = load_synonyms()
 
-    # 학습된 모델 로드
-    quantity_model = load_quantity_model()
-
     # 음성 인식
     recognized_text = recognize_speech()
 
     if recognized_text:
-        intent = OrderIntent(recognized_text, synonyms_data, quantity_model)
+        intent = OrderIntent(recognized_text, synonyms_data)
 
         print(f"감지된 주문 문장: {recognized_text}")
 
