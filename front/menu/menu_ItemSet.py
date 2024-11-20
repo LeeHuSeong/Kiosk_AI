@@ -12,8 +12,6 @@ class menu_ItemSet(QWidget, form_class) :
         super(menu_ItemSet, self).__init__(parent)
         self.setupUi(self)
 
-        #print("log_3" + str(parent))
-
         self.listWidget = listWidget
         self.menuData = menuData
         self.parent = parent

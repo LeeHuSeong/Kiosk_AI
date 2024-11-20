@@ -6,12 +6,7 @@ import back1
 
 import time #for Test
 
-#형식: 메뉴이름, 가격, 이미지경로, 분류
-##menudata[3]
-
 def menuWidget_Load(self, type) :
-        #start = time.time()#
-
         self.menuList.clear()
         menuDB = []
         if 'menuDB_origin' not in locals()  :
@@ -33,13 +28,8 @@ def menuWidget_Load(self, type) :
                 else :
                     pass
 
-        ## menuDB = [menuType: menuList[]]
-        #start2 = time.time()
         for list in menuDB :
             list.append(optionDB[list[0]][1])
-        #end2 = time.time()
-        #print(f'실행 시간: {end2 - start2}')#
-
     
         menuData = []
 
@@ -53,6 +43,3 @@ def menuWidget_Load(self, type) :
 
             self.menuList.addItem(item)
             self.menuList.setItemWidget(item, item_Widget)
-
-        #end = time.time()#
-        #print(f'메뉴 로딩 시간: {end - start}')#

@@ -2,59 +2,59 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-form_class = uic.loadUiType("front/cart/cart_Item.ui")[0]
+from PyQt5.QtGui import QPixmap
 
-class cartItem(QWidget, form_class) :
+form_class = uic.loadUiType("front/aipage/test_item.ui")[0]
+
+class aiCartItem(QWidget, form_class) :
     listWidget = None
     menuData = []
     optionList = []
 
     menuName = ''
     selectedOptionList = ''
-    amount = 0
+    amount = 1
     singleMenuPrice = 0
     totalMenuPrice = 0
 
     def __init__(self, listWidget, menuData, parent) :
-        super(cartItem, self).__init__(parent)
+        super(aiCartItem, self).__init__(parent)
         self.setupUi(self)
         self.parent = parent
-
-        self.menuData = menuData
         self.listWidget = listWidget
+        self.optionList = menuData[4]
         
-        self.menuName = menuData[0]
-        
-        optionList = []
-        for value in menuData[1].values() :
-            optionList.append(value)
-        self.optionList = optionList
+        #self.menuName = menuData[0]
+        self.menuName = menuData[2].split('\\')[2].replace('.jpg', '')
+        self.singleMenuPrice = menuData[1]
+        self.totalMenuPrice = menuData[1]
+        self.amount = menuData[5]
+        self.parent.totalPrice += self.singleMenuPrice * self.amount
+
+        pixmap = QPixmap(menuData[2]).scaled(150, 150)
+        self.menuPic_.setPixmap(pixmap)
+
+        self.menuName_.setText(self.menuName)
+        self.quantity_.setText(str(self.amount))
+        self.itemPrice_.setText(str(self.totalMenuPrice * self.amount) + '원')
 
         self.selectedOptionList = '\n'.join(self.optionList)
-        
-        self.amount = menuData[2]
-        self.singleMenuPrice = int(menuData[3].replace('원', ''))
-        self.totalMenuPrice = int(menuData[3].replace('원', ''))
-
-        self.menuName_.setText(menuData[0])
         self.optionList_.setText(self.selectedOptionList)
-        self.quantity.setText(str(menuData[2]))
-        self.itemPrice.setText(str(self.singleMenuPrice) + '원')
 
-        self.parent.totalPrice += self.singleMenuPrice
+        self.parent.Reset_lcd_Price()
 
     def cartItemAmount_Increase(self) :
         self.amount += 1
-        self.quantity.setText(str(self.amount))
+        self.quantity_.setText(str(self.amount))
         self.parent.totalPrice += self.singleMenuPrice
 
         self.totalMenuPrice = self.singleMenuPrice * self.amount
-        self.itemPrice.setText(str(self.totalMenuPrice) + '원')
+        self.itemPrice_.setText(str(self.totalMenuPrice) + '원')
         self.parent.Reset_lcd_Price()
 
     def cartItemAmount_Decrease(self) :
         self.amount -= 1
-        self.quantity.setText(str(self.amount))
+        self.quantity_.setText(str(self.amount))
 
         if self.amount == 0 :
             self.parent.totalPrice -= self.singleMenuPrice
@@ -63,7 +63,7 @@ class cartItem(QWidget, form_class) :
             self.parent.totalPrice -= self.singleMenuPrice
 
         self.totalMenuPrice = self.singleMenuPrice * self.amount
-        self.itemPrice.setText(str(self.totalMenuPrice) + '원')
+        self.itemPrice_.setText(str(self.totalMenuPrice) + '원')
         self.parent.Reset_lcd_Price()
     
     def cartItem_Remove(self) :
@@ -79,7 +79,3 @@ class cartItem(QWidget, form_class) :
         item = self.listWidget.itemAt(self.pos())
         row = self.listWidget.row(item)
         self.listWidget.takeItem(row)
-
-    def get_CartData(self) :
-        data = [self.menuName, self.optionList, self.amount, self.totalMenuPrice]
-        return data

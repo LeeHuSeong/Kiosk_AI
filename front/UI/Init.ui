@@ -74,7 +74,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="initPage">
          <layout class="QGridLayout" name="gridLayout_5">
@@ -594,13 +594,6 @@
                </widget>
               </item>
               <item>
-               <widget class="QPushButton" name="pushButton">
-                <property name="text">
-                 <string>PushButton</string>
-                </property>
-               </widget>
-              </item>
-              <item>
                <widget class="QLabel" name="label">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -614,8 +607,16 @@
                   <height>125</height>
                  </size>
                 </property>
+                <property name="font">
+                 <font>
+                  <pointsize>36</pointsize>
+                 </font>
+                </property>
                 <property name="text">
-                 <string>TextLabel</string>
+                 <string>K-Patois AI 키오스크 </string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
                 </property>
                </widget>
               </item>
@@ -683,37 +684,192 @@
          </layout>
         </widget>
         <widget class="QWidget" name="voiceOrderPage">
-         <widget class="QTextBrowser" name="textBrowser">
-          <property name="geometry">
-           <rect>
-            <x>9</x>
-            <y>9</y>
-            <width>256</width>
-            <height>192</height>
-           </rect>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="leftMargin">
+           <number>0</number>
           </property>
-          <property name="html">
-           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Gulim'; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;음성주문Page&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;voiceOrderPage&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          <property name="topMargin">
+           <number>0</number>
           </property>
-         </widget>
-         <widget class="QPushButton" name="pushButton_2">
-          <property name="geometry">
-           <rect>
-            <x>340</x>
-            <y>20</y>
-            <width>151</width>
-            <height>141</height>
-           </rect>
+          <property name="rightMargin">
+           <number>0</number>
           </property>
-          <property name="text">
-           <string/>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
-         </widget>
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <item row="0" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QPushButton" name="btn_toInitPage_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>125</width>
+                <height>125</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>홈으로</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_2">
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_2">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>125</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <pointsize>36</pointsize>
+               </font>
+              </property>
+              <property name="text">
+               <string>K-Patois AI 키오스크 </string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>125</width>
+                <height>125</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>125</width>
+                <height>125</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QListWidget" name="aiCartListWidget">
+              <property name="focusPolicy">
+               <enum>Qt::NoFocus</enum>
+              </property>
+              <property name="editTriggers">
+               <set>QAbstractItemView::NoEditTriggers</set>
+              </property>
+              <property name="showDropIndicator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="selectionMode">
+               <enum>QAbstractItemView::NoSelection</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="2" column="0">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QPushButton" name="btn_addMenu">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>75</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>75</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>주문하기</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_3">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>75</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>75</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>PushButton</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcd_aiPrice"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_toCheckOrderPage_2">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>75</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>75</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>결제하기</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
         </widget>
        </widget>
       </item>
@@ -724,22 +880,6 @@ p, li { white-space: pre-wrap; }
  </widget>
  <resources/>
  <connections>
-  <connection>
-   <sender>pushButton_2</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>mainPage_toInit()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>398</x>
-     <y>67</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>748</x>
-     <y>101</y>
-    </hint>
-   </hints>
-  </connection>
   <connection>
    <sender>btn_toSelectPage</sender>
    <signal>clicked()</signal>
@@ -779,8 +919,8 @@ p, li { white-space: pre-wrap; }
    <slot>add_timer()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1008</x>
-     <y>81</y>
+     <x>125</x>
+     <y>50</y>
     </hint>
     <hint type="destinationlabel">
      <x>1100</x>
@@ -796,7 +936,7 @@ p, li { white-space: pre-wrap; }
    <hints>
     <hint type="sourcelabel">
      <x>40</x>
-     <y>38</y>
+     <y>40</y>
     </hint>
     <hint type="destinationlabel">
      <x>1351</x>
@@ -837,30 +977,14 @@ p, li { white-space: pre-wrap; }
    </hints>
   </connection>
   <connection>
-   <sender>pushButton</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btnTEST()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>165</x>
-     <y>60</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>-53</x>
-     <y>84</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>btn_catalog_1</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>btn_MenuALL()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>76</x>
-     <y>252</y>
+     <x>80</x>
+     <y>125</y>
     </hint>
     <hint type="destinationlabel">
      <x>-71</x>
@@ -875,8 +999,8 @@ p, li { white-space: pre-wrap; }
    <slot>btn_MenuCoffee()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>41</x>
-     <y>381</y>
+     <x>45</x>
+     <y>125</y>
     </hint>
     <hint type="destinationlabel">
      <x>-110</x>
@@ -891,8 +1015,8 @@ p, li { white-space: pre-wrap; }
    <slot>btn_MenuDeCaffeine()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>59</x>
-     <y>539</y>
+     <x>63</x>
+     <y>125</y>
     </hint>
     <hint type="destinationlabel">
      <x>-125</x>
@@ -907,8 +1031,8 @@ p, li { white-space: pre-wrap; }
    <slot>btn_MenuDrinks()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>69</x>
-     <y>690</y>
+     <x>73</x>
+     <y>125</y>
     </hint>
     <hint type="destinationlabel">
      <x>-72</x>
@@ -923,8 +1047,8 @@ p, li { white-space: pre-wrap; }
    <slot>btn_MenuDessert()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>33</x>
-     <y>828</y>
+     <x>37</x>
+     <y>125</y>
     </hint>
     <hint type="destinationlabel">
      <x>-80</x>
@@ -939,8 +1063,8 @@ p, li { white-space: pre-wrap; }
    <slot>btn_CartListClear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1033</x>
-     <y>972</y>
+     <x>125</x>
+     <y>75</y>
     </hint>
     <hint type="destinationlabel">
      <x>1151</x>
@@ -955,12 +1079,60 @@ p, li { white-space: pre-wrap; }
    <slot>popup_Receipt()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1031</x>
-     <y>1052</y>
+     <x>125</x>
+     <y>75</y>
     </hint>
     <hint type="destinationlabel">
      <x>1121</x>
      <y>1045</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_toInitPage_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>mainPage_toInit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>76</x>
+     <y>89</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1117</x>
+     <y>246</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnTEST()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>168</x>
+     <y>65</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1134</x>
+     <y>81</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>btn_addMenu</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btn_newAiOrder()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>44</x>
+     <y>1050</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-44</x>
+     <y>1050</y>
     </hint>
    </hints>
   </connection>
@@ -981,5 +1153,6 @@ p, li { white-space: pre-wrap; }
   <slot>btnTEST()</slot>
   <slot>btnTEST2()</slot>
   <slot>btn_CartListClear()</slot>
+  <slot>btn_newAiOrder()</slot>
  </slots>
 </ui>
