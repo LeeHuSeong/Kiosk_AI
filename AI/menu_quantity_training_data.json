@@ -20,6 +20,14 @@
         "quantity": 1
     },
     {
+        "sentence": "디카페인 아메리카노 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "디카페인 아메리카노 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "디카페인 아메리카노 두 잔 주세요",
         "quantity": 1
     },
@@ -33,11 +41,19 @@
     },
     {
         "sentence": "디카페인 아메리카노 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "디카페인 아메리카노 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 아메리카노 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 아메리카노 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "디카페인 아메리카노 세 잔 주세요",
@@ -60,24 +76,40 @@
         "quantity": 2
     },
     {
-        "sentence": "디카페인 아메리카노 네 잔 주세요",
+        "sentence": "디카페인 아메리카노 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "디카페인 아메리카노 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 아메리카노 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 아메리카노 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 아메리카노 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 아메리카노 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 아메리카노 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 아메리카노 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 아메리카노 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 아메리카노 다섯 잔 주세요",
@@ -89,115 +121,139 @@
     },
     {
         "sentence": "디카페인 아메리카노 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 아메리카노 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 아메리카노 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 아메리카노 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 아메리카노 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 아메리카노 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 아메리카노 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 아메리카노 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 아메리카노 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 아메리카노 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 아메리카노 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 아메리카노 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 아메리카노 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 아메리카노 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 아메리카노 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "디카페인 아메리카노 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "디카페인 아메리카노 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 아메리카노 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 아메리카노 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 아메리카노 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 아메리카노 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 아메리카노 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 아메리카노 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 아메리카노 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 아메리카노 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 아메리카노 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 아메리카노 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 아메리카노 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 아메리카노 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 아메리카노 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 아메리카노 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 아메리카노 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 아메리카노 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "디카페인 아메리카노 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카페라떼 한잔 주세요",
@@ -220,6 +276,14 @@
         "quantity": 1
     },
     {
+        "sentence": "디카페인 카페라떼 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "디카페인 카페라떼 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "디카페인 카페라떼 두 잔 주세요",
         "quantity": 1
     },
@@ -233,11 +297,19 @@
     },
     {
         "sentence": "디카페인 카페라떼 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "디카페인 카페라떼 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카페라떼 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카페라떼 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "디카페인 카페라떼 세 잔 주세요",
@@ -260,24 +332,40 @@
         "quantity": 2
     },
     {
-        "sentence": "디카페인 카페라떼 네 잔 주세요",
+        "sentence": "디카페인 카페라떼 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카페라떼 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카페라떼 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페라떼 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페라떼 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페라떼 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페라떼 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카페라떼 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카페라떼 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페라떼 다섯 잔 주세요",
@@ -289,115 +377,139 @@
     },
     {
         "sentence": "디카페인 카페라떼 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페라떼 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페라떼 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 카페라떼 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페라떼 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페라떼 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페라떼 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페라떼 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페라떼 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 카페라떼 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페라떼 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페라떼 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페라떼 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페라떼 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페라떼 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "디카페인 카페라떼 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페라떼 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페라떼 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페라떼 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페라떼 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페라떼 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 카페라떼 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페라떼 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페라떼 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페라떼 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페라떼 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페라떼 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 카페라떼 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페라떼 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페라떼 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페라떼 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카페라떼 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카페라떼 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "디카페인 카페라떼 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "디카페인 바닐라라떼 한잔 주세요",
@@ -420,6 +532,14 @@
         "quantity": 1
     },
     {
+        "sentence": "디카페인 바닐라라떼 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "디카페인 바닐라라떼 두 잔 주세요",
         "quantity": 1
     },
@@ -433,11 +553,19 @@
     },
     {
         "sentence": "디카페인 바닐라라떼 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "디카페인 바닐라라떼 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "디카페인 바닐라라떼 세 잔 주세요",
@@ -460,24 +588,40 @@
         "quantity": 2
     },
     {
-        "sentence": "디카페인 바닐라라떼 네 잔 주세요",
+        "sentence": "디카페인 바닐라라떼 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 바닐라라떼 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 바닐라라떼 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 바닐라라떼 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 바닐라라떼 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 바닐라라떼 다섯 잔 주세요",
@@ -489,115 +633,139 @@
     },
     {
         "sentence": "디카페인 바닐라라떼 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 바닐라라떼 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 바닐라라떼 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 바닐라라떼 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 바닐라라떼 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 바닐라라떼 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 바닐라라떼 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 바닐라라떼 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 바닐라라떼 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 바닐라라떼 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 바닐라라떼 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 바닐라라떼 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 바닐라라떼 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "디카페인 바닐라라떼 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 바닐라라떼 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 바닐라라떼 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 바닐라라떼 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 바닐라라떼 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 바닐라라떼 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 바닐라라떼 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 바닐라라떼 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 바닐라라떼 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 바닐라라떼 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 바닐라라떼 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 바닐라라떼 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 바닐라라떼 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 바닐라라떼 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 바닐라라떼 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "디카페인 바닐라라떼 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "디카페인 연유라떼 한잔 주세요",
@@ -620,6 +788,14 @@
         "quantity": 1
     },
     {
+        "sentence": "디카페인 연유라떼 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "디카페인 연유라떼 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "디카페인 연유라떼 두 잔 주세요",
         "quantity": 1
     },
@@ -633,11 +809,19 @@
     },
     {
         "sentence": "디카페인 연유라떼 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "디카페인 연유라떼 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 연유라떼 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 연유라떼 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "디카페인 연유라떼 세 잔 주세요",
@@ -660,24 +844,40 @@
         "quantity": 2
     },
     {
-        "sentence": "디카페인 연유라떼 네 잔 주세요",
+        "sentence": "디카페인 연유라떼 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "디카페인 연유라떼 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 연유라떼 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 연유라떼 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 연유라떼 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 연유라떼 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 연유라떼 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 연유라떼 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 연유라떼 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 연유라떼 다섯 잔 주세요",
@@ -689,115 +889,139 @@
     },
     {
         "sentence": "디카페인 연유라떼 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 연유라떼 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 연유라떼 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 연유라떼 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 연유라떼 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 연유라떼 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 연유라떼 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 연유라떼 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 연유라떼 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 연유라떼 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 연유라떼 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 연유라떼 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 연유라떼 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 연유라떼 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 연유라떼 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "디카페인 연유라떼 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "디카페인 연유라떼 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 연유라떼 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 연유라떼 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 연유라떼 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 연유라떼 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 연유라떼 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 연유라떼 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 연유라떼 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 연유라떼 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 연유라떼 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 연유라떼 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 연유라떼 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 연유라떼 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 연유라떼 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 연유라떼 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 연유라떼 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 연유라떼 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "디카페인 연유라떼 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카라멜마끼아또 한잔 주세요",
@@ -820,6 +1044,14 @@
         "quantity": 1
     },
     {
+        "sentence": "디카페인 카라멜마끼아또 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "디카페인 카라멜마끼아또 두 잔 주세요",
         "quantity": 1
     },
@@ -833,11 +1065,19 @@
     },
     {
         "sentence": "디카페인 카라멜마끼아또 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "디카페인 카라멜마끼아또 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "디카페인 카라멜마끼아또 세 잔 주세요",
@@ -860,24 +1100,40 @@
         "quantity": 2
     },
     {
-        "sentence": "디카페인 카라멜마끼아또 네 잔 주세요",
+        "sentence": "디카페인 카라멜마끼아또 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카라멜마끼아또 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카라멜마끼아또 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카라멜마끼아또 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카라멜마끼아또 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카라멜마끼아또 다섯 잔 주세요",
@@ -889,115 +1145,139 @@
     },
     {
         "sentence": "디카페인 카라멜마끼아또 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카라멜마끼아또 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카라멜마끼아또 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카라멜마끼아또 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카라멜마끼아또 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카라멜마끼아또 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카라멜마끼아또 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카라멜마끼아또 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카라멜마끼아또 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카라멜마끼아또 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카라멜마끼아또 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카라멜마끼아또 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카라멜마끼아또 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카라멜마끼아또 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카라멜마끼아또 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카라멜마끼아또 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카라멜마끼아또 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카라멜마끼아또 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카라멜마끼아또 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카라멜마끼아또 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카라멜마끼아또 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카라멜마끼아또 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카라멜마끼아또 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카라멜마끼아또 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카라멜마끼아또 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카라멜마끼아또 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카라멜마끼아또 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카라멜마끼아또 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "디카페인 카라멜마끼아또 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카페모카 한잔 주세요",
@@ -1020,6 +1300,14 @@
         "quantity": 1
     },
     {
+        "sentence": "디카페인 카페모카 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "디카페인 카페모카 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "디카페인 카페모카 두 잔 주세요",
         "quantity": 1
     },
@@ -1033,11 +1321,19 @@
     },
     {
         "sentence": "디카페인 카페모카 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "디카페인 카페모카 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카페모카 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카페모카 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "디카페인 카페모카 세 잔 주세요",
@@ -1060,24 +1356,40 @@
         "quantity": 2
     },
     {
-        "sentence": "디카페인 카페모카 네 잔 주세요",
+        "sentence": "디카페인 카페모카 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카페모카 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카페모카 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페모카 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페모카 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페모카 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페모카 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카페모카 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카페모카 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카페모카 다섯 잔 주세요",
@@ -1089,115 +1401,139 @@
     },
     {
         "sentence": "디카페인 카페모카 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페모카 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페모카 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 카페모카 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페모카 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페모카 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페모카 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페모카 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페모카 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 카페모카 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카페모카 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페모카 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페모카 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페모카 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페모카 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "디카페인 카페모카 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페모카 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페모카 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페모카 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페모카 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카페모카 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 카페모카 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페모카 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페모카 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페모카 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페모카 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페모카 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 카페모카 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페모카 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페모카 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카페모카 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카페모카 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카페모카 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "디카페인 카페모카 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카푸치노 한잔 주세요",
@@ -1220,6 +1556,14 @@
         "quantity": 1
     },
     {
+        "sentence": "디카페인 카푸치노 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "디카페인 카푸치노 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "디카페인 카푸치노 두 잔 주세요",
         "quantity": 1
     },
@@ -1233,11 +1577,19 @@
     },
     {
         "sentence": "디카페인 카푸치노 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "디카페인 카푸치노 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카푸치노 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카푸치노 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "디카페인 카푸치노 세 잔 주세요",
@@ -1260,24 +1612,40 @@
         "quantity": 2
     },
     {
-        "sentence": "디카페인 카푸치노 네 잔 주세요",
+        "sentence": "디카페인 카푸치노 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "디카페인 카푸치노 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카푸치노 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카푸치노 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카푸치노 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카푸치노 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카푸치노 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카푸치노 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "디카페인 카푸치노 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "디카페인 카푸치노 다섯 잔 주세요",
@@ -1289,115 +1657,139 @@
     },
     {
         "sentence": "디카페인 카푸치노 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카푸치노 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카푸치노 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 카푸치노 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카푸치노 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카푸치노 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카푸치노 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카푸치노 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카푸치노 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "디카페인 카푸치노 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "디카페인 카푸치노 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카푸치노 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카푸치노 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카푸치노 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카푸치노 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "디카페인 카푸치노 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카푸치노 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카푸치노 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카푸치노 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카푸치노 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "디카페인 카푸치노 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 카푸치노 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카푸치노 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카푸치노 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카푸치노 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카푸치노 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카푸치노 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "디카페인 카푸치노 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카푸치노 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카푸치노 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "디카페인 카푸치노 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카푸치노 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "디카페인 카푸치노 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "디카페인 카푸치노 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "아메리카노 한잔 주세요",
@@ -1420,6 +1812,14 @@
         "quantity": 1
     },
     {
+        "sentence": "아메리카노 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "아메리카노 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "아메리카노 두 잔 주세요",
         "quantity": 1
     },
@@ -1433,11 +1833,19 @@
     },
     {
         "sentence": "아메리카노 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "아메리카노 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "아메리카노 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "아메리카노 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "아메리카노 세 잔 주세요",
@@ -1460,24 +1868,40 @@
         "quantity": 2
     },
     {
-        "sentence": "아메리카노 네 잔 주세요",
+        "sentence": "아메리카노 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "아메리카노 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "아메리카노 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "아메리카노 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "아메리카노 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "아메리카노 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "아메리카노 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "아메리카노 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "아메리카노 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "아메리카노 다섯 잔 주세요",
@@ -1489,115 +1913,139 @@
     },
     {
         "sentence": "아메리카노 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "아메리카노 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "아메리카노 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "아메리카노 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "아메리카노 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "아메리카노 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "아메리카노 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "아메리카노 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "아메리카노 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "아메리카노 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "아메리카노 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "아메리카노 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "아메리카노 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "아메리카노 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "아메리카노 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "아메리카노 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "아메리카노 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "아메리카노 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "아메리카노 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "아메리카노 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "아메리카노 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "아메리카노 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "아메리카노 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "아메리카노 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "아메리카노 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "아메리카노 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "아메리카노 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "아메리카노 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "아메리카노 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "아메리카노 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "아메리카노 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "아메리카노 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "아메리카노 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "아메리카노 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "카페라떼 한잔 주세요",
@@ -1620,6 +2068,14 @@
         "quantity": 1
     },
     {
+        "sentence": "카페라떼 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "카페라떼 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "카페라떼 두 잔 주세요",
         "quantity": 1
     },
@@ -1633,11 +2089,19 @@
     },
     {
         "sentence": "카페라떼 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "카페라떼 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "카페라떼 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "카페라떼 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "카페라떼 세 잔 주세요",
@@ -1660,24 +2124,40 @@
         "quantity": 2
     },
     {
-        "sentence": "카페라떼 네 잔 주세요",
+        "sentence": "카페라떼 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "카페라떼 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "카페라떼 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "카페라떼 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카페라떼 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카페라떼 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카페라떼 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "카페라떼 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "카페라떼 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "카페라떼 다섯 잔 주세요",
@@ -1689,115 +2169,139 @@
     },
     {
         "sentence": "카페라떼 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페라떼 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페라떼 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "카페라떼 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "카페라떼 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페라떼 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페라떼 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페라떼 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페라떼 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "카페라떼 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "카페라떼 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페라떼 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페라떼 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페라떼 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페라떼 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "카페라떼 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "카페라떼 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페라떼 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페라떼 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페라떼 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페라떼 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "카페라떼 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "카페라떼 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페라떼 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페라떼 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페라떼 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페라떼 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "카페라떼 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "카페라떼 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페라떼 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페라떼 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "카페라떼 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "카페라떼 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "카페라떼 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "바닐라라떼 한잔 주세요",
@@ -1820,6 +2324,14 @@
         "quantity": 1
     },
     {
+        "sentence": "바닐라라떼 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "바닐라라떼 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "바닐라라떼 두 잔 주세요",
         "quantity": 1
     },
@@ -1833,11 +2345,19 @@
     },
     {
         "sentence": "바닐라라떼 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "바닐라라떼 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "바닐라라떼 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "바닐라라떼 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "바닐라라떼 세 잔 주세요",
@@ -1860,24 +2380,40 @@
         "quantity": 2
     },
     {
-        "sentence": "바닐라라떼 네 잔 주세요",
+        "sentence": "바닐라라떼 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "바닐라라떼 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "바닐라라떼 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "바닐라라떼 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "바닐라라떼 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "바닐라라떼 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "바닐라라떼 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "바닐라라떼 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "바닐라라떼 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "바닐라라떼 다섯 잔 주세요",
@@ -1889,115 +2425,139 @@
     },
     {
         "sentence": "바닐라라떼 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "바닐라라떼 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "바닐라라떼 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "바닐라라떼 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "바닐라라떼 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "바닐라라떼 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "바닐라라떼 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "바닐라라떼 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "바닐라라떼 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "바닐라라떼 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "바닐라라떼 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "바닐라라떼 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "바닐라라떼 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "바닐라라떼 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "바닐라라떼 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "바닐라라떼 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "바닐라라떼 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "바닐라라떼 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "바닐라라떼 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "바닐라라떼 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "바닐라라떼 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "바닐라라떼 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "바닐라라떼 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "바닐라라떼 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "바닐라라떼 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "바닐라라떼 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "바닐라라떼 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "바닐라라떼 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "바닐라라떼 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "바닐라라떼 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "바닐라라떼 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "바닐라라떼 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "바닐라라떼 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "바닐라라떼 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "연유라떼 한잔 주세요",
@@ -2020,6 +2580,14 @@
         "quantity": 1
     },
     {
+        "sentence": "연유라떼 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "연유라떼 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "연유라떼 두 잔 주세요",
         "quantity": 1
     },
@@ -2033,11 +2601,19 @@
     },
     {
         "sentence": "연유라떼 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "연유라떼 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "연유라떼 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "연유라떼 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "연유라떼 세 잔 주세요",
@@ -2060,24 +2636,40 @@
         "quantity": 2
     },
     {
-        "sentence": "연유라떼 네 잔 주세요",
+        "sentence": "연유라떼 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "연유라떼 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "연유라떼 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "연유라떼 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "연유라떼 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "연유라떼 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "연유라떼 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "연유라떼 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "연유라떼 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "연유라떼 다섯 잔 주세요",
@@ -2089,115 +2681,139 @@
     },
     {
         "sentence": "연유라떼 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "연유라떼 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "연유라떼 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "연유라떼 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "연유라떼 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "연유라떼 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "연유라떼 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "연유라떼 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "연유라떼 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "연유라떼 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "연유라떼 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "연유라떼 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "연유라떼 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "연유라떼 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "연유라떼 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "연유라떼 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "연유라떼 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "연유라떼 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "연유라떼 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "연유라떼 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "연유라떼 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "연유라떼 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "연유라떼 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "연유라떼 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "연유라떼 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "연유라떼 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "연유라떼 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "연유라떼 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "연유라떼 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "연유라떼 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "연유라떼 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "연유라떼 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "연유라떼 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "연유라떼 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "카라멜마끼야또 한잔 주세요",
@@ -2220,6 +2836,14 @@
         "quantity": 1
     },
     {
+        "sentence": "카라멜마끼야또 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "카라멜마끼야또 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "카라멜마끼야또 두 잔 주세요",
         "quantity": 1
     },
@@ -2233,11 +2857,19 @@
     },
     {
         "sentence": "카라멜마끼야또 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "카라멜마끼야또 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "카라멜마끼야또 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "카라멜마끼야또 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "카라멜마끼야또 세 잔 주세요",
@@ -2260,24 +2892,40 @@
         "quantity": 2
     },
     {
-        "sentence": "카라멜마끼야또 네 잔 주세요",
+        "sentence": "카라멜마끼야또 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "카라멜마끼야또 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "카라멜마끼야또 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "카라멜마끼야또 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카라멜마끼야또 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카라멜마끼야또 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카라멜마끼야또 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "카라멜마끼야또 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "카라멜마끼야또 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "카라멜마끼야또 다섯 잔 주세요",
@@ -2289,115 +2937,139 @@
     },
     {
         "sentence": "카라멜마끼야또 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카라멜마끼야또 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카라멜마끼야또 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "카라멜마끼야또 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "카라멜마끼야또 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카라멜마끼야또 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카라멜마끼야또 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카라멜마끼야또 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카라멜마끼야또 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "카라멜마끼야또 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "카라멜마끼야또 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카라멜마끼야또 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카라멜마끼야또 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카라멜마끼야또 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카라멜마끼야또 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "카라멜마끼야또 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "카라멜마끼야또 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카라멜마끼야또 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카라멜마끼야또 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카라멜마끼야또 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카라멜마끼야또 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "카라멜마끼야또 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "카라멜마끼야또 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카라멜마끼야또 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카라멜마끼야또 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카라멜마끼야또 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카라멜마끼야또 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "카라멜마끼야또 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "카라멜마끼야또 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카라멜마끼야또 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카라멜마끼야또 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "카라멜마끼야또 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "카라멜마끼야또 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "카라멜마끼야또 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "카페모카 한잔 주세요",
@@ -2420,6 +3092,14 @@
         "quantity": 1
     },
     {
+        "sentence": "카페모카 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "카페모카 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "카페모카 두 잔 주세요",
         "quantity": 1
     },
@@ -2433,11 +3113,19 @@
     },
     {
         "sentence": "카페모카 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "카페모카 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "카페모카 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "카페모카 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "카페모카 세 잔 주세요",
@@ -2460,24 +3148,40 @@
         "quantity": 2
     },
     {
-        "sentence": "카페모카 네 잔 주세요",
+        "sentence": "카페모카 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "카페모카 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "카페모카 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "카페모카 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카페모카 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카페모카 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카페모카 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "카페모카 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "카페모카 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "카페모카 다섯 잔 주세요",
@@ -2489,115 +3193,139 @@
     },
     {
         "sentence": "카페모카 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페모카 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페모카 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "카페모카 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "카페모카 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페모카 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페모카 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페모카 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카페모카 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "카페모카 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "카페모카 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페모카 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페모카 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페모카 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페모카 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "카페모카 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "카페모카 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페모카 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페모카 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페모카 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카페모카 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "카페모카 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "카페모카 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페모카 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페모카 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페모카 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페모카 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "카페모카 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "카페모카 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페모카 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카페모카 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "카페모카 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "카페모카 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "카페모카 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "카푸치노 한잔 주세요",
@@ -2620,6 +3348,14 @@
         "quantity": 1
     },
     {
+        "sentence": "카푸치노 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "카푸치노 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "카푸치노 두 잔 주세요",
         "quantity": 1
     },
@@ -2633,11 +3369,19 @@
     },
     {
         "sentence": "카푸치노 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "카푸치노 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "카푸치노 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "카푸치노 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "카푸치노 세 잔 주세요",
@@ -2660,24 +3404,40 @@
         "quantity": 2
     },
     {
-        "sentence": "카푸치노 네 잔 주세요",
+        "sentence": "카푸치노 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "카푸치노 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "카푸치노 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "카푸치노 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카푸치노 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카푸치노 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "카푸치노 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "카푸치노 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "카푸치노 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "카푸치노 다섯 잔 주세요",
@@ -2689,115 +3449,139 @@
     },
     {
         "sentence": "카푸치노 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카푸치노 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카푸치노 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "카푸치노 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "카푸치노 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카푸치노 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카푸치노 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카푸치노 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "카푸치노 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "카푸치노 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "카푸치노 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카푸치노 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카푸치노 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카푸치노 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카푸치노 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "카푸치노 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "카푸치노 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카푸치노 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카푸치노 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카푸치노 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "카푸치노 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "카푸치노 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "카푸치노 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카푸치노 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카푸치노 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카푸치노 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카푸치노 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "카푸치노 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "카푸치노 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카푸치노 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "카푸치노 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "카푸치노 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "카푸치노 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "카푸치노 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "복숭아아이스티 한잔 주세요",
@@ -2820,6 +3604,14 @@
         "quantity": 1
     },
     {
+        "sentence": "복숭아아이스티 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "복숭아아이스티 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "복숭아아이스티 두 잔 주세요",
         "quantity": 1
     },
@@ -2833,11 +3625,19 @@
     },
     {
         "sentence": "복숭아아이스티 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "복숭아아이스티 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "복숭아아이스티 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "복숭아아이스티 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "복숭아아이스티 세 잔 주세요",
@@ -2860,24 +3660,40 @@
         "quantity": 2
     },
     {
-        "sentence": "복숭아아이스티 네 잔 주세요",
+        "sentence": "복숭아아이스티 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "복숭아아이스티 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "복숭아아이스티 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "복숭아아이스티 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "복숭아아이스티 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "복숭아아이스티 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "복숭아아이스티 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "복숭아아이스티 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "복숭아아이스티 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "복숭아아이스티 다섯 잔 주세요",
@@ -2889,115 +3705,139 @@
     },
     {
         "sentence": "복숭아아이스티 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "복숭아아이스티 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "복숭아아이스티 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "복숭아아이스티 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "복숭아아이스티 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "복숭아아이스티 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "복숭아아이스티 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "복숭아아이스티 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "복숭아아이스티 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "복숭아아이스티 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "복숭아아이스티 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "복숭아아이스티 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "복숭아아이스티 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "복숭아아이스티 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "복숭아아이스티 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "복숭아아이스티 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "복숭아아이스티 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "복숭아아이스티 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "복숭아아이스티 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "복숭아아이스티 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "복숭아아이스티 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "복숭아아이스티 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "복숭아아이스티 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "복숭아아이스티 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "복숭아아이스티 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "복숭아아이스티 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "복숭아아이스티 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "복숭아아이스티 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "복숭아아이스티 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "복숭아아이스티 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "복숭아아이스티 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "복숭아아이스티 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "복숭아아이스티 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "복숭아아이스티 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "유자차 한잔 주세요",
@@ -3020,6 +3860,14 @@
         "quantity": 1
     },
     {
+        "sentence": "유자차 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "유자차 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "유자차 두 잔 주세요",
         "quantity": 1
     },
@@ -3033,11 +3881,19 @@
     },
     {
         "sentence": "유자차 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "유자차 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "유자차 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "유자차 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "유자차 세 잔 주세요",
@@ -3060,24 +3916,40 @@
         "quantity": 2
     },
     {
-        "sentence": "유자차 네 잔 주세요",
+        "sentence": "유자차 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "유자차 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "유자차 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "유자차 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "유자차 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "유자차 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "유자차 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "유자차 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "유자차 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "유자차 다섯 잔 주세요",
@@ -3089,115 +3961,139 @@
     },
     {
         "sentence": "유자차 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "유자차 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "유자차 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "유자차 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "유자차 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "유자차 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "유자차 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "유자차 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "유자차 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "유자차 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "유자차 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "유자차 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "유자차 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "유자차 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "유자차 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "유자차 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "유자차 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "유자차 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "유자차 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "유자차 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "유자차 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "유자차 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "유자차 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "유자차 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "유자차 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "유자차 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "유자차 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "유자차 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "유자차 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "유자차 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "유자차 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "유자차 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "유자차 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "유자차 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "레몬차 한잔 주세요",
@@ -3220,6 +4116,14 @@
         "quantity": 1
     },
     {
+        "sentence": "레몬차 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "레몬차 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "레몬차 두 잔 주세요",
         "quantity": 1
     },
@@ -3233,11 +4137,19 @@
     },
     {
         "sentence": "레몬차 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "레몬차 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "레몬차 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "레몬차 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "레몬차 세 잔 주세요",
@@ -3260,24 +4172,40 @@
         "quantity": 2
     },
     {
-        "sentence": "레몬차 네 잔 주세요",
+        "sentence": "레몬차 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "레몬차 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "레몬차 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "레몬차 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "레몬차 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "레몬차 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "레몬차 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "레몬차 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "레몬차 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "레몬차 다섯 잔 주세요",
@@ -3289,115 +4217,139 @@
     },
     {
         "sentence": "레몬차 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "레몬차 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "레몬차 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "레몬차 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "레몬차 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "레몬차 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "레몬차 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "레몬차 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "레몬차 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "레몬차 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "레몬차 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "레몬차 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "레몬차 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "레몬차 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "레몬차 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "레몬차 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "레몬차 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "레몬차 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "레몬차 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "레몬차 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "레몬차 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "레몬차 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "레몬차 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "레몬차 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "레몬차 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "레몬차 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "레몬차 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "레몬차 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "레몬차 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "레몬차 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "레몬차 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "레몬차 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "레몬차 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "레몬차 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "자몽차 한잔 주세요",
@@ -3420,6 +4372,14 @@
         "quantity": 1
     },
     {
+        "sentence": "자몽차 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "자몽차 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "자몽차 두 잔 주세요",
         "quantity": 1
     },
@@ -3433,11 +4393,19 @@
     },
     {
         "sentence": "자몽차 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "자몽차 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "자몽차 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "자몽차 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "자몽차 세 잔 주세요",
@@ -3460,24 +4428,40 @@
         "quantity": 2
     },
     {
-        "sentence": "자몽차 네 잔 주세요",
+        "sentence": "자몽차 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "자몽차 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "자몽차 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "자몽차 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "자몽차 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "자몽차 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "자몽차 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "자몽차 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "자몽차 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "자몽차 다섯 잔 주세요",
@@ -3489,115 +4473,139 @@
     },
     {
         "sentence": "자몽차 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "자몽차 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "자몽차 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "자몽차 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "자몽차 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "자몽차 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "자몽차 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "자몽차 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "자몽차 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "자몽차 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "자몽차 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "자몽차 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "자몽차 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "자몽차 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "자몽차 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "자몽차 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "자몽차 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "자몽차 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "자몽차 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "자몽차 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "자몽차 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "자몽차 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "자몽차 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "자몽차 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "자몽차 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "자몽차 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "자몽차 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "자몽차 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "자몽차 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "자몽차 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "자몽차 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "자몽차 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "자몽차 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "자몽차 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "녹차 한잔 주세요",
@@ -3620,6 +4628,14 @@
         "quantity": 1
     },
     {
+        "sentence": "녹차 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "녹차 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "녹차 두 잔 주세요",
         "quantity": 1
     },
@@ -3633,11 +4649,19 @@
     },
     {
         "sentence": "녹차 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "녹차 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "녹차 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "녹차 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "녹차 세 잔 주세요",
@@ -3660,24 +4684,40 @@
         "quantity": 2
     },
     {
-        "sentence": "녹차 네 잔 주세요",
+        "sentence": "녹차 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "녹차 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "녹차 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "녹차 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "녹차 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "녹차 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "녹차 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "녹차 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "녹차 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "녹차 다섯 잔 주세요",
@@ -3689,115 +4729,139 @@
     },
     {
         "sentence": "녹차 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "녹차 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "녹차 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "녹차 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "녹차 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "녹차 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "녹차 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "녹차 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "녹차 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "녹차 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "녹차 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "녹차 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "녹차 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "녹차 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "녹차 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "녹차 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "녹차 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "녹차 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "녹차 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "녹차 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "녹차 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "녹차 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "녹차 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "녹차 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "녹차 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "녹차 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "녹차 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "녹차 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "녹차 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "녹차 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "녹차 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "녹차 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "녹차 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "녹차 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "캐모마일 한잔 주세요",
@@ -3820,6 +4884,14 @@
         "quantity": 1
     },
     {
+        "sentence": "캐모마일 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "캐모마일 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "캐모마일 두 잔 주세요",
         "quantity": 1
     },
@@ -3833,11 +4905,19 @@
     },
     {
         "sentence": "캐모마일 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "캐모마일 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "캐모마일 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "캐모마일 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "캐모마일 세 잔 주세요",
@@ -3860,24 +4940,40 @@
         "quantity": 2
     },
     {
-        "sentence": "캐모마일 네 잔 주세요",
+        "sentence": "캐모마일 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "캐모마일 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "캐모마일 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "캐모마일 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "캐모마일 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "캐모마일 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "캐모마일 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "캐모마일 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "캐모마일 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "캐모마일 다섯 잔 주세요",
@@ -3889,115 +4985,139 @@
     },
     {
         "sentence": "캐모마일 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "캐모마일 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "캐모마일 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "캐모마일 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "캐모마일 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "캐모마일 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "캐모마일 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "캐모마일 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "캐모마일 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "캐모마일 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "캐모마일 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "캐모마일 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "캐모마일 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "캐모마일 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "캐모마일 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "캐모마일 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "캐모마일 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "캐모마일 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "캐모마일 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "캐모마일 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "캐모마일 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "캐모마일 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "캐모마일 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "캐모마일 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "캐모마일 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "캐모마일 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "캐모마일 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "캐모마일 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "캐모마일 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "캐모마일 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "캐모마일 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "캐모마일 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "캐모마일 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "캐모마일 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "얼그레이 한잔 주세요",
@@ -4020,6 +5140,14 @@
         "quantity": 1
     },
     {
+        "sentence": "얼그레이 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "얼그레이 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "얼그레이 두 잔 주세요",
         "quantity": 1
     },
@@ -4033,11 +5161,19 @@
     },
     {
         "sentence": "얼그레이 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "얼그레이 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "얼그레이 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "얼그레이 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "얼그레이 세 잔 주세요",
@@ -4060,24 +5196,40 @@
         "quantity": 2
     },
     {
-        "sentence": "얼그레이 네 잔 주세요",
+        "sentence": "얼그레이 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "얼그레이 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "얼그레이 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "얼그레이 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "얼그레이 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "얼그레이 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "얼그레이 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "얼그레이 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "얼그레이 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "얼그레이 다섯 잔 주세요",
@@ -4089,115 +5241,139 @@
     },
     {
         "sentence": "얼그레이 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "얼그레이 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "얼그레이 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "얼그레이 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "얼그레이 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "얼그레이 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "얼그레이 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "얼그레이 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "얼그레이 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "얼그레이 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "얼그레이 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "얼그레이 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "얼그레이 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "얼그레이 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "얼그레이 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "얼그레이 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "얼그레이 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "얼그레이 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "얼그레이 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "얼그레이 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "얼그레이 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "얼그레이 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "얼그레이 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "얼그레이 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "얼그레이 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "얼그레이 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "얼그레이 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "얼그레이 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "얼그레이 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "얼그레이 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "얼그레이 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "얼그레이 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "얼그레이 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "얼그레이 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "치즈케익 한잔 주세요",
@@ -4220,6 +5396,14 @@
         "quantity": 1
     },
     {
+        "sentence": "치즈케익 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "치즈케익 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "치즈케익 두 잔 주세요",
         "quantity": 1
     },
@@ -4233,11 +5417,19 @@
     },
     {
         "sentence": "치즈케익 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "치즈케익 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "치즈케익 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "치즈케익 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "치즈케익 세 잔 주세요",
@@ -4260,24 +5452,40 @@
         "quantity": 2
     },
     {
-        "sentence": "치즈케익 네 잔 주세요",
+        "sentence": "치즈케익 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "치즈케익 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "치즈케익 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "치즈케익 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "치즈케익 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "치즈케익 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "치즈케익 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "치즈케익 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "치즈케익 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "치즈케익 다섯 잔 주세요",
@@ -4289,115 +5497,139 @@
     },
     {
         "sentence": "치즈케익 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "치즈케익 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "치즈케익 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "치즈케익 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "치즈케익 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "치즈케익 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "치즈케익 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "치즈케익 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "치즈케익 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "치즈케익 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "치즈케익 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "치즈케익 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "치즈케익 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "치즈케익 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "치즈케익 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "치즈케익 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "치즈케익 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "치즈케익 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "치즈케익 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "치즈케익 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "치즈케익 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "치즈케익 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "치즈케익 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "치즈케익 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "치즈케익 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "치즈케익 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "치즈케익 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "치즈케익 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "치즈케익 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "치즈케익 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "치즈케익 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "치즈케익 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "치즈케익 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "치즈케익 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "초코케익 한잔 주세요",
@@ -4420,6 +5652,14 @@
         "quantity": 1
     },
     {
+        "sentence": "초코케익 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "초코케익 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "초코케익 두 잔 주세요",
         "quantity": 1
     },
@@ -4433,11 +5673,19 @@
     },
     {
         "sentence": "초코케익 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "초코케익 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "초코케익 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "초코케익 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "초코케익 세 잔 주세요",
@@ -4460,24 +5708,40 @@
         "quantity": 2
     },
     {
-        "sentence": "초코케익 네 잔 주세요",
+        "sentence": "초코케익 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "초코케익 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "초코케익 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "초코케익 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "초코케익 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "초코케익 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "초코케익 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "초코케익 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "초코케익 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "초코케익 다섯 잔 주세요",
@@ -4489,115 +5753,139 @@
     },
     {
         "sentence": "초코케익 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "초코케익 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "초코케익 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "초코케익 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "초코케익 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "초코케익 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "초코케익 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "초코케익 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "초코케익 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "초코케익 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "초코케익 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "초코케익 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "초코케익 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "초코케익 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "초코케익 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "초코케익 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "초코케익 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "초코케익 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "초코케익 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "초코케익 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "초코케익 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "초코케익 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "초코케익 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "초코케익 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "초코케익 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "초코케익 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "초코케익 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "초코케익 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "초코케익 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "초코케익 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "초코케익 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "초코케익 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "초코케익 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "초코케익 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "티라미수케익 한잔 주세요",
@@ -4620,6 +5908,14 @@
         "quantity": 1
     },
     {
+        "sentence": "티라미수케익 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "티라미수케익 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "티라미수케익 두 잔 주세요",
         "quantity": 1
     },
@@ -4633,11 +5929,19 @@
     },
     {
         "sentence": "티라미수케익 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "티라미수케익 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "티라미수케익 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "티라미수케익 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "티라미수케익 세 잔 주세요",
@@ -4660,24 +5964,40 @@
         "quantity": 2
     },
     {
-        "sentence": "티라미수케익 네 잔 주세요",
+        "sentence": "티라미수케익 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "티라미수케익 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "티라미수케익 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "티라미수케익 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "티라미수케익 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "티라미수케익 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "티라미수케익 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "티라미수케익 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "티라미수케익 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "티라미수케익 다섯 잔 주세요",
@@ -4689,115 +6009,139 @@
     },
     {
         "sentence": "티라미수케익 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "티라미수케익 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "티라미수케익 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "티라미수케익 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "티라미수케익 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "티라미수케익 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "티라미수케익 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "티라미수케익 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "티라미수케익 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "티라미수케익 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "티라미수케익 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "티라미수케익 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "티라미수케익 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "티라미수케익 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "티라미수케익 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "티라미수케익 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "티라미수케익 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "티라미수케익 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "티라미수케익 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "티라미수케익 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "티라미수케익 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "티라미수케익 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "티라미수케익 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "티라미수케익 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "티라미수케익 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "티라미수케익 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "티라미수케익 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "티라미수케익 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "티라미수케익 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "티라미수케익 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "티라미수케익 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "티라미수케익 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "티라미수케익 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "티라미수케익 열 개 주세요",
+        "quantity": 7
     },
     {
         "sentence": "허니브레드 한잔 주세요",
@@ -4820,6 +6164,14 @@
         "quantity": 1
     },
     {
+        "sentence": "허니브레드 한개 주세요",
+        "quantity": 1
+    },
+    {
+        "sentence": "허니브레드 한 개 주세요",
+        "quantity": 1
+    },
+    {
         "sentence": "허니브레드 두 잔 주세요",
         "quantity": 1
     },
@@ -4833,11 +6185,19 @@
     },
     {
         "sentence": "허니브레드 둘잔 주세요",
-        "quantity": 1
+        "quantity": 2
     },
     {
         "sentence": "허니브레드 두잔 주세요",
-        "quantity": 1
+        "quantity": 2
+    },
+    {
+        "sentence": "허니브레드 두개 주세요",
+        "quantity": 2
+    },
+    {
+        "sentence": "허니브레드 두 개 주세요",
+        "quantity": 2
     },
     {
         "sentence": "허니브레드 세 잔 주세요",
@@ -4860,24 +6220,40 @@
         "quantity": 2
     },
     {
-        "sentence": "허니브레드 네 잔 주세요",
+        "sentence": "허니브레드 세개 주세요",
         "quantity": 2
+    },
+    {
+        "sentence": "허니브레드 세 개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "허니브레드 네 잔 주세요",
+        "quantity": 3
     },
     {
         "sentence": "허니브레드 넷 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "허니브레드 4잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "허니브레드 넷잔 주세요",
-        "quantity": 2
+        "quantity": 3
     },
     {
         "sentence": "허니브레드 네잔 주세요",
-        "quantity": 2
+        "quantity": 3
+    },
+    {
+        "sentence": "허니브레드 네개 주세요",
+        "quantity": 3
+    },
+    {
+        "sentence": "허니브레드 네 개 주세요",
+        "quantity": 3
     },
     {
         "sentence": "허니브레드 다섯 잔 주세요",
@@ -4889,114 +6265,138 @@
     },
     {
         "sentence": "허니브레드 5잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "허니브레드 다섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "허니브레드 다섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "허니브레드 다섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "허니브레드 여섯 잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "허니브레드 여섯 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "허니브레드 6잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "허니브레드 여섯잔 주세요",
-        "quantity": 3
+        "quantity": 4
     },
     {
         "sentence": "허니브레드 여섯개 주세요",
-        "quantity": 3
+        "quantity": 4
+    },
+    {
+        "sentence": "허니브레드 여섯 개 주세요",
+        "quantity": 4
     },
     {
         "sentence": "허니브레드 일곱 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "허니브레드 일곱 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "허니브레드 7잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "허니브레드 일곱잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "허니브레드 일곱개 주세요",
-        "quantity": 4
+        "quantity": 5
+    },
+    {
+        "sentence": "허니브레드 일곱 개 주세요",
+        "quantity": 5
     },
     {
         "sentence": "허니브레드 여덟 잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "허니브레드 여덟 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "허니브레드 8잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "허니브레드 여덟잔 주세요",
-        "quantity": 4
+        "quantity": 5
     },
     {
         "sentence": "허니브레드 여덟개 주세요",
-        "quantity": 4
+        "quantity": 6
+    },
+    {
+        "sentence": "허니브레드 여덟 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "허니브레드 아홉 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "허니브레드 아홉 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "허니브레드 9잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "허니브레드 아홉잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "허니브레드 아홉개 주세요",
-        "quantity": 5
+        "quantity": 6
+    },
+    {
+        "sentence": "허니브레드 아홉 개 주세요",
+        "quantity": 6
     },
     {
         "sentence": "허니브레드 열 잔 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "허니브레드 열 주세요",
-        "quantity": 5
+        "quantity": 6
     },
     {
         "sentence": "허니브레드 10잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "허니브레드 열잔 주세요",
-        "quantity": 5
+        "quantity": 7
     },
     {
         "sentence": "허니브레드 열개 주세요",
-        "quantity": 5
+        "quantity": 7
+    },
+    {
+        "sentence": "허니브레드 열 개 주세요",
+        "quantity": 7
     }
 ]
