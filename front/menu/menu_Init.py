@@ -9,10 +9,12 @@ import time #for Test
 def menuWidget_Load(self, type) :
         self.menuList.clear()
         menuDB = []
+        conn = back1.create_connection()
+
         if 'menuDB_origin' not in locals()  :
-            menuDB_origin = back1.get_menu_price_path_category()    #List
+            menuDB_origin = back1.get_menu_price_path_category(conn)    #List
         if 'optionDB' not in locals() :
-            optionDB = back1.get_menu_option()                      #Dict
+            optionDB = back1.get_menu_option(conn)                      #Dict
 
         if type == 'ALL' or type == '' :
             menuDB = menuDB_origin
@@ -43,3 +45,5 @@ def menuWidget_Load(self, type) :
 
             self.menuList.addItem(item)
             self.menuList.setItemWidget(item, item_Widget)
+
+        back1.close_connection(conn)

@@ -14,6 +14,7 @@ class optionWindow(QDialog, form_class) :
     totalPrice = 0
 
     def __init__(self, menuData, optionData, parent) :
+        conn = back1.create_connection()
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
@@ -54,8 +55,10 @@ class optionWindow(QDialog, form_class) :
         pixmap = QPixmap(menuData[2]).scaled(150, 150)
         self.menuPic.setPixmap(pixmap)
 
-        desc = back1.get_menu_info(menuData[0])
+        desc = back1.get_menu_info(conn, menuData[0])
         self.menuDescription.setText(desc[0])
+
+        back1.close_connection(conn)
 
     def selectOption_InitSetting(self, optionData) :
         i = 0
