@@ -54,7 +54,7 @@ def get_menu_option(conn):
     try:
         #conn에 대한 cursor를 만드는 함수
         cur= cursor(conn)
-        menu = [item[0] for item in get_menu_price_path_category()]
+        menu = [item[0] for item in get_menu_price_path_category(conn)]
 
         #Query: 메뉴이름, 가격, 옵션들
         query_menu="""

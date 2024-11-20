@@ -103,13 +103,15 @@ class aiOptionWindow(QDialog, form_class) :
 
     # 옵션버튼 클릭 시 가격 변경
     def refresh_Price(self) :
+        conn = back1.create_connection()
         data = self.selectedOptionID.items()
         optionPrice = 0
 
         if data != {} :
             for key, value in data :
-                optionPrice += int(back1.get_opt_price(key, value))
+                optionPrice += int(back1.get_opt_price(conn, key, value))
         
+        back1.close_connection(conn)
         return optionPrice
     # 옵션 버튼 클릭 이벤트 ###############
     def optionSelect(self) :
