@@ -161,19 +161,24 @@ def AI_recognition(conn):
         intent = OrderIntent(conn, recognized_text, synonyms_data)
         intent.extract_menu(conn)
 
-        
-
+        #메뉴가 없을때
         if not intent.menu:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
             return [[None],0,0] #메뉴가 없을 때
 
         #결과 갯수 파악
-        result_Flag = 0
-        if len(intent.menu) == 1:
+        result_Flag = -1
+        if intent.menu:
+            if isinstance(intent.menu, list):
+                menu_count = len(intent.menu)  # 매칭된 메뉴 개수
+            else:
+                menu_count = 1  # 단일 메뉴인 경우
+
+        if menu_count == 1:
             result_Flag=0
-        elif len(intent.menu) > 1:
+        elif menu_count > 1:
             result_Flag=1
-        elif len(intent.menu) < 1:
+        elif menu_count < 1:
             result_Flag=-1
 
         # 결과 출력
@@ -229,7 +234,7 @@ def get_AI_menu_data(conn,menus,quantity,flag):
                 img_path,        # 메뉴 이미지 경로
                 quantity,        # 수량
                 options,         # 옵션 리스트
-                menu_info        # 메뉴 설명
+                menu_info[0]        # 메뉴 설명
             ]
             results.append(result)
 
@@ -245,5 +250,5 @@ conn=create_connection()
 menu,quantity,flag,text = AI_recognition(conn)
 a = get_AI_menu_data(conn,menu, quantity, flag)
 
-print(menu,quantity,flag, text)
+#print(menu,quantity,flag, text)
 print(a)
