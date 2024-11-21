@@ -244,7 +244,7 @@ def get_AI_menu_data(conn,menus,quantity,flag):
         return []
 
 
-#test시 사용
+'''#test시 사용
 #MySQL과 연결
 conn=create_connection()
 menu,quantity,flag,text = AI_recognition(conn)
@@ -252,3 +252,4 @@ a = get_AI_menu_data(conn,menu, quantity, flag)
 
 #print(menu,quantity,flag, text)
 print(a)
+'''
