@@ -114,7 +114,7 @@ class optionWindow(QDialog, form_class) :
         self.totalPrice = self.refresh_Price() + self.originPrice
         self.priceLabel.setText(str(self.totalPrice) + '원')
 
-        if key == 'AddShot' :
+        if key == 'Addshot' :
             if int(value) == 0 :
                 pass
             elif int(value) == 1 :
