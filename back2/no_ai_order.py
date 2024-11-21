@@ -65,10 +65,11 @@ def get_menuname2():
 #메뉴 이름에 공백 다 제거
 #for i in range(len(menu_list)):
  #  menu_list[i] = menu_list[i].replace(" ","")
-get_menuname1()
-get_menuname2()
+
 
 def check_menu():
+    get_menuname1()
+    get_menuname2()
     text = recognize_speech()
     if text.find('디카페인')==-1: #음성에 디카페인이 없을 경우 , 디카페인 없는 메뉴 리스트 이용
         for i in range(len(menu_list1)):
