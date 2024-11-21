@@ -178,7 +178,7 @@ def AI_recognition(conn):
 
         # 결과 출력
         if intent.menu:
-            final_result = [[intent.menu], intent.quantity,result_Flag]
+            final_result = [[intent.menu], intent.quantity,result_Flag,[recognized_text]]
             return final_result
         else:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
@@ -188,12 +188,8 @@ def AI_recognition(conn):
 
 
 #사용함수 ['메뉴이름', '기본가격',  '메뉴이미지 경로', 수량,  옵션리스트, '메뉴 설명']
-def get_AI_menu_data(conn):
-    try:
-        #AI_recognition함수의 리턴값 정보
-        # menus = [], quantity = int, flag = int
-        menus, quantity, flag = AI_recognition(conn)
-        
+def get_AI_menu_data(conn,menus,quantity,flag):
+    try:    
         # 테스트용 변수
         #flag = 1, quantity = 1, menus=["아메리카노","카페라떼"]
 
@@ -243,12 +239,11 @@ def get_AI_menu_data(conn):
         return []
 
 
-'''#test시 사용
+#test시 사용
 #MySQL과 연결
 conn=create_connection()
-#a = get_menu_option(conn)
-#a = AI_recognition(conn)
-#a = get_AI_menu_data(conn)
+menu,quantity,flag,text = AI_recognition(conn)
+a = get_AI_menu_data(conn,menu, quantity, flag)
 
+print(menu,quantity,flag, text)
 print(a)
-'''
