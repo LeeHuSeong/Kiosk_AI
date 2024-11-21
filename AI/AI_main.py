@@ -148,7 +148,7 @@ def recognize_speech():
         return None
 
 
-# 사용함수  [ [메뉴이름] , 수량]
+# 사용함수  [ [메뉴이름] , 수량, flag]
 def AI_recognition(conn):
     # 유사어 데이터 로드
     synonyms_data = load_synonyms()
@@ -169,11 +169,11 @@ def AI_recognition(conn):
 
         #결과 갯수 파악
         result_Flag = 0
-        if len(intent.menu) == 0:
+        if len(intent.menu) == 1:
             result_Flag=0
-        elif len(intent.menu) > 0:
+        elif len(intent.menu) > 1:
             result_Flag=1
-        elif len(intent.menu) < 0:
+        elif len(intent.menu) < 1:
             result_Flag=-1
 
         # 결과 출력
@@ -186,8 +186,69 @@ def AI_recognition(conn):
         print("음성 인식에 실패했습니다.")
 
 
-''' test시 사용
+
+#사용함수 ['메뉴이름', '기본가격',  '메뉴이미지 경로', 수량,  옵션리스트, '메뉴 설명']
+def get_AI_menu_data(conn):
+    try:
+        #AI_recognition함수의 리턴값 정보
+        # menus = [], quantity = int, flag = int
+        menus, quantity, flag = AI_recognition(conn)
+        
+        # 테스트용 변수
+        #flag = 1, quantity = 1, menus=["아메리카노","카페라떼"]
+
+        # 플래그 조건에 따른 처리
+        if flag == -1: #메뉴가 없을 경우
+            print("메뉴가 감지되지 않았습니다.")
+            return []
+        elif flag == 0:
+            menus = [menus[0]]  # 메뉴가 한 개일 경우
+        elif flag == 1:
+            pass  # 메뉴가 여러 개일 경우
+        
+
+        results = [] #메뉴가 여러개일 경우
+        
+        for menu in menus:
+            menu_details = get_menu_price_path_category(conn)
+            menu_info = get_menu_info(conn, menu)
+
+            selected_menu_details = next(
+                (item for item in menu_details if item[0] == menu), None
+            )
+            
+            #메뉴 정보 추출
+            menu_name = selected_menu_details[0]
+            base_price = selected_menu_details[1]
+            img_path = selected_menu_details[2]
+
+            #옵션 추출
+            menu_options = get_menu_option(conn)
+            options_origin = menu_options.get(menu_name,[])
+            options = options_origin[1] #기본 가격 제외
+
+            result = [
+                menu_name,       # 메뉴 이름
+                base_price,      # 기본 가격
+                img_path,        # 메뉴 이미지 경로
+                quantity,        # 수량
+                options,         # 옵션 리스트
+                menu_info        # 메뉴 설명
+            ]
+            results.append(result)
+
+        return results
+    except Exception as e:
+        print("get_AI_menu_data ErrorOccured",e)
+        return []
+
+
+'''#test시 사용
 #MySQL과 연결
 conn=create_connection()
-print(AI_recognition(conn))
+#a = get_menu_option(conn)
+#a = AI_recognition(conn)
+#a = get_AI_menu_data(conn)
+
+print(a)
 '''

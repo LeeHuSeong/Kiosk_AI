@@ -103,13 +103,13 @@ def get_menu_option(conn):
                         options_with_column_names.append(opt_name)
                         break
             res_dict[key] = [price, options_with_column_names]
+        return res_dict
+    
     except:
         print("get_menu_option(conn) ErrorOccured")
     finally:
         #커서 종료
         cur.close()
-    
-    return res_dict
 
 
 #리스트 /table data / [[no, 분류, 카테고리 번호, HOT/ICE, 이름, 가격, 설명] ]
@@ -125,13 +125,12 @@ def get_data(conn):
         cur.execute(query)
         result_tuple = cur.fetchall()
         result_list=[list(row) for row in result_tuple]
+        return result_list
     except:
          print("get_data(conn) ErrorOccured")
     finally:
         #커서 종료
         cur.close()
-
-    return result_list
 
 
 #리스트/옵션 가격/ [[choose_id, eng_name,price],[] ]
@@ -147,14 +146,13 @@ def get_opt_price(conn):
         opt_tuple = cur.fetchall()
         opt_list=[list(row) for row in opt_tuple]
         opt= [[item[0],item[1],item[3]] for item in opt_list]
+        return opt
     except:
          print("get_opt_price(conn) ErrorOccured")
 
     finally:
         #커서 종료
         cur.close()
-
-    return opt
 
 
 # def(옵션이름,번호(opt_one)) => 값 반환
