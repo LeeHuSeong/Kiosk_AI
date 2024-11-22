@@ -4,23 +4,20 @@ import mysql.connector
 import pickle
 import os
 import json
-import sys
-sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
-from back1 import *
 
 
 # 주문 의도를 처리하는 클래스
 class OrderIntent:
-    def __init__(self, conn, text, synonyms_data):
+    def __init__(self, text, synonyms_data):
         self.text = text
         self.synonyms_data = synonyms_data
-        self.matched_synonym, self.menu = self.extract_menu(conn)
+        self.matched_synonym, self.menu = self.extract_menu()
         self.quantity = self.extract_quantity()
         self.is_order = self.detect_order_words()
 
-    def extract_menu(self,conn):
+    def extract_menu(self):
         # 메뉴 이름 가져오기
-        menu_names = [menu.strip().lower() for menu in get_menu_name(conn)]
+        menu_names = [menu.strip().lower() for menu in get_menu_name()]
         text_lower = self.text.lower()
 
         # 메뉴 직접 매칭
@@ -40,7 +37,6 @@ class OrderIntent:
 
         return None, None
 
-    #중첩함수
     def extract_quantity(self):
         # 한글 숫자 매핑
         korean_numbers = {
@@ -90,7 +86,6 @@ def load_synonyms(file_path="C:/synonyms.json"):
         return {}
 
 
-''' back1 모듈을 가져와서 사용하므로 사용x
 # MySQL 데이터베이스 연결
 def connect_to_db():
     try:
@@ -105,9 +100,10 @@ def connect_to_db():
         print(f"데이터베이스 연결 오류: {err}")
         return None
 
+
 # 메뉴 이름 가져오기
 def get_menu_name():
-    conn =create_connection()
+    conn = connect_to_db()
     if conn is None:
         return []
 
@@ -124,7 +120,7 @@ def get_menu_name():
         conn.close()
 
     return result_list
-'''
+
 
 # 음성을 텍스트로 변환하는 함수
 def recognize_speech():
@@ -148,108 +144,24 @@ def recognize_speech():
         return None
 
 
-# 사용함수  [ [메뉴이름] , 수량, flag]
-def AI_recognition(conn):
+# 실행 코드
+if __name__ == "__main__":
     # 유사어 데이터 로드
     synonyms_data = load_synonyms()
 
-    # 음성 인식된 text
+    # 음성 인식
     recognized_text = recognize_speech()
-    print(recognized_text)
 
     if recognized_text:
-        intent = OrderIntent(conn, recognized_text, synonyms_data)
-        intent.extract_menu(conn)
+        intent = OrderIntent(recognized_text, synonyms_data)
 
-        #메뉴가 없을때
-        if not intent.menu:
-            print("사용 가능한 메뉴와 매칭되지 않았습니다.")
-            return [[None],0,0] #메뉴가 없을 때
-
-        #결과 갯수 파악
-        result_Flag = -1
-        if intent.menu:
-            if isinstance(intent.menu, list):
-                menu_count = len(intent.menu)  # 매칭된 메뉴 개수
-            else:
-                menu_count = 1  # 단일 메뉴인 경우
-
-        if menu_count == 1:
-            result_Flag=0
-        elif menu_count > 1:
-            result_Flag=1
-        elif menu_count < 1:
-            result_Flag=-1
+        print(f"감지된 주문 문장: {recognized_text}")
 
         # 결과 출력
         if intent.menu:
-            final_result = [[intent.menu], intent.quantity,result_Flag,[recognized_text]]
-            return final_result
+            final_result = [[intent.menu], [intent.quantity]]
+            print(f"결과: {final_result}")
         else:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
     else:
         print("음성 인식에 실패했습니다.")
-
-
-
-#사용함수 ['메뉴이름', '기본가격',  '메뉴이미지 경로', 수량,  옵션리스트, '메뉴 설명']
-def get_AI_menu_data(conn,menus,quantity,flag):
-    try:    
-        # 테스트용 변수
-        #flag = 1, quantity = 1, menus=["아메리카노","카페라떼"]
-
-        # 플래그 조건에 따른 처리
-        if flag == -1: #메뉴가 없을 경우
-            print("메뉴가 감지되지 않았습니다.")
-            return []
-        elif flag == 0:
-            menus = [menus[0]]  # 메뉴가 한 개일 경우
-        elif flag == 1:
-            pass  # 메뉴가 여러 개일 경우
-        
-
-        results = [] #메뉴가 여러개일 경우
-        
-        for menu in menus:
-            menu_details = get_menu_price_path_category(conn)
-            menu_info = get_menu_info(conn, menu)
-
-            selected_menu_details = next(
-                (item for item in menu_details if item[0] == menu), None
-            )
-            
-            #메뉴 정보 추출
-            menu_name = selected_menu_details[0]
-            base_price = selected_menu_details[1]
-            img_path = selected_menu_details[2]
-
-            #옵션 추출
-            menu_options = get_menu_option(conn)
-            options_origin = menu_options.get(menu_name,[])
-            options = options_origin[1] #기본 가격 제외
-
-            result = [
-                menu_name,       # 메뉴 이름
-                base_price,      # 기본 가격
-                img_path,        # 메뉴 이미지 경로
-                quantity,        # 수량
-                options,         # 옵션 리스트
-                menu_info[0]        # 메뉴 설명
-            ]
-            results.append(result)
-
-        return results
-    except Exception as e:
-        print("get_AI_menu_data ErrorOccured",e)
-        return []
-
-
-'''#test시 사용
-#MySQL과 연결
-conn=create_connection()
-menu,quantity,flag,text = AI_recognition(conn)
-a = get_AI_menu_data(conn,menu, quantity, flag)
-
-#print(menu,quantity,flag, text)
-print(a)
-'''
