@@ -10,13 +10,9 @@ from back1 import *
 
 conn = create_connection()
 
-test='디카페인 아메리카노랑 아메리카노 그리고 카푸치노 또 치즈케익도 주세요'
- # 음성을 텍스트로 변환
  # 메뉴 이름
 menu_list1=[] # 일반 커피 + 티 + 디저트
 menu_list2=[] # 디카페인 커피만
-menu_count1=[] # 디카페인 없는 경우
-menu_count2=[] # 디카페인만 확인
 
 # 음성을 텍스트로 변환하는 함수
 def recognize_speech():
@@ -68,35 +64,25 @@ def get_menuname2():
 
 
 def check_menu():
+    text = '디카페인 아메리카노랑 아메리카노 그리고 카푸치노 또 치즈케익도 주세요'
+    #text = recognize_speech()
     get_menuname1()
     get_menuname2()
-    text = recognize_speech()
     if text.find('디카페인')==-1: #음성에 디카페인이 없을 경우 , 디카페인 없는 메뉴 리스트 이용
-        for i in range(len(menu_list1)):
-            menu_count1.append(text.count(menu_list1[i]))
         print("인식한 메뉴")
-        for i in range(len(menu_list1)):
-            if menu_count1[i] > 0:
-                print(menu_list1[i])
+        for i in menu_list1:
+            if text.find(i)!=-1:
+                print(i)
     else: # 음성에 디카페인이 있을 경우
              # 텍스트 복사
-        for i in range(len(menu_list2)):
-            menu_count2.append(text.count(menu_list2[i]))
-            if text.count(menu_list2[i])>0:
-                text=text.replace(menu_list2[i],'')
-            else:
-                continue
-
-        for i in range(len(menu_list1)):
-            menu_count1.append(text.count(menu_list1[i]))
         print("인식한 메뉴")
-        for i in range(len(menu_list2)):
-            if menu_count2[i] > 0:
-                print(menu_list2[i])
-        for i in range(len(menu_list1)):
-            if menu_count1[i] > 0:
-                print(menu_list1[i])
-
+        for i in menu_list2:
+            if text.find(i)!=-1:
+                text2=text.replace(i,'')
+                print(i)
+        for i in menu_list1:
+            if text2.find(i) != -1:
+                print(i)
 
 
 check_menu()
