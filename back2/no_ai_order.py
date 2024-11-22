@@ -64,24 +64,24 @@ def get_menuname2():
 
 
 def check_menu():
-    test = '디카페인 아메리카노랑 아메리카노 그리고 카푸치노 또 치즈케익도 주세요'
+    text = '디카페인 아메리카노랑 아메리카노 그리고 카푸치노 또 치즈케익도 주세요'
     #text = recognize_speech()
     get_menuname1()
     get_menuname2()
-    if test.find('디카페인')==-1: #음성에 디카페인이 없을 경우 , 디카페인 없는 메뉴 리스트 이용
+    if text.find('디카페인')==-1: #음성에 디카페인이 없을 경우 , 디카페인 없는 메뉴 리스트 이용
         print("인식한 메뉴")
         for i in menu_list1:
-            if test.find(i)!=-1:
+            if text.find(i)!=-1:
                 print(i)
     else: # 음성에 디카페인이 있을 경우
              # 텍스트 복사
         print("인식한 메뉴")
         for i in menu_list2:
-            if test.find(i)!=-1:
-                test2=test.replace(i,'')
+            if text.find(i)!=-1:
+                text2=text.replace(i,'')
                 print(i)
         for i in menu_list1:
-            if test2.find(i) != -1:
+            if text2.find(i) != -1:
                 print(i)
 
 
