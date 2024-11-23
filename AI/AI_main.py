@@ -8,7 +8,6 @@ import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
 from back1 import *
 
-
 # 주문 의도를 처리하는 클래스
 class OrderIntent:
     def __init__(self, conn, text, dialect_model, synonyms_model, menu_quantity_model, vectorizer):
@@ -98,9 +97,8 @@ def recognize_speech():
 # 사용함수  [ [메뉴이름] , 수량, flag]
 def AI_recognition(conn):
 
-    # 음성 인식된 text
+    # 음성 인식
     recognized_text = recognize_speech()
-    print(recognized_text)
 
     if recognized_text:
         dialect_model, synonyms_model, menu_quantity_model, vectorizer = load_models()
@@ -129,8 +127,8 @@ def AI_recognition(conn):
 
         # 결과 출력
         if intent.menu:
-            final_result = [[intent.menu], intent.quantity,result_Flag,[recognized_text]]
-            return final_result
+            final_result = [[intent.menu], [intent.quantity]]
+            print(f"결과: {final_result}")
         else:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
     else:

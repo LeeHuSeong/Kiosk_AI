@@ -1,0 +1,110 @@
+[
+  {
+    "choose_id": 1,
+    "eng_name": "no_choice",
+    "kor_name": "선택x",
+    "noraml_drink": 0
+  },
+  {
+    "choose_id": 2,
+    "eng_name": "coffee_weak",
+    "kor_name": "연하게",
+    "noraml_drink": 0
+  },
+  {
+    "choose_id": 3,
+    "eng_name": "coffee_add_one",
+    "kor_name": "샷 추가",
+    "noraml_drink": 500
+  },
+  {
+    "choose_id": 4,
+    "eng_name": "coffee_add_two",
+    "kor_name": "2샷 추가",
+    "noraml_drink": 1000
+  },
+  {
+    "choose_id": 5,
+    "eng_name": "decaffein_shot",
+    "kor_name": "디카페인 샷 추가",
+    "noraml_drink": 1000
+  },
+  {
+    "choose_id": 6,
+    "eng_name": "vanilia_syrup_add",
+    "kor_name": "바닐라시럽추가",
+    "noraml_drink": 500
+  },
+  {
+    "choose_id": 7,
+    "eng_name": "light_vanilia_changed",
+    "kor_name": "라이트바닐라시럽변경",
+    "noraml_drink": 300
+  },
+  {
+    "choose_id": 8,
+    "eng_name": "light_vanilia_add",
+    "kor_name": "라이트바닐라시럽추가",
+    "noraml_drink": 800
+  },
+  {
+    "choose_id": 9,
+    "eng_name": "syrup_add_c",
+    "kor_name": "카라멜시럽추가",
+    "noraml_drink": 500
+  },
+  {
+    "choose_id": 10,
+    "eng_name": "stevia_changed",
+    "kor_name": "스태비아변경",
+    "noraml_drink": 300
+  },
+  {
+    "choose_id": 11,
+    "eng_name": "stevia_add",
+    "kor_name": "스태비아 추가",
+    "noraml_drink": 600
+  },
+  {
+    "choose_id": 12,
+    "eng_name": "choose_milk_a",
+    "kor_name": "아몬드밀크변경",
+    "noraml_drink": 500
+  },
+  {
+    "choose_id": 13,
+    "eng_name": "choose_milk_o",
+    "kor_name": "오트밀크변경",
+    "noraml_drink": 700
+  },
+  {
+    "choose_id": 14,
+    "eng_name": "honey_add",
+    "kor_name": "꿀 추가",
+    "noraml_drink": 700
+  },
+  {
+    "choose_id": 15,
+    "eng_name": "whip_n",
+    "kor_name": "휘핑(O)",
+    "noraml_drink": 0
+  },
+  {
+    "choose_id": 16,
+    "eng_name": "whip_y",
+    "kor_name": "휘핑(X)",
+    "noraml_drink": 0
+  },
+  {
+    "choose_id": 17,
+    "eng_name": "cinnamon_y",
+    "kor_name": "시나몬(O)",
+    "noraml_drink": 0
+  },
+  {
+    "choose_id": 18,
+    "eng_name": "cinnamon_n",
+    "kor_name": "시나몬(X)",
+    "noraml_drink": 0
+  }
+]

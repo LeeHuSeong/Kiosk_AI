@@ -9,7 +9,7 @@ table123=[['아메리카노',['샷 추가','옵션이름2','옵션이름3'],3,50
 def add_receipt(order_id,table):
     cur=db.cursor(conn)
     price=0
-    sql= ("insert into order_table2 ( customer_id, order_drink_name,opt_name, order_drink,price,pay_time) values (%s, %s,%s, %s, %s,%s)")
+    sql= ("insert into order_table2 ( customer_id, order_menu_name,opt_name,ea,price,pay_time) values (%s, %s,%s, %s, %s,%s)")
     for i in range(len(table)):
         str = ''
         for j in table123[i][1]:  # 옵션 합침

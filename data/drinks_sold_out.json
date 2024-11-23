@@ -1,0 +1,317 @@
+[
+  {
+    "id": 1,
+    "degree": "HOT",
+    "category_num": 1,
+    "menu_name": "디카페인 아메리카노",
+    "sold_out": 0
+  },
+  {
+    "id": 2,
+    "degree": "HOT",
+    "category_num": 2,
+    "menu_name": "디카페인 카페라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 3,
+    "degree": "HOT",
+    "category_num": 3,
+    "menu_name": "디카페인 바닐라라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 4,
+    "degree": "HOT",
+    "category_num": 4,
+    "menu_name": "디카페인 연유라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 5,
+    "degree": "HOT",
+    "category_num": 5,
+    "menu_name": "디카페인 카라멜마끼아또",
+    "sold_out": 0
+  },
+  {
+    "id": 6,
+    "degree": "HOT",
+    "category_num": 6,
+    "menu_name": "디카페인 카페모카",
+    "sold_out": 0
+  },
+  {
+    "id": 7,
+    "degree": "HOT",
+    "category_num": 7,
+    "menu_name": "디카페인 카푸치노",
+    "sold_out": 0
+  },
+  {
+    "id": 8,
+    "degree": "ICE",
+    "category_num": 8,
+    "menu_name": "디카페인 아메리카노",
+    "sold_out": 0
+  },
+  {
+    "id": 9,
+    "degree": "ICE",
+    "category_num": 9,
+    "menu_name": "디카페인 카페라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 10,
+    "degree": "ICE",
+    "category_num": 10,
+    "menu_name": "디카페인 바닐라라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 11,
+    "degree": "ICE",
+    "category_num": 11,
+    "menu_name": "디카페인 연유라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 12,
+    "degree": "ICE",
+    "category_num": 12,
+    "menu_name": "디카페인 카라멜마끼아또",
+    "sold_out": 0
+  },
+  {
+    "id": 13,
+    "degree": "ICE",
+    "category_num": 13,
+    "menu_name": "디카페인 카페모카",
+    "sold_out": 0
+  },
+  {
+    "id": 14,
+    "degree": "ICE",
+    "category_num": 14,
+    "menu_name": "디카페인 카푸치노",
+    "sold_out": 0
+  },
+  {
+    "id": 15,
+    "degree": "HOT",
+    "category_num": 1,
+    "menu_name": "아메리카노",
+    "sold_out": 0
+  },
+  {
+    "id": 16,
+    "degree": "HOT",
+    "category_num": 2,
+    "menu_name": "카페라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 17,
+    "degree": "HOT",
+    "category_num": 3,
+    "menu_name": "바닐라라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 18,
+    "degree": "HOT",
+    "category_num": 4,
+    "menu_name": "연유라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 19,
+    "degree": "HOT",
+    "category_num": 5,
+    "menu_name": "카라멜마끼야또",
+    "sold_out": 0
+  },
+  {
+    "id": 20,
+    "degree": "HOT",
+    "category_num": 6,
+    "menu_name": "카페모카",
+    "sold_out": 0
+  },
+  {
+    "id": 21,
+    "degree": "HOT",
+    "category_num": 7,
+    "menu_name": "카푸치노",
+    "sold_out": 0
+  },
+  {
+    "id": 22,
+    "degree": "ICE",
+    "category_num": 1,
+    "menu_name": "아메리카노",
+    "sold_out": 0
+  },
+  {
+    "id": 23,
+    "degree": "ICE",
+    "category_num": 2,
+    "menu_name": "카페라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 24,
+    "degree": "ICE",
+    "category_num": 3,
+    "menu_name": "바닐라라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 25,
+    "degree": "ICE",
+    "category_num": 4,
+    "menu_name": "연유라떼",
+    "sold_out": 0
+  },
+  {
+    "id": 26,
+    "degree": "ICE",
+    "category_num": 5,
+    "menu_name": "카라멜마끼아또",
+    "sold_out": 0
+  },
+  {
+    "id": 27,
+    "degree": "ICE",
+    "category_num": 6,
+    "menu_name": "카페모카",
+    "sold_out": 0
+  },
+  {
+    "id": 28,
+    "degree": "ICE",
+    "category_num": 7,
+    "menu_name": "카푸치노",
+    "sold_out": 0
+  },
+  {
+    "id": 29,
+    "degree": "ICE",
+    "category_num": 1,
+    "menu_name": "복숭아아이스티",
+    "sold_out": 0
+  },
+  {
+    "id": 30,
+    "degree": "ICE",
+    "category_num": 2,
+    "menu_name": "유자차",
+    "sold_out": 0
+  },
+  {
+    "id": 31,
+    "degree": "ICE",
+    "category_num": 3,
+    "menu_name": "레몬차",
+    "sold_out": 0
+  },
+  {
+    "id": 32,
+    "degree": "ICE",
+    "category_num": 4,
+    "menu_name": "자몽차",
+    "sold_out": 0
+  },
+  {
+    "id": 33,
+    "degree": "ICE",
+    "category_num": 5,
+    "menu_name": "녹차",
+    "sold_out": 0
+  },
+  {
+    "id": 34,
+    "degree": "ICE",
+    "category_num": 6,
+    "menu_name": "캐모마일",
+    "sold_out": 0
+  },
+  {
+    "id": 35,
+    "degree": "ICE",
+    "category_num": 7,
+    "menu_name": "얼그레이",
+    "sold_out": 0
+  },
+  {
+    "id": 36,
+    "degree": "HOT",
+    "category_num": 8,
+    "menu_name": "유자차",
+    "sold_out": 0
+  },
+  {
+    "id": 37,
+    "degree": "HOT",
+    "category_num": 9,
+    "menu_name": "레몬차",
+    "sold_out": 0
+  },
+  {
+    "id": 38,
+    "degree": "HOT",
+    "category_num": 10,
+    "menu_name": "자몽차",
+    "sold_out": 0
+  },
+  {
+    "id": 39,
+    "degree": "HOT",
+    "category_num": 11,
+    "menu_name": "녹차",
+    "sold_out": 0
+  },
+  {
+    "id": 40,
+    "degree": "HOT",
+    "category_num": 12,
+    "menu_name": "캐모마일",
+    "sold_out": 0
+  },
+  {
+    "id": 41,
+    "degree": "HOT",
+    "category_num": 13,
+    "menu_name": "얼그레이",
+    "sold_out": 0
+  },
+  {
+    "id": 42,
+    "degree": "-",
+    "category_num": 1,
+    "menu_name": "치즈케익",
+    "sold_out": 0
+  },
+  {
+    "id": 43,
+    "degree": "-",
+    "category_num": 2,
+    "menu_name": "초코케익",
+    "sold_out": 0
+  },
+  {
+    "id": 44,
+    "degree": "-",
+    "category_num": 3,
+    "menu_name": "티라미수케익",
+    "sold_out": 0
+  },
+  {
+    "id": 45,
+    "degree": "-",
+    "category_num": 4,
+    "menu_name": "허니브레드",
+    "sold_out": 0
+  }
+]
