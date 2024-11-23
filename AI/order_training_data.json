@@ -1,0 +1,2452 @@
+[
+    {
+        "input": "디카페인 아메리카노 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 세 잔 부탁해요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 하나 주문할게요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 두 개 주세요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 세 개 추가해 주세요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 네 잔 주세요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 네 개 주세요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 한 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 두 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 디카페인 아메리카노 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 디카페인 아메리카노 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 하나 더 주세요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 아메리카노 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "디카페인 아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 세 잔 부탁해요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 하나 주문할게요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 두 개 주세요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 세 개 추가해 주세요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 네 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 네 개 주세요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 한 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 두 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 디카페인 카페라떼 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 디카페인 카페라떼 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 하나 더 주세요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페라떼 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "디카페인 카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 세 잔 부탁해요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 하나 주문할게요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 두 개 주세요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 세 개 추가해 주세요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 네 잔 주세요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 네 개 주세요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 한 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 두 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 디카페인 바닐라라떼 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 디카페인 바닐라라떼 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 하나 더 주세요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 바닐라라떼 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "디카페인 바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 세 잔 부탁해요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 하나 주문할게요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 두 개 주세요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 세 개 추가해 주세요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 네 잔 주세요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 네 개 주세요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 한 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 두 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 디카페인 연유라떼 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 디카페인 연유라떼 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 하나 더 주세요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 연유라떼 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "디카페인 연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 세 잔 부탁해요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 하나 주문할게요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 두 개 주세요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 세 개 추가해 주세요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 네 잔 주세요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 네 개 주세요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 한 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 두 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 디카페인 카라멜마끼아또 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 디카페인 카라멜마끼아또 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 하나 더 주세요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카라멜마끼아또 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "디카페인 카라멜마끼아또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 세 잔 부탁해요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 하나 주문할게요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 두 개 주세요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 세 개 추가해 주세요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 네 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 네 개 주세요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 한 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 두 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 디카페인 카페모카 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 디카페인 카페모카 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 하나 더 주세요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카페모카 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "디카페인 카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 세 잔 부탁해요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 하나 주문할게요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 두 개 주세요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 세 개 추가해 주세요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 네 잔 주세요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 네 개 주세요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 한 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 두 잔 부탁드립니다",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 디카페인 카푸치노 한 잔 주세요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 디카페인 카푸치노 두 잔 주세요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 하나 더 주세요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "디카페인 카푸치노 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "디카페인 카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "아메리카노 한 잔 주세요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "아메리카노 두 잔 주세요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "아메리카노 세 잔 부탁해요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "아메리카노 하나 주문할게요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "아메리카노 두 개 주세요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "아메리카노 세 개 추가해 주세요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "아메리카노 네 잔 주세요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "아메리카노 네 개 주세요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "아메리카노 한 잔 부탁드립니다",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "아메리카노 두 잔 부탁드립니다",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 아메리카노 한 잔 주세요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 아메리카노 두 잔 주세요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "아메리카노 하나 더 주세요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "아메리카노 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "아메리카노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페라떼 한 잔 주세요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페라떼 두 잔 주세요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카페라떼 세 잔 부탁해요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "카페라떼 하나 주문할게요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페라떼 두 개 주세요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카페라떼 세 개 추가해 주세요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "카페라떼 네 잔 주세요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "카페라떼 네 개 주세요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "카페라떼 한 잔 부탁드립니다",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페라떼 두 잔 부탁드립니다",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 카페라떼 한 잔 주세요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 카페라떼 두 잔 주세요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카페라떼 하나 더 주세요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페라떼 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "카페라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "바닐라라떼 한 잔 주세요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "바닐라라떼 두 잔 주세요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "바닐라라떼 세 잔 부탁해요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "바닐라라떼 하나 주문할게요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "바닐라라떼 두 개 주세요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "바닐라라떼 세 개 추가해 주세요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "바닐라라떼 네 잔 주세요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "바닐라라떼 네 개 주세요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "바닐라라떼 한 잔 부탁드립니다",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "바닐라라떼 두 잔 부탁드립니다",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 바닐라라떼 한 잔 주세요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 바닐라라떼 두 잔 주세요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "바닐라라떼 하나 더 주세요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "바닐라라떼 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "바닐라라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "연유라떼 한 잔 주세요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "연유라떼 두 잔 주세요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "연유라떼 세 잔 부탁해요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "연유라떼 하나 주문할게요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "연유라떼 두 개 주세요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "연유라떼 세 개 추가해 주세요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "연유라떼 네 잔 주세요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "연유라떼 네 개 주세요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "연유라떼 한 잔 부탁드립니다",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "연유라떼 두 잔 부탁드립니다",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 연유라떼 한 잔 주세요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 연유라떼 두 잔 주세요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "연유라떼 하나 더 주세요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "연유라떼 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "연유라떼",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 한 잔 주세요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 두 잔 주세요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 세 잔 부탁해요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 하나 주문할게요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 두 개 주세요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 세 개 추가해 주세요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 네 잔 주세요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 네 개 주세요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 한 잔 부탁드립니다",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 두 잔 부탁드립니다",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 카라멜마끼야또 한 잔 주세요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 카라멜마끼야또 두 잔 주세요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 하나 더 주세요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카라멜마끼야또 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "카라멜마끼야또",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페모카 한 잔 주세요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페모카 두 잔 주세요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카페모카 세 잔 부탁해요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "카페모카 하나 주문할게요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페모카 두 개 주세요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카페모카 세 개 추가해 주세요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "카페모카 네 잔 주세요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "카페모카 네 개 주세요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "카페모카 한 잔 부탁드립니다",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페모카 두 잔 부탁드립니다",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 카페모카 한 잔 주세요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 카페모카 두 잔 주세요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카페모카 하나 더 주세요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카페모카 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "카페모카",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카푸치노 한 잔 주세요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카푸치노 두 잔 주세요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카푸치노 세 잔 부탁해요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "카푸치노 하나 주문할게요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카푸치노 두 개 주세요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카푸치노 세 개 추가해 주세요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "카푸치노 네 잔 주세요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "카푸치노 네 개 주세요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "카푸치노 한 잔 부탁드립니다",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카푸치노 두 잔 부탁드립니다",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 카푸치노 한 잔 주세요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 카푸치노 두 잔 주세요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "카푸치노 하나 더 주세요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "카푸치노 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "카푸치노",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "복숭아아이스티 한 잔 주세요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "복숭아아이스티 두 잔 주세요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "복숭아아이스티 세 잔 부탁해요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "복숭아아이스티 하나 주문할게요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "복숭아아이스티 두 개 주세요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "복숭아아이스티 세 개 추가해 주세요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "복숭아아이스티 네 잔 주세요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "복숭아아이스티 네 개 주세요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "복숭아아이스티 한 잔 부탁드립니다",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "복숭아아이스티 두 잔 부탁드립니다",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 복숭아아이스티 한 잔 주세요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 복숭아아이스티 두 잔 주세요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "복숭아아이스티 하나 더 주세요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "복숭아아이스티 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "복숭아아이스티",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "유자차 한 잔 주세요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "유자차 두 잔 주세요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "유자차 세 잔 부탁해요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "유자차 하나 주문할게요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "유자차 두 개 주세요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "유자차 세 개 추가해 주세요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "유자차 네 잔 주세요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "유자차 네 개 주세요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "유자차 한 잔 부탁드립니다",
+        "output": {
+            "menu": "유자차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "유자차 두 잔 부탁드립니다",
+        "output": {
+            "menu": "유자차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 유자차 한 잔 주세요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 유자차 두 잔 주세요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "유자차 하나 더 주세요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "유자차 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "유자차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "레몬차 한 잔 주세요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "레몬차 두 잔 주세요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "레몬차 세 잔 부탁해요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "레몬차 하나 주문할게요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "레몬차 두 개 주세요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "레몬차 세 개 추가해 주세요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "레몬차 네 잔 주세요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "레몬차 네 개 주세요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "레몬차 한 잔 부탁드립니다",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "레몬차 두 잔 부탁드립니다",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 레몬차 한 잔 주세요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 레몬차 두 잔 주세요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "레몬차 하나 더 주세요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "레몬차 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "레몬차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "자몽차 한 잔 주세요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "자몽차 두 잔 주세요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "자몽차 세 잔 부탁해요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "자몽차 하나 주문할게요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "자몽차 두 개 주세요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "자몽차 세 개 추가해 주세요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "자몽차 네 잔 주세요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "자몽차 네 개 주세요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "자몽차 한 잔 부탁드립니다",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "자몽차 두 잔 부탁드립니다",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 자몽차 한 잔 주세요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 자몽차 두 잔 주세요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "자몽차 하나 더 주세요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "자몽차 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "자몽차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "녹차 한 잔 주세요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "녹차 두 잔 주세요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "녹차 세 잔 부탁해요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "녹차 하나 주문할게요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "녹차 두 개 주세요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "녹차 세 개 추가해 주세요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "녹차 네 잔 주세요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "녹차 네 개 주세요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "녹차 한 잔 부탁드립니다",
+        "output": {
+            "menu": "녹차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "녹차 두 잔 부탁드립니다",
+        "output": {
+            "menu": "녹차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 녹차 한 잔 주세요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 녹차 두 잔 주세요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "녹차 하나 더 주세요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "녹차 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "녹차",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "캐모마일 한 잔 주세요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "캐모마일 두 잔 주세요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "캐모마일 세 잔 부탁해요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "캐모마일 하나 주문할게요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "캐모마일 두 개 주세요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "캐모마일 세 개 추가해 주세요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "캐모마일 네 잔 주세요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "캐모마일 네 개 주세요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "캐모마일 한 잔 부탁드립니다",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "캐모마일 두 잔 부탁드립니다",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 캐모마일 한 잔 주세요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 캐모마일 두 잔 주세요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "캐모마일 하나 더 주세요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "캐모마일 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "캐모마일",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "얼그레이 한 잔 주세요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "얼그레이 두 잔 주세요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "얼그레이 세 잔 부탁해요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "얼그레이 하나 주문할게요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "얼그레이 두 개 주세요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "얼그레이 세 개 추가해 주세요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "얼그레이 네 잔 주세요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "얼그레이 네 개 주세요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "얼그레이 한 잔 부탁드립니다",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "얼그레이 두 잔 부탁드립니다",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 얼그레이 한 잔 주세요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 얼그레이 두 잔 주세요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "얼그레이 하나 더 주세요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "얼그레이 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "얼그레이",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "치즈케익 한 잔 주세요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "치즈케익 두 잔 주세요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "치즈케익 세 잔 부탁해요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "치즈케익 하나 주문할게요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "치즈케익 두 개 주세요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "치즈케익 세 개 추가해 주세요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "치즈케익 네 잔 주세요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "치즈케익 네 개 주세요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "치즈케익 한 잔 부탁드립니다",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "치즈케익 두 잔 부탁드립니다",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 치즈케익 한 잔 주세요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 치즈케익 두 잔 주세요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "치즈케익 하나 더 주세요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "치즈케익 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "치즈케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "초코케익 한 잔 주세요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "초코케익 두 잔 주세요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "초코케익 세 잔 부탁해요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "초코케익 하나 주문할게요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "초코케익 두 개 주세요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "초코케익 세 개 추가해 주세요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "초코케익 네 잔 주세요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "초코케익 네 개 주세요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "초코케익 한 잔 부탁드립니다",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "초코케익 두 잔 부탁드립니다",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 초코케익 한 잔 주세요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 초코케익 두 잔 주세요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "초코케익 하나 더 주세요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "초코케익 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "초코케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "티라미수케익 한 잔 주세요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "티라미수케익 두 잔 주세요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "티라미수케익 세 잔 부탁해요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "티라미수케익 하나 주문할게요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "티라미수케익 두 개 주세요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "티라미수케익 세 개 추가해 주세요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "티라미수케익 네 잔 주세요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "티라미수케익 네 개 주세요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "티라미수케익 한 잔 부탁드립니다",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "티라미수케익 두 잔 부탁드립니다",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 티라미수케익 한 잔 주세요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 티라미수케익 두 잔 주세요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "티라미수케익 하나 더 주세요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "티라미수케익 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "티라미수케익",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "허니브레드 한 잔 주세요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "허니브레드 두 잔 주세요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "허니브레드 세 잔 부탁해요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "허니브레드 하나 주문할게요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "허니브레드 두 개 주세요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "허니브레드 세 개 추가해 주세요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "3"
+        }
+    },
+    {
+        "input": "허니브레드 네 잔 주세요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "허니브레드 네 개 주세요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "4"
+        }
+    },
+    {
+        "input": "허니브레드 한 잔 부탁드립니다",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "허니브레드 두 잔 부탁드립니다",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "시원한 허니브레드 한 잔 주세요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "따뜻한 허니브레드 두 잔 주세요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "2"
+        }
+    },
+    {
+        "input": "허니브레드 하나 더 주세요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "1"
+        }
+    },
+    {
+        "input": "허니브레드 한 잔 바로 부탁해요",
+        "output": {
+            "menu": "허니브레드",
+            "quantity": "1"
+        }
+    }
+]
