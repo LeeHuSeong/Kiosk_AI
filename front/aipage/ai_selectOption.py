@@ -225,9 +225,6 @@ class aiOptionWindow(QDialog, form_class) :
 
     # 버튼 메서드
     def selectOption_Cancel(self) : # 선택 취소
-        result = self.optionResult
-
-        self.parent.set_optionResult(result)    # ai_Dialog 객체로 전달
         self.close()
 
     def selectOption_OK(self) :     # 선택 확인
