@@ -3,6 +3,28 @@
     <file>src/BG.png</file>
     <file>src/BG2.png</file>
   </qresource>
+  <qresource prefix="2_menuPage">
+    <file>src/purchase_H.png</file>
+    <file>src/purchase_O.png</file>
+    <file>src/addTime_H.png</file>
+    <file>src/addTime_O.png</file>
+    <file>src/allMenu_H.png</file>
+    <file>src/allMenu_O.png</file>
+    <file>src/coffee_H.png</file>
+    <file>src/coffee_O.png</file>
+    <file>src/decaffein_H.png</file>
+    <file>src/decaffein_O.png</file>
+    <file>src/dessert_H.png</file>
+    <file>src/dessert_O.png</file>
+    <file>src/drinks_H.png</file>
+    <file>src/drinks_O.png</file>
+    <file>src/home1_H.png</file>
+    <file>src/home1_O.png</file>
+    <file>src/purchase_H.png</file>
+    <file>src/purchase_O.png</file>
+    <file>src/reset_H.png</file>
+    <file>src/reset_O.png</file>
+  </qresource>
   <qresource prefix="-1_aiDialog">
     <file>src/aiDialog1_H.png</file>
     <file>src/aiDialog1_O.png</file>

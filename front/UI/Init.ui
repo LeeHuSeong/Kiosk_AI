@@ -39,7 +39,7 @@
 
 #mainPage {
 	
-	border-image: url(:/.all/src/BG2.png);
+	background-image: url(:/.all/src/BG2.png);
 }
 
 #btn_toSelectPage {
@@ -70,6 +70,80 @@
 #btn_toVoiceOrderPage:hover {
 	
 	border-image: url(:/1_selectPage/src/selectbtn2_H.png);
+}
+
+#btn_toInitPage {
+	
+	border-image: url(:/2_menuPage/src/home1_O.png);
+}
+
+#btn_toInitPage:hover {
+	
+	border-image: url(:/2_menuPage/src/home1_H.png);
+}
+
+#btn_catalog_1 {
+	border-image: url(:/2_menuPage/src/allMenu_O.png);
+}
+
+#btn_catalog_1:hover {
+	border-image: url(:/2_menuPage/src/allMenu_H.png);
+}
+
+#btn_catalog_2 {
+	border-image: url(:/2_menuPage/src/coffee_O.png);
+}
+
+#btn_catalog_2:hover {
+	border-image: url(:/2_menuPage/src/coffee_H.png);
+}
+
+#btn_catalog_3 {
+	border-image: url(:/2_menuPage/src/decaffein_O.png);
+}
+
+#btn_catalog_3:hover {
+	border-image: url(:/2_menuPage/src/decaffein_H.png);
+}
+
+#btn_catalog_4 {
+	border-image: url(:/2_menuPage/src/drinks_O.png);
+}
+
+#btn_catalog_4:hover {
+	border-image: url(:/2_menuPage/src/drinks_H.png);
+}
+
+#btn_catalog_5 {
+	border-image: url(:/2_menuPage/src/dessert_O.png);
+}
+
+#btn_catalog_5:hover {
+	border-image: url(:/2_menuPage/src/dessert_H.png);
+}
+
+#btn_resetShoppingCart {
+	border-image: url(:/2_menuPage/src/reset_O.png);
+}
+
+#btn_resetShoppingCart:hover {
+	border-image: url(:/2_menuPage/src/reset_H.png);
+}
+
+#btn_toCheckOrderPage {
+	border-image: url(:/2_menuPage/src/purchase_O.png);
+}
+
+#btn_toCheckOrderPage:hover {
+	border-image: url(:/2_menuPage/src/purchase_H.png);
+}
+
+#timer_addTime {
+	border-image: url(:/2_menuPage/src/addTime_O.png);
+}
+
+#timer_addTime:hover {
+	border-image: url(:/2_menuPage/src/addTime_H.png);
 }</string>
   </property>
   <widget class="QWidget" name="centralwidget">
@@ -121,7 +195,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="initPage">
          <layout class="QGridLayout" name="gridLayout_5">
@@ -142,9 +216,114 @@
           </property>
           <item row="0" column="0">
            <layout class="QGridLayout" name="initPage_Layout">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
             <property name="spacing">
              <number>0</number>
             </property>
+            <item row="0" column="1">
+             <spacer name="verticalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>90</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="1" column="2">
+             <spacer name="horizontalSpacer_2">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>90</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="2" column="0">
+             <widget class="QFrame" name="bottomLeft">
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>90</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="pushButton_4">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Default
+Setting</string>
+              </property>
+             </widget>
+            </item>
             <item row="1" column="1">
              <widget class="QPushButton" name="btn_toSelectPage">
               <property name="sizePolicy">
@@ -167,8 +346,8 @@
               </property>
              </widget>
             </item>
-            <item row="2" column="0">
-             <widget class="QFrame" name="bottomLeft">
+            <item row="0" column="2">
+             <widget class="QPushButton" name="btn_quit">
               <property name="minimumSize">
                <size>
                 <width>90</width>
@@ -181,11 +360,8 @@
                 <height>90</height>
                </size>
               </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
+              <property name="text">
+               <string>종료</string>
               </property>
              </widget>
             </item>
@@ -211,47 +387,21 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="2">
-             <widget class="QPushButton" name="btn_quit">
-              <property name="minimumSize">
+            <item row="2" column="1">
+             <spacer name="verticalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
                <size>
-                <width>90</width>
+                <width>20</width>
                 <height>90</height>
                </size>
               </property>
-              <property name="maximumSize">
-               <size>
-                <width>90</width>
-                <height>90</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>종료</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="0">
-             <widget class="QPushButton" name="pushButton_4">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>90</width>
-                <height>90</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>90</width>
-                <height>90</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>Default
-Setting</string>
-              </property>
-             </widget>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -545,7 +695,7 @@ Setting</string>
                  </size>
                 </property>
                 <property name="text">
-                 <string>전체메뉴</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -577,7 +727,7 @@ Setting</string>
                  </size>
                 </property>
                 <property name="text">
-                 <string>커피</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -609,7 +759,7 @@ Setting</string>
                  </size>
                 </property>
                 <property name="text">
-                 <string>디카페인</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -641,7 +791,7 @@ Setting</string>
                  </size>
                 </property>
                 <property name="text">
-                 <string>음료</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -673,7 +823,7 @@ Setting</string>
                  </size>
                 </property>
                 <property name="text">
-                 <string>디저트</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -784,7 +934,7 @@ Setting</string>
                  </size>
                 </property>
                 <property name="text">
-                 <string>리셋</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -803,7 +953,7 @@ Setting</string>
                  </size>
                 </property>
                 <property name="text">
-                 <string>결제하기</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -836,7 +986,7 @@ Setting</string>
                  </size>
                 </property>
                 <property name="text">
-                 <string>홈으로</string>
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -920,7 +1070,7 @@ Setting</string>
                  </size>
                 </property>
                 <property name="text">
-                 <string>시간연장</string>
+                 <string/>
                 </property>
                </widget>
               </item>
