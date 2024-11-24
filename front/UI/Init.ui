@@ -833,13 +833,13 @@
               <property name="minimumSize">
                <size>
                 <width>950</width>
-                <height>745</height>
+                <height>750</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
                 <width>950</width>
-                <height>745</height>
+                <height>750</height>
                </size>
               </property>
               <property name="focusPolicy">
