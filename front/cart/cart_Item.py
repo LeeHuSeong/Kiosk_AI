@@ -41,10 +41,18 @@ class cartItem(QWidget, form_class) :
         self.quantity.setText(str(menuData[2]))
         self.itemPrice.setText(str(self.singleMenuPrice) + '원')
 
+        self.btn_cartAmountDec.setDisabled(True)
+
         self.parent.totalPrice += self.singleMenuPrice
 
     def cartItemAmount_Increase(self) :
         self.amount += 1
+
+        if self.amount == 1 :
+            self.btn_cartAmountDec.setDisabled(True)
+        else :
+            self.btn_cartAmountDec.setEnabled(True)
+            
         self.quantity.setText(str(self.amount))
         self.parent.totalPrice += self.singleMenuPrice
 
@@ -54,6 +62,12 @@ class cartItem(QWidget, form_class) :
 
     def cartItemAmount_Decrease(self) :
         self.amount -= 1
+
+        if self.amount == 1 :
+            self.btn_cartAmountDec.setDisabled(True)
+        else :
+            self.btn_cartAmountDec.setEnabled(True)
+
         self.quantity.setText(str(self.amount))
 
         if self.amount == 0 :

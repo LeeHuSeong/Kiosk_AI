@@ -15,7 +15,7 @@ class optionWindow(QDialog, form_class) :
     conn = None
 
     def __init__(self, menuData, optionData, parent, conn) :
-        conn = back1.create_connection()
+        self.conn = conn
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
