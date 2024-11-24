@@ -195,7 +195,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="initPage">
          <layout class="QGridLayout" name="gridLayout_5">
@@ -830,6 +830,18 @@
             </item>
             <item>
              <widget class="QListWidget" name="menuListWidget">
+              <property name="minimumSize">
+               <size>
+                <width>950</width>
+                <height>745</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>950</width>
+                <height>745</height>
+               </size>
+              </property>
               <property name="focusPolicy">
                <enum>Qt::NoFocus</enum>
               </property>

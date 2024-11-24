@@ -115,7 +115,7 @@ class optionWindow(QDialog, form_class) :
 
         if key == 'Addshot' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '1샷 추가'
             elif int(value) == 2 :
@@ -123,49 +123,49 @@ class optionWindow(QDialog, form_class) :
 
         elif key == 'AddDeShot' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '디카페인 1샷 추가'
 
         elif key == 'ChangeStevia' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '스테비아 변경'
         
         elif key == 'AddStevia' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '스테비아 추가'
         
         elif key == 'AddVanila' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '바닐라시럽 추가'
         
         elif key == 'ChangeLightVanila' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '라이트 바닐라시럽 변경'
         
         elif key == 'AddLightVanila' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '라이트 바닐라시럽 추가'
         
         elif key == 'AddCaramel' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '카라멜시럽 추가'
         
         elif key == 'SelectMilk' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '우유 변경(아몬드)'
             elif int(value) == 2 :
@@ -173,7 +173,7 @@ class optionWindow(QDialog, form_class) :
         
         elif key == 'AddHoney' :
             if int(value) == 0 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
             elif int(value) == 1 :
                 self.selectedOptionNameDict[key] = '꿀 추가'
         
@@ -181,13 +181,13 @@ class optionWindow(QDialog, form_class) :
             if int(value) == 0 :
                 self.selectedOptionNameDict[key] = '휘핑 빼기'
             elif int(value) == 1 :
-                pass
+                self.selectedOptionNameDict.pop(key, None)
         
         elif key == 'AddCinnamon' :
             if int(value) == 0 :
                 self.selectedOptionNameDict[key] = '시나몬 빼기'
             elif int(value) == 1 :
-                pass       
+                self.selectedOptionNameDict.pop(key, None)       
 
     def get_key(self, val) :
         for key in self.optionDict : 
