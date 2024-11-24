@@ -73,14 +73,14 @@
 		"opt_No" : 10,
 		"opt_Name" : "AddWhipping",
 		"opt_One" : 0,
-		"opt_Two" : null,
+		"opt_Two" : 0,
 		"opt_Three" : null
 	},
 	{
 		"opt_No" : 11,
 		"opt_Name" : "AddCinnamon",
 		"opt_One" : 0,
-		"opt_Two" : null,
+		"opt_Two" : 0,
 		"opt_Three" : null
 	}
 ]
