@@ -74,7 +74,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="initPage">
          <layout class="QGridLayout" name="gridLayout_5">
@@ -92,28 +92,6 @@
           </property>
           <item row="0" column="0">
            <layout class="QGridLayout" name="initPage_Layout">
-            <item row="0" column="0">
-             <widget class="QFrame" name="topLeft">
-              <property name="minimumSize">
-               <size>
-                <width>40</width>
-                <height>40</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>40</width>
-                <height>40</height>
-               </size>
-              </property>
-              <property name="frameShape">
-               <enum>QFrame::StyledPanel</enum>
-              </property>
-              <property name="frameShadow">
-               <enum>QFrame::Raised</enum>
-              </property>
-             </widget>
-            </item>
             <item row="1" column="1">
              <widget class="QPushButton" name="btn_toSelectPage">
               <property name="sizePolicy">
@@ -124,8 +102,8 @@
               </property>
               <property name="maximumSize">
                <size>
-                <width>1000</width>
-                <height>1000</height>
+                <width>900</width>
+                <height>900</height>
                </size>
               </property>
               <property name="text">
@@ -137,14 +115,14 @@
              <widget class="QFrame" name="bottomLeft">
               <property name="minimumSize">
                <size>
-                <width>40</width>
-                <height>40</height>
+                <width>90</width>
+                <height>90</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>40</width>
-                <height>40</height>
+                <width>90</width>
+                <height>90</height>
                </size>
               </property>
               <property name="frameShape">
@@ -159,14 +137,14 @@
              <widget class="QFrame" name="bottomRight">
               <property name="minimumSize">
                <size>
-                <width>40</width>
-                <height>40</height>
+                <width>90</width>
+                <height>90</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>40</width>
-                <height>40</height>
+                <width>90</width>
+                <height>90</height>
                </size>
               </property>
               <property name="frameShape">
@@ -181,18 +159,38 @@
              <widget class="QPushButton" name="btn_quit">
               <property name="minimumSize">
                <size>
-                <width>40</width>
-                <height>40</height>
+                <width>90</width>
+                <height>90</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>40</width>
-                <height>40</height>
+                <width>90</width>
+                <height>90</height>
                </size>
               </property>
               <property name="text">
-               <string>QUIT</string>
+               <string>종료</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QPushButton" name="pushButton_4">
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Default
+Setting</string>
               </property>
              </widget>
             </item>
@@ -887,8 +885,8 @@
    <slot>mainPage_toSelect()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>65</x>
-     <y>18</y>
+     <x>113</x>
+     <y>66</y>
     </hint>
     <hint type="destinationlabel">
      <x>759</x>
@@ -925,22 +923,6 @@
     <hint type="destinationlabel">
      <x>1100</x>
      <y>163</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>btn_quit</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>close()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>40</x>
-     <y>40</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1351</x>
-     <y>159</y>
     </hint>
    </hints>
   </connection>
@@ -1136,6 +1118,22 @@
     </hint>
    </hints>
   </connection>
+  <connection>
+   <sender>btn_quit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>Close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1065</x>
+     <y>25</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1153</x>
+     <y>22</y>
+    </hint>
+   </hints>
+  </connection>
  </connections>
  <slots>
   <slot>mainPage_toInit()</slot>
@@ -1154,5 +1152,6 @@
   <slot>btnTEST2()</slot>
   <slot>btn_CartListClear()</slot>
   <slot>btn_newAiOrder()</slot>
+  <slot>Close()</slot>
  </slots>
 </ui>

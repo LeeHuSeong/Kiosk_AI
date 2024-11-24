@@ -16,6 +16,7 @@ class aiOptionWindow(QDialog, form_class) :
     menuData = []           # (List) [메뉴이름, 메뉴 기본가격, 메뉴 이미지 주소, 주문 수량, 옵션 목록, 메뉴 설명]
     optionData = []         # (List) [menuData[4]]/선택 가능한 옵션 목록 ex(['AddDeShot', 'AddVanila'])
     optionResult = []       # (List) 이전 선택 결과/기본값 [{}, {}, 0]
+    conn = None
 
     menuName = ''           # (STR) 메뉴 이름
     menuDesc = ''           # (STR) 메뉴 설명
@@ -28,6 +29,16 @@ class aiOptionWindow(QDialog, form_class) :
     selectedOptionName = {} # (Dict) 결과 출력용 선택옵션 딕셔너리
     selectedOptionID = {}   # (Dict) 내부 연산용 선택옵션 딕셔너리
 
+    # __init__
+    def __init__(self, parent, menuData, optionResult, conn) :
+        super().__init__()
+        self.setWindowFlag(Qt.FramelessWindowHint)
+        self.setupUi(self)
+        self.center()
+
+        self.set_InitData(parent, menuData, optionResult, conn)
+        self.set_LabelData()
+
     #getter
     def get_totalPrice(self) :
         return self.totalPrice
@@ -36,11 +47,12 @@ class aiOptionWindow(QDialog, form_class) :
         self.totalPrice = val
 
     # 초기 변수 설정(객체 생성 시 1번 실행)
-    def set_InitData(self, parent, menuData, optionResult) :
+    def set_InitData(self, parent, menuData, optionResult, conn) :
         self.parent = parent
         self.menuData = menuData
         self.optionData = menuData[4]
         self.optionResult = optionResult
+        self.conn = conn
 
         self.menuName = menuData[2].split('\\')[2].replace('.jpg', '')
         self.menuDesc = menuData[5]
@@ -103,15 +115,13 @@ class aiOptionWindow(QDialog, form_class) :
 
     # 옵션버튼 클릭 시 가격 변경
     def refresh_Price(self) :
-        conn = back1.create_connection()
         data = self.selectedOptionID.items()
         optionPrice = 0
 
         if data != {} :
             for key, value in data :
-                optionPrice += int(back1.get_opt_price(conn, key, value))
+                optionPrice += int(back1.get_opt_price(self.conn, key, value))
         
-        back1.close_connection(conn)
         return optionPrice
     # 옵션 버튼 클릭 이벤트 ###############
     def optionSelect(self) :
@@ -129,7 +139,7 @@ class aiOptionWindow(QDialog, form_class) :
         self.set_selectedOptionName(key, value)
         
     def set_selectedOptionName(self, key, value) :
-        if key == 'AddShot' :
+        if key == 'Addshot' :
             if int(value) == 0 :
                 self.selectedOptionName.pop(key, None)
             elif int(value) == 1 :
@@ -225,16 +235,6 @@ class aiOptionWindow(QDialog, form_class) :
         
         self.parent.set_optionResult(result)    # ai_Dialog 객체로 전달
         self.close()
-
-    # __init__
-    def __init__(self, parent, menuData, optionResult) :
-        super().__init__()
-        self.setWindowFlag(Qt.FramelessWindowHint)
-        self.setupUi(self)
-        self.center()
-
-        self.set_InitData(parent, menuData, optionResult)
-        self.set_LabelData()
 
     # 창 종료까지 대기
     def showModal(self) :

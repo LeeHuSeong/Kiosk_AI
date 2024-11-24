@@ -10,6 +10,7 @@ import back1
 
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
+conn = back1.create_connection()
 
 class MainWindow(QMainWindow, Init_Class) :
     totalPrice = 0
@@ -31,7 +32,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
         #MenuList_Init
         self.menuList = self.menuListWidget
-        front.menuWidget_Load(self, 'ALL')
+        front.menuWidget_Load(self, 'ALL', conn)
 
         #aiCartList_Init
         self.aiCartList = self.aiCartListWidget
@@ -79,25 +80,25 @@ class MainWindow(QMainWindow, Init_Class) :
     def mainPage_toVoice(self) :
         self.set_MainPage_Index(3)
 
-        testDialog = front.aiDialog(self)
+        testDialog = front.aiDialog(self, conn)
         testDialog.showModal()
 #Move_Page
 
 #btn_MenuType/메뉴종류 설정('ALL', '디카페인', '커피', '티(음료)', '디저트')
     def btn_MenuALL(self) :
-        front.menuWidget_Load(self, 'ALL')
+        front.menuWidget_Load(self, 'ALL', conn)
         
     def btn_MenuCoffee(self) :
-        front.menuWidget_Load(self, '커피')
+        front.menuWidget_Load(self, '커피', conn)
         
     def btn_MenuDeCaffeine(self) :
-        front.menuWidget_Load(self, '디카페인')
+        front.menuWidget_Load(self, '디카페인', conn)
         
     def btn_MenuDrinks(self) :
-        front.menuWidget_Load(self, '티')
+        front.menuWidget_Load(self, '티', conn)
         
     def btn_MenuDessert(self) :
-        front.menuWidget_Load(self, '디저트')    
+        front.menuWidget_Load(self, '디저트', conn)    
 #btn_MenuType
 
 #btn_ETC/기타 버튼
@@ -138,11 +139,15 @@ class MainWindow(QMainWindow, Init_Class) :
         pass
 
     def btn_newAiOrder(self) :
-        testDialog = front.aiDialog(self)
+        testDialog = front.aiDialog(self, conn)
         testDialog.showModal()
     
     def addAiCart(self, data) :
         front.aiCartWidget_Add(self, data)
+
+    def Close(self) :
+        back1.close_connection(conn)
+        self.close()
 
 ######################################################
 

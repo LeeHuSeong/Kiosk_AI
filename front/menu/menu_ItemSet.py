@@ -7,11 +7,13 @@ form_class = uic.loadUiType("front/menu/menu_ItemSet.ui")[0]
 class menu_ItemSet(QWidget, form_class) :
     listWidget = None
     menuData = []
+    conn = None
 
-    def __init__(self, listWidget, menuData, parent) :
+    def __init__(self, listWidget, menuData, parent, conn) :
         super(menu_ItemSet, self).__init__(parent)
         self.setupUi(self)
 
+        self.conn = conn
         self.listWidget = listWidget
         self.menuData = menuData
         self.parent = parent
@@ -23,5 +25,5 @@ class menu_ItemSet(QWidget, form_class) :
                 break
             else :
                 widget.menuData.setText(str(menuData[i-1]))
-                widget.menuItem_Init()
+                widget.menuItem_Init(self.conn)
                 widget.set_Parent(parent)

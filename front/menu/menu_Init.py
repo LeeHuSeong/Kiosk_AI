@@ -6,10 +6,9 @@ import back1
 
 import time #for Test
 
-def menuWidget_Load(self, type) :
+def menuWidget_Load(self, type, conn) :
         self.menuList.clear()
         menuDB = []
-        conn = back1.create_connection()
 
         if 'menuDB_origin' not in locals()  :
             menuDB_origin = back1.get_menu_price_path_category(conn)    #List
@@ -39,11 +38,9 @@ def menuWidget_Load(self, type) :
             menuData.append(menuDB[i:i + 4])
 
         for itemSet in menuData :
-            item_Widget = front.menu_ItemSet(self.menuList, itemSet, self)
+            item_Widget = front.menu_ItemSet(self.menuList, itemSet, self, conn)
             item = QListWidgetItem()
             item.setSizeHint(item_Widget.sizeHint())
 
             self.menuList.addItem(item)
             self.menuList.setItemWidget(item, item_Widget)
-
-        back1.close_connection(conn)

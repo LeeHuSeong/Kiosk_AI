@@ -12,15 +12,16 @@ form_class = uic.loadUiType("front/menu/menu_SelectOption.ui")[0]
 class optionWindow(QDialog, form_class) :
     originPrice = 0
     totalPrice = 0
+    conn = None
 
-    def __init__(self, menuData, optionData, parent) :
+    def __init__(self, menuData, optionData, parent, conn) :
         conn = back1.create_connection()
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
         self.center()
-        print(optionData)
 
+        self.conn = conn
         self.parent = parent
 
         self.selectedOptionNameDict = {}
@@ -55,10 +56,8 @@ class optionWindow(QDialog, form_class) :
         pixmap = QPixmap(menuData[2]).scaled(150, 150)
         self.menuPic.setPixmap(pixmap)
 
-        desc = back1.get_menu_info(conn, menuData[0])
+        desc = back1.get_menu_info(self.conn, menuData[0])
         self.menuDescription.setText(desc[0])
-
-        back1.close_connection(conn)
 
     def selectOption_InitSetting(self, optionData) :
         i = 0
@@ -87,7 +86,7 @@ class optionWindow(QDialog, form_class) :
 
         if data != {} :
             for key, value in data :
-                optPrice += int(back1.get_opt_price(key, value))
+                optPrice += int(back1.get_opt_price(self.conn, key, value))
 
         return optPrice
 

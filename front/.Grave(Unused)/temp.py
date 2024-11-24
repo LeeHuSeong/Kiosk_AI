@@ -185,3 +185,21 @@ if key == 'AddShot' :
 
 
 '''
+
+#result = ['메뉴명', 수량]
+            #self.result = ['디카페인 아메리카노', 7]
+            #self.menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, []]
+            #self.menuData = [메뉴이름, '기본가격',  메뉴이미지 경로, '수량',  옵션리스트, '메뉴 설명'] DB연동
+            #menuData = def(result[0])
+            #self.menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
+            #self.menuData = ['디카페인 카페라떼', 3900, 'img\\drink1\\HOT_디카페인 카페라떼.jpg', 1, ['AddDeShot', 'AddLightVanila', 'SelectMilk'], 'TEST DESCRIPTION디카페인카페라떼']
+
+            #menuData = [
+                #['메뉴명1', '메뉴설명', '이미지경로', '옵션목록[]', '가격'], 
+                #...
+            #]
+            menuData = [
+                ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION디카페인아메리카노'], 
+                ['아메리카노', 2000, 'img\\drink1\\HOT_아메리카노.jpg', 1, ['AddShot'], 'TEST DESCRIPTION아메리카노'],
+                ['디카페인 카페라떼', 3900,  'img\\drink1\\HOT_디카페인 카페라떼.jpg', 1, ['AddDeShot', 'AddLightVanila', 'SelectMilk'], 'TEST DESCRIPTION디카페인카페라떼']
+            ]
