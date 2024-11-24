@@ -31,6 +31,47 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">#MainWindow {
+	
+	border-image: url(:/.all/src/BG.png);
+}
+
+#mainPage {
+	
+	border-image: url(:/.all/src/BG2.png);
+}
+
+#btn_toSelectPage {
+
+	border-image: url(:/0_initPage/src/initbtn_O.png);
+}
+
+#btn_toSelectPage:hover {
+
+	border-image: url(:/0_initPage/src/initbtn_H.png);
+}
+
+#btn_toDefaultMenuPage {
+	
+	border-image: url(:/1_selectPage/src/selectbtn1_O.png);
+}
+
+#btn_toDefaultMenuPage:hover {
+	
+	border-image: url(:/1_selectPage/src/selectbtn1_H.png);
+}
+
+#btn_toVoiceOrderPage {
+	
+	border-image: url(:/1_selectPage/src/selectbtn2_O.png);
+}
+
+#btn_toVoiceOrderPage:hover {
+	
+	border-image: url(:/1_selectPage/src/selectbtn2_H.png);
+}</string>
+  </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -51,8 +92,14 @@
     <property name="bottomMargin">
      <number>0</number>
     </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
     <item row="0" column="0">
      <layout class="QGridLayout" name="gridLayout">
+      <property name="spacing">
+       <number>0</number>
+      </property>
       <item row="1" column="0">
        <widget class="QStackedWidget" name="mainPage">
         <property name="sizePolicy">
@@ -90,8 +137,14 @@
           <property name="bottomMargin">
            <number>0</number>
           </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
           <item row="0" column="0">
            <layout class="QGridLayout" name="initPage_Layout">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <item row="1" column="1">
              <widget class="QPushButton" name="btn_toSelectPage">
               <property name="sizePolicy">
@@ -106,8 +159,11 @@
                 <height>900</height>
                </size>
               </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
               <property name="text">
-               <string>시작하기</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -176,6 +232,9 @@
             </item>
             <item row="0" column="0">
              <widget class="QPushButton" name="pushButton_4">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="minimumSize">
                <size>
                 <width>90</width>
@@ -212,31 +271,218 @@ Setting</string>
           <property name="bottomMargin">
            <number>0</number>
           </property>
+          <property name="spacing">
+           <number>0</number>
+          </property>
           <item row="0" column="0">
-           <layout class="QVBoxLayout" name="verticalLayout">
-            <item>
-             <widget class="QPushButton" name="btn_toDefaultMenuPage">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+           <layout class="QGridLayout" name="gridLayout_6">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item row="2" column="0">
+             <widget class="QFrame" name="frame_6">
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
               </property>
-              <property name="text">
-               <string>일반 주문</string>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
               </property>
              </widget>
             </item>
-            <item>
+            <item row="5" column="2">
+             <widget class="QFrame" name="frame_5">
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QFrame" name="frame_4">
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="2">
+             <widget class="QFrame" name="frame">
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QFrame" name="frame_3">
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="4" column="1">
              <widget class="QPushButton" name="btn_toVoiceOrderPage">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
                 <verstretch>0</verstretch>
                </sizepolicy>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>900</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>900</width>
+                <height>400</height>
+               </size>
+              </property>
               <property name="text">
-               <string>음성 주문</string>
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <widget class="QPushButton" name="btn_toDefaultMenuPage">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>900</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>900</width>
+                <height>400</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QFrame" name="frame_7">
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="2">
+             <widget class="QFrame" name="frame_8">
+              <property name="minimumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>90</width>
+                <height>90</height>
+               </size>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
               </property>
              </widget>
             </item>
@@ -572,6 +818,9 @@ Setting</string>
             </property>
             <item>
              <layout class="QHBoxLayout" name="horizontalLayout">
+              <property name="spacing">
+               <number>0</number>
+              </property>
               <item>
                <widget class="QPushButton" name="btn_toInitPage">
                 <property name="sizePolicy">
@@ -785,6 +1034,9 @@ Setting</string>
           </item>
           <item row="1" column="0">
            <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QListWidget" name="aiCartListWidget">
               <property name="focusPolicy">
@@ -805,6 +1057,9 @@ Setting</string>
           </item>
           <item row="2" column="0">
            <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <property name="spacing">
+             <number>0</number>
+            </property>
             <item>
              <widget class="QPushButton" name="btn_addMenu">
               <property name="minimumSize">
@@ -826,6 +1081,9 @@ Setting</string>
             </item>
             <item>
              <widget class="QPushButton" name="pushButton_3">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="minimumSize">
                <size>
                 <width>0</width>
@@ -839,7 +1097,7 @@ Setting</string>
                </size>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -876,7 +1134,9 @@ Setting</string>
    </layout>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>btn_toSelectPage</sender>
@@ -885,8 +1145,8 @@ Setting</string>
    <slot>mainPage_toSelect()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>113</x>
-     <y>66</y>
+     <x>211</x>
+     <y>164</y>
     </hint>
     <hint type="destinationlabel">
      <x>759</x>
@@ -917,8 +1177,8 @@ Setting</string>
    <slot>add_timer()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>125</x>
-     <y>50</y>
+     <x>1078</x>
+     <y>127</y>
     </hint>
     <hint type="destinationlabel">
      <x>1100</x>
@@ -933,8 +1193,8 @@ Setting</string>
    <slot>mainPage_toVoice()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>99</x>
-     <y>29</y>
+     <x>191</x>
+     <y>615</y>
     </hint>
     <hint type="destinationlabel">
      <x>701</x>
@@ -949,8 +1209,8 @@ Setting</string>
    <slot>mainPage_toDefault()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>99</x>
-     <y>12</y>
+     <x>191</x>
+     <y>106</y>
     </hint>
     <hint type="destinationlabel">
      <x>736</x>
@@ -965,8 +1225,8 @@ Setting</string>
    <slot>btn_MenuALL()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>80</x>
-     <y>125</y>
+     <x>83</x>
+     <y>280</y>
     </hint>
     <hint type="destinationlabel">
      <x>-71</x>
@@ -981,8 +1241,8 @@ Setting</string>
    <slot>btn_MenuCoffee()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>45</x>
-     <y>125</y>
+     <x>48</x>
+     <y>428</y>
     </hint>
     <hint type="destinationlabel">
      <x>-110</x>
@@ -997,8 +1257,8 @@ Setting</string>
    <slot>btn_MenuDeCaffeine()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>63</x>
-     <y>125</y>
+     <x>66</x>
+     <y>577</y>
     </hint>
     <hint type="destinationlabel">
      <x>-125</x>
@@ -1013,8 +1273,8 @@ Setting</string>
    <slot>btn_MenuDrinks()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>73</x>
-     <y>125</y>
+     <x>76</x>
+     <y>725</y>
     </hint>
     <hint type="destinationlabel">
      <x>-72</x>
@@ -1029,8 +1289,8 @@ Setting</string>
    <slot>btn_MenuDessert()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>37</x>
-     <y>125</y>
+     <x>40</x>
+     <y>874</y>
     </hint>
     <hint type="destinationlabel">
      <x>-80</x>
@@ -1045,8 +1305,8 @@ Setting</string>
    <slot>btn_CartListClear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>125</x>
-     <y>75</y>
+     <x>1078</x>
+     <y>1003</y>
     </hint>
     <hint type="destinationlabel">
      <x>1151</x>
@@ -1061,8 +1321,8 @@ Setting</string>
    <slot>popup_Receipt()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>125</x>
-     <y>75</y>
+     <x>1078</x>
+     <y>1078</y>
     </hint>
     <hint type="destinationlabel">
      <x>1121</x>

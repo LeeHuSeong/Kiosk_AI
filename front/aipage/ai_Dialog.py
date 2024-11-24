@@ -41,6 +41,7 @@ class aiDialog(QDialog, form_class) :
         self.aiOptionList = self.aiOptionListWidget
         self.aiInExactList = self.ai_InExactListWidget
         self.stackedWidget.setCurrentIndex(0)
+        #self.btn_start.setChecked(False)
 
     def showModal(self) :
         return super().exec_()
@@ -52,6 +53,7 @@ class aiDialog(QDialog, form_class) :
         self.move(qr.topLeft())
 
     def btn_Start(self) :
+        #self.btn_start.setChecked(True)
         self.optionResult = [{}, {}, 0] #선택옵션리스트 초기화
         voiceResult = None
         self.result = []        #결과
@@ -60,7 +62,10 @@ class aiDialog(QDialog, form_class) :
         #음성입력 시작
 
         #여기에 작성 및 result 변수/ resultFlag 변수에 결과 할당
-        voiceResult = AI.AI_main.AI_recognition(self.conn)
+        try :
+            voiceResult = AI.AI_main.AI_recognition(self.conn)
+        except :
+            self.resultFlag = -1
         #[['아메리카노'], 1, 0, ['아이스 아메리카노']]
 
         if voiceResult != None :
@@ -71,12 +76,15 @@ class aiDialog(QDialog, form_class) :
 
         #음성입력 완료 및 결과반환
 
+        #self.btn_start.setChecked(False)
+
         #결과가 정확하다면
         if self.resultFlag == 0 :
             self.stackedWidget.setCurrentIndex(2)
             self.menuData = AI.AI_main.get_AI_menu_data(self.conn, self.result[0], self.result[1], self.resultFlag)
             #print(self.menuData)
             self.set_aiOrderData(self.menuData[0])
+            self.btn_start.setChecked(False)
 
         #결과가 부정확하다면
         elif self.resultFlag == 1:
@@ -89,10 +97,11 @@ class aiDialog(QDialog, form_class) :
             #메뉴리스트 ListWidget item으로 반환
             for data in self.menuData :
                 self.addInExactList(data)            
+            self.btn_start.setChecked(False)
 
         #오류
         else :
-            pass
+            self.btn_start.setChecked(False)
 
     # Initial_Setting
     def set_aiOrderData(self, menuData) :
@@ -190,3 +199,10 @@ class aiDialog(QDialog, form_class) :
         self.aiInExactList.addItem(item)
         self.aiInExactList.setItemWidget(item, item_Widget)
     
+    def Close(self) :
+        print(self.parent.aiCartList.count())
+        if self.parent.aiCartList.count() == 0 :
+            self.parent.mainPage_toInit()
+            self.close()
+        else :
+            self.close()

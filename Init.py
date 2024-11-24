@@ -8,6 +8,8 @@ import front
 import back1
 #import back2
 
+import resources_rc
+
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
 conn = back1.create_connection()

@@ -128,7 +128,7 @@ def AI_recognition(conn):
         #메뉴가 없을때
         if not intent.menu:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
-            return [[None],0,0,[recognized_text]] #메뉴가 없을 때
+            return [[None],0,-1,[recognized_text]] #메뉴가 없을 때
 
         #결과 갯수 파악
         result_Flag = -1
@@ -153,7 +153,7 @@ def AI_recognition(conn):
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
     else:
         print("음성 인식에 실패했습니다.")
-        return [[None],0,0,[None]]
+        return [[None],0,-1,[None]]
 
 
 
