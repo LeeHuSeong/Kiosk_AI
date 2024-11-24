@@ -37,6 +37,11 @@
 	background-image: url(:/.all/src/BG.png);
 }
 
+#aiCartListWidget {
+	
+	border-image: url(:/.all/src/BG3.png);
+}
+
 #mainPage {
 	
 	background-image: url(:/.all/src/BG2.png);
@@ -77,7 +82,17 @@
 	border-image: url(:/2_menuPage/src/home1_O.png);
 }
 
+#btn_toInitPage_2 {
+	
+	border-image: url(:/2_menuPage/src/home1_O.png);
+}
+
 #btn_toInitPage:hover {
+	
+	border-image: url(:/2_menuPage/src/home1_H.png);
+}
+
+#btn_toInitPage_2:hover {
 	
 	border-image: url(:/2_menuPage/src/home1_H.png);
 }
@@ -144,7 +159,35 @@
 
 #timer_addTime:hover {
 	border-image: url(:/2_menuPage/src/addTime_H.png);
-}</string>
+}
+
+#btn_addMenu {
+	border-image: url(:/-1-1_aiDialog2/src/aiNew_O.png);
+}
+
+#btn_addMenu:hover {
+	border-image: url(:/-1-1_aiDialog2/src/aiNew_H.png);
+}
+
+#btn_toCheckOrderPage_2 {
+	border-image: url(:/-1-1_aiDialog2/src/aiPur_O.png);
+}
+
+#btn_toCheckOrderPage_2:hover {
+	border-image: url(:/-1-1_aiDialog2/src/aiPur_H.png);
+}
+
+#btn_dummy:disabled {
+	border-image: url(:/-1-1_aiDialog2/src/aiBlankB_O.png);
+}
+
+#lcd_aiPrice {
+	border-image: url(:/-1-1_aiDialog2/src/aiBlankG_H.png);
+}
+
+
+
+</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="sizePolicy">
@@ -174,7 +217,7 @@
       <property name="spacing">
        <number>0</number>
       </property>
-      <item row="1" column="0">
+      <item row="1" column="1">
        <widget class="QStackedWidget" name="mainPage">
         <property name="sizePolicy">
          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -195,7 +238,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>2</number>
+         <number>3</number>
         </property>
         <widget class="QWidget" name="initPage">
          <layout class="QGridLayout" name="gridLayout_5">
@@ -662,6 +705,19 @@
              <number>0</number>
             </property>
             <item>
+             <spacer name="horizontalSpacer_3">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <layout class="QVBoxLayout" name="catalog_List">
               <property name="spacing">
                <number>0</number>
@@ -826,19 +882,45 @@
                 </property>
                </widget>
               </item>
+              <item>
+               <spacer name="verticalSpacer_8">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
              </layout>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
             <item>
              <widget class="QListWidget" name="menuListWidget">
               <property name="minimumSize">
                <size>
-                <width>950</width>
+                <width>900</width>
                 <height>750</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>950</width>
+                <width>900</width>
                 <height>750</height>
                </size>
               </property>
@@ -848,8 +930,24 @@
               <property name="contextMenuPolicy">
                <enum>Qt::NoContextMenu</enum>
               </property>
+              <property name="styleSheet">
+               <string notr="true">#menuListWidget {
+	
+	background-image: url(:/.all/src/BG3.png);
+	border: 0px solid;
+}</string>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::NoFrame</enum>
+              </property>
+              <property name="lineWidth">
+               <number>0</number>
+              </property>
               <property name="autoScroll">
                <bool>false</bool>
+              </property>
+              <property name="autoScrollMargin">
+               <number>16</number>
               </property>
               <property name="editTriggers">
                <set>QAbstractItemView::NoEditTriggers</set>
@@ -863,7 +961,29 @@
               <property name="verticalScrollMode">
                <enum>QAbstractItemView::ScrollPerPixel</enum>
               </property>
+              <property name="horizontalScrollMode">
+               <enum>QAbstractItemView::ScrollPerItem</enum>
+              </property>
+              <property name="batchSize">
+               <number>1</number>
+              </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_8">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -874,11 +994,32 @@
             </property>
             <item>
              <widget class="QListWidget" name="cartListWidget">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>950</width>
+                <height>200</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>950</width>
+                <height>200</height>
+               </size>
+              </property>
               <property name="focusPolicy">
                <enum>Qt::NoFocus</enum>
               </property>
               <property name="contextMenuPolicy">
                <enum>Qt::NoContextMenu</enum>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-image: url(:/.all/src/BG3.png);</string>
               </property>
               <property name="autoScroll">
                <bool>false</bool>
@@ -915,26 +1056,70 @@
                <number>0</number>
               </property>
               <item>
-               <widget class="QLCDNumber" name="lcd_Price">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <property name="spacing">
+                 <number>0</number>
                 </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>125</width>
-                  <height>50</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>50</height>
-                 </size>
-                </property>
-               </widget>
+                <item>
+                 <widget class="QLCDNumber" name="lcd_Price">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="MinimumExpanding">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>100</width>
+                    <height>45</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>100</width>
+                    <height>45</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Plain</enum>
+                  </property>
+                  <property name="digitCount">
+                   <number>6</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="label_3">
+                  <property name="minimumSize">
+                   <size>
+                    <width>15</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>15</width>
+                    <height>30</height>
+                   </size>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>원</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
                <widget class="QPushButton" name="btn_resetShoppingCart">
@@ -948,6 +1133,19 @@
                  <string/>
                 </property>
                </widget>
+              </item>
+              <item>
+               <spacer name="verticalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>20</width>
+                  <height>40</height>
+                 </size>
+                </property>
+               </spacer>
               </item>
               <item>
                <widget class="QPushButton" name="btn_toCheckOrderPage">
@@ -982,6 +1180,22 @@
               <property name="spacing">
                <number>0</number>
               </property>
+              <item>
+               <spacer name="horizontalSpacer_4">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeType">
+                 <enum>QSizePolicy::Minimum</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>19</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
               <item>
                <widget class="QPushButton" name="btn_toInitPage">
                 <property name="sizePolicy">
@@ -1028,62 +1242,81 @@
                 </property>
                </widget>
               </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_2">
-              <property name="spacing">
-               <number>0</number>
-              </property>
-              <property name="sizeConstraint">
-               <enum>QLayout::SetDefaultConstraint</enum>
-              </property>
               <item>
-               <widget class="QLCDNumber" name="lcd_Timer">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>125</width>
-                  <height>75</height>
-                 </size>
-                </property>
-                <property name="frameShape">
-                 <enum>QFrame::Panel</enum>
-                </property>
-                <property name="lineWidth">
-                 <number>1</number>
-                </property>
-                <property name="midLineWidth">
+               <layout class="QVBoxLayout" name="verticalLayout_2">
+                <property name="spacing">
                  <number>0</number>
                 </property>
-                <property name="intValue" stdset="0">
-                 <number>180</number>
+                <property name="sizeConstraint">
+                 <enum>QLayout::SetDefaultConstraint</enum>
                 </property>
-               </widget>
+                <item>
+                 <widget class="QLCDNumber" name="lcd_Timer">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>125</width>
+                    <height>75</height>
+                   </size>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::NoFrame</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Plain</enum>
+                  </property>
+                  <property name="lineWidth">
+                   <number>1</number>
+                  </property>
+                  <property name="midLineWidth">
+                   <number>0</number>
+                  </property>
+                  <property name="intValue" stdset="0">
+                   <number>180</number>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="timer_addTime">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>125</width>
+                    <height>50</height>
+                   </size>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
               </item>
               <item>
-               <widget class="QPushButton" name="timer_addTime">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
+               <spacer name="horizontalSpacer_7">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
                 </property>
-                <property name="minimumSize">
+                <property name="sizeType">
+                 <enum>QSizePolicy::Maximum</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
                  <size>
-                  <width>125</width>
-                  <height>50</height>
+                  <width>19</width>
+                  <height>20</height>
                  </size>
                 </property>
-                <property name="text">
-                 <string/>
-                </property>
-               </widget>
+               </spacer>
               </item>
              </layout>
             </item>
@@ -1114,6 +1347,22 @@
              <number>0</number>
             </property>
             <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>19</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <widget class="QPushButton" name="btn_toInitPage_2">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -1128,14 +1377,7 @@
                </size>
               </property>
               <property name="text">
-               <string>홈으로</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_2">
-              <property name="text">
-               <string>PushButton</string>
+               <string/>
               </property>
              </widget>
             </item>
@@ -1168,6 +1410,9 @@
             </item>
             <item>
              <widget class="QPushButton" name="pushButton">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                 <horstretch>0</horstretch>
@@ -1187,9 +1432,25 @@
                </size>
               </property>
               <property name="text">
-               <string>PushButton</string>
+               <string/>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>19</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -1198,6 +1459,22 @@
             <property name="spacing">
              <number>0</number>
             </property>
+            <item>
+             <spacer name="horizontalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>19</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
             <item>
              <widget class="QListWidget" name="aiCartListWidget">
               <property name="focusPolicy">
@@ -1214,6 +1491,22 @@
               </property>
              </widget>
             </item>
+            <item>
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>19</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
            </layout>
           </item>
           <item row="2" column="0">
@@ -1222,38 +1515,32 @@
              <number>0</number>
             </property>
             <item>
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>19</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
              <widget class="QPushButton" name="btn_addMenu">
               <property name="minimumSize">
                <size>
-                <width>0</width>
+                <width>250</width>
                 <height>75</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>75</height>
-               </size>
-              </property>
-              <property name="text">
-               <string>주문하기</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QPushButton" name="pushButton_3">
-              <property name="enabled">
-               <bool>false</bool>
-              </property>
-              <property name="minimumSize">
-               <size>
-                <width>0</width>
-                <height>75</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
+                <width>250</width>
                 <height>75</height>
                </size>
               </property>
@@ -1263,26 +1550,122 @@
              </widget>
             </item>
             <item>
-             <widget class="QLCDNumber" name="lcd_aiPrice"/>
+             <spacer name="horizontalSpacer_15">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
             <item>
-             <widget class="QPushButton" name="btn_toCheckOrderPage_2">
+             <widget class="QPushButton" name="btn_dummy">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
               <property name="minimumSize">
                <size>
-                <width>0</width>
+                <width>250</width>
                 <height>75</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
+                <width>250</width>
                 <height>75</height>
                </size>
               </property>
               <property name="text">
-               <string>결제하기</string>
+               <string/>
               </property>
              </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_14">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcd_aiPrice">
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">color: white</string>
+              </property>
+              <property name="digitCount">
+               <number>7</number>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_16">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="btn_toCheckOrderPage_2">
+              <property name="minimumSize">
+               <size>
+                <width>250</width>
+                <height>75</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>250</width>
+                <height>75</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_13">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>19</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
             </item>
            </layout>
           </item>
@@ -1306,8 +1689,8 @@
    <slot>mainPage_toSelect()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>100</x>
-     <y>30</y>
+     <x>66</x>
+     <y>20</y>
     </hint>
     <hint type="destinationlabel">
      <x>759</x>
@@ -1508,30 +1891,14 @@
    </hints>
   </connection>
   <connection>
-   <sender>pushButton_2</sender>
-   <signal>clicked()</signal>
-   <receiver>MainWindow</receiver>
-   <slot>btnTEST()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>100</x>
-     <y>30</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>1134</x>
-     <y>81</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>btn_addMenu</sender>
    <signal>clicked()</signal>
    <receiver>MainWindow</receiver>
    <slot>btn_newAiOrder()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>45</x>
-     <y>75</y>
+     <x>26</x>
+     <y>96</y>
     </hint>
     <hint type="destinationlabel">
      <x>-44</x>

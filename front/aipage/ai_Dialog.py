@@ -41,6 +41,7 @@ class aiDialog(QDialog, form_class) :
         self.aiOptionList = self.aiOptionListWidget
         self.aiInExactList = self.ai_InExactListWidget
         self.stackedWidget.setCurrentIndex(0)
+
         #self.btn_start.setChecked(False)
 
     def showModal(self) :
@@ -64,6 +65,7 @@ class aiDialog(QDialog, form_class) :
         #여기에 작성 및 result 변수/ resultFlag 변수에 결과 할당
         try :
             voiceResult = AI.AI_main.AI_recognition(self.conn)
+            #voiceResult = AI.AI_main.AI_recognition2()
         except :
             self.resultFlag = -1
         #[['아메리카노'], 1, 0, ['아이스 아메리카노']]
@@ -206,3 +208,5 @@ class aiDialog(QDialog, form_class) :
             self.close()
         else :
             self.close()
+
+    ################################

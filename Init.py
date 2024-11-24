@@ -25,7 +25,7 @@ class MainWindow(QMainWindow, Init_Class) :
 
 #Initial_Settings(execute once)/초기 설정(한번만 실행됨)
     def init_setting(self) :
-        #Timer_Init
+        #Timer_Init 
         self.timer = front.timeoutClass(self)
         self.lcd_Timer.display(180)
 

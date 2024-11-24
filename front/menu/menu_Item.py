@@ -23,18 +23,32 @@ class menu_Item(QWidget, form_class) :
         self.optionData = self.menuData[5]
 
         #self.menuName.setText(self.menuData[0])
-        self.menuName.setText(self.menuData[2].split('\\')[2].replace('.jpg', ''))
+        menuStr = self.menuData[2].split('\\')[2].replace('.jpg', '').split('_')
+        
+        if len(menuStr) == 1 :
+            self.menuName.setText(menuStr[0])
+        else :
+            if menuStr[0] == 'HOT' :
+                self.menuHot.setText(menuStr[0])
+            else :
+                self.menuIce.setText(menuStr[0])
+
+            self.menuName.setText(menuStr[1])
                               
         self.menuPrice.setText(str(self.menuData[1]) + '원')
 
         self.menuImg.setIcon(QtGui.QIcon(self.menuData[2]))
-        self.menuImg.setIconSize(QSize(200, 200))
+        self.menuImg.setIconSize(QSize(198, 198))
 
     def set_Parent(self, parent) :
         self.parent = parent
 
     def open_selectOptionPage(self) :
-        self.parent.timer.timeout_Pause()
+        try :
+            self.parent.timer.timeout_Pause()
 
-        selectOptionPage = menu_SelectOption.optionWindow(self.menuData, self.optionData, self.parent, self.conn)
-        selectOptionPage.showModal()
+            selectOptionPage = menu_SelectOption.optionWindow(self.menuData, self.optionData, self.parent, self.conn)
+            selectOptionPage.showModal()
+
+        except :
+            pass

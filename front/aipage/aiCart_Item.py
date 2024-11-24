@@ -43,6 +43,11 @@ class aiCartItem(QWidget, form_class) :
         self.set_optionList(menuData[4])
 
         self.totalPrice = self.singlePrice * self.menuAmount
+
+        if self.menuAmount == 1 :
+            self.btn_decrease_menuAmount.setDisabled(True)
+        else :
+            self.btn_decrease_menuAmount.setEnabled(True)
     
     def set_InitLabelData(self) :       #초기 Label 값 설정
         self.menuName_.setText(self.menuName)
@@ -82,6 +87,12 @@ class aiCartItem(QWidget, form_class) :
     def increase_menuAmount(self) :     #menuAmount값 1 증가
         currentAmount = self.get_menuAmount()
         self.menuAmount = currentAmount + 1
+
+        if self.menuAmount == 1 :
+            self.btn_decrease_menuAmount.setDisabled(True)
+        else :
+            self.btn_decrease_menuAmount.setEnabled(True)
+            
         self.quantity_.setText(str(self.menuAmount))
 
         self.parent.totalPrice += self.singlePrice
@@ -90,6 +101,12 @@ class aiCartItem(QWidget, form_class) :
     def decrease_menuAmount(self) :     #menuAmount값 1 감소
         currentAmount = self.get_menuAmount()
         self.menuAmount = currentAmount - 1
+
+        if self.menuAmount == 1 :
+            self.btn_decrease_menuAmount.setDisabled(True)
+        else :
+            self.btn_decrease_menuAmount.setEnabled(True)
+
         self.quantity_.setText(str(self.menuAmount))
 
         self.parent.totalPrice -= self.singlePrice
