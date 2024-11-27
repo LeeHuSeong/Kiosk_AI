@@ -111,7 +111,6 @@ def get_menu_option(conn):
         #커서 종료
         cur.close()
 
-
 #리스트 /table data / [[no, 분류, 카테고리 번호, HOT/ICE, 이름, 가격, 설명] ]
 def get_data(conn):
     try:

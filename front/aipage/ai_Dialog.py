@@ -153,8 +153,6 @@ class aiDialog(QDialog, form_class) :
 
     # def
     def btn_Back(self) :
-        #print(self.resultFlag)
-        #print(self.stackedWidget.currentIndex())
         if self.stackedWidget.currentIndex() == 1 :
             self.stackedWidget.setCurrentIndex(0)
             self.aiInExactList.clear()
@@ -169,9 +167,7 @@ class aiDialog(QDialog, form_class) :
 
     def btn_SelectOption(self) :
         self.aiOptionListWidget.clear()
-        #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
-
-        popup_selectOption = front.aiOptionWindow(self, self.menuData, self.optionResult, self.conn)
+        popup_selectOption = front.optionWindowClass_Voice(self, self.conn, self.menuData, self.optionResult)
         popup_selectOption.showModal()
 
         self.optionList = []
@@ -180,16 +176,14 @@ class aiDialog(QDialog, form_class) :
             self.aiOptionListWidget.addItem(value[1])
             self.optionList.append(value[1])
 
+
     def btn_addCart(self) :
+        #self.optionResult = [{}, {}, 0]
         if int(self.optionResult[2]) != 0 :
             data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], 1, self.optionList, self.result[1]]
-            #self.optionResult = [{}, {}, 0]
         else :
             data = [self.menuData[0], self.menuData[1], self.menuData[2], 1, self.optionList, self.result[1]]
-            #self.optionResult = [{}, {}, 0]
-        #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg']
-        #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
-        #
+
         self.parent.addAiCart(data)
         self.close()
 

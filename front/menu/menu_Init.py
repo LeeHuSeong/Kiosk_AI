@@ -28,10 +28,15 @@ def menuWidget_Load(self, type, conn) :
                     menuDB.append(item)
                 else :
                     pass
+                
 
         for list in menuDB :
             list.append(optionDB[list[0]][1])
-    
+            list.pop(3)
+            desc = back1.get_menu_info(conn, list[0])
+            list.append(desc[0])
+
+        #print(menuDB)
         menuData = []
 
         for i in range(0, len(menuDB), 4) :

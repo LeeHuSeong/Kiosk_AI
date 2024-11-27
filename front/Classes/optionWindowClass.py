@@ -4,25 +4,27 @@ from PyQt5.QtGui import QPixmap
 from PyQt5 import uic
 
 from abc import abstractmethod
+import copy
 
 import front, back1
 
-form_class = uic.loadUiType("front/aipage/ai_selectOption.ui")[0]
+form_class = uic.loadUiType("front/Classes/optionWindowClass.ui")[0]
 class optionWindowClass(QDialog, form_class) :
-    def __init__(self, parent, menuData, optionResult, conn) :
+    def __init__(self, parent, conn, menuData, optionResult = None) :
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
         self.center()
 
+        int_type = 0
         # Var_objectData
-        #self.parent = parent
+        self.parent = parent
         self.__conn = conn                             # SQL 연결 정보
         self.__menuData = menuData                     # (LIST) 메뉴 전체 데이터
         self.__optionData = menuData[4]                # (LIST) 메뉴 옵션 목록
         
         # Var_menuData
-        self.__menuName = menuData[2].split('\\')[2].replace('.jpg', '') # (STR) 메뉴 이름
+        self.__menuName = menuData[2].split('\\')[2].replace('.jpg', '')    # (STR) 메뉴 이름
         self.__menuDesc = menuData[5]                  # (STR) 메뉴 설명
         self.__menuImgSrc = menuData[2]                # (STR) 메뉴 이미지 주소
         self.__menuDefaultPrice = menuData[1]          # (INT) 메뉴 기본 가격 (옵션 제외 가격)
@@ -45,11 +47,18 @@ class optionWindowClass(QDialog, form_class) :
             'AddWhipping'       : [self.btn_Whipping_0, self.btn_Whipping_1] ,                      #10 휘핑OX
             'AddCinnamon'       : [self.btn_Cinnamon_0, self.btn_Cinnamon_1]                        #11 시나몬 OX
         }
-        self.__prevOptionResult = optionResult    # (Dict) 이전 선택 결과 (옵션 ID)
         
         # Var_Result
-        self.__resultNameDict = {}    # (Dict) 옵션 선택 결과 Name (옵션 이름/외부 출력용)
-        self.__resultIdDict = {}      # (Dict) 옵션 선택 결과 ID (옵션 ID/내부 처리용)
+        try :       # 이전 결과 O(음성주문)
+            self.__resultNameDict = copy.deepcopy(optionResult[0])     # (Dict) 옵션 선택 결과 Name (옵션 이름/외부 출력용)
+            self.__resultIdDict = copy.deepcopy(optionResult[1])       # (Dict) 옵션 선택 결과 ID (옵션 ID/내부 처리용)
+            self.__prevNameDict = copy.deepcopy(optionResult[0])       # (Dict) 이전 선택 결과 Name
+            self.__prevIdDict = copy.deepcopy(optionResult[1])         # (Dict) 이전 선택 결과 ID
+        except :    # 이전 결과 X(일반 주문)
+            self.__resultNameDict = {}
+            self.__resultIdDict = {}
+            self.__prevNameDict = {} 
+            self.__prevIdDict = {}
 
         # 라벨 데이터 설정
         self.set_LabelData()
@@ -59,21 +68,24 @@ class optionWindowClass(QDialog, form_class) :
             i = 0
             for value in self.optionDict[key] :
                 value.clicked.connect(self.optionSelect)
-                if key in self.prevOptionResult and i == self.prevOptionResult[key] :
-                    value.setChecked(True)
+                try :
+                    if key in self.prevIdDict and i == self.prevIdDict[key] :
+                        value.setChecked(True)
+                except :
+                    pass
                 i += 1
-
-        # 이전 선택 결과 로딩
 
         # 필요없는 옵션항목 숨기기
         i = 0
         for key in self.optionDict :
-            if key in self.optionDict :
+            if key in self.optionData :
                 defStr = 'self.frame_Option_' + str(i) + '.setVisible(True)'
             else :
                 defStr = 'self.frame_Option_' + str(i) + '.setVisible(False)'
             eval(defStr) # 실행
             i += 1
+
+        self.refresh_Price()
 
     #Getter
     @property
@@ -101,8 +113,11 @@ class optionWindowClass(QDialog, form_class) :
     def optionDict(self) :
         return self.__optionDict
     @property
-    def prevOptionResult(self) :
-        return self.__prevOptionResult
+    def prevNameDict(self) :
+        return self.__prevNameDict
+    @property
+    def prevIdDict(self) :
+        return self.__prevIdDict
     @property
     def resultNameDict(self) :
         return self.__resultNameDict
@@ -112,20 +127,21 @@ class optionWindowClass(QDialog, form_class) :
     @property
     def conn(self) :
         return self.__conn
+    @property
+    def menuData(self) :
+        return self.__menuData
+    @property
+    def optionData(self):
+        return self.__optionData
     #Setter
     @menuAmount.setter  # 메뉴 수량 설정
-    def menuAmount(self, val) :
-        if type(val) != int :
-            raise TypeError('숫자(정수)만 입력하세요')
-        self.__menuAmount = int
+    def menuAmount(self, Amount) :
+        self.__menuAmount = Amount
     @optionPrice.setter # 선택한 옵션 총 가격 설정
-    def optionPrice(self, val) :
-        if type(val) != int :
-            raise TypeError('숫자(정수)만 입력하세요')
-        self.__optionPrice = int
+    def optionPrice(self, Price) :
+        self.__optionPrice = Price
     @totalPrice.setter
-    def totalPrice(self, val) :
-        val = None # Nothing
+    def totalPrice(self, val = None) :
         self.__totalPrice = self.menuDefaultPrice + self.optionPrice
         self.itemPrice_.setText(str(self.totalPrice) + '원')
     
@@ -151,8 +167,8 @@ class optionWindowClass(QDialog, form_class) :
             for key, value in data :
                 temp += int(back1.get_opt_price(self.conn, key, value))
         
-        self.optionPrice(temp)
-        self.totalPrice(temp)
+        self.optionPrice = temp
+        self.totalPrice = None
 
     def optionSelect(self) :
         sender = self.sender()
@@ -164,10 +180,8 @@ class optionWindowClass(QDialog, form_class) :
 
         self.resultIdDict[key] = int(value)
         self.refresh_Price()
-        #self.itemPrice_.setText(str(self.totalPrice) + '원')
 
         self.set_resultNameDict(key, value)
-
     def set_resultNameDict(self, key, value) :
         options = {
             'Addshot': {1: '1샷 추가', 2: '2샷 추가'},
@@ -180,19 +194,18 @@ class optionWindowClass(QDialog, form_class) :
             'AddCaramel': {1: '카라멜시럽 추가'},
             'SelectMilk': {1: '우유 변경(아몬드)', 2: '우유 변경(오트)'},
             'AddHoney': {1: '꿀 추가'},
-            'AddWhipping': {0: '휘핑 빼기'},
-            'AddCinnamon': {0: '시나몬 빼기'}
+            'AddWhipping': {0: '휘핑 빼기', 1: '휘핑 기본'},
+            'AddCinnamon': {0: '시나몬 빼기', 1: '시나몬 기본'}
         }
         value = int(value)
-        if key in options:
-            if value == 0:
+        if key in options :
+            if value == 0 :
                 self.resultNameDict.pop(key, None)
             else:
                 self.resultNameDict[key] = options[key].get(value, None)
                 # value가 매핑되지 않은 경우 pop으로 제거
                 if self.resultNameDict[key] is None:
                     self.resultNameDict.pop(key, None)
-
     def get_key(self, val) :
         for key in self.optionDict :
             for value in self.optionDict[key]:
@@ -200,15 +213,41 @@ class optionWindowClass(QDialog, form_class) :
                     return key
     def get_value(self, objectName) :
         return objectName[-1]
-    
-    #btn_Methods
+
+    #AbstractMethods
+    @abstractmethod
     def btn_Cancel(self) :
-        self.close()
-    
+        pass
+
+    @abstractmethod
     def btn_OK(self) :
         pass
 
-#    #AbstractMethods
-#    @abstractmethod
-#    def something() :
-#        pass
+#일반 주문 옵션 선택 클래스
+class optionWindowClass_Default(optionWindowClass) :
+    def btn_Cancel(self) :
+        self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
+        self.close()
+
+    def btn_OK(self) :
+        result = [self.menuName, self.resultNameDict, 1, self.totalPrice]  
+        front.cartWidget_Add(self.parent, result)
+
+        self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
+        self.close()
+
+#음성 주문 옵션 선택 클래스
+class optionWindowClass_Voice(optionWindowClass) :
+    def btn_Cancel(self) :
+        result = [self.prevNameDict, self.prevIdDict, self.totalPrice]
+        print(result)
+        self.parent.set_optionResult(result)    # ai_Dialog 객체로 전달
+
+        self.close()
+
+    def btn_OK(self) :
+        result = [self.resultNameDict, self.resultIdDict, self.totalPrice]
+        print(result)
+        self.parent.set_optionResult(result)    # ai_Dialog 객체로 전달
+
+        self.close()

@@ -21,27 +21,35 @@ class MainWindow(QMainWindow, Init_Class) :
         super().__init__()
         self.setupUi(self)
 
-        self.init_setting()
+        self.__timer = timeoutClass(self)
 
-#Initial_Settings(execute once)/초기 설정(한번만 실행됨)
-    def init_setting(self) :
-        #Timer_Init 
-        self.timer = timeoutClass(self)
+        self.__cartList = self.cartListWidget
+        self.__menuList = self.menuListWidget
+        self.__aiCartList = self.aiCartListWidget
+
+        self.__conn = back1.create_connection()
+
         self.lcd_Timer.display(180)
-
-        #CartList_Init
-        self.cartList = self.cartListWidget
-
-        #MenuList_Init
-        self.menuList = self.menuListWidget
         menuWidget_Load(self, 'ALL', conn)
-
-        #aiCartList_Init
-        self.aiCartList = self.aiCartListWidget
-
         self.set_MainPage_Index(0)
 
-#Initial_Settings
+    #Getter
+    @property
+    def timer(self) :
+        return self.__timer
+    @property
+    def cartList(self) :
+        return self.__cartList
+    @property
+    def menuList(self) :
+        return self.__menuList
+    @property
+    def aiCartList(self) :
+        return self.__aiCartList
+    @property
+    def conn(self) :
+        return self.__conn
+    #Setter
 
 #Def_ETC
     #Timer_AddTime/타이머 시간추가

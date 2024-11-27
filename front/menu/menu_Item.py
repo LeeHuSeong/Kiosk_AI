@@ -3,7 +3,7 @@ from PyQt5.QtCore import *
 from PyQt5 import uic, QtGui
 
 import ast
-from front.menu import menu_SelectOption
+
 import front
 
 form_class = uic.loadUiType("front/menu/menu_Item.ui")[0]
@@ -21,7 +21,7 @@ class menu_Item(QWidget, form_class) :
         self.conn = conn
         menuDataText = self.menuData.text()
         self.menuData = ast.literal_eval(menuDataText)
-        self.optionData = self.menuData[5]
+        self.optionData = self.menuData[4]
 
         #self.menuName.setText(self.menuData[0])
         menuStr = self.menuData[2].split('\\')[2].replace('.jpg', '').split('_')
@@ -49,8 +49,6 @@ class menu_Item(QWidget, form_class) :
             self.parent.timer.timeout_Pause()
         except :
             pass
-
-        #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
-        selectOptionPage = menu_SelectOption.optionWindow(self.menuData, self.optionData, self.parent, self.conn)
-        #selectOptionPage = front.optionWindowClass(self.parent, menuData, {},  self.conn)
+        
+        selectOptionPage = front.optionWindowClass_Default(self.parent, self.conn, self.menuData)
         selectOptionPage.showModal()

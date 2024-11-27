@@ -33,8 +33,8 @@ class cartItem(QWidget, form_class) :
         self.selectedOptionList = '\n'.join(self.optionList)
         
         self.amount = menuData[2]
-        self.singleMenuPrice = int(menuData[3].replace('원', ''))
-        self.totalMenuPrice = int(menuData[3].replace('원', ''))
+        self.singleMenuPrice = menuData[3]
+        self.totalMenuPrice = menuData[3]
 
         self.menuName_.setText(menuData[0])
         self.optionList_.setText(self.selectedOptionList)
