@@ -4,6 +4,7 @@ from PyQt5 import uic, QtGui
 
 import ast
 from front.menu import menu_SelectOption
+import front
 
 form_class = uic.loadUiType("front/menu/menu_Item.ui")[0]
 
@@ -46,9 +47,10 @@ class menu_Item(QWidget, form_class) :
     def open_selectOptionPage(self) :
         try :
             self.parent.timer.timeout_Pause()
-
-            selectOptionPage = menu_SelectOption.optionWindow(self.menuData, self.optionData, self.parent, self.conn)
-            selectOptionPage.showModal()
-
         except :
             pass
+
+        #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
+        selectOptionPage = menu_SelectOption.optionWindow(self.menuData, self.optionData, self.parent, self.conn)
+        #selectOptionPage = front.optionWindowClass(self.parent, menuData, {},  self.conn)
+        selectOptionPage.showModal()

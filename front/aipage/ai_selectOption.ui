@@ -2455,15 +2455,15 @@
    <sender>btn_Close</sender>
    <signal>clicked()</signal>
    <receiver>selectOption</receiver>
-   <slot>selectOption_Cancel()</slot>
+   <slot>btn_Cancel()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>251</x>
-     <y>754</y>
+     <x>56</x>
+     <y>737</y>
     </hint>
     <hint type="destinationlabel">
-     <x>245</x>
-     <y>874</y>
+     <x>-150</x>
+     <y>720</y>
     </hint>
    </hints>
   </connection>
@@ -2471,21 +2471,21 @@
    <sender>btn_addCart</sender>
    <signal>clicked()</signal>
    <receiver>selectOption</receiver>
-   <slot>selectOption_OK()</slot>
+   <slot>btn_OK()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>545</x>
-     <y>738</y>
+     <x>477</x>
+     <y>776</y>
     </hint>
     <hint type="destinationlabel">
-     <x>624</x>
-     <y>862</y>
+     <x>490</x>
+     <y>827</y>
     </hint>
    </hints>
   </connection>
  </connections>
  <slots>
-  <slot>selectOption_Cancel()</slot>
-  <slot>selectOption_OK()</slot>
+  <slot>btn_Cancel()</slot>
+  <slot>btn_OK()</slot>
  </slots>
 </ui>
