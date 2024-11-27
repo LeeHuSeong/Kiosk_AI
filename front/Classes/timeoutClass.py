@@ -10,7 +10,17 @@ class timeoutMsgBox(QDialog, form_class) :
         self.setupUi(self)
         self.center()
 
-        self.timeoutFlag = True
+        self.__timeoutFlag = True
+
+    @property
+    def timeoutFlag(self) :
+        return self.__timeoutFlag
+
+    @timeoutFlag.setter
+    def timeoutFlag(self, val) :
+        if type(val) != bool :
+            raise TypeError('bool 형식만 가능합니다.')
+        self.__timeoutFlag = val
 
     # 창 종료까지 대기
     def showModal(self) :
@@ -29,24 +39,32 @@ class timeoutMsgBox(QDialog, form_class) :
         self.close()
 
 class timeoutClass :
-    timeout_Time = 3 * 60
-    add_Time = 60
-    remain_Time = timeout_Time
+    TIMEOUT_TIME = 3 #* 60         # Constant
+    ADD_TIME = 60                 # Constant
+    __remain_Time = TIMEOUT_TIME
 
     def __init__(self, parent) :
         self.__timer = QTimer()
         self.__parent = parent
+
+        # Interval마다 실행할 함수 설정
         self.timer.timeout.connect(self.update_timer)
 
-    #Getter
+    # Getter
     @property
-    def timer(self) :
+    def remain_Time(self) :
+        return self.__remain_Time
+    @property
+    def timer(self) :       # QTimer객체
         return self.__timer
     @property
     def parent(self) :
         return self.__parent
 
-    #Setter
+    # Setter
+    @remain_Time.setter
+    def remain_Time(self, val) :
+        self.__remain_Time = val
 
     def timeout_Start(self, timeValue) :
         self.timer.start(1000)      #interval(ms)
@@ -71,7 +89,7 @@ class timeoutClass :
                 self.timeout_Do()
             else :
                 timeoutMsgbox.close()
-                self.timeout_Start(self.timeout_Time)
+                self.timeout_Start(self.TIMEOUT_TIME)
     
     def timeout_Stop(self) :
         self.timer.stop()
@@ -85,4 +103,10 @@ class timeoutClass :
         self.timer.start(1000)      #interval(ms)
         self.remain_Time = timeValue
         self.parent.lcd_Timer.display(self.remain_Time)
+
+    #Timer_AddTime/타이머 시간추가
+    def add_timer(self) :
+        self.remain_Time += self.ADD_TIME
+        self.parent.lcd_Timer.display(self.remain_Time)
+
 

@@ -6,7 +6,7 @@ from PyQt5 import uic
 from abc import abstractmethod
 import copy
 
-import front, back1
+from back1 import get_opt_price
 
 form_class = uic.loadUiType("front/Classes/optionWindowClass.ui")[0]
 class optionWindowClass(QDialog, form_class) :
@@ -59,6 +59,8 @@ class optionWindowClass(QDialog, form_class) :
             self.__resultIdDict = {}
             self.__prevNameDict = {} 
             self.__prevIdDict = {}
+
+        self.__result = []
 
         # 라벨 데이터 설정
         self.set_LabelData()
@@ -133,6 +135,9 @@ class optionWindowClass(QDialog, form_class) :
     @property
     def optionData(self):
         return self.__optionData
+    @property
+    def result(self) :
+        return self.__result
     #Setter
     @menuAmount.setter  # 메뉴 수량 설정
     def menuAmount(self, Amount) :
@@ -144,7 +149,10 @@ class optionWindowClass(QDialog, form_class) :
     def totalPrice(self, val = None) :
         self.__totalPrice = self.menuDefaultPrice + self.optionPrice
         self.itemPrice_.setText(str(self.totalPrice) + '원')
-    
+    @result.setter
+    def result(self, val) :
+        self.__result = val
+
     #Methods
     def set_LabelData(self) :   # 라벨 데이터 설정
         self.menuName_.setText(self.menuName)
@@ -165,7 +173,7 @@ class optionWindowClass(QDialog, form_class) :
 
         if data != {} :
             for key, value in data :
-                temp += int(back1.get_opt_price(self.conn, key, value))
+                temp += int(get_opt_price(self.conn, key, value))
         
         self.optionPrice = temp
         self.totalPrice = None
@@ -226,28 +234,23 @@ class optionWindowClass(QDialog, form_class) :
 #일반 주문 옵션 선택 클래스
 class optionWindowClass_Default(optionWindowClass) :
     def btn_Cancel(self) :
-        self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
         self.close()
 
     def btn_OK(self) :
-        result = [self.menuName, self.resultNameDict, 1, self.totalPrice]  
-        front.cartWidget_Add(self.parent, result)
+        self.result = [self.menuName, self.resultNameDict, 1, self.totalPrice]  
 
-        self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
         self.close()
 
 #음성 주문 옵션 선택 클래스
 class optionWindowClass_Voice(optionWindowClass) :
     def btn_Cancel(self) :
-        result = [self.prevNameDict, self.prevIdDict, self.totalPrice]
-        print(result)
-        self.parent.set_optionResult(result)    # ai_Dialog 객체로 전달
+        self.result = [self.prevNameDict, self.prevIdDict, self.totalPrice]
+        self.parent.set_optionResult(self.result)    # ai_Dialog 객체로 전달
 
         self.close()
 
     def btn_OK(self) :
-        result = [self.resultNameDict, self.resultIdDict, self.totalPrice]
-        print(result)
-        self.parent.set_optionResult(result)    # ai_Dialog 객체로 전달
+        self.result = [self.resultNameDict, self.resultIdDict, self.totalPrice]
+        self.parent.set_optionResult(self.result)    # ai_Dialog 객체로 전달
 
         self.close()

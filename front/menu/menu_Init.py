@@ -4,7 +4,6 @@ from PyQt5.QtCore import *
 import front
 import back1
 
-import time #for Test
 
 def menuWidget_Load(self, type, conn) :
         self.menuList.clear()

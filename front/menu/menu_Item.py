@@ -52,3 +52,7 @@ class menu_Item(QWidget, form_class) :
         
         selectOptionPage = front.optionWindowClass_Default(self.parent, self.conn, self.menuData)
         selectOptionPage.showModal()
+
+        result = selectOptionPage.result
+        self.parent.timer.timeout_Resume(self.parent.timer.remain_Time)
+        front.cartWidget_Add(self.parent, result)
