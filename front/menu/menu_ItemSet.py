@@ -17,6 +17,7 @@ class menu_ItemSet(QWidget, form_class) :
         self.listWidget = listWidget
         self.menuData = menuData
         self.parent = parent
+        print(menuData)
 
         for i in range(1, 5):
             widget_name = f'widget_{i}'
@@ -24,6 +25,6 @@ class menu_ItemSet(QWidget, form_class) :
             if i > len(menuData) :
                 break
             else :
-                widget.menuData.setText(str(menuData[i-1]))
+                widget.menuData_.setText(str(menuData[i-1]))
                 widget.menuItem_Init(self.conn)
                 widget.set_Parent(parent)

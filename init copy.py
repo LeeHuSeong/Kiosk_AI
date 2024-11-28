@@ -81,7 +81,7 @@ class MainWindow(QMainWindow, Init_Class) :
     #move to defaultMenuPage
     def mainPage_toDefault(self) :
         self.lcd_Timer.display(180)
-        self.timer.timeout_Start(self.timer.timeout_Time)
+        self.timer.timeout_Start(self.timer.TIMEOUT_TIME)
         self.set_MainPage_Index(2)
 
     #move to voiceOrderPage

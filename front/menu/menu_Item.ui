@@ -68,7 +68,7 @@
      <property name="frameShadow">
       <enum>QFrame::Plain</enum>
      </property>
-     <widget class="QLabel" name="menuIce">
+     <widget class="QLabel" name="menuIce_">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -105,7 +105,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="menuHot">
+     <widget class="QLabel" name="menuHot_">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -142,57 +142,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="menuParent">
-      <property name="geometry">
-       <rect>
-        <x>1</x>
-        <y>1</y>
-        <width>0</width>
-        <height>0</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="menuData">
-      <property name="geometry">
-       <rect>
-        <x>1</x>
-        <y>1</y>
-        <width>0</width>
-        <height>0</height>
-       </rect>
-      </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="text">
-       <string>TextLabel</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="menuPrice">
+     <widget class="QLabel" name="menuPrice_">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -229,7 +179,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QLabel" name="menuName">
+     <widget class="QLabel" name="menuName_">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -273,7 +223,7 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
-     <widget class="QPushButton" name="menuImg">
+     <widget class="QPushButton" name="menuImg_">
       <property name="geometry">
        <rect>
         <x>6</x>
@@ -328,7 +278,7 @@
  </resources>
  <connections>
   <connection>
-   <sender>menuImg</sender>
+   <sender>menuImg_</sender>
    <signal>clicked()</signal>
    <receiver>Form</receiver>
    <slot>open_selectOptionPage()</slot>

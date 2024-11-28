@@ -6,11 +6,11 @@ def create_connection():
     try:
         conn = mysql.connector.connect(
             host = 'localhost',
-            user = 'root',        # 본인의 DB 사용자 이름으로 수정
-            password = 'rootpass', # 본인의 DB 비밀번호로 수정
+            #user = 'root',        # 본인의 DB 사용자 이름으로 수정
+            #password = 'rootpass', # 본인의 DB 비밀번호로 수정
 
-            #user = 'kiosk_proj',        # 본인의 DB 사용자 이름으로 수정
-            #password = 'kiosk_pass', # 본인의 DB 비밀번호로 수정
+            user = 'kiosk_proj',        # 본인의 DB 사용자 이름으로 수정
+            password = 'kiosk_pass', # 본인의 DB 비밀번호로 수정
 
             database = 'kiosk_',  # 본인의 DB 이름으로 수정
             port = 3306,

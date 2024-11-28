@@ -19,7 +19,7 @@ class menu_Item(QWidget, form_class) :
 
     def menuItem_Init(self, conn) :
         self.conn = conn
-        menuDataText = self.menuData.text()
+        menuDataText = self.menuData_.text()
         self.menuData = ast.literal_eval(menuDataText)
         self.optionData = self.menuData[4]
 
@@ -27,19 +27,19 @@ class menu_Item(QWidget, form_class) :
         menuStr = self.menuData[2].split('\\')[2].replace('.jpg', '').split('_')
         
         if len(menuStr) == 1 :
-            self.menuName.setText(menuStr[0])
+            self.menuName_.setText(menuStr[0])
         else :
             if menuStr[0] == 'HOT' :
-                self.menuHot.setText(menuStr[0])
+                self.menuHot_.setText(menuStr[0])
             else :
-                self.menuIce.setText(menuStr[0])
+                self.menuIce_.setText(menuStr[0])
 
-            self.menuName.setText(menuStr[1])
+            self.menuName_.setText(menuStr[1])
                               
-        self.menuPrice.setText(str(self.menuData[1]) + '원')
+        self.menuPrice_.setText(str(self.menuData[1]) + '원')
 
-        self.menuImg.setIcon(QtGui.QIcon(self.menuData[2]))
-        self.menuImg.setIconSize(QSize(198, 198))
+        self.menuImg_.setIcon(QtGui.QIcon(self.menuData[2]))
+        self.menuImg_.setIconSize(QSize(198, 198))
 
     def set_Parent(self, parent) :
         self.parent = parent
