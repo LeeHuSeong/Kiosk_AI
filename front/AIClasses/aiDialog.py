@@ -9,7 +9,7 @@ import front
 import back1
 import AI.AI_main
 
-form_class = uic.loadUiType("front/aipage/aiDialog.ui")[0]
+form_class = uic.loadUiType("front/AIClasses/aiDialog.ui")[0]
 
 class aiDialog(QDialog, form_class) :
     #Page_0
