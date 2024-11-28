@@ -78,7 +78,7 @@
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <widget class="menu_Item" name="widget_1" native="true">
+      <widget class="menuItemClass" name="widget_1" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -109,7 +109,7 @@
       </widget>
      </item>
      <item>
-      <widget class="menu_Item" name="widget_2" native="true">
+      <widget class="menuItemClass" name="widget_2" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -134,7 +134,7 @@
       </widget>
      </item>
      <item>
-      <widget class="menu_Item" name="widget_3" native="true">
+      <widget class="menuItemClass" name="widget_3" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -159,7 +159,7 @@
       </widget>
      </item>
      <item>
-      <widget class="menu_Item" name="widget_4" native="true">
+      <widget class="menuItemClass" name="widget_4" native="true">
        <property name="sizePolicy">
         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
          <horstretch>0</horstretch>
@@ -189,9 +189,9 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>menu_Item</class>
+   <class>menuItemClass</class>
    <extends>QWidget</extends>
-   <header>front/menu/menu_Item.h</header>
+   <header>front/Classes/menuItemClass.h</header>
    <container>1</container>
    <slots>
     <signal>clicked()</signal>

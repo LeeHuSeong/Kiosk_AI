@@ -39,7 +39,7 @@ class timeoutMsgBox(QDialog, form_class) :
         self.close()
 
 class timeoutClass :
-    TIMEOUT_TIME = 3 #* 60         # Constant
+    TIMEOUT_TIME = 3 * 60         # Constant
     ADD_TIME = 60                 # Constant
     __remain_Time = TIMEOUT_TIME
 

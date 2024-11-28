@@ -12,8 +12,6 @@ import resources_rc
 
 #UI Loading
 Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
-conn = back1.create_connection()
-
 class MainWindow(QMainWindow, Init_Class) :
     totalPrice = 0
 
@@ -21,30 +19,40 @@ class MainWindow(QMainWindow, Init_Class) :
         super().__init__()
         self.setupUi(self)
 
-        self.init_setting()
+        self.__timer = timeoutClass(self)
 
-#Initial_Settings(execute once)/초기 설정(한번만 실행됨)
-    def init_setting(self) :
-        #Timer_Init 
-        self.timer = timeoutClass(self)
+        self.__cartList = self.cartListWidget
+        self.__menuList = self.menuListWidget
+        self.__aiCartList = self.aiCartListWidget
+
+        self.__conn = back1.create_connection()
+
         self.lcd_Timer.display(180)
-
-        #CartList_Init
-        self.cartList = self.cartListWidget
-
-        #MenuList_Init
-        self.menuList = self.menuListWidget
-        menuWidget_Load(self, 'ALL', conn)
-
-        #aiCartList_Init
-        self.aiCartList = self.aiCartListWidget
-
+        menuClass.menuWidget_Load(self, self.conn, 'ALL')
         self.set_MainPage_Index(0)
+
+    #Getter
+    @property
+    def timer(self) :
+        return self.__timer
+    @property
+    def cartList(self) :
+        return self.__cartList
+    @property
+    def menuList(self) :
+        return self.__menuList
+    @property
+    def aiCartList(self) :
+        return self.__aiCartList
+    @property
+    def conn(self) :
+        return self.__conn
+    #Setter
 
     #Timer_AddTime/타이머 시간추가
     def add_timer(self) :
         self.timer.add_timer()
-        
+
     #Reset_PriceLCD/가격표시LCD 새로고침
     def Reset_lcd_Price(self) :
         self.lcd_Price.display(self.totalPrice)
@@ -65,7 +73,7 @@ class MainWindow(QMainWindow, Init_Class) :
     #move to selectPage
     def mainPage_toSelect(self) :
         self.set_MainPage_Index(1)
-        btn_CartListClear(self)
+        cartClass.btn_CartListClear(self)
         self.aiCartList.clear()
 
     #move to defaultMenuPage
@@ -78,30 +86,29 @@ class MainWindow(QMainWindow, Init_Class) :
     def mainPage_toVoice(self) :
         self.set_MainPage_Index(3)
 
-        testDialog = aiDialog(self, conn)
-        testDialog.showModal()
-#Move_Page
+
+        aiOrderDialog = aiDialog(self, self.conn)
+        aiOrderDialog.showModal()
 
 #btn_MenuType/메뉴종류 설정('ALL', '디카페인', '커피', '티(음료)', '디저트')
     def btn_MenuALL(self) :
-        menuWidget_Load(self, 'ALL', conn)
+        menuClass.menuWidget_Load(self, self.conn, 'ALL')
         
     def btn_MenuCoffee(self) :
-        menuWidget_Load(self, '커피', conn)
+        menuClass.menuWidget_Load(self, self.conn, '커피')
         
     def btn_MenuDeCaffeine(self) :
-        menuWidget_Load(self, '디카페인', conn)
+        menuClass.menuWidget_Load(self, self.conn, '디카페인')
         
     def btn_MenuDrinks(self) :
-        menuWidget_Load(self, '티', conn)
+        menuClass.menuWidget_Load(self, self.conn, '티')
         
     def btn_MenuDessert(self) :
-        menuWidget_Load(self, '디저트', conn)    
-#btn_MenuType
+        menuClass.menuWidget_Load(self, self.conn, '디저트')    
 
 #btn_ETC/기타 버튼
     def btn_CartListClear(self) :
-        btn_CartListClear(self)
+        cartClass.btn_CartListClear(self)
 
     def popup_Receipt(self) :
         if self.totalPrice > 0 :
@@ -119,29 +126,21 @@ class MainWindow(QMainWindow, Init_Class) :
                 else :
                     break
  
-            print(totalOrderData)
-            purchaseWindow = front.purchaseWindow(totalOrderData, self)
+            purchaseWindow = purchaseClass(totalOrderData, self)
             purchaseWindow.order_Price.display(self.totalPrice)
             purchaseWindow.showModal()
-#btn_ETC
 
 ######################################################
 
-    def btnTEST(self) :
-        pass
-
-    def btnTEST2(self) :
-        pass
-
     def btn_newAiOrder(self) :
-        testDialog = front.aiDialog(self, conn)
-        testDialog.showModal()
+        aiOrderDialog = aiDialog(self, self.conn)
+        aiOrderDialog.showModal()
     
     def addAiCart(self, data) :
         aiCartWidget_Add(self, data)
 
     def Close(self) :
-        back1.close_connection(conn)
+        back1.close_connection(self.conn)
         self.close()
 
 ######################################################

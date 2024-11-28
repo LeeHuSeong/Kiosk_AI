@@ -25,6 +25,4 @@ class menu_ItemSet(QWidget, form_class) :
             if i > len(menuData) :
                 break
             else :
-                widget.menuData_.setText(str(menuData[i-1]))
                 widget.menuItem_Init(self.conn)
-                widget.set_Parent(parent)

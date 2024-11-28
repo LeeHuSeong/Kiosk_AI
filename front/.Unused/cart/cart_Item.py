@@ -38,8 +38,8 @@ class cartItem(QWidget, form_class) :
 
         self.menuName_.setText(menuData[0])
         self.optionList_.setText(self.selectedOptionList)
-        self.quantity.setText(str(menuData[2]))
-        self.itemPrice.setText(str(self.singleMenuPrice) + '원')
+        self.menuAmount_.setText(str(menuData[2]))
+        self.itemPrice_.setText(str(self.singleMenuPrice) + '원')
 
         self.btn_cartAmountDec.setDisabled(True)
 
@@ -53,11 +53,11 @@ class cartItem(QWidget, form_class) :
         else :
             self.btn_cartAmountDec.setEnabled(True)
             
-        self.quantity.setText(str(self.amount))
+        self.menuAmount_.setText(str(self.amount))
         self.parent.totalPrice += self.singleMenuPrice
 
         self.totalMenuPrice = self.singleMenuPrice * self.amount
-        self.itemPrice.setText(str(self.totalMenuPrice) + '원')
+        self.itemPrice_.setText(str(self.totalMenuPrice) + '원')
         self.parent.Reset_lcd_Price()
 
     def cartItemAmount_Decrease(self) :
@@ -68,7 +68,7 @@ class cartItem(QWidget, form_class) :
         else :
             self.btn_cartAmountDec.setEnabled(True)
 
-        self.quantity.setText(str(self.amount))
+        self.menuAmount_.setText(str(self.amount))
 
         if self.amount == 0 :
             self.parent.totalPrice -= self.singleMenuPrice
@@ -77,7 +77,7 @@ class cartItem(QWidget, form_class) :
             self.parent.totalPrice -= self.singleMenuPrice
 
         self.totalMenuPrice = self.singleMenuPrice * self.amount
-        self.itemPrice.setText(str(self.totalMenuPrice) + '원')
+        self.itemPrice_.setText(str(self.totalMenuPrice) + '원')
         self.parent.Reset_lcd_Price()
     
     def cartItem_Remove(self) :
