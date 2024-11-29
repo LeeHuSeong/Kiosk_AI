@@ -11,12 +11,15 @@ from back1 import *
 
 # 주문 의도를 처리하는 클래스
 class OrderIntent:
-    def __init__(self, conn, text, synonyms_data):
+    def __init__(self,conn, text, synonyms_data, menu_quantity_model, menu_quantity_vectorizer):
         self.text = text
         self.synonyms_data = synonyms_data
+        self.menu_quantity_model = menu_quantity_model
+        self.menu_quantity_vectorizer = menu_quantity_vectorizer
         self.matched_synonym, self.menu = self.extract_menu(conn)
         self.quantity = self.extract_quantity()
         self.is_order = self.detect_order_words()
+
 
     def extract_menu(self,conn):
         # 메뉴 이름 가져오기
@@ -42,38 +45,36 @@ class OrderIntent:
 
     #중첩함수
     def extract_quantity(self):
-        # 한글 숫자 매핑
-        korean_numbers = {
-            '한': 1, '두': 2, '세': 3, '네': 4,
-            '다섯': 5, '여섯': 6, '일곱': 7, '여덟': 8,
-            '아홉': 9, '열': 10, '스물': 20, '서른': 30,
-            '마흔': 40, '쉰': 50, '예순': 60, '일흔': 70,
-            '여든': 80, '아흔': 90
+        # 한글 수량과 숫자를 매핑하는 사전
+        korean_to_number = {
+            "한": 1, "두": 2, "세": 3, "네": 4, "다섯": 5,
+            "여섯": 6, "일곱": 7, "여덟": 8, "아홉": 9, "열": 10
         }
 
-        def parse_korean_number(korean_str):
-            total = 0
-            temp = 0
-            for char in korean_str:
-                if char in korean_numbers:
-                    temp += korean_numbers[char]
-                elif char == '십':
-                    temp = max(1, temp) * 10
-            total += temp
-            return total
+        # 텍스트에서 한글 수량 또는 숫자 수량 추출
+        text_lower = self.text.lower()
+        quantity = 1  # 기본값
 
-        # 정규식 패턴 (수량과 "잔" 같은 단위를 인식)
-        pattern = r'(\d+)|([한두세네다섯여섯일곱여덟아홉열스물서른마흔쉰예순일흔여든아흔십]+)\s*잔'
-        matches = re.findall(pattern, self.text)
+        # 한글 수량 처리
+        for korean, num in korean_to_number.items():
+            if korean in text_lower:
+                quantity = num
+                break
 
-        total_quantity = 0
-        for match in matches:
-            if match[0].isdigit():
-                total_quantity += int(match[0])
-            elif match[1]:
-                total_quantity += parse_korean_number(match[1])
+        # 숫자 수량 처리 (숫자가 우선)
+        number_match = re.search(r"(\d+)", self.text)
+        if number_match:
+            quantity = int(number_match.group(1))
 
-        return total_quantity if total_quantity > 0 else 1
+        # 머신러닝 모델 사용
+        try:
+            vectorized_text = self.menu_quantity_vectorizer.transform([self.text])
+            predicted_quantity = self.menu_quantity_model.predict(vectorized_text)[0]
+            print(f"[DEBUG] 모델 예측 수량: {predicted_quantity}")
+            return max(quantity, int(predicted_quantity))  # 모델과 추출한 수량 중 더 큰 값을 사용
+        except Exception as e:
+            print(f"[ERROR] 수량 예측 오류: {e}")
+            return quantity
 
     def detect_order_words(self):
         order_keywords = ["주세요", "줘", "주문할게요", "주문"]
@@ -81,7 +82,7 @@ class OrderIntent:
 
 
 # JSON 데이터 로드
-def load_synonyms(file_path="synonyms_json.py"):
+def load_synonyms(file_path="AI/synonyms.json"):
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             return json.load(file)
@@ -100,9 +101,6 @@ def recognize_speech():
 
         try:
             text = recognizer.recognize_google(audio, language="ko-KR")
-            if not text.strip():  # 빈 텍스트 처리
-                print("입력된 음성이 없습니다.")
-                return None
             print(f"음성 인식 결과: {text}")
             return text.strip()
         except sr.UnknownValueError:
@@ -110,6 +108,17 @@ def recognize_speech():
         except sr.RequestError as e:
             print(f"Google Speech Recognition 서비스 오류: {e}")
         return None
+
+# 학습된 모델 로드
+def load_models():
+    model_folder = "model"
+    try:
+        with open(os.path.join(model_folder, "menu_classifier.pkl"), "rb") as file:
+            menu_quantity_model, menu_quantity_vectorizer = pickle.load(file)
+        return menu_quantity_model, menu_quantity_vectorizer
+    except FileNotFoundError:
+        print("모델 파일을 찾을 수 없습니다.")
+        return None, None
 
 
 # 사용함수  [ [메뉴이름] , 수량, flag]
@@ -119,36 +128,30 @@ def AI_recognition(conn):
 
     # 음성 인식된 text
     recognized_text = recognize_speech()
-    print(recognized_text)
 
     if recognized_text:
-        intent = OrderIntent(conn, recognized_text, synonyms_data)
-        intent.extract_menu(conn)
+        menu_quantity_model, menu_quantity_vectorizer = load_models()
+        if menu_quantity_model and menu_quantity_vectorizer:
+            intent = OrderIntent(conn ,recognized_text, synonyms_data, menu_quantity_model, menu_quantity_vectorizer)
+
+        #
+        result_flag=-1
+        # 유사어 리스트 감지 시
+        if intent.matched_synonym:
+            # 매칭된 키에 포함된 메뉴 리스트를 결과에 포함
+            matched_menu_list = synonyms_data[intent.matched_synonym]
+            result_flag=1
+            result = [[matched_menu_list], intent.quantity,result_flag,[recognized_text]]
+        else:
+            result_flage=0
+            result =[intent.menu,intent.quantity,result_flag,[recognized_text]]
+
 
         #메뉴가 없을때
         if not intent.menu:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
             return [[None],0,-1,[recognized_text]] #메뉴가 없을 때
 
-        #결과 갯수 파악
-        result_Flag = -1
-        if intent.menu:
-            if isinstance(intent.menu, list):
-                menu_count = len(intent.menu)  # 매칭된 메뉴 개수
-            else:
-                menu_count = 1  # 단일 메뉴인 경우
-
-        if menu_count == 1:
-            result_Flag=0
-        elif menu_count > 1:
-            result_Flag=1
-        elif menu_count < 1:
-            result_Flag=-1
-
-        # 결과 출력
-        if intent.menu:
-            final_result = [[intent.menu], intent.quantity,result_Flag,[recognized_text]]
-            return final_result
         else:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
     else:
@@ -211,9 +214,10 @@ def get_AI_menu_data(conn,menus,quantity,flag):
 
 ##test시 사용
 ##MySQL과 연결
-#conn=create_connection()
+conn=create_connection()
+
 #menu,quantity,flag,text = AI_recognition(conn)
 #a = get_AI_menu_data(conn,menu, quantity, flag)
 #
 ##print(menu,quantity,flag, text)
-#print(a)
+print(AI_recognition(conn))
