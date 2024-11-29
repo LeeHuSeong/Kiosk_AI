@@ -49,7 +49,7 @@ class DialectModelTrainer:
     def clean_text(self, text):
         """ 텍스트를 정제하는 함수: 소문자화, 불필요한 특수문자만 제거 """
         text = text.lower()  # 소문자화
-        text = re.sub(r'[^\w\s]', '', text)  # 알파벳, 숫자, 공백만 남기기 (특수문자만 제거)
+        text = re.sub(r'[^\w\s\d가-힣]', '', text)  # 알파벳, 숫자, 공백만 남기기 (특수문자만 제거)
         return text.strip()
 
     def train_model(self, data):
@@ -99,7 +99,6 @@ class DialectModelTrainer:
         except Exception as e:
             print(f"모델 저장 도중 오류 발생: {e}")
 
-# 클래스 사용 예시
 data_folder = "D:/unzipped_data"  # 데이터 폴더 경로
 trainer = DialectModelTrainer(data_folder)
 data = trainer.load_data()  # 데이터 로드

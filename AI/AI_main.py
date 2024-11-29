@@ -3,69 +3,89 @@ import speech_recognition as sr
 import mysql.connector
 import pickle
 import os
-
-def normalize_dialect_with_model(text, dialect_model, dialect_vectorizer):
-    # 방언 모델을 사용하여 텍스트를 표준어로 변환
-    vectorized_text = dialect_vectorizer.transform([text])
-    normalized_text = dialect_model.predict(vectorized_text)[0]
-    print(f"Original Text: {text}")
-    print(f"Vectorized Text: {vectorized_text}")
-    print(f"Normalized Text after Dialect Processing: {normalized_text}")
-    return normalized_text
+import json
+from sklearn.feature_extraction.text import CountVectorizer
 
 
-# 주문 의도를 처리하는 클래스
 class OrderIntent:
-    def __init__(self, text, order_model, menu_quantity_model, order_vectorizer, menu_quantity_vectorizer, dialect_model, dialect_vectorizer):
+    def __init__(self, text, synonyms_data, menu_quantity_model, menu_quantity_vectorizer):
         self.text = text
-        self.order_model = order_model
+        self.synonyms_data = synonyms_data
         self.menu_quantity_model = menu_quantity_model
-        self.order_vectorizer = order_vectorizer
         self.menu_quantity_vectorizer = menu_quantity_vectorizer
-        self.dialect_model = dialect_model
-        self.dialect_vectorizer = dialect_vectorizer
-        self.normalized_text = self.normalize_text()  # 방언 처리
-        self.menu = self.extract_menu()  # 메뉴를 DB에서 추출
-        self.quantity = self.extract_quantity()  # 수량은 여전히 벡터라이저를 사용
+        self.matched_synonym, self.menu = self.extract_menu()
+        self.quantity = self.extract_quantity()
         self.is_order = self.detect_order_words()
-
-    def normalize_text(self):
-        # 방언 처리: dialect_model을 사용하여 방언을 표준어로 변환
-        normalized_text = normalize_dialect_with_model(self.text, self.dialect_model, self.dialect_vectorizer)
-        print(f"Normalized Text after Dialect Processing: {normalized_text}")  # 방언 변환 후 텍스트 출력
-        return normalized_text
 
     def extract_menu(self):
         # 메뉴 이름 가져오기
-        menu_names = [menu[0].strip().lower() for menu in get_menu_name()]  # DB에서 메뉴 이름 목록 가져오기
-        print(f"Normalized Text: {self.normalized_text}")
+        menu_names = [menu.strip().lower() for menu in get_menu_name()]
+        text_lower = self.text.lower()
 
-        # 메뉴와 정확히 일치하는 항목을 찾는 루프
+        # 메뉴 직접 매칭
         for menu in menu_names:
-            # 메뉴와 텍스트에 포함된 내용 비교
-            if menu in self.normalized_text.lower():  # 부분 일치 검사
-                print(f"Found Menu: {menu}")
-                return menu
+            if menu in text_lower:
+                return None, menu
 
-        return None  # 메뉴를 인식하지 못하면 None 반환
+        # 유사어 검색 (길이가 긴 키워드 우선 매칭)
+        matched_key = None
+        for key in sorted(self.synonyms_data.keys(), key=len, reverse=True):
+            if key in text_lower:
+                matched_key = key
+                break
+
+        if matched_key:
+            return matched_key, self.synonyms_data[matched_key]
+
+        return None, None
 
     def extract_quantity(self):
-        # 수량을 추출하는 로직
-        vectorized_text = self.menu_quantity_vectorizer.transform([self.normalized_text])
-        predicted_quantity = self.menu_quantity_model.predict(vectorized_text)[0]
+        # 한글 수량과 숫자를 매핑하는 사전
+        korean_to_number = {
+            "한": 1, "두": 2, "세": 3, "네": 4, "다섯": 5,
+            "여섯": 6, "일곱": 7, "여덟": 8, "아홉": 9, "열": 10
+        }
 
-        # 예측된 수량이 문자열일 수 있으므로 int로 변환
+        # 텍스트에서 한글 수량 또는 숫자 수량 추출
+        text_lower = self.text.lower()
+        quantity = 1  # 기본값
+
+        # 한글 수량 처리
+        for korean, num in korean_to_number.items():
+            if korean in text_lower:
+                quantity = num
+                break
+
+        # 숫자 수량 처리 (숫자가 우선)
+        number_match = re.search(r"(\d+)", self.text)
+        if number_match:
+            quantity = int(number_match.group(1))
+
+        # 머신러닝 모델 사용
         try:
-            predicted_quantity = int(predicted_quantity)
-        except ValueError:
-            predicted_quantity = 1  # 예측값이 숫자가 아닐 경우 기본값 1로 설정
-
-        print(f"Extracted Quantity: {predicted_quantity}")
-        return max(1, predicted_quantity)  # 최소값 1
+            vectorized_text = self.menu_quantity_vectorizer.transform([self.text])
+            predicted_quantity = self.menu_quantity_model.predict(vectorized_text)[0]
+            print(f"[DEBUG] 모델 예측 수량: {predicted_quantity}")
+            return max(quantity, int(predicted_quantity))  # 모델과 추출한 수량 중 더 큰 값을 사용
+        except Exception as e:
+            print(f"[ERROR] 수량 예측 오류: {e}")
+            return quantity
 
     def detect_order_words(self):
         order_keywords = ["주세요", "줘", "주문할게요", "주문"]
-        return any(word in self.normalized_text for word in order_keywords)
+        return any(word in self.text for word in order_keywords)
+
+
+
+# JSON 데이터 로드
+def load_synonyms(file_path="AI/synonyms.json"):
+    try:
+        with open(file_path, "r", encoding="utf-8") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        print("유사어 데이터 파일을 찾을 수 없습니다.")
+        return {}
+
 
 # MySQL 데이터베이스 연결
 def connect_to_db():
@@ -81,6 +101,7 @@ def connect_to_db():
         print(f"데이터베이스 연결 오류: {err}")
         return None
 
+
 # 메뉴 이름 가져오기
 def get_menu_name():
     conn = connect_to_db()
@@ -88,7 +109,7 @@ def get_menu_name():
         return []
     try:
         cursor = conn.cursor()
-        query = "SELECT 이름 FROM data"  # '이름' 컬럼을 가져온다고 가정
+        query = "SELECT 이름 FROM data"
         cursor.execute(query)
         result_list = [row[0] for row in cursor.fetchall()]
     except mysql.connector.Error as err:
@@ -99,6 +120,7 @@ def get_menu_name():
         conn.close()
     return result_list
 
+
 # 음성을 텍스트로 변환하는 함수
 def recognize_speech():
     recognizer = sr.Recognizer()
@@ -106,6 +128,7 @@ def recognize_speech():
         recognizer.adjust_for_ambient_noise(source)
         print("음성을 입력하세요...")
         audio = recognizer.listen(source)
+
         try:
             text = recognizer.recognize_google(audio, language="ko-KR")
             print(f"음성 인식 결과: {text}")
@@ -116,49 +139,45 @@ def recognize_speech():
             print(f"Google Speech Recognition 서비스 오류: {e}")
         return None
 
-# 학습된 모델 로드 및 예측 함수
+
+# 학습된 모델 로드
 def load_models():
     model_folder = "model"
-    models = {}
+    try:
+        with open(os.path.join(model_folder, "menu_classifier.pkl"), "rb") as file:
+            menu_quantity_model, menu_quantity_vectorizer = pickle.load(file)
+        return menu_quantity_model, menu_quantity_vectorizer
+    except FileNotFoundError:
+        print("모델 파일을 찾을 수 없습니다.")
+        return None, None
 
-    # 모델과 벡터라이저를 함께 로드
-    for model_name in ["order_model.pkl", "menu_quantity_model.pkl", "dialect_model.pkl"]:
-        model_path = os.path.join(model_folder, model_name)
-        if not os.path.exists(model_path):
-            print(f"모델 파일이 존재하지 않습니다: {model_name}")
-            return None
-        with open(model_path, "rb") as model_file:
-            models[model_name] = pickle.load(model_file)
-
-    # 각 모델에 대한 벡터라이저도 각각 로드
-    order_vectorizer = models["order_model.pkl"][1]  # 주문 모델 벡터라이저
-    menu_quantity_vectorizer = models["menu_quantity_model.pkl"][1]  # 메뉴 수량 모델 벡터라이저
-    dialect_vectorizer = models["dialect_model.pkl"][1]  # 방언 모델 벡터라이저
-
-    return (
-        models["order_model.pkl"][0],  # 주문 모델
-        models["menu_quantity_model.pkl"][0],  # 메뉴 수량 모델
-        order_vectorizer,
-        menu_quantity_vectorizer,
-        models["dialect_model.pkl"][0],  # 방언 모델
-        dialect_vectorizer
-    )
 
 # 실행 코드
-recognized_text = recognize_speech()
-if recognized_text:
-    order_model, menu_quantity_model, order_vectorizer, menu_quantity_vectorizer, dialect_model, dialect_vectorizer = load_models()
-    if order_model and menu_quantity_model:
-        intent = OrderIntent(recognized_text, order_model, menu_quantity_model, order_vectorizer, menu_quantity_vectorizer, dialect_model, dialect_vectorizer)
-        print(f"감지된 주문 문장: {recognized_text}")
-        
-        if intent.menu:
-            print(f"추출된 메뉴: {intent.menu}, 수량: {intent.quantity}")
+if __name__ == "__main__":
+    # 유사어 데이터 로드
+    synonyms_data = load_synonyms()
+
+    # 음성 인식
+    recognized_text = recognize_speech()
+
+    if recognized_text:
+        menu_quantity_model, menu_quantity_vectorizer = load_models()
+        if menu_quantity_model and menu_quantity_vectorizer:
+            intent = OrderIntent(recognized_text, synonyms_data, menu_quantity_model, menu_quantity_vectorizer)
+
+            # 유사어 리스트 감지 시
+            if intent.matched_synonym:
+                # 매칭된 키에 포함된 메뉴 리스트를 결과에 포함
+                matched_menu_list = synonyms_data[intent.matched_synonym]
+                result = [[matched_menu_list], [intent.quantity]]
+            else:
+                # 메뉴 이름과 수량만 포함
+                result = [[intent.menu], [intent.quantity]]
+
+            # 결과 출력
+            print(f"감지된 음성: {recognized_text}")
+            print(f"출력 결과: {result}")
         else:
-            print("메뉴를 인식하지 못했습니다.")
-        
-        print(f"주문 단어 감지 여부: {'예' if intent.is_order else '아니오'}")
+            print("모델 로드에 실패했습니다.")
     else:
-        print("모델 로드에 실패했습니다.")
-else:
-    print("음성 인식에 실패했습니다.")
+        print("음성 인식에 실패했습니다.")
