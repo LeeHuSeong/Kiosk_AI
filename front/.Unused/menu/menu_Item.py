@@ -19,7 +19,6 @@ class menu_Item(QWidget, form_class) :
 
     def menuItem_Init(self, conn) :
         self.conn = conn
-        menuDataText = self.menuData_.text()
         self.menuData = ast.literal_eval(menuDataText)
         self.optionData = self.menuData[4]
 

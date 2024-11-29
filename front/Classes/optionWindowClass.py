@@ -6,6 +6,7 @@ from PyQt5 import uic
 from abc import abstractmethod
 import copy
 
+from .cartClass import *
 from back1 import get_opt_price
 
 form_class = uic.loadUiType("front/Classes/optionWindowClass.ui")[0]
@@ -18,7 +19,7 @@ class optionWindowClass(QDialog, form_class) :
 
         int_type = 0
         # Var_objectData
-        self.parent = parent
+        self.__parent = parent
         self.__conn = conn                             # SQL 연결 정보
         self.__menuData = menuData                     # (LIST) 메뉴 전체 데이터
         self.__optionData = menuData[4]                # (LIST) 메뉴 옵션 목록
@@ -91,6 +92,15 @@ class optionWindowClass(QDialog, form_class) :
 
     #Getter
     @property
+    def parent(self) :
+        return self.__parent
+    @property
+    def conn(self) :
+        return self.__conn
+    @property
+    def menuData(self) :
+        return self.__menuData
+    @property
     def menuName(self) :
         return self.__menuName
     @property
@@ -126,12 +136,6 @@ class optionWindowClass(QDialog, form_class) :
     @property
     def resultIdDict(self) :
         return self.__resultIdDict
-    @property
-    def conn(self) :
-        return self.__conn
-    @property
-    def menuData(self) :
-        return self.__menuData
     @property
     def optionData(self):
         return self.__optionData
@@ -238,7 +242,6 @@ class optionWindowClass_Default(optionWindowClass) :
 
     def btn_OK(self) :
         self.result = [self.menuName, self.resultNameDict, 1, self.totalPrice]  
-
         self.close()
 
 #음성 주문 옵션 선택 클래스
@@ -246,11 +249,9 @@ class optionWindowClass_Voice(optionWindowClass) :
     def btn_Cancel(self) :
         self.result = [self.prevNameDict, self.prevIdDict, self.totalPrice]
         self.parent.set_optionResult(self.result)    # ai_Dialog 객체로 전달
-
         self.close()
 
     def btn_OK(self) :
         self.result = [self.resultNameDict, self.resultIdDict, self.totalPrice]
         self.parent.set_optionResult(self.result)    # ai_Dialog 객체로 전달
-
         self.close()
