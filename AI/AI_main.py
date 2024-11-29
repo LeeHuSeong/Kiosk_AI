@@ -129,13 +129,14 @@ def AI_recognition(conn):
     # 음성 인식된 text
     recognized_text = recognize_speech()
 
+    #메뉴 갯수 파악하는 변수
+    result_flag=-1
+
     if recognized_text:
         menu_quantity_model, menu_quantity_vectorizer = load_models()
         if menu_quantity_model and menu_quantity_vectorizer:
             intent = OrderIntent(conn ,recognized_text, synonyms_data, menu_quantity_model, menu_quantity_vectorizer)
 
-        #
-        result_flag=-1
         # 유사어 리스트 감지 시
         if intent.matched_synonym:
             # 매칭된 키에 포함된 메뉴 리스트를 결과에 포함
@@ -144,19 +145,19 @@ def AI_recognition(conn):
             result = [[matched_menu_list], intent.quantity,result_flag,[recognized_text]]
         else:
             result_flage=0
-            result =[intent.menu,intent.quantity,result_flag,[recognized_text]]
+            result =[[intent.menu],intent.quantity,result_flag,[recognized_text]]
 
 
         #메뉴가 없을때
         if not intent.menu:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
-            return [[None],0,-1,[recognized_text]] #메뉴가 없을 때
+            return [[None],0,result_flag,[recognized_text]] #메뉴가 없을 때
 
         else:
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
     else:
         print("음성 인식에 실패했습니다.")
-        return [[None],0,-1,[None]]
+        return [[None],0,result_flag,[None]]
 
 
 
