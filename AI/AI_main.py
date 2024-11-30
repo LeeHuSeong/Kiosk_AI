@@ -139,12 +139,10 @@ def AI_recognition(conn):
 
         # 유사어 리스트 감지 시
         if intent.matched_synonym:
-            print(intent.matched_synonym)
             # 매칭된 키에 포함된 메뉴 리스트를 결과에 포함
             matched_menu_list = synonyms_data[intent.matched_synonym]
-            print(matched_menu_list)
             result_flag=1
-            return [[matched_menu_list], intent.quantity,result_flag,[recognized_text]]
+            return [matched_menu_list, intent.quantity,result_flag,[recognized_text]]
        
         #메뉴가 없을때
         elif intent.menu:
@@ -166,7 +164,10 @@ def get_AI_menu_data(conn,menus,quantity,flag):
     try:    
         # 테스트용 변수
         #flag = 1, quantity = 1, menus=["아메리카노","카페라떼"]
-
+        
+        # 중첩 리스트를 평탄화 (1차원 리스트로 변환)
+        if isinstance(menus, list) and any(isinstance(i, list) for i in menus):
+            menus = [item for sublist in menus for item in sublist]  # 리스트 평탄화
         # 플래그 조건에 따른 처리
         if flag == -1: #메뉴가 없을 경우
             print("메뉴가 감지되지 않았습니다.")
@@ -176,7 +177,8 @@ def get_AI_menu_data(conn,menus,quantity,flag):
         elif flag == 1:
             pass  # 메뉴가 여러 개일 경우
         
-
+        #입력된 메뉴들
+        print(menus)
         results = [] #메뉴가 여러개일 경우
         
         for menu in menus:
@@ -186,6 +188,9 @@ def get_AI_menu_data(conn,menus,quantity,flag):
             selected_menu_details = next(
                 (item for item in menu_details if item[0] == menu), None
             )
+            if not selected_menu_details:
+                print(f"메뉴 {menu}에 대한 정보를 찾을 수 없습니다.")
+                continue
             
             #메뉴 정보 추출
             menu_name = selected_menu_details[0]
@@ -195,7 +200,7 @@ def get_AI_menu_data(conn,menus,quantity,flag):
             #옵션 추출
             menu_options = get_menu_option(conn)
             options_origin = menu_options.get(menu_name,[])
-            options = options_origin[1] #기본 가격 제외
+            options = options_origin[1:] #if len(options_origin) > 1 else [] #기본 가격 제외
 
             result = [
                 menu_name,       # 메뉴 이름
@@ -219,6 +224,7 @@ def get_AI_menu_data(conn,menus,quantity,flag):
 
 #menu,quantity,flag,text = AI_recognition(conn)
 #a = get_AI_menu_data(conn,menu, quantity, flag)
-#
-##print(menu,quantity,flag, text)
+
+#print(menu,quantity,flag, text)
+#print(a)
 #print(AI_recognition(conn))
