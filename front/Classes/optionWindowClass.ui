@@ -289,7 +289,7 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>0</y>
+        <y>-1991</y>
         <width>731</width>
         <height>2484</height>
        </rect>
@@ -2158,13 +2158,13 @@
                 <string notr="true"/>
                </property>
                <property name="text">
-                <string extracomment="123">기본</string>
+                <string extracomment="123">빼기</string>
                </property>
                <property name="checkable">
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>true</bool>
+                <bool>false</bool>
                </property>
                <property name="autoExclusive">
                 <bool>true</bool>
@@ -2198,9 +2198,12 @@
                 <enum>Qt::LeftToRight</enum>
                </property>
                <property name="text">
-                <string>빼기</string>
+                <string>기본</string>
                </property>
                <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
                 <bool>true</bool>
                </property>
                <property name="autoExclusive">
@@ -2314,13 +2317,13 @@
                 <string notr="true"/>
                </property>
                <property name="text">
-                <string extracomment="123">기본</string>
+                <string extracomment="123">빼기</string>
                </property>
                <property name="checkable">
                 <bool>true</bool>
                </property>
                <property name="checked">
-                <bool>true</bool>
+                <bool>false</bool>
                </property>
                <property name="autoExclusive">
                 <bool>true</bool>
@@ -2370,9 +2373,12 @@
                 <enum>Qt::LeftToRight</enum>
                </property>
                <property name="text">
-                <string>빼기</string>
+                <string>기본</string>
                </property>
                <property name="checkable">
+                <bool>true</bool>
+               </property>
+               <property name="checked">
                 <bool>true</bool>
                </property>
                <property name="autoExclusive">

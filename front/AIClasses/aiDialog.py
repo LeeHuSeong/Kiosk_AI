@@ -121,6 +121,7 @@ class aiDialog(QDialog, form_class) :
         self.itemPrice = menuData[1]
         self.menuImgSrc = menuData[2]
         self.menuOption = menuData[4]
+        self.menuAmount = menuData[3]
 
         self.set_LabelData()
 
@@ -130,6 +131,12 @@ class aiDialog(QDialog, form_class) :
         
         pixmap = QPixmap(self.get_menuImgSrc()).scaled(300, 300)
         self.menuImg_.setPixmap(pixmap)                             #메뉴이미지
+        
+        self.menuAmount_.setText(str(self.get_menuAmount()))
+        if self.get_menuAmount() == 1 :
+            self.btnDec.setDisabled(True)
+        else :
+            self.btnDec.setEnabled(True)
         
         self.itemPrice_.display(self.get_itemPrice())
 
@@ -148,6 +155,8 @@ class aiDialog(QDialog, form_class) :
         return self.menuOption
     def get_optionResult(self) :
         return self.optionResult
+    def get_menuAmount(self) :
+        return self.menuAmount
     # setter
     def set_menuData(self, menuData) :  #메뉴데이터 설정
         self.menuData = menuData
@@ -183,9 +192,9 @@ class aiDialog(QDialog, form_class) :
     def btn_addCart(self) :
         #self.optionResult = [{}, {}, 0]
         if int(self.optionResult[2]) != 0 :
-            data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], self.menuData[3], self.optionList, self.result[1]]
+            data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], self.get_menuAmount(), self.optionList, self.result[1]]
         else :
-            data = [self.menuData[0], self.menuData[1], self.menuData[2], self.menuData[3], self.optionList, self.result[1]]
+            data = [self.menuData[0], self.menuData[1], self.menuData[2], self.get_menuAmount(), self.optionList, self.result[1]]
 
         self.parent.addAiCart(data)
         self.close()
@@ -207,3 +216,21 @@ class aiDialog(QDialog, form_class) :
             self.close()
 
     ################################
+
+    def DecreaseAmount(self) :
+        currAmount = self.get_menuAmount() - 1
+        if currAmount == 1 :
+            self.btnDec.setDisabled(True)
+        else :
+            self.btnDec.setEnabled(True)
+        
+        self.menuAmount = currAmount
+        self.menuAmount_.setText(str(self.get_menuAmount()))
+
+    def IncreaseAmount(self) :
+        currAmount = self.get_menuAmount() + 1
+        if currAmount != 1 :
+            self.btnDec.setEnabled(True)
+        
+        self.menuAmount = currAmount
+        self.menuAmount_.setText(str(self.get_menuAmount()))

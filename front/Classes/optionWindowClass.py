@@ -193,6 +193,7 @@ class optionWindowClass(QDialog, form_class) :
         self.refresh_Price()
 
         self.set_resultNameDict(key, value)
+
     def set_resultNameDict(self, key, value) :
         options = {
             'Addshot': {1: '1샷 추가', 2: '2샷 추가'},
@@ -205,18 +206,20 @@ class optionWindowClass(QDialog, form_class) :
             'AddCaramel': {1: '카라멜시럽 추가'},
             'SelectMilk': {1: '우유 변경(아몬드)', 2: '우유 변경(오트)'},
             'AddHoney': {1: '꿀 추가'},
-            'AddWhipping': {0: '휘핑 빼기', 1: '휘핑 기본'},
-            'AddCinnamon': {0: '시나몬 빼기', 1: '시나몬 기본'}
+            'AddWhipping': {1: '휘핑 빼기'},
+            'AddCinnamon': {1: '시나몬 빼기'}
         }
         value = int(value)
+
         if key in options :
             if value == 0 :
                 self.resultNameDict.pop(key, None)
-            else:
+            else :
                 self.resultNameDict[key] = options[key].get(value, None)
                 # value가 매핑되지 않은 경우 pop으로 제거
                 if self.resultNameDict[key] is None:
                     self.resultNameDict.pop(key, None)
+
     def get_key(self, val) :
         for key in self.optionDict :
             for value in self.optionDict[key]:

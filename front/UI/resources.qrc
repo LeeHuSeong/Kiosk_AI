@@ -50,6 +50,14 @@
     <file>src/aiDialog1_P.png</file>
   </qresource>
   <qresource prefix="-1-1_aiDialog2">
+    <file>src/btnBack_H.png</file>
+    <file>src/btnBack_O.png</file>
+    <file>src/btnRe_H.png</file>
+    <file>src/btnRe_O.png</file>
+    <file>src/aiCartbtn_H.png</file>
+    <file>src/aiCartbtn_O.png</file>
+    <file>src/aiOptionS_H.png</file>
+    <file>src/aiOptionS_O.png</file>
     <file>src/aiBlankB_H.png</file>
     <file>src/aiBlankB_O.png</file>
     <file>src/aiBlankG_H.png</file>
