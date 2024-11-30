@@ -162,10 +162,14 @@ def AI_recognition(conn):
 
 
 #사용함수 ['메뉴이름', '기본가격',  '메뉴이미지 경로', 수량,  옵션리스트, '메뉴 설명']
-def get_AI_menu_data(conn,menu):
+def get_AI_menu_data(conn, menu, amount):
     try:    
         menuData = get_menu_totalData(conn, menu)
-        Amount = 1 # TEST
+
+        if amount < 1 :
+            Amount = 1
+        else :
+            Amount = amount
         
         #메뉴 정보 추출
         menu_name = menuData[0]
@@ -186,7 +190,7 @@ def get_AI_menu_data(conn,menu):
             menu_info       # 메뉴 설명
         ]
 
-        print(f"get_AI_menu_data: {result}")
+        #print(f"get_AI_menu_data: {result}")
         return result
     
     except Exception as e:

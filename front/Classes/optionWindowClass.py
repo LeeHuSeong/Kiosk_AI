@@ -17,7 +17,6 @@ class optionWindowClass(QDialog, form_class) :
         self.setupUi(self)
         self.center()
 
-        int_type = 0
         # Var_objectData
         self.__parent = parent
         self.__conn = conn                             # SQL 연결 정보

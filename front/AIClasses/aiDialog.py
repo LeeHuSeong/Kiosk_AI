@@ -84,9 +84,9 @@ class aiDialog(QDialog, form_class) :
             self.stackedWidget.setCurrentIndex(2)
 
             #self.menuData = AI.AI_main.get_AI_menu_data(self.conn, self.result[0], self.result[1], self.resultFlag)
-            self.menuData = AI.AI_main.get_AI_menu_data(self.conn, self.result[0][0])
+            self.menuData = AI.AI_main.get_AI_menu_data(self.conn, self.result[0][0], self.result[1])
 
-            print("self.menuData: ", self.menuData)
+            #print("self.menuData: ", self.menuData)
             self.set_aiOrderData(self.menuData)
 
             self.btn_start.setChecked(False)
@@ -97,11 +97,11 @@ class aiDialog(QDialog, form_class) :
             self.inputStr_.setText('입력 결과: ' + inputStr)
 
             resultList = voiceResult[0]
-            print("resultList: ", resultList)
+            #print("resultList: ", resultList)
 
             #메뉴리스트 ListWidget item으로 반환
             for menuName in resultList :
-                data = AI.AI_main.get_AI_menu_data(self.conn, menuName)
+                data = AI.AI_main.get_AI_menu_data(self.conn, menuName, self.result[1])
                 self.addInExactList(data)       
             
             self.stackedWidget.setCurrentIndex(1)     
@@ -183,9 +183,9 @@ class aiDialog(QDialog, form_class) :
     def btn_addCart(self) :
         #self.optionResult = [{}, {}, 0]
         if int(self.optionResult[2]) != 0 :
-            data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], 1, self.optionList, self.result[1]]
+            data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], self.menuData[3], self.optionList, self.result[1]]
         else :
-            data = [self.menuData[0], self.menuData[1], self.menuData[2], 1, self.optionList, self.result[1]]
+            data = [self.menuData[0], self.menuData[1], self.menuData[2], self.menuData[3], self.optionList, self.result[1]]
 
         self.parent.addAiCart(data)
         self.close()
