@@ -128,10 +128,11 @@ class aiDialog(QDialog, form_class) :
         self.resultFlag = -1 
 
         #음성입력 시작
+        voiceResult = None
         try :
             voiceResult = AI.AI_main.AI_recognition(self.conn)
         except Exception as e :
-            print(f"음성 인식을 시작하지 못했습니다. {e}")
+            print(f"음성 인식을 시작하지 못했습니다.\n{e}")
             self.resultFlag = -1
 
         #[['아메리카노'], 1, 0, ['아이스 아메리카노']]
@@ -141,6 +142,7 @@ class aiDialog(QDialog, form_class) :
             self.resultFlag = voiceResult[2]
         else :
             print("결과를 반환하지 못했습니다.")
+            self.btn_start.setChecked(False)
             return
         #음성입력 완료 및 결과반환
 

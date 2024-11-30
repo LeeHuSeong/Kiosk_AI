@@ -97,9 +97,9 @@ def recognize_speech():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         recognizer.adjust_for_ambient_noise(source)
-        try :
+        try:
             print("음성을 입력하세요...")
-            audio = recognizer.listen(source)
+            audio = recognizer.listen(source, 5, 3)
         except Exception as e :
             print(f"음성 입력 오류.\n{e}")
 

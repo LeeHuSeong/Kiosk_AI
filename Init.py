@@ -132,10 +132,6 @@ class MainWindow(QMainWindow, Init_Class) :
 
 ######################################################
 
-    def btnTEST(self) :
-        test = back1.get_menu_option(self.conn)
-        print(test)
-
     def btn_newAiOrder(self) :
         aiOrderDialog = aiDialog(self, self.conn)
         aiOrderDialog.showModal()
