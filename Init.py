@@ -131,6 +131,8 @@ class MainWindow(QMainWindow, Init_Class) :
             purchaseWindow.showModal()
 
 ######################################################
+    def btnTEST(self) :
+        back1.get_menu_totalData(self.conn, '아메리카노')
 
     def btn_newAiOrder(self) :
         aiOrderDialog = aiDialog(self, self.conn)

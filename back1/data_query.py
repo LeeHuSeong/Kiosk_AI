@@ -195,3 +195,25 @@ def get_menu_info(conn,menu):
         #커서 종료
         cur.close()
     return opt_dict[menu]
+
+def get_menu_totalData(conn, menuName) :
+    try :
+        cur = cursor(conn)
+
+        query = """
+                    select path.menu_name, data.가격, path.img_path, data.분류, data.설명
+                    from 
+                        drinks_img_path path 
+                    join
+                        data data on path.id=data.no
+                    where path.menu_name = %s 
+                """
+
+        cur.execute(query, (menuName, ))
+        result = cur.fetchall()
+        resultList = [list(row) for row in result][0]
+        
+        return resultList
+
+    except Exception as e:
+        print(f"error: {e}")

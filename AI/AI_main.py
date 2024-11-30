@@ -144,80 +144,51 @@ def AI_recognition(conn):
             result_flag=1
             if isinstance(matched_menu_list, list) and any(isinstance(i, list) for i in matched_menu_list):
                 matched_menu_list = [item for sublist in matched_menu_list for item in sublist]  # 리스트 평탄화
-            return [matched_menu_list, intent.quantity,result_flag,[recognized_text]]
+            return [matched_menu_list, intent.quantity,result_flag,recognized_text]
        
         #메뉴가 없을때
         elif intent.menu:
             result_flag=0
-            return [[intent.menu],intent.quantity,result_flag,[recognized_text]] #메뉴가 없을 때
+            return [[intent.menu],intent.quantity,result_flag,recognized_text] #메뉴가 없을 때
 
         else:
             result_flag = -1
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
-            return [[None],0,result_flag,[recognized_text]] #메뉴가 없을 때
+            return [[None],0,result_flag,recognized_text] #메뉴가 없을 때
     else:
         print("음성 인식에 실패했습니다.")
-        return [[None],0,result_flag,[None]]
+        return [[None],0,result_flag,None]
 
 
 
 #사용함수 ['메뉴이름', '기본가격',  '메뉴이미지 경로', 수량,  옵션리스트, '메뉴 설명']
-def get_AI_menu_data(conn,menus,quantity,flag):
+def get_AI_menu_data(conn,menu):
     try:    
-        # 테스트용 변수
-        #flag = 1, quantity = 1, menus=["아메리카노","카페라떼"]
+        menuData = get_menu_totalData(conn, menu)
+        Amount = 1 # TEST
         
-        # 중첩 리스트를 평탄화 (1차원 리스트로 변환)
-        if isinstance(menus, list) and any(isinstance(i, list) for i in menus):
-            menus = [item for sublist in menus for item in sublist]  # 리스트 평탄화
-        # 플래그 조건에 따른 처리
-        if flag == -1: #메뉴가 없을 경우
-            print("메뉴가 감지되지 않았습니다.")
-            return []
-        elif flag == 0:
-            menus = [menus[0]]  # 메뉴가 한 개일 경우
-        elif flag == 1:
-            pass  # 메뉴가 여러 개일 경우
-        
-        #입력된 메뉴들
-        print(menus)
-        results = [] #메뉴가 여러개일 경우
-        
-        for menu in menus:
-            menu_details = get_menu_price_path_category(conn)
-            menu_info = get_menu_info(conn, menu)
+        #메뉴 정보 추출
+        menu_name = menuData[0]
+        base_price = menuData[1]
+        img_path = menuData[2]
+        menu_info = menuData[4]
+        #옵션 추출
+        menu_options = get_menu_option(conn)
+        options_origin = menu_options.get(menu_name, [])
+        options = options_origin[1] #if len(options_origin) > 1 else [] #기본 가격 제외
 
-            selected_menu_details = next(
-                (item for item in menu_details if item[0] == menu), None
-            )
-            if not selected_menu_details:
-                print(f"메뉴 {menu}에 대한 정보를 찾을 수 없습니다.")
-                continue
-            
-            #메뉴 정보 추출
-            menu_name = selected_menu_details[0]
-            base_price = selected_menu_details[1]
-            img_path = selected_menu_details[2]
+        result = [
+            menu_name,      # 메뉴 이름
+            base_price,     # 기본 가격
+            img_path,       # 메뉴 이미지 경로
+            Amount,         # 수량 
+            options,        # 옵션 리스트
+            menu_info       # 메뉴 설명
+        ]
 
-            #옵션 추출
-            menu_options = get_menu_option(conn)
-            print('menuOptions: ', menu_options)
-            options_origin = menu_options.get(menu_name, [])
-            print('options_origin: ', options_origin)
-            options = options_origin[1] #if len(options_origin) > 1 else [] #기본 가격 제외
-            print('options: ', options)
-
-            result = [
-                menu_name,       # 메뉴 이름
-                base_price,      # 기본 가격
-                img_path,        # 메뉴 이미지 경로
-                quantity,        # 수량
-                options,         # 옵션 리스트
-                menu_info[0]        # 메뉴 설명
-            ]
-            results.append(result)
-
-        return results
+        print(f"get_AI_menu_data: {result}")
+        return result
+    
     except Exception as e:
         print("get_AI_menu_data ErrorOccured",e)
         return []

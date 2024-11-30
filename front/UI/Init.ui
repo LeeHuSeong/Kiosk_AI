@@ -238,7 +238,7 @@
          </size>
         </property>
         <property name="currentIndex">
-         <number>3</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="initPage">
          <layout class="QGridLayout" name="gridLayout_5">
@@ -1216,6 +1216,13 @@
                </widget>
               </item>
               <item>
+               <widget class="QPushButton" name="pushButton_2">
+                <property name="text">
+                 <string>PushButton</string>
+                </property>
+               </widget>
+              </item>
+              <item>
                <widget class="QLabel" name="label">
                 <property name="sizePolicy">
                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
@@ -1721,8 +1728,8 @@
    <slot>add_timer()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1078</x>
-     <y>127</y>
+     <x>1058</x>
+     <y>128</y>
     </hint>
     <hint type="destinationlabel">
      <x>1100</x>
@@ -1769,8 +1776,8 @@
    <slot>btn_MenuALL()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>83</x>
-     <y>280</y>
+     <x>103</x>
+     <y>278</y>
     </hint>
     <hint type="destinationlabel">
      <x>-71</x>
@@ -1785,8 +1792,8 @@
    <slot>btn_MenuCoffee()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>48</x>
-     <y>428</y>
+     <x>68</x>
+     <y>422</y>
     </hint>
     <hint type="destinationlabel">
      <x>-110</x>
@@ -1801,8 +1808,8 @@
    <slot>btn_MenuDeCaffeine()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>66</x>
-     <y>577</y>
+     <x>86</x>
+     <y>567</y>
     </hint>
     <hint type="destinationlabel">
      <x>-125</x>
@@ -1817,8 +1824,8 @@
    <slot>btn_MenuDrinks()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>76</x>
-     <y>725</y>
+     <x>96</x>
+     <y>712</y>
     </hint>
     <hint type="destinationlabel">
      <x>-72</x>
@@ -1833,8 +1840,8 @@
    <slot>btn_MenuDessert()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>40</x>
-     <y>874</y>
+     <x>60</x>
+     <y>856</y>
     </hint>
     <hint type="destinationlabel">
      <x>-80</x>
@@ -1849,8 +1856,8 @@
    <slot>btn_CartListClear()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1078</x>
-     <y>1003</y>
+     <x>1077</x>
+     <y>1002</y>
     </hint>
     <hint type="destinationlabel">
      <x>1151</x>
@@ -1865,7 +1872,7 @@
    <slot>popup_Receipt()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>1078</x>
+     <x>1077</x>
      <y>1078</y>
     </hint>
     <hint type="destinationlabel">
@@ -1897,8 +1904,8 @@
    <slot>btn_newAiOrder()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>26</x>
-     <y>96</y>
+     <x>31</x>
+     <y>1079</y>
     </hint>
     <hint type="destinationlabel">
      <x>-44</x>
@@ -1919,6 +1926,22 @@
     <hint type="destinationlabel">
      <x>1153</x>
      <y>22</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>btnTEST()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>193</x>
+     <y>67</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1117</x>
+     <y>110</y>
     </hint>
    </hints>
   </connection>
