@@ -121,7 +121,7 @@ def load_models():
         return None, None
 
 
-# 사용함수  [ [메뉴이름] , 수량, flag]
+# 사용함수  [ [메뉴이름] , 수량, flag,[text]]
 def AI_recognition(conn):
     # 유사어 데이터 로드
     synonyms_data = load_synonyms()
@@ -142,6 +142,8 @@ def AI_recognition(conn):
             # 매칭된 키에 포함된 메뉴 리스트를 결과에 포함
             matched_menu_list = synonyms_data[intent.matched_synonym]
             result_flag=1
+            if isinstance(matched_menu_list, list) and any(isinstance(i, list) for i in matched_menu_list):
+                matched_menu_list = [item for sublist in matched_menu_list for item in sublist]  # 리스트 평탄화
             return [matched_menu_list, intent.quantity,result_flag,[recognized_text]]
        
         #메뉴가 없을때
@@ -220,11 +222,10 @@ def get_AI_menu_data(conn,menus,quantity,flag):
 
 ##test시 사용
 ##MySQL과 연결
-#conn=create_connection()
+conn=create_connection()
 
-#menu,quantity,flag,text = AI_recognition(conn)
-#a = get_AI_menu_data(conn,menu, quantity, flag)
-
+menu,quantity,flag,text = AI_recognition(conn)
+a = get_AI_menu_data(conn,menu, quantity, flag)
 #print(menu,quantity,flag, text)
-#print(a)
+print(a)
 #print(AI_recognition(conn))
