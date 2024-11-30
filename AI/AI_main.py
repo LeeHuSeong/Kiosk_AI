@@ -97,8 +97,11 @@ def recognize_speech():
     recognizer = sr.Recognizer()
     with sr.Microphone() as source:
         recognizer.adjust_for_ambient_noise(source)
-        print("음성을 입력하세요...")
-        audio = recognizer.listen(source)
+        try :
+            print("음성을 입력하세요...")
+            audio = recognizer.listen(source)
+        except Exception as e :
+            print(f"음성 입력 오류.\n{e}")
 
         try:
             text = recognizer.recognize_google(audio, language="ko-KR")

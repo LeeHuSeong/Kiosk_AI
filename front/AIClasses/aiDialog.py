@@ -155,7 +155,7 @@ class aiDialog(QDialog, form_class) :
             self.btn_start.setChecked(False)
 
         #결과가 부정확하다면
-        elif self.resultFlag == 1:
+        elif self.resultFlag == 1 :
             inputStr = str(voiceResult[3])
             self.inputStr_.setText(f"입력 결과: {inputStr}")
 

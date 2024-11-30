@@ -4,6 +4,12 @@
     <file>src/BG.png</file>
     <file>src/BG2.png</file>
   </qresource>
+  <qresource prefix="3_optionPage">
+    <file>src/optionCancel_H.png</file>
+    <file>src/optionCancel_O.png</file>
+    <file>src/optionOK_H.png</file>
+    <file>src/optionOK_O.png</file>
+  </qresource>
   <qresource prefix="2-2_cartItem">
     <file>src/cartAdd_H.png</file>
     <file>src/cartAdd_O.png</file>

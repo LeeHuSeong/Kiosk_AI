@@ -2,7 +2,7 @@ from openai import OpenAI
 import os
 
 class use_OpenAI:
-    def gpt_Patois_Correction(text):
+    def gpt_Patois_Correction(text) :
         try :
             client = OpenAI()
 
@@ -20,6 +20,3 @@ class use_OpenAI:
         except Exception as e:
             print(f"gpt_api 키 값이 올바르지 않습니다.\n{e}")
             return text
-
-a = use_OpenAI.gpt_Patois_Correction('떠거운 카피 한잔')
-print(a)

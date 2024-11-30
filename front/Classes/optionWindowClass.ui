@@ -38,20 +38,47 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">#selectOption {
+
+	border-image: url(:/.all/src/BG2.png);
+}
+
+#scrollAreaWidgetContents {
+
+	border-image: url(:/.all/src/BG3.png);
+}
+
+#btn_addCart {
+
+	border-image: url(:/3_optionPage/src/optionOK_O.png);
+}
+#btn_addCart:hover {
+
+	border-image: url(:/3_optionPage/src/optionOK_H.png);
+}
+
+#btn_Close {
+
+	border-image: url(:/3_optionPage/src/optionCancel_O.png);
+}
+#btn_Close:hover {
+
+	border-image: url(:/3_optionPage/src/optionCancel_H.png);
+}
+</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <property name="leftMargin">
-    <number>0</number>
+    <number>6</number>
    </property>
    <property name="topMargin">
-    <number>0</number>
+    <number>6</number>
    </property>
    <property name="rightMargin">
-    <number>0</number>
+    <number>6</number>
    </property>
    <property name="bottomMargin">
-    <number>0</number>
+    <number>6</number>
    </property>
    <item>
     <widget class="QLabel" name="label_5">
@@ -289,8 +316,8 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>-1991</y>
-        <width>731</width>
+        <y>0</y>
+        <width>719</width>
         <height>2484</height>
        </rect>
       </property>
@@ -2413,22 +2440,34 @@
    </item>
    <item>
     <layout class="QHBoxLayout" name="btn">
+     <property name="leftMargin">
+      <number>0</number>
+     </property>
+     <property name="topMargin">
+      <number>0</number>
+     </property>
+     <property name="rightMargin">
+      <number>0</number>
+     </property>
+     <property name="bottomMargin">
+      <number>0</number>
+     </property>
      <item>
       <widget class="QPushButton" name="btn_Close">
        <property name="minimumSize">
         <size>
-         <width>0</width>
+         <width>360</width>
          <height>75</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>16777215</width>
+         <width>360</width>
          <height>75</height>
         </size>
        </property>
        <property name="text">
-        <string>취소</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -2436,18 +2475,18 @@
       <widget class="QPushButton" name="btn_addCart">
        <property name="minimumSize">
         <size>
-         <width>0</width>
+         <width>360</width>
          <height>75</height>
         </size>
        </property>
        <property name="maximumSize">
         <size>
-         <width>16777215</width>
+         <width>360</width>
          <height>75</height>
         </size>
        </property>
        <property name="text">
-        <string>담기</string>
+        <string/>
        </property>
       </widget>
      </item>
@@ -2455,7 +2494,9 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="../UI/resources.qrc"/>
+ </resources>
  <connections>
   <connection>
    <sender>btn_Close</sender>
