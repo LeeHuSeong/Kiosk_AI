@@ -6,15 +6,21 @@ def create_connection():
     try:
         conn = mysql.connector.connect(
             host = 'localhost',
-            user = 'root',        # 본인의 DB 사용자 이름으로 수정
-            password = 'rootpass', # 본인의 DB 비밀번호로 수정
+
+            user = 'root',
+            password = 'rootpass',
+
+            #user = 'root',
             #password = '0000',
-            #user = 'kiosk_proj',        # 본인의 DB 사용자 이름으로 수정
-            #password = 'kiosk_pass', # 본인의 DB 비밀번호로 수정
+
+            #user = 'kiosk_proj',
+            #password = 'kiosk_pass',
 
             database = 'kiosk_',  # 본인의 DB 이름으로 수정
+
             port = 3306,
             #port = 3303,
+
             auth_plugin='mysql_native_password'  # 인증 플러그인 명시
         )
         if conn.is_connected():  # 연결 성공 여부 확인

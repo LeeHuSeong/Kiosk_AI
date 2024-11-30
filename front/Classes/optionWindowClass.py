@@ -89,7 +89,7 @@ class optionWindowClass(QDialog, form_class) :
 
         self.refresh_Price()
 
-    #Getter
+    # Getter
     @property
     def parent(self) :
         return self.__parent
@@ -141,7 +141,7 @@ class optionWindowClass(QDialog, form_class) :
     @property
     def result(self) :
         return self.__result
-    #Setter
+    # Setter
     @menuAmount.setter  # 메뉴 수량 설정
     def menuAmount(self, Amount) :
         self.__menuAmount = Amount
@@ -156,7 +156,7 @@ class optionWindowClass(QDialog, form_class) :
     def result(self, val) :
         self.__result = val
 
-    #Methods
+    # Methods
     def set_LabelData(self) :   # 라벨 데이터 설정
         self.menuName_.setText(self.menuName)
         self.menuDesc_.setText(self.menuDesc)
@@ -228,7 +228,7 @@ class optionWindowClass(QDialog, form_class) :
     def get_value(self, objectName) :
         return objectName[-1]
 
-    #AbstractMethods
+    # AbstractMethods
     @abstractmethod
     def btn_Cancel(self) :
         pass
@@ -237,7 +237,7 @@ class optionWindowClass(QDialog, form_class) :
     def btn_OK(self) :
         pass
 
-#일반 주문 옵션 선택 클래스
+# 일반 주문 옵션 선택 클래스
 class optionWindowClass_Default(optionWindowClass) :
     def btn_Cancel(self) :
         self.close()
@@ -246,14 +246,14 @@ class optionWindowClass_Default(optionWindowClass) :
         self.result = [self.menuName, self.resultNameDict, 1, self.totalPrice]  
         self.close()
 
-#음성 주문 옵션 선택 클래스
+# 음성 주문 옵션 선택 클래스
 class optionWindowClass_Voice(optionWindowClass) :
     def btn_Cancel(self) :
         self.result = [self.prevNameDict, self.prevIdDict, self.totalPrice]
-        self.parent.set_optionResult(self.result)    # ai_Dialog 객체로 전달
+        self.parent.optionResult = self.result  # ai_Dialog 객체로 전달
         self.close()
 
     def btn_OK(self) :
         self.result = [self.resultNameDict, self.resultIdDict, self.totalPrice]
-        self.parent.set_optionResult(self.result)    # ai_Dialog 객체로 전달
+        self.parent.optionResult = self.result  # ai_Dialog 객체로 전달
         self.close()

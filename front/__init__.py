@@ -14,6 +14,10 @@ from .Classes.timeoutClass import timeoutClass
 
 ############################################################################
 
+#from patois_Alter import use_OpenAI
+
+############################################################################
+
 __all__ = [
     "cartClass",
     "menuClass",
@@ -25,4 +29,5 @@ __all__ = [
     "aiCartItem",
     "aiDialog",
     "inExactItem"
+    #"use_OpenAI"
 ]

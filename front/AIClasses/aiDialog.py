@@ -10,43 +10,111 @@ import back1
 import AI.AI_main
 
 form_class = uic.loadUiType("front/AIClasses/aiDialog.ui")[0]
-
 class aiDialog(QDialog, form_class) :
-    #Page_0
-    resultFlag = 0
-    result = []
-    parent = None
-    conn = 0
-
-    #Page_1
-    menuData = []
-
-    #Page_2
-    menuName = ''
-    menuDesc = ''
-    itemPrice = 0
-    menuImgSrc = ''
-    menuOption = []
-    optionResult = [{}, {}, 0]
-    optionList = []
-
     def __init__(self, parent, conn) :
         super().__init__()
         self.setWindowFlag(Qt.FramelessWindowHint)
         self.setupUi(self)
         self.center()
 
-        self.conn = conn
-        self.parent = parent
-        self.aiOptionList = self.aiOptionListWidget
-        self.aiInExactList = self.ai_InExactListWidget
-        self.stackedWidget.setCurrentIndex(0)
+        # Var_objectData
+        self.__parent = parent  
+        self.__conn = conn                  # SQL 연결 정보
+        self.__menuData = []                # (List) 메뉴 전체 데이터
+        self.__optionData = []              # (List) 메뉴 옵션 목록
 
+        # Var_menuData          
+        self.__menuName = ''                # (STR) 메뉴 이름
+        self.__menuDesc = ''                # (STR) 메뉴 설명
+        self.__menuPrice = 0                # (INT) 메뉴 기본 가격
+        self.__menuAmount = 0               # (INT) 메뉴 주문 수량
+        self.__menuImgSrc = ''              # (STR) 메뉴 이미지 경로
+
+        # Var_listWidget
+        self.__aiOptionList = self.aiOptionListWidget       # (listWidget) 옵션 목록 리스트위젯 객체
+        self.__aiInExactList = self.ai_InExactListWidget    # (listWidget) 유사메뉴 목록 리스트위젯 객체
+
+        # Var_resultData
+        self.__result = []                  # (List) 음성인식 결과 리스트
+        self.__resultFlag = 0               # (INT) 결과 종류 (-1: 오류. 0: 해당 메뉴, 1: 유사어 메뉴)
+        self.__optionResult = [{}, {}, 0]   # (List) 옵션 선택 결과 반환
+        self.__optionList = []              # (List) 옵션 선택 결과 출력 문자열
+
+        self.stackedWidget.setCurrentIndex(0)
         #self.btn_start.setChecked(False)
 
+    # Getter
+    @property
+    def parent(self) :
+        return self.__parent
+    @property
+    def conn(self) :
+        return self.__conn
+    @property
+    def menuData(self) :
+        return self.__menuData
+    @property
+    def optionData(self) :
+        return self.__optionData
+    @property
+    def menuName(self) :
+        return self.__menuName
+    @property
+    def menuDesc(self) :
+        return self.__menuDesc
+    @property
+    def menuImgSrc(self) :
+        return self.__menuImgSrc
+    @property
+    def menuPrice(self) :
+        return self.__menuPrice
+    @property
+    def menuAmount(self) :
+        return self.__menuAmount
+    @property
+    def aiOptionList(self) :
+        return self.__aiOptionList
+    @property
+    def aiInExactList(self) :
+        return self.__aiInExactList
+    @property
+    def result(self) :
+        return self.__result
+    @property
+    def resultFlag(self) :
+        return self.__resultFlag
+    @property
+    def optionResult(self) :
+        return self.__optionResult
+    @property
+    def optionList(self) :
+        return self.__optionList
+
+    # Setter
+    @menuData.setter
+    def menuData(self, val) :
+        self.__menuData = val
+    @menuAmount.setter
+    def menuAmount(self, val) :
+        self.__menuAmount = val
+    @optionResult.setter
+    def optionResult(self, val) :
+        self.__optionResult = val
+        self.__menuPrice = val[2]
+    @optionList.setter
+    def optionList(self, val) :
+        self.__optionList = val
+    @result.setter
+    def result(self, val) :
+        self.__result = val
+    @resultFlag.setter
+    def resultFlag(self, val) :
+        self.__resultFlag = val
+
+
+    # Methods
     def showModal(self) :
         return super().exec_()
-    
     def center(self):
         qr = self.frameGeometry()
         cp = QDesktopWidget().availableGeometry().center()
@@ -54,52 +122,47 @@ class aiDialog(QDialog, form_class) :
         self.move(qr.topLeft())
 
     def btn_Start(self) :
-        #self.btn_start.setChecked(True)
-        self.optionResult = [{}, {}, 0] #선택옵션리스트 초기화
-        voiceResult = None
-        self.result = []        #결과
-        self.resultFlag = -1     #결과 종류(0: 정확한 결과, 1: 부정확한 결과(리스트), -1: 입력 오류)
-        
-        #음성입력 시작
+        # 변수 초기화
+        self.optionResult = [{}, {}, 0]
+        self.result = []        
+        self.resultFlag = -1 
 
-        #여기에 작성 및 result 변수/ resultFlag 변수에 결과 할당
+        #음성입력 시작
         try :
             voiceResult = AI.AI_main.AI_recognition(self.conn)
-        except :
+        except Exception as e :
+            print(f"음성 인식을 시작하지 못했습니다. {e}")
             self.resultFlag = -1
-        #[['아메리카노'], 1, 0, ['아이스 아메리카노']]
 
-        print("voiceResult: ", voiceResult)
+        #[['아메리카노'], 1, 0, ['아이스 아메리카노']]
 
         if voiceResult != None :
             self.result = [voiceResult[0], voiceResult[1]]
             self.resultFlag = voiceResult[2]
         else :
+            print("결과를 반환하지 못했습니다.")
             return
-
         #음성입력 완료 및 결과반환
 
         #결과가 정확하다면
         if self.resultFlag == 0 :
-            self.stackedWidget.setCurrentIndex(2)
-
-            #self.menuData = AI.AI_main.get_AI_menu_data(self.conn, self.result[0], self.result[1], self.resultFlag)
             self.menuData = AI.AI_main.get_AI_menu_data(self.conn, self.result[0][0], self.result[1])
+            #print(f"self.menuData: {self.menuData}")
 
-            #print("self.menuData: ", self.menuData)
-            self.set_aiOrderData(self.menuData)
+            self.aiOrderData__init__(self.menuData)
 
+            self.stackedWidget.setCurrentIndex(2)
             self.btn_start.setChecked(False)
 
         #결과가 부정확하다면
         elif self.resultFlag == 1:
             inputStr = str(voiceResult[3])
-            self.inputStr_.setText('입력 결과: ' + inputStr)
+            self.inputStr_.setText(f"입력 결과: {inputStr}")
 
             resultList = voiceResult[0]
-            #print("resultList: ", resultList)
+            #print(f"resultList: {resultList}")
 
-            #메뉴리스트 ListWidget item으로 반환
+            # aiInExactList에 추가
             for menuName in resultList :
                 data = AI.AI_main.get_AI_menu_data(self.conn, menuName, self.result[1])
                 self.addInExactList(data)       
@@ -111,60 +174,34 @@ class aiDialog(QDialog, form_class) :
         else :
             self.btn_start.setChecked(False)
 
-    # Initial_Setting
-    def set_aiOrderData(self, menuData) :
-        #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
-
-        self.menuData = menuData
-        self.menuName = menuData[2].split('\\')[2].replace('.jpg', '')
-        self.menuDesc = menuData[5]
-        self.itemPrice = menuData[1]
-        self.menuImgSrc = menuData[2]
-        self.menuOption = menuData[4]
-        self.menuAmount = menuData[3]
+    def aiOrderData__init__(self, menuData) :
+        #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION']
+        print(menuData)
+        self.__menuData = menuData
+        self.__menuName = menuData[2].split('\\')[2].replace('.jpg', '')
+        self.__menuDesc = menuData[5]
+        self.__menuPrice = menuData[1]
+        self.__menuImgSrc = menuData[2]
+        self.__optionData = menuData[4]
+        self.__menuAmount = menuData[3]
 
         self.set_LabelData()
 
     def set_LabelData(self) :
-        self.menuName_.setText(self.get_menuName())                 #메뉴이름
-        self.menuDesc_.setText(self.get_menuDesc())                 #메뉴설명
+        self.menuName_.setText(self.menuName)                 #메뉴이름
+        self.menuDesc_.setText(self.menuDesc)                 #메뉴설명
         
-        pixmap = QPixmap(self.get_menuImgSrc()).scaled(300, 300)
+        pixmap = QPixmap(self.menuImgSrc).scaled(300, 300)
         self.menuImg_.setPixmap(pixmap)                             #메뉴이미지
         
-        self.menuAmount_.setText(str(self.get_menuAmount()))
-        if self.get_menuAmount() == 1 :
+        self.menuAmount_.setText(str(self.menuAmount))
+        if self.menuAmount == 1 :
             self.btnDec.setDisabled(True)
         else :
             self.btnDec.setEnabled(True)
         
-        self.itemPrice_.display(self.get_itemPrice())
+        self.menuPrice_.display(self.menuPrice)
 
-    # getter
-    def get_menuData(self) :
-        return self.menuData
-    def get_menuName(self) :            #STR
-        return self.menuName
-    def get_itemPrice(self) :
-        return self.itemPrice
-    def get_menuDesc(self) :            #STR
-        return self.menuDesc
-    def get_menuImgSrc(self) :          #STR
-        return self.menuImgSrc
-    def get_menuOption(self) :          #LIST[STR]
-        return self.menuOption
-    def get_optionResult(self) :
-        return self.optionResult
-    def get_menuAmount(self) :
-        return self.menuAmount
-    # setter
-    def set_menuData(self, menuData) :  #메뉴데이터 설정
-        self.menuData = menuData
-    def set_optionResult(self, value) :
-        self.optionResult = value
-        self.itemPrice = value[2]
-
-    # def
     def btn_Back(self) :
         if self.stackedWidget.currentIndex() == 1 :
             self.stackedWidget.setCurrentIndex(0)
@@ -179,22 +216,22 @@ class aiDialog(QDialog, form_class) :
                 self.aiOptionList.clear()
 
     def btn_SelectOption(self) :
-        self.aiOptionListWidget.clear()
+        self.aiOptionList.clear()
         popup_selectOption = front.optionWindowClass_Voice(self, self.conn, self.menuData, self.optionResult)
         popup_selectOption.showModal()
 
         self.optionList = []
-        self.itemPrice_.display(self.get_itemPrice())
+        self.menuPrice_.display(self.menuPrice)
         for value in self.optionResult[0].items() :
-            self.aiOptionListWidget.addItem(value[1])
+            self.aiOptionList.addItem(value[1])
             self.optionList.append(value[1])
 
     def btn_addCart(self) :
         #self.optionResult = [{}, {}, 0]
         if int(self.optionResult[2]) != 0 :
-            data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], self.get_menuAmount(), self.optionList, self.result[1]]
+            data = [self.menuData[0], int(self.optionResult[2]), self.menuData[2], self.menuAmount, self.optionList, self.result[1]]
         else :
-            data = [self.menuData[0], self.menuData[1], self.menuData[2], self.get_menuAmount(), self.optionList, self.result[1]]
+            data = [self.menuData[0], self.menuData[1], self.menuData[2], self.menuAmount, self.optionList, self.result[1]]
 
         self.parent.addAiCart(data)
         self.close()
@@ -218,19 +255,19 @@ class aiDialog(QDialog, form_class) :
     ################################
 
     def DecreaseAmount(self) :
-        currAmount = self.get_menuAmount() - 1
+        currAmount = self.menuAmount - 1
         if currAmount == 1 :
             self.btnDec.setDisabled(True)
         else :
             self.btnDec.setEnabled(True)
         
         self.menuAmount = currAmount
-        self.menuAmount_.setText(str(self.get_menuAmount()))
+        self.menuAmount_.setText(str(self.menuAmount))
 
     def IncreaseAmount(self) :
-        currAmount = self.get_menuAmount() + 1
+        currAmount = self.menuAmount + 1
         if currAmount != 1 :
             self.btnDec.setEnabled(True)
         
         self.menuAmount = currAmount
-        self.menuAmount_.setText(str(self.get_menuAmount()))
+        self.menuAmount_.setText(str(self.menuAmount))

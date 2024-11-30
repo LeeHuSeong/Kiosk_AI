@@ -6,6 +6,7 @@ import os
 import json
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
+from front.patois_Alter import use_OpenAI
 from back1 import *
 
 
@@ -102,7 +103,14 @@ def recognize_speech():
         try:
             text = recognizer.recognize_google(audio, language="ko-KR")
             print(f"음성 인식 결과: {text}")
-            return text.strip()
+
+            ####임시 방언 처리####
+            
+            patois_Correction = use_OpenAI.gpt_Patois_Correction(text)
+            print(f"방언 처리된 결과: {patois_Correction}")
+
+            #####################
+            return patois_Correction.strip()
         except sr.UnknownValueError:
             print("음성을 이해할 수 없습니다.")
         except sr.RequestError as e:
