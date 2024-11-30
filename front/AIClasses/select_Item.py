@@ -30,4 +30,4 @@ class inExactItem(QWidget, form_class) :
 
     def btn_select(self) : 
          self.parent.stackedWidget.setCurrentIndex(2)
-         self.parent.set_aiOrderData(self.menuData)
+         self.parent.aiOrderData__init__(self.menuData)
