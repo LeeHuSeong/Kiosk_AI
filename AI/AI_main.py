@@ -139,22 +139,22 @@ def AI_recognition(conn):
 
         # 유사어 리스트 감지 시
         if intent.matched_synonym:
+            print(intent.matched_synonym)
             # 매칭된 키에 포함된 메뉴 리스트를 결과에 포함
             matched_menu_list = synonyms_data[intent.matched_synonym]
+            print(matched_menu_list)
             result_flag=1
-            result = [[matched_menu_list], intent.quantity,result_flag,[recognized_text]]
-        else:
-            result_flage=0
-            result =[[intent.menu],intent.quantity,result_flag,[recognized_text]]
-
-
+            return [[matched_menu_list], intent.quantity,result_flag,[recognized_text]]
+       
         #메뉴가 없을때
-        if not intent.menu:
+        elif intent.menu:
+            result_flag=0
+            return [[intent.menu],intent.quantity,result_flag,[recognized_text]] #메뉴가 없을 때
+
+        else:
+            result_flag = -1
             print("사용 가능한 메뉴와 매칭되지 않았습니다.")
             return [[None],0,result_flag,[recognized_text]] #메뉴가 없을 때
-
-        else:
-            print("사용 가능한 메뉴와 매칭되지 않았습니다.")
     else:
         print("음성 인식에 실패했습니다.")
         return [[None],0,result_flag,[None]]
