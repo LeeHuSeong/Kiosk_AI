@@ -65,10 +65,11 @@ class aiDialog(QDialog, form_class) :
         #여기에 작성 및 result 변수/ resultFlag 변수에 결과 할당
         try :
             voiceResult = AI.AI_main.AI_recognition(self.conn)
-            #voiceResult = AI.AI_main.AI_recognition2()
         except :
             self.resultFlag = -1
         #[['아메리카노'], 1, 0, ['아이스 아메리카노']]
+
+        print(voiceResult)
 
         if voiceResult != None :
             self.result = [voiceResult[0], voiceResult[1]]
@@ -78,22 +79,21 @@ class aiDialog(QDialog, form_class) :
 
         #음성입력 완료 및 결과반환
 
-        #self.btn_start.setChecked(False)
-
         #결과가 정확하다면
         if self.resultFlag == 0 :
             self.stackedWidget.setCurrentIndex(2)
-            self.menuData = AI.AI_main.get_AI_menu_data(self.conn, self.result[0], self.result[1], self.resultFlag)
-            #print(self.menuData)
-            self.set_aiOrderData(self.menuData[0])
+            self.menuData = AI.AI_main.get_AI_menu_data(self.conn, self.result[0], self.result[1], self.resultFlag)[0]
+
+            print(self.menuData)
+            self.set_aiOrderData(self.menuData)
+            
             self.btn_start.setChecked(False)
 
         #결과가 부정확하다면
         elif self.resultFlag == 1:
             inputStr = voiceResult[3]
-            self.InputStr_2.setText('입력 결과: ' + inputStr)
+            self.InputStr_.setText('입력 결과: ' + inputStr)
             #result = [['메뉴명1', '메뉴명2', ...], 수량]
-            self.result = [['디카페인 아메리카노', '아메리카노', '디카페인 카페라떼'], 1]
 
             self.stackedWidget.setCurrentIndex(1)
             #메뉴리스트 ListWidget item으로 반환
@@ -107,18 +107,17 @@ class aiDialog(QDialog, form_class) :
 
     # Initial_Setting
     def set_aiOrderData(self, menuData) :
+        print(self.menuData)
         #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, ['AddDeShot'], 'TEST DESCRIPTION',]
 
-        self.set_InitData(menuData)
-        self.set_LabelData()
-
-    def set_InitData(self, menuData) :
         self.menuData = menuData
         self.menuName = menuData[2].split('\\')[2].replace('.jpg', '')
         self.menuDesc = menuData[5]
         self.itemPrice = menuData[1]
         self.menuImgSrc = menuData[2]
-        self.menuOption = menuData[4]
+        self.menuOption = menuData[4][0]
+
+        self.set_LabelData()
 
     def set_LabelData(self) :
         self.menuName_.setText(self.get_menuName())                 #메뉴이름

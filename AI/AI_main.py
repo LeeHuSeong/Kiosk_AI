@@ -201,8 +201,11 @@ def get_AI_menu_data(conn,menus,quantity,flag):
 
             #옵션 추출
             menu_options = get_menu_option(conn)
-            options_origin = menu_options.get(menu_name,[])
-            options = options_origin[1:] #if len(options_origin) > 1 else [] #기본 가격 제외
+            print('menuOptions: ', menu_options)
+            options_origin = menu_options.get(menu_name, [])
+            print('options_origin: ', options_origin)
+            options = options_origin[1] #if len(options_origin) > 1 else [] #기본 가격 제외
+            print('options: ', options)
 
             result = [
                 menu_name,       # 메뉴 이름
