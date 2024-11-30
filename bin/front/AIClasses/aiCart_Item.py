@@ -4,7 +4,7 @@ from PyQt5 import uic
 
 from PyQt5.QtGui import QPixmap
 
-form_class = uic.loadUiType("front/AIClasses/aiCart_Item.ui")[0]
+form_class = uic.loadUiType("bin/front/AIClasses/aiCart_Item.ui")[0]
 #['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, []]
 #['메뉴이름', '기본가격', '이미지경로', '수량', '옵션리스트']
 class aiCartItem(QWidget, form_class) :

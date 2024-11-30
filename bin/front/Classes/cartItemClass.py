@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-form_class = uic.loadUiType("front/Classes/cartItemClass.ui")[0]
+form_class = uic.loadUiType("bin/front/Classes/cartItemClass.ui")[0]
 
 class cartItemClass(QWidget, form_class) :
     def __init__(self, parent, listWidget, menuData) :

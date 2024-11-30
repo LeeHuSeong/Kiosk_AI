@@ -4,8 +4,7 @@ from PyQt5 import uic
 
 from PyQt5.QtGui import QPixmap
 
-form_class = uic.loadUiType("front/AIClasses/select_Item.ui")[0]
-
+form_class = uic.loadUiType("bin/front/AIClasses/select_Item.ui")[0]
 class inExactItem(QWidget, form_class) :
     listWidget = None
     menuData = []

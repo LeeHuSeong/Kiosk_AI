@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-form_class = uic.loadUiType("front/Classes/timeoutClass.ui")[0]
+form_class = uic.loadUiType("bin/front/Classes/timeoutClass.ui")[0]
 class timeoutMsgBox(QDialog, form_class) :
     def __init__(self) :
         super().__init__()

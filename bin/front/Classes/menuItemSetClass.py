@@ -5,7 +5,7 @@ from PyQt5 import uic
 from .menuItemClass import menuItemClass
 
 #menuData = ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 0, ['AddDeShot', 'AddStevia'], 'desc']
-form_class = uic.loadUiType("front/Classes/menuItemSetClass.ui")[0]
+form_class = uic.loadUiType("bin/front/Classes/menuItemSetClass.ui")[0]
 
 class menuItemSetClass(QWidget, form_class) :
 

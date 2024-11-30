@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 
 from .menuItemSetClass import menuItemSetClass
-from back1 import get_menu_price_path_category, get_menu_option, get_menu_info
+from bin.back1 import get_menu_price_path_category, get_menu_option, get_menu_info
 
 class menuClass :
     def menuWidget_Load(self, conn, type) :

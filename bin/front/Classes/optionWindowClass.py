@@ -7,9 +7,9 @@ from abc import abstractmethod
 import copy
 
 from .cartClass import *
-from back1 import get_opt_price
+from bin.back1 import get_opt_price
 
-form_class = uic.loadUiType("front/Classes/optionWindowClass.ui")[0]
+form_class = uic.loadUiType("bin/front/Classes/optionWindowClass.ui")[0]
 class optionWindowClass(QDialog, form_class) :
     def __init__(self, parent, conn, menuData, optionResult = None) :
         super().__init__()

@@ -5,11 +5,10 @@ from PyQt5 import uic
 from PyQt5.QtGui import QPixmap
 import time
 
-import front
-import back1
-import AI.AI_main
+import bin.front
+import bin.AI.AI_main
 
-form_class = uic.loadUiType("front/AIClasses/aiDialog.ui")[0]
+form_class = uic.loadUiType("bin/front/AIClasses/aiDialog.ui")[0]
 class aiDialog(QDialog, form_class) :
     def __init__(self, parent, conn) :
         super().__init__()
@@ -130,7 +129,7 @@ class aiDialog(QDialog, form_class) :
         #음성입력 시작
         voiceResult = None
         try :
-            voiceResult = AI.AI_main.AI_recognition(self.conn)
+            voiceResult = bin.AI.AI_main.AI_recognition(self.conn)
         except Exception as e :
             print(f"음성 인식을 시작하지 못했습니다.\n{e}")
             self.resultFlag = -1
@@ -148,7 +147,7 @@ class aiDialog(QDialog, form_class) :
 
         #결과가 정확하다면
         if self.resultFlag == 0 :
-            self.menuData = AI.AI_main.get_AI_menu_data(self.conn, self.result[0][0], self.result[1])
+            self.menuData = bin.AI.AI_main.get_AI_menu_data(self.conn, self.result[0][0], self.result[1])
             #print(f"self.menuData: {self.menuData}")
 
             self.aiOrderData__init__(self.menuData)
@@ -166,7 +165,7 @@ class aiDialog(QDialog, form_class) :
 
             # aiInExactList에 추가
             for menuName in resultList :
-                data = AI.AI_main.get_AI_menu_data(self.conn, menuName, self.result[1])
+                data = bin.AI.AI_main.get_AI_menu_data(self.conn, menuName, self.result[1])
                 self.addInExactList(data)       
             
             self.stackedWidget.setCurrentIndex(1)     
@@ -219,7 +218,7 @@ class aiDialog(QDialog, form_class) :
 
     def btn_SelectOption(self) :
         self.aiOptionList.clear()
-        popup_selectOption = front.optionWindowClass_Voice(self, self.conn, self.menuData, self.optionResult)
+        popup_selectOption = bin.front.optionWindowClass_Voice(self, self.conn, self.menuData, self.optionResult)
         popup_selectOption.showModal()
 
         self.optionList = []
@@ -239,7 +238,7 @@ class aiDialog(QDialog, form_class) :
         self.close()
 
     def addInExactList(self, menuData) :
-        item_Widget = front.inExactItem(self.aiInExactList, menuData, self)
+        item_Widget = bin.front.inExactItem(self.aiInExactList, menuData, self)
         item = QListWidgetItem()
         item.setSizeHint(item_Widget.sizeHint())
 

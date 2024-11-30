@@ -4,14 +4,14 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
-from front import *
-import back1
+from bin.front import *
+import bin.back1
 #import back2
 
 import resources_rc
 
 #UI Loading
-Init_Class = uic.loadUiType("front/UI/Init.ui")[0]
+Init_Class = uic.loadUiType("bin/front/UI/Init.ui")[0]
 class MainWindow(QMainWindow, Init_Class) :
     totalPrice = 0
 
@@ -25,7 +25,7 @@ class MainWindow(QMainWindow, Init_Class) :
         self.__menuList = self.menuListWidget
         self.__aiCartList = self.aiCartListWidget
 
-        self.__conn = back1.create_connection()
+        self.__conn = bin.back1.create_connection()
 
         self.lcd_Timer.display(180)
         menuClass.menuWidget_Load(self, self.conn, 'ALL')
@@ -140,7 +140,7 @@ class MainWindow(QMainWindow, Init_Class) :
         aiCartWidget_Add(self, data)
 
     def Close(self) :
-        back1.close_connection(self.conn)
+        bin.back1.close_connection(self.conn)
         self.close()
 
 ######################################################
