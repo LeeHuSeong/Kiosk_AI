@@ -1,0 +1,88 @@
+Data
+카테고리종류
+1. 디카페인
+2. 커피(HOT)
+3. 커피(ICE)
+4. 티
+5. 디저트
+================================
+drink1 Hot/Ice
+디카페인 아메리카노
+디카페인 카페라떼
+디카페인 바닐라라떼
+디카페인 연유라떼
+디카페인 카라멜마끼아또
+디카페인 카페모카
+디카페인 카푸치노
+
+drink2 Hot
+아메리카노
+카페라떼
+바닐라라떼
+연유라떼
+카라멜 마끼아또
+카페모카
+카푸치노
+
+drink3 ICE
+아메리카노
+카페라떼
+바닐라라떼
+연유라떼
+카라멜 마끼아또
+카페모카
+카푸치노
+
+drink3 Hot/Ice
+유자차
+레몬차
+자몽차
+녹차
+캐모마일
+얼그레이
+
+drink3 +Ice
+복숭아아이스티
+
+Dessert
+치즈케익
+초코케익
+티라미수케익
+허니브레드
+================================
+option
+1. cinamon
+2. whip
+3. strong_or_weak
+4. syrup_add 
+5. light_vanila_add
+6. stevia_changed
+7. stevia_add
+8.honey_add
+9.choosee_milk
+===============================
+option code
+1	no_choice
+2	coffee_weak
+3	coffee_add_one
+4	coffee_add_two
+5	decaffein_shot
+6	vanilia_syrup_add
+7	light_vanilia_changed
+8	light_vanilia_add
+9	syrup_add_c
+10	stevia_changed
+11	stevia_add
+12	choose_milk_a
+13	choose_milk_o
+14	honey_add
+15	whip_n
+16	whip_y
+17	cinnamon_y
+18	cinnamon_n
+19	coffee_weak_2
+20	no_choice_light_vanlia_add
+21	no_choice_light_vanlia_changed
+22	no_choice_stevia_add
+23	no_choice_milk
+24	no_choice_decaffein

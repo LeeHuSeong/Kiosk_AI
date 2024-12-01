@@ -1,0 +1,86 @@
+<RCC>
+  <qresource prefix=".all">
+    <file>src/BG3.png</file>
+    <file>src/BG.png</file>
+    <file>src/BG2.png</file>
+  </qresource>
+  <qresource prefix="3_optionPage">
+    <file>src/optionCancel_H.png</file>
+    <file>src/optionCancel_O.png</file>
+    <file>src/optionOK_H.png</file>
+    <file>src/optionOK_O.png</file>
+  </qresource>
+  <qresource prefix="2-2_cartItem">
+    <file>src/cartAdd_H.png</file>
+    <file>src/cartAdd_O.png</file>
+    <file>src/cartMinus_D.png</file>
+    <file>src/cartMinus_H.png</file>
+    <file>src/cartMinus_O.png</file>
+    <file>src/cartRemove_H.png</file>
+    <file>src/cartRemove_O.png</file>
+  </qresource>
+  <qresource prefix="2-1_menuItem">
+    <file>src/menuItem4_O.png</file>
+    <file>src/menuItem3_O.png</file>
+    <file>src/menuItem2_O.png</file>
+    <file>src/menuItem_H.png</file>
+    <file>src/menuItem_O.png</file>
+  </qresource>
+  <qresource prefix="2_menuPage">
+    <file>src/purchase_H.png</file>
+    <file>src/purchase_O.png</file>
+    <file>src/addTime_H.png</file>
+    <file>src/addTime_O.png</file>
+    <file>src/allMenu_H.png</file>
+    <file>src/allMenu_O.png</file>
+    <file>src/coffee_H.png</file>
+    <file>src/coffee_O.png</file>
+    <file>src/decaffein_H.png</file>
+    <file>src/decaffein_O.png</file>
+    <file>src/dessert_H.png</file>
+    <file>src/dessert_O.png</file>
+    <file>src/drinks_H.png</file>
+    <file>src/drinks_O.png</file>
+    <file>src/home1_H.png</file>
+    <file>src/home1_O.png</file>
+    <file>src/purchase_H.png</file>
+    <file>src/purchase_O.png</file>
+    <file>src/reset_H.png</file>
+    <file>src/reset_O.png</file>
+  </qresource>
+  <qresource prefix="-1_aiDialog">
+    <file>src/aiDialog1_H.png</file>
+    <file>src/aiDialog1_O.png</file>
+    <file>src/aiDialog2_H.png</file>
+    <file>src/aiDialog2_O.png</file>
+    <file>src/aiDialog1_P.png</file>
+  </qresource>
+  <qresource prefix="-1-1_aiDialog2">
+    <file>src/btnBack_H.png</file>
+    <file>src/btnBack_O.png</file>
+    <file>src/btnRe_H.png</file>
+    <file>src/btnRe_O.png</file>
+    <file>src/aiCartbtn_H.png</file>
+    <file>src/aiCartbtn_O.png</file>
+    <file>src/aiOptionS_H.png</file>
+    <file>src/aiOptionS_O.png</file>
+    <file>src/aiBlankB_H.png</file>
+    <file>src/aiBlankB_O.png</file>
+    <file>src/aiBlankG_H.png</file>
+    <file>src/aiBlankG_O.png</file>
+    <file>src/aiNew_H.png</file>
+    <file>src/aiNew_O.png</file>
+    <file>src/aiPur_H.png</file>
+    <file>src/aiPur_O.png</file>
+  </qresource>
+  <qresource prefix="1_selectPage">
+    <file>src/selectbtn1_H.png</file>
+    <file>src/selectbtn1_O.png</file>
+    <file>src/selectbtn2_H.png</file>
+    <file>src/selectbtn2_O.png</file>
+  </qresource>
+  <qresource prefix="0_initPage">
+    <file>src/initbtn_H.png</file>
+    <file>src/initbtn_O.png</file>
+  </qresource>
+</RCC>
