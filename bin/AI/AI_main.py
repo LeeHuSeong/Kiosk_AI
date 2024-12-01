@@ -6,8 +6,9 @@ import os
 import json
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
-from front.patois_Alter import use_OpenAI
 from back1 import *
+#from front.patois_Alter import use_OpenAI
+
 
 
 # 주문 의도를 처리하는 클래스
@@ -102,6 +103,7 @@ def recognize_speech():
             audio = recognizer.listen(source, 5, 3)
         except Exception as e :
             print(f"음성 입력 오류.\n{e}")
+            return None
 
         try:
             text = recognizer.recognize_google(audio, language="ko-KR")
@@ -211,9 +213,9 @@ def get_AI_menu_data(conn, menu, amount):
 
 ##test시 사용
 ##MySQL과 연결
-#conn=create_connection()
+conn=create_connection()
 
-#menu,quantity,flag,text = AI_recognition(conn)
+menu,quantity,flag,text = AI_recognition(conn)
 #a = get_AI_menu_data(conn,menu, quantity, flag)
 #print(menu,quantity,flag, text)
 #print(a)
