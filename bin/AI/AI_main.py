@@ -83,7 +83,7 @@ class OrderIntent:
 
 
 # JSON 데이터 로드
-def load_synonyms(file_path="AI/synonyms.json"):
+def load_synonyms(file_path="bin/AI/synonyms.json"):
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             return json.load(file)
