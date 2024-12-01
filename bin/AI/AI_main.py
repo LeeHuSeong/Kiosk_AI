@@ -7,7 +7,7 @@ import json
 import sys
 sys.path.append(os.path.dirname(os.path.abspath(__file__)) + '/../')
 from back1 import *
-#from front.patois_Alter import use_OpenAI
+from front.patois_Alter import use_OpenAI
 
 
 
@@ -84,7 +84,7 @@ class OrderIntent:
 
 
 # JSON 데이터 로드
-def load_synonyms(file_path="AI/synonyms.json"):
+def load_synonyms(file_path="bin/AI/synonyms.json"):
     try:
         with open(file_path, "r", encoding="utf-8") as file:
             return json.load(file)
@@ -213,9 +213,9 @@ def get_AI_menu_data(conn, menu, amount):
 
 ##test시 사용
 ##MySQL과 연결
-conn=create_connection()
-
-menu,quantity,flag,text = AI_recognition(conn)
+#conn=create_connection()
+#
+#menu,quantity,flag,text = AI_recognition(conn)
 #a = get_AI_menu_data(conn,menu, quantity, flag)
 #print(menu,quantity,flag, text)
 #print(a)
