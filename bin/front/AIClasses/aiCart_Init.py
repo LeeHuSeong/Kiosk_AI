@@ -1,3 +1,4 @@
+# 코드 정리 필요
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 

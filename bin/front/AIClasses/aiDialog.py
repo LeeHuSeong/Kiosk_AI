@@ -1,9 +1,10 @@
+# 코드 정리 중
+
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
 from PyQt5.QtGui import QPixmap
-import time
 
 import bin.front
 import bin.AI.AI_main

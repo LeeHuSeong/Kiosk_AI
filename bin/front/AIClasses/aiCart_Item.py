@@ -1,12 +1,15 @@
+# 코드 정리 필요
+
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5 import uic
 
 from PyQt5.QtGui import QPixmap
 
+# ['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, []]
+# ['메뉴이름', '기본가격', '이미지경로', '수량', '옵션리스트']
+
 form_class = uic.loadUiType("bin/front/AIClasses/aiCart_Item.ui")[0]
-#['디카페인 아메리카노', 2500, 'img\\drink1\\HOT_디카페인 아메리카노.jpg', 1, []]
-#['메뉴이름', '기본가격', '이미지경로', '수량', '옵션리스트']
 class aiCartItem(QWidget, form_class) :
     listWidget = None
     # Variables
@@ -70,7 +73,7 @@ class aiCartItem(QWidget, form_class) :
         return self.menuAmount
     def get_menuOption(self) :          #LIST[STR]
         return self.menuOption
-    def get_singlePrice(self) :         #INTㄴ
+    def get_singlePrice(self) :         #INT
         return self.singlePrice
     def get_totalPrice(self) :          #INT
         return self.totalPrice
